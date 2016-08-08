@@ -23,7 +23,7 @@ If the target variable is a continuous variable, a regression tree is constructe
       <RootToolName></RootToolName>
       <ToolVersion></ToolVersion>
       <ToolInDb></ToolInDb>
-      <CategoryName>Predictive</CategoryName>
+      <CategoryName>Predictive Refresh</CategoryName>
       <SearchTags>predictive, macro, R, statistic, influence, tree, predictive category, target, predictor</SearchTags>
       <Author>Dan Putler</Author>
       <Company>Alteryx, Inc.</Company>
