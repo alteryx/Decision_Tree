@@ -1,0 +1,34 @@
+<?xml version="1.0"?>
+<AlteryxJavaScriptPlugin>
+  <EngineSettings EngineDLL="Macro" EngineDLLEntryPoint="Decision_Tree/Supporting_Macros/Decision_Tree.yxmc" SDKVersion="10.1"/>
+  <GuiSettings Html="Decision_TreeGui.html" Icon="Decision_TreeIcon.png" SDKVersion="10.1" Help="AlteryxHelp:rpart">
+    <InputConnections>
+      <Connection Name="Input" AllowMultiple="False" Optional="False" Type="Connection" Label=""/>
+    </InputConnections>
+    <OutputConnections>
+      <Connection Name="Output" AllowMultiple="False" Optional="False" Type="Connection" Label="O"/>
+      <Connection Name="Reports" AllowMultiple="False" Optional="False" Type="Connection" Label="R"/>
+      <Connection Name="Interactive" AllowMultiple="False" Optional="False" Type="Connection" Label="I"/>
+    </OutputConnections>
+  </GuiSettings>
+  <Properties>
+    <MetaInfo>
+      <NameIsFileName></NameIsFileName>
+      <Name>Decision Tree</Name>
+      <Description>Predict a target variable using one or more predictor variables that are expected to have an influence on the target variable by constructing a set of if-then split rules that optimize a criteria. 
+
+If the target variable identifies membership in one of a set of categories, a classification tree is constructed (based on Gini coefficient) to maximize the 'purity' at each split.
+
+If the target variable is a continuous variable, a regression tree is constructed using the split criteria of 'minimize the sum of the squared errors' at each split.</Description>
+      <RootToolName></RootToolName>
+      <ToolVersion></ToolVersion>
+      <ToolInDb></ToolInDb>
+      <CategoryName>Predictive</CategoryName>
+      <SearchTags>predictive, macro, R, statistic, influence, tree, predictive category, target, predictor</SearchTags>
+      <Author>Dan Putler</Author>
+      <Company>Alteryx, Inc.</Company>
+      <Copyright>Alteryx, Inc.</Copyright>
+      <DescriptionLink></DescriptionLink>
+    </MetaInfo>
+  </Properties>
+</AlteryxJavaScriptPlugin>
