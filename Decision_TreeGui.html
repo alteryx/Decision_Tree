@@ -16,142 +16,237 @@ Decision_Tree
 <body>
     
 <fieldset>
-  <legend>Configuration</legend>
-  <!--  Model Name  -->
-  <label for="Model Name">Model Name</label>
-  <alteryx-pluginwidget type="TextBox" password="false" id="Model Name" dataName="Model Name"></alteryx-pluginwidget>
-  <!--  Y Var  -->
-  <label for="Y Var">Select the target variable</label>
-  <alteryx-pluginwidget type="DropDown" dataType="FieldSelector" inputNumber="0" connectionNumber="0" fieldType="All" id="Y Var" dataName="Y Var"></alteryx-pluginwidget>
-  <!--  X Vars  -->
-  <label for="X Vars">Select the predictor variables</label>
-  <alteryx-pluginwidget type="DropDown" dataType="FieldSelectorMulti" inputNumber="0" connectionNumber="0" fieldType="All" id="X Vars" dataName="X Vars"></alteryx-pluginwidget>
-  <!--  use.weights  -->
-  <label for="use.weights"></label>
-  <alteryx-pluginwidget type="CheckBox" text="Use sampling weights in model estimation? (Optional)" default="false" id="use.weights" dataName="use.weights"></alteryx-pluginwidget>
-  <!--  select.weights  -->
-  <label for="select.weights">Select the sampling weight field</label>
-  <alteryx-pluginwidget type="DropDown" dataType="FieldSelector" inputNumber="0" connectionNumber="0" fieldType="All" id="select.weights" dataName="select.weights"></alteryx-pluginwidget>
-  <!--  cp  -->
-  <label for="cp">Complexity parameter</label>
-  <alteryx-pluginwidget type="TextBox" password="false" placeholder="Auto" id="cp" dataName="cp"></alteryx-pluginwidget>
-  <!--  select.type  -->
-  <label for="select.type"></label>
-  <alteryx-pluginwidget type="CheckBox" text="Model type" default="false" id="select.type" dataName="select.type"></alteryx-pluginwidget>
-  <!--  classification  -->
-  <label for="classification"></label>
-  <alteryx-pluginwidget type="RadioButton" text="Classification" group="radioTest1" default="true" id="classification" dataName="classification"></alteryx-pluginwidget>
-  <!--  use.gini  -->
-  <label for="use.gini"></label>
-  <alteryx-pluginwidget type="RadioButton" text="Gini coefficient" group="radioTest1" default="true" id="use.gini" dataName="use.gini"></alteryx-pluginwidget>
-  <!--  use.information  -->
-  <label for="use.information"></label>
-  <alteryx-pluginwidget type="RadioButton" text="Information index" group="radioTest1" default="false" id="use.information" dataName="use.information"></alteryx-pluginwidget>
-  <!--  regression  -->
-  <label for="regression"></label>
-  <alteryx-pluginwidget type="RadioButton" text="Regression" group="radioTest1" default="false" id="regression" dataName="regression"></alteryx-pluginwidget>
-  <!--  min.split  -->
-  <label for="min.split">The minimum number of records needed to allow for a split</label>
-  <alteryx-pluginwidget type="NumericSpinner" default="20" min="2" max="10000" step="1" id="min.split" dataName="min.split"></alteryx-pluginwidget>
-  <!--  min.bucket  -->
-  <label for="min.bucket">The allowed minimum number of records in a terminal node</label>
-  <alteryx-pluginwidget type="NumericSpinner" default="7" min="1" max="5000" step="1" id="min.bucket" dataName="min.bucket"></alteryx-pluginwidget>
-  <!--  usesurrogate.0  -->
-  <label for="usesurrogate.0"></label>
-  <alteryx-pluginwidget type="RadioButton" text="Omit an observation with a missing value for the primary split rule" group="radioTest1" default="false" id="usesurrogate.0" dataName="usesurrogate.0"></alteryx-pluginwidget>
-  <!--  usesurrogate.1  -->
-  <label for="usesurrogate.1"></label>
-  <alteryx-pluginwidget type="RadioButton" text="Use surrogates in order to split records missing the candidate variable" group="radioTest1" default="false" id="usesurrogate.1" dataName="usesurrogate.1"></alteryx-pluginwidget>
-  <!--  usesurrogate.2  -->
-  <label for="usesurrogate.2"></label>
-  <alteryx-pluginwidget type="RadioButton" text="If all surrogates are missing, then send the observation in the majority direction" group="radioTest1" default="true" id="usesurrogate.2" dataName="usesurrogate.2"></alteryx-pluginwidget>
-  <!--  total.correct  -->
-  <label for="total.correct"></label>
-  <alteryx-pluginwidget type="RadioButton" text="The total number of correct classifications for a potential candidate variable" group="radioTest1" default="true" id="total.correct" dataName="total.correct"></alteryx-pluginwidget>
-  <!--  percent.correct  -->
-  <label for="percent.correct"></label>
-  <alteryx-pluginwidget type="RadioButton" text="The percentage correct calculated over the non-missing values of a candidate variable" group="radioTest1" default="false" id="percent.correct" dataName="percent.correct"></alteryx-pluginwidget>
-  <!--  xval.folds  -->
-  <label for="xval.folds">The number of folds to use in the cross validation to prune the tree</label>
-  <alteryx-pluginwidget type="NumericSpinner" default="10" min="2" max="20" step="1" id="xval.folds" dataName="xval.folds"></alteryx-pluginwidget>
-  <!--  max.depth  -->
-  <label for="max.depth">The maximum allowed depth of any node in the final tree</label>
-  <alteryx-pluginwidget type="NumericSpinner" default="20" min="2" max="50" step="1" id="max.depth" dataName="max.depth"></alteryx-pluginwidget>
-  <!--  max.bins  -->
-  <label for="max.bins">The maximum number of bins to use for each numeric variable</label>
-  <alteryx-pluginwidget type="TextBox" password="false" placeholder="Default" id="max.bins" dataName="max.bins"></alteryx-pluginwidget>
-  <!--  tree.plot  -->
-  <label for="tree.plot"></label>
-  <alteryx-pluginwidget type="CheckBox" text="Tree plot" default="true" id="tree.plot" dataName="tree.plot"></alteryx-pluginwidget>
-  <!--  Counts  -->
-  <label for="Counts"></label>
-  <alteryx-pluginwidget type="RadioButton" text="Counts" group="radioTest1" default="false" id="Counts" dataName="Counts"></alteryx-pluginwidget>
-  <!--  Proportions  -->
-  <label for="Proportions"></label>
-  <alteryx-pluginwidget type="RadioButton" text="Proportions" group="radioTest1" default="true" id="Proportions" dataName="Proportions"></alteryx-pluginwidget>
-  <!--  Branch Dist  -->
-  <label for="Branch Dist"></label>
-  <alteryx-pluginwidget type="CheckBox" text="Uniform branch distances" default="true" id="Branch Dist" dataName="Branch Dist"></alteryx-pluginwidget>
-  <!--  tree.inches  -->
-  <label for="tree.inches"></label>
-  <alteryx-pluginwidget type="RadioButton" text="Inches" group="radioTest1" default="true" id="tree.inches" dataName="tree.inches"></alteryx-pluginwidget>
-  <!--  tree.in.w  -->
-  <label for="tree.in.w">Width</label>
-  <alteryx-pluginwidget type="NumericSpinner" default="5.5" min="1" max="100" step="0.05" id="tree.in.w" dataName="tree.in.w"></alteryx-pluginwidget>
-  <!--  tree.in.h  -->
-  <label for="tree.in.h">Height</label>
-  <alteryx-pluginwidget type="NumericSpinner" default="5.5" min="1" max="100" step="0.05" id="tree.in.h" dataName="tree.in.h"></alteryx-pluginwidget>
-  <!--  tree.centimeters  -->
-  <label for="tree.centimeters"></label>
-  <alteryx-pluginwidget type="RadioButton" text="Centimeters" group="radioTest1" default="false" id="tree.centimeters" dataName="tree.centimeters"></alteryx-pluginwidget>
-  <!--  tree.cm.w  -->
-  <label for="tree.cm.w">Width</label>
-  <alteryx-pluginwidget type="NumericSpinner" default="13" min="1" max="100" step="0.05" id="tree.cm.w" dataName="tree.cm.w"></alteryx-pluginwidget>
-  <!--  tree.cm.h  -->
-  <label for="tree.cm.h">Height</label>
-  <alteryx-pluginwidget type="NumericSpinner" default="14.95" min="1" max="100" step="0.05" id="tree.cm.h" dataName="tree.cm.h"></alteryx-pluginwidget>
-  <!--  tree.graph.resolution  -->
-  <label for="tree.graph.resolution">Graph resolution</label>
-  <alteryx-pluginwidget type="DropDown" id="tree.graph.resolution" dataName="tree.graph.resolution">
-    <alteryx-option uiobject="1x (96 dpi)" default="true">1x</alteryx-option>
-    <alteryx-option uiobject="2x (192 dpi)">2x</alteryx-option>
-    <alteryx-option uiobject="3x (288 dpi)">3x</alteryx-option>
-  </alteryx-pluginwidget>
-  <!--  tree.pointsize  -->
-  <label for="tree.pointsize">Base font size (points)</label>
-  <alteryx-pluginwidget type="NumericSpinner" default="8" min="5" max="100" step="1" id="tree.pointsize" dataName="tree.pointsize"></alteryx-pluginwidget>
-  <!--  prune.plot  -->
-  <label for="prune.plot"></label>
-  <alteryx-pluginwidget type="CheckBox" text="Pruning plot" default="false" id="prune.plot" dataName="prune.plot"></alteryx-pluginwidget>
-  <!--  prune.inches  -->
-  <label for="prune.inches"></label>
-  <alteryx-pluginwidget type="RadioButton" text="Inches" group="radioTest1" default="true" id="prune.inches" dataName="prune.inches"></alteryx-pluginwidget>
-  <!--  prune.in.w  -->
-  <label for="prune.in.w">Width</label>
-  <alteryx-pluginwidget type="NumericSpinner" default="5.5" min="1" max="100" step="0.05" id="prune.in.w" dataName="prune.in.w"></alteryx-pluginwidget>
-  <!--  prune.in.h  -->
-  <label for="prune.in.h">Height</label>
-  <alteryx-pluginwidget type="NumericSpinner" default="5.5" min="1" max="100" step="0.05" id="prune.in.h" dataName="prune.in.h"></alteryx-pluginwidget>
-  <!--  prune.centimeters  -->
-  <label for="prune.centimeters"></label>
-  <alteryx-pluginwidget type="RadioButton" text="Centimeters" group="radioTest1" default="false" id="prune.centimeters" dataName="prune.centimeters"></alteryx-pluginwidget>
-  <!--  prune.cm.w  -->
-  <label for="prune.cm.w">Width</label>
-  <alteryx-pluginwidget type="NumericSpinner" default="13" min="1" max="100" step="0.05" id="prune.cm.w" dataName="prune.cm.w"></alteryx-pluginwidget>
-  <!--  prune.cm.h  -->
-  <label for="prune.cm.h">Height</label>
-  <alteryx-pluginwidget type="NumericSpinner" default="14.95" min="1" max="100" step="0.05" id="prune.cm.h" dataName="prune.cm.h"></alteryx-pluginwidget>
-  <!--  prune.graph.resolution  -->
-  <label for="prune.graph.resolution">Graph resolution</label>
-  <alteryx-pluginwidget type="DropDown" id="prune.graph.resolution" dataName="prune.graph.resolution">
-    <alteryx-option uiobject="1x (96 dpi)" default="true">1x</alteryx-option>
-    <alteryx-option uiobject="2x (192 dpi)">2x</alteryx-option>
-    <alteryx-option uiobject="3x (288 dpi)">3x</alteryx-option>
-  </alteryx-pluginwidget>
-  <!--  prune.pointsize  -->
-  <label for="prune.pointsize">Base font size (points)</label>
-  <alteryx-pluginwidget type="NumericSpinner" default="10" min="5" max="100" step="1" id="prune.pointsize" dataName="prune.pointsize"></alteryx-pluginwidget>
+<legend>Configuration</legend>
+<div id="accordion">
+  <h4 class="accordion-toggle">Setup Model</h4>
+  <div class='accordion-content default'>
+    
+<!--  Model Name  -->
+<label for="Model Name">Model Name</label>
+<alteryx-pluginwidget type="TextBox" password="false" id="Model Name" dataName="Model Name"></alteryx-pluginwidget>
+
+    
+<!--  Y Var  -->
+<label for="Y Var">Select the target variable</label>
+<alteryx-pluginwidget type="DropDown" dataType="FieldSelector" inputNumber="0" connectionNumber="0" fieldType="All" id="Y Var" dataName="Y Var"></alteryx-pluginwidget>
+
+    
+<!--  X Vars  -->
+<label for="X Vars">Select the predictor variables</label>
+<alteryx-pluginwidget type="DropDown" dataType="FieldSelectorMulti" inputNumber="0" connectionNumber="0" fieldType="All" id="X Vars" dataName="X Vars"></alteryx-pluginwidget>
+
+  </div>
+  <h4 class="accordion-toggle">Sampling Weights and Complexity Parameter</h4>
+  <div class='accordion-content'>
+    
+<!--  cp  -->
+<label for="cp">Complexity parameter</label>
+<alteryx-pluginwidget type="TextBox" password="false" placeholder="Auto" id="cp" dataName="cp"></alteryx-pluginwidget>
+
+    
+<!--  use.weights  -->
+<alteryx-pluginwidget type="CheckBox" text="Use sampling weights in model estimation? (Optional)" default="false" id="use.weights" dataName="use.weights"></alteryx-pluginwidget>
+
+    <div id='div-use.weights'>
+<!--  select.weights  -->
+<label for="select.weights">Select the sampling weight field</label>
+<alteryx-pluginwidget type="DropDown" dataType="FieldSelector" inputNumber="0" connectionNumber="0" fieldType="All" id="select.weights" dataName="select.weights"></alteryx-pluginwidget>
+</div>
+  </div>
+  <h4 class="accordion-toggle">Splitting Criteria and Surrogates</h4>
+  <div class='accordion-content'>
+    
+<!--  LabelGroup (118)  -->
+<label for="LabelGroup (118)">The splitting criteria to use:</label>
+<alteryx-pluginwidget type="RadioGroup" group="LabelGroup (118)" id="LabelGroup (118)" dataName="LabelGroup (118)">
+  <alteryx-option uiobject="Gini coefficient" default="true">use.gini</alteryx-option>
+  <alteryx-option uiobject="Information index">use.information</alteryx-option>
+</alteryx-pluginwidget>
+
+    
+<!--  LabelGroup (127)  -->
+<label for="LabelGroup (127)">Surrogate use:</label>
+<alteryx-pluginwidget type="RadioGroup" group="LabelGroup (127)" id="LabelGroup (127)" dataName="LabelGroup (127)">
+  <alteryx-option uiobject="Omit an observation with a missing value for the primary split rule" default="true">usesurrogate.0</alteryx-option>
+  <alteryx-option uiobject="Use surrogates in order to split records missing the candidate variable">usesurrogate.1</alteryx-option>
+  <alteryx-option uiobject="If all surrogates are missing, then send the observation in the majority direction">usesurrogate.2</alteryx-option>
+</alteryx-pluginwidget>
+
+    
+<!--  LabelGroup (130)  -->
+<label for="LabelGroup (130)">Criteria for selecting the best surrogate split:</label>
+<alteryx-pluginwidget type="RadioGroup" group="LabelGroup (130)" id="LabelGroup (130)" dataName="LabelGroup (130)">
+  <alteryx-option uiobject="The total number of correct classifications for a potential candidate variable" default="true">total.correct</alteryx-option>
+  <alteryx-option uiobject="The percentage correct calculated over the non-missing values of a candidate variable">percent.correct</alteryx-option>
+</alteryx-pluginwidget>
+
+  </div>
+  <h4 class="accordion-toggle">HyperParameters</h4>
+  <div class='accordion-content'>
+    
+<!--  min.split  -->
+<label for="min.split">The minimum number of records needed to allow for a split</label>
+<alteryx-pluginwidget type="NumericSpinner" default="20" min="2" max="10000" step="1" id="min.split" dataName="min.split"></alteryx-pluginwidget>
+
+    
+<!--  min.bucket  -->
+<label for="min.bucket">The allowed minimum number of records in a terminal node</label>
+<alteryx-pluginwidget type="NumericSpinner" default="7" min="1" max="5000" step="1" id="min.bucket" dataName="min.bucket"></alteryx-pluginwidget>
+
+    
+<!--  xval.folds  -->
+<label for="xval.folds">The number of folds to use in the cross validation to prune the tree</label>
+<alteryx-pluginwidget type="NumericSpinner" default="10" min="2" max="20" step="1" id="xval.folds" dataName="xval.folds"></alteryx-pluginwidget>
+
+    
+<!--  max.depth  -->
+<label for="max.depth">The maximum allowed depth of any node in the final tree</label>
+<alteryx-pluginwidget type="NumericSpinner" default="20" min="2" max="50" step="1" id="max.depth" dataName="max.depth"></alteryx-pluginwidget>
+
+    
+<!--  max.bins  -->
+<label for="max.bins">The maximum number of bins to use for each numeric variable</label>
+<alteryx-pluginwidget type="TextBox" password="false" placeholder="Default" id="max.bins" dataName="max.bins"></alteryx-pluginwidget>
+
+  </div>
+  <h4 class="accordion-toggle">Plots</h4>
+  <div class="accordion-content">
+    
+<!--  tree.plot  -->
+<alteryx-pluginwidget type="CheckBox" text="Tree plot" default="true" id="tree.plot" dataName="tree.plot"></alteryx-pluginwidget>
+
+    <div id='div-tree.plot'>
+      
+<!--  LabelGroup (138)  -->
+<label for="LabelGroup (138)">Leaf summary</label>
+<alteryx-pluginwidget type="RadioGroup" group="LabelGroup (138)" id="LabelGroup (138)" dataName="LabelGroup (138)">
+  <alteryx-option uiobject="Counts" default="true">Counts</alteryx-option>
+  <alteryx-option uiobject="Proportions">Proportions</alteryx-option>
+</alteryx-pluginwidget>
+
+      
+<!--  Branch Dist  -->
+<alteryx-pluginwidget type="CheckBox" text="Uniform branch distances" default="true" id="Branch Dist" dataName="Branch Dist"></alteryx-pluginwidget>
+
+      
+<!--  LabelGroup (147)  -->
+<label for="LabelGroup (147)">Plot size</label>
+<alteryx-pluginwidget type="RadioGroup" group="LabelGroup (147)" id="LabelGroup (147)" dataName="LabelGroup (147)">
+  <alteryx-option uiobject="Inches" default="true">tree.inches</alteryx-option>
+  <alteryx-option uiobject="Centimeters">tree.centimeters</alteryx-option>
+</alteryx-pluginwidget>
+
+      <div id='div-treeplot-in'>
+        
+<!--  tree.in.w  -->
+<label for="tree.in.w">Width</label>
+<alteryx-pluginwidget type="NumericSpinner" default="5.5" min="1" max="100" step="0.05" id="tree.in.w" dataName="tree.in.w"></alteryx-pluginwidget>
+
+        
+<!--  tree.in.h  -->
+<label for="tree.in.h">Height</label>
+<alteryx-pluginwidget type="NumericSpinner" default="5.5" min="1" max="100" step="0.05" id="tree.in.h" dataName="tree.in.h"></alteryx-pluginwidget>
+
+      </div>
+      <div id='div-treeplot-cm'>
+        
+<!--  tree.cm.w  -->
+<label for="tree.cm.w">Width</label>
+<alteryx-pluginwidget type="NumericSpinner" default="13" min="1" max="100" step="0.05" id="tree.cm.w" dataName="tree.cm.w"></alteryx-pluginwidget>
+
+        
+<!--  tree.cm.h  -->
+<label for="tree.cm.h">Height</label>
+<alteryx-pluginwidget type="NumericSpinner" default="14.95" min="1" max="100" step="0.05" id="tree.cm.h" dataName="tree.cm.h"></alteryx-pluginwidget>
+     
+      </div>
+      
+<!--  tree.graph.resolution  -->
+<label for="tree.graph.resolution">Graph resolution</label>
+<alteryx-pluginwidget type="DropDown" id="tree.graph.resolution" dataName="tree.graph.resolution">
+  <alteryx-option uiobject="1x (96 dpi)" default="true">1x</alteryx-option>
+  <alteryx-option uiobject="2x (192 dpi)">2x</alteryx-option>
+  <alteryx-option uiobject="3x (288 dpi)">3x</alteryx-option>
+</alteryx-pluginwidget>
+
+      
+<!--  tree.pointsize  -->
+<label for="tree.pointsize">Base font size (points)</label>
+<alteryx-pluginwidget type="NumericSpinner" default="8" min="5" max="100" step="1" id="tree.pointsize" dataName="tree.pointsize"></alteryx-pluginwidget>
+
+    </div>
+      
+<!--  prune.plot  -->
+<alteryx-pluginwidget type="CheckBox" text="Pruning plot" default="false" id="prune.plot" dataName="prune.plot"></alteryx-pluginwidget>
+
+      <div id='div-prune.plot'>
+        
+<!--  LabelGroup (157)  -->
+<label for="LabelGroup (157)">Plot size</label>
+<alteryx-pluginwidget type="RadioGroup" group="LabelGroup (157)" id="LabelGroup (157)" dataName="LabelGroup (157)">
+  <alteryx-option uiobject="Inches" default="true">prune.inches</alteryx-option>
+  <alteryx-option uiobject="Centimeters">prune.centimeters</alteryx-option>
+</alteryx-pluginwidget>
+
+        
+<!--  prune.in.w  -->
+<label for="prune.in.w">Width</label>
+<alteryx-pluginwidget type="NumericSpinner" default="5.5" min="1" max="100" step="0.05" id="prune.in.w" dataName="prune.in.w"></alteryx-pluginwidget>
+
+        
+<!--  prune.in.h  -->
+<label for="prune.in.h">Height</label>
+<alteryx-pluginwidget type="NumericSpinner" default="5.5" min="1" max="100" step="0.05" id="prune.in.h" dataName="prune.in.h"></alteryx-pluginwidget>
+
+        
+<!--  prune.cm.w  -->
+<label for="prune.cm.w">Width</label>
+<alteryx-pluginwidget type="NumericSpinner" default="13" min="1" max="100" step="0.05" id="prune.cm.w" dataName="prune.cm.w"></alteryx-pluginwidget>
+
+        
+<!--  prune.cm.h  -->
+<label for="prune.cm.h">Height</label>
+<alteryx-pluginwidget type="NumericSpinner" default="14.95" min="1" max="100" step="0.05" id="prune.cm.h" dataName="prune.cm.h"></alteryx-pluginwidget>
+
+        
+<!--  prune.graph.resolution  -->
+<label for="prune.graph.resolution">Graph resolution</label>
+<alteryx-pluginwidget type="DropDown" id="prune.graph.resolution" dataName="prune.graph.resolution">
+  <alteryx-option uiobject="1x (96 dpi)" default="true">1x</alteryx-option>
+  <alteryx-option uiobject="2x (192 dpi)">2x</alteryx-option>
+  <alteryx-option uiobject="3x (288 dpi)">3x</alteryx-option>
+</alteryx-pluginwidget>
+
+        
+<!--  prune.pointsize  -->
+<label for="prune.pointsize">Base font size (points)</label>
+<alteryx-pluginwidget type="NumericSpinner" default="10" min="5" max="100" step="1" id="prune.pointsize" dataName="prune.pointsize"></alteryx-pluginwidget>
+
+      </div>
+    </div>
+</div>
 </fieldset>
+
+<script>
+$(document).ready(function($) {
+    $('#accordion').find('.accordion-toggle').click(function(){
+
+      //Expand or collapse this panel
+      $(this).next().slideToggle('fast');
+
+      //Hide the other panels
+      $(".accordion-content").not($(this).next()).slideUp('fast');
+
+    });
+});
+</script>
+
+<!-- CSS -->
+<style>
+  .accordion-toggle {cursor: pointer;}
+  .accordion-content {display: none;}
+  .accordion-content.default {display: block;}
+</style>
 
   <script src="app.min.js" type="text/javascript"></script>
 </body>
