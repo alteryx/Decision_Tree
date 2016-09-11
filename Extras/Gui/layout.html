@@ -9,15 +9,19 @@
   </div>
   <h4 class="accordion-toggle">Sampling Weights and Complexity Parameter</h4>
   <div class='accordion-content'>
-    {{ `cp` }}
+    <div>
+      <div style='float:left;' id='div-set-cp'>{{ `set_cp` }}</div>
+      <div style='float:right;' id='div-cp'>{{ `cp` }}</div>
+    </div>
+    
     {{ `use.weights` }}
     <div id='div-use.weights'>{{ `select.weights` }}</div>
   </div>
   <h4 class="accordion-toggle">Splitting Criteria and Surrogates</h4>
   <div class='accordion-content'>
-    {{ `LabelGroup (118)` }}
-    {{ `LabelGroup (127)` }}
-    {{ `LabelGroup (130)` }}
+    {{ `splitting_criteria` }}
+    {{ `surrogate_use` }}
+    {{ `surrogate_split_criteria` }}
   </div>
   <h4 class="accordion-toggle">HyperParameters</h4>
   <div class='accordion-content'>
@@ -31,9 +35,9 @@
   <div class="accordion-content">
     {{ `tree.plot` }}
     <div id='div-tree.plot'>
-      {{ `LabelGroup (138)` }}
+      {{ `tree_summary` }}
       {{ `Branch Dist` }}
-      {{ `LabelGroup (147)` }}
+      {{ `tree_plot_size` }}
       <div id='div-treeplot-in'>
         {{ `tree.in.w` }}
         {{ `tree.in.h` }}
@@ -47,11 +51,15 @@
     </div>
       {{ `prune.plot` }}
       <div id='div-prune.plot'>
-        {{ `LabelGroup (157)` }}
+        {{ `pruning_plot_size` }}
+        <div id='div-pruneplot-in'>
         {{ `prune.in.w` }}
         {{ `prune.in.h` }}
+        </div>
+        <div id='div-pruneplot-cm'>
         {{ `prune.cm.w` }}
         {{ `prune.cm.h` }}
+        </div>
         {{ `prune.graph.resolution` }}
         {{ `prune.pointsize` }}
       </div>
