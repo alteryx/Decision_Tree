@@ -22,7 +22,7 @@ Decision_Tree
   <div class='accordion-content default'>
     
 <!--  Model Name  -->
-<label for="Model Name">Model Name</label>
+<label for="Model Name">Please enter model name</label>
 <alteryx-pluginwidget type="TextBox" password="false" id="Model Name" dataName="Model Name"></alteryx-pluginwidget>
 
     
@@ -38,11 +38,17 @@ Decision_Tree
   </div>
   <h4 class="accordion-toggle">Sampling Weights and Complexity Parameter</h4>
   <div class='accordion-content'>
-    
+    <div>
+      <div style='float:left;' id='div-set-cp'>
+<!--  set_cp  -->
+<alteryx-pluginwidget type="CheckBox" text="Set complexity parameter" default="false" id="set_cp" dataName="set_cp"></alteryx-pluginwidget>
+</div>
+      <div style='float:right;' id='div-cp'>
 <!--  cp  -->
-<label for="cp">Complexity parameter</label>
-<alteryx-pluginwidget type="TextBox" password="false" placeholder="Auto" id="cp" dataName="cp"></alteryx-pluginwidget>
-
+<alteryx-pluginwidget type="NumericSpinner" default="0" min="0" max="1" step="0.1" id="cp" dataName="cp"></alteryx-pluginwidget>
+</div>
+    </div>
+    
     
 <!--  use.weights  -->
 <alteryx-pluginwidget type="CheckBox" text="Use sampling weights in model estimation? (Optional)" default="false" id="use.weights" dataName="use.weights"></alteryx-pluginwidget>
@@ -56,26 +62,26 @@ Decision_Tree
   <h4 class="accordion-toggle">Splitting Criteria and Surrogates</h4>
   <div class='accordion-content'>
     
-<!--  LabelGroup (118)  -->
-<label for="LabelGroup (118)">The splitting criteria to use:</label>
-<alteryx-pluginwidget type="RadioGroup" group="LabelGroup (118)" id="LabelGroup (118)" dataName="LabelGroup (118)">
+<!--  splitting_criteria  -->
+<label for="splitting_criteria">The splitting criteria to use:</label>
+<alteryx-pluginwidget type="RadioGroup" group="splitting_criteria" id="splitting_criteria" dataName="splitting_criteria">
   <alteryx-option uiobject="Gini coefficient" default="true">use.gini</alteryx-option>
   <alteryx-option uiobject="Information index">use.information</alteryx-option>
 </alteryx-pluginwidget>
 
     
-<!--  LabelGroup (127)  -->
-<label for="LabelGroup (127)">Surrogate use:</label>
-<alteryx-pluginwidget type="RadioGroup" group="LabelGroup (127)" id="LabelGroup (127)" dataName="LabelGroup (127)">
+<!--  surrogate_use  -->
+<label for="surrogate_use">Surrogate use:</label>
+<alteryx-pluginwidget type="RadioGroup" group="surrogate_use" id="surrogate_use" dataName="surrogate_use">
   <alteryx-option uiobject="Omit an observation with a missing value for the primary split rule" default="true">usesurrogate.0</alteryx-option>
   <alteryx-option uiobject="Use surrogates in order to split records missing the candidate variable">usesurrogate.1</alteryx-option>
   <alteryx-option uiobject="If all surrogates are missing, then send the observation in the majority direction">usesurrogate.2</alteryx-option>
 </alteryx-pluginwidget>
 
     
-<!--  LabelGroup (130)  -->
-<label for="LabelGroup (130)">Criteria for selecting the best surrogate split:</label>
-<alteryx-pluginwidget type="RadioGroup" group="LabelGroup (130)" id="LabelGroup (130)" dataName="LabelGroup (130)">
+<!--  surrogate_split_criteria  -->
+<label for="surrogate_split_criteria">Criteria for selecting the best surrogate split:</label>
+<alteryx-pluginwidget type="RadioGroup" group="surrogate_split_criteria" id="surrogate_split_criteria" dataName="surrogate_split_criteria">
   <alteryx-option uiobject="The total number of correct classifications for a potential candidate variable" default="true">total.correct</alteryx-option>
   <alteryx-option uiobject="The percentage correct calculated over the non-missing values of a candidate variable">percent.correct</alteryx-option>
 </alteryx-pluginwidget>
@@ -117,9 +123,9 @@ Decision_Tree
 
     <div id='div-tree.plot'>
       
-<!--  LabelGroup (138)  -->
-<label for="LabelGroup (138)">Leaf summary</label>
-<alteryx-pluginwidget type="RadioGroup" group="LabelGroup (138)" id="LabelGroup (138)" dataName="LabelGroup (138)">
+<!--  tree_summary  -->
+<label for="tree_summary">Leaf summary</label>
+<alteryx-pluginwidget type="RadioGroup" group="tree_summary" id="tree_summary" dataName="tree_summary">
   <alteryx-option uiobject="Counts" default="true">Counts</alteryx-option>
   <alteryx-option uiobject="Proportions">Proportions</alteryx-option>
 </alteryx-pluginwidget>
@@ -129,9 +135,9 @@ Decision_Tree
 <alteryx-pluginwidget type="CheckBox" text="Uniform branch distances" default="true" id="Branch Dist" dataName="Branch Dist"></alteryx-pluginwidget>
 
       
-<!--  LabelGroup (147)  -->
-<label for="LabelGroup (147)">Plot size</label>
-<alteryx-pluginwidget type="RadioGroup" group="LabelGroup (147)" id="LabelGroup (147)" dataName="LabelGroup (147)">
+<!--  tree_plot_size  -->
+<label for="tree_plot_size">Plot size</label>
+<alteryx-pluginwidget type="RadioGroup" group="tree_plot_size" id="tree_plot_size" dataName="tree_plot_size">
   <alteryx-option uiobject="Inches" default="true">tree.inches</alteryx-option>
   <alteryx-option uiobject="Centimeters">tree.centimeters</alteryx-option>
 </alteryx-pluginwidget>
@@ -181,13 +187,14 @@ Decision_Tree
 
       <div id='div-prune.plot'>
         
-<!--  LabelGroup (157)  -->
-<label for="LabelGroup (157)">Plot size</label>
-<alteryx-pluginwidget type="RadioGroup" group="LabelGroup (157)" id="LabelGroup (157)" dataName="LabelGroup (157)">
+<!--  pruning_plot_size  -->
+<label for="pruning_plot_size">Plot size</label>
+<alteryx-pluginwidget type="RadioGroup" group="pruning_plot_size" id="pruning_plot_size" dataName="pruning_plot_size">
   <alteryx-option uiobject="Inches" default="true">prune.inches</alteryx-option>
   <alteryx-option uiobject="Centimeters">prune.centimeters</alteryx-option>
 </alteryx-pluginwidget>
 
+        <div id='div-pruneplot-in'>
         
 <!--  prune.in.w  -->
 <label for="prune.in.w">Width</label>
@@ -198,6 +205,8 @@ Decision_Tree
 <label for="prune.in.h">Height</label>
 <alteryx-pluginwidget type="NumericSpinner" default="5.5" min="1" max="100" step="0.05" id="prune.in.h" dataName="prune.in.h"></alteryx-pluginwidget>
 
+        </div>
+        <div id='div-pruneplot-cm'>
         
 <!--  prune.cm.w  -->
 <label for="prune.cm.w">Width</label>
@@ -208,6 +217,7 @@ Decision_Tree
 <label for="prune.cm.h">Height</label>
 <alteryx-pluginwidget type="NumericSpinner" default="14.95" min="1" max="100" step="0.05" id="prune.cm.h" dataName="prune.cm.h"></alteryx-pluginwidget>
 
+        </div>
         
 <!--  prune.graph.resolution  -->
 <label for="prune.graph.resolution">Graph resolution</label>

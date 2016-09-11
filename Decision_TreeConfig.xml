@@ -1,7 +1,7 @@
 <?xml version="1.0"?>
 <AlteryxJavaScriptPlugin>
   <EngineSettings EngineDLL="Macro" EngineDLLEntryPoint="Decision_Tree/Supporting_Macros/Decision_Tree.yxmc" SDKVersion="10.1"/>
-  <GuiSettings Html="Decision_TreeGui.html" Icon="Decision_TreeIcon.png" SDKVersion="10.1" Help="AlteryxHelp:rpart">
+  <GuiSettings Html="Decision_TreeGui.html" Icon="Decision_TreeIcon.png" SDKVersion="10.1" Help="rpart.htm">
     <InputConnections>
       <Connection Name="Input" AllowMultiple="False" Optional="False" Type="Connection" Label=""/>
     </InputConnections>
@@ -29,6 +29,7 @@ If the target variable is a continuous variable, a regression tree is constructe
       <Company>Alteryx, Inc.</Company>
       <Copyright>Alteryx, Inc.</Copyright>
       <DescriptionLink></DescriptionLink>
+      <Example></Example>
     </MetaInfo>
   </Properties>
 </AlteryxJavaScriptPlugin>
