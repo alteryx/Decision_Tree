@@ -20,10 +20,10 @@
 If the target variable identifies membership in one of a set of categories, a classification tree is constructed (based on Gini coefficient) to maximize the 'purity' at each split.
 
 If the target variable is a continuous variable, a regression tree is constructed using the split criteria of 'minimize the sum of the squared errors' at each split.</Description>
-      <RootToolName></RootToolName>
-      <ToolVersion></ToolVersion>
+      <RootToolName>Decision_Tree</RootToolName>
+      <ToolVersion>1.1</ToolVersion>
       <ToolInDb></ToolInDb>
-      <CategoryName>Predictive Refresh</CategoryName>
+      <CategoryName>Predictive</CategoryName>
       <SearchTags>predictive, macro, R, statistic, influence, tree, predictive category, target, predictor</SearchTags>
       <Author>Dan Putler</Author>
       <Company>Alteryx, Inc.</Company>
