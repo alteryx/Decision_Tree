@@ -108,8 +108,8 @@
           <Value name="tree.inches">True</Value>
           <Value name="prune.centimeters">False</Value>
           <Value name="prune.inches">True</Value>
-          <Value name="Counts">False</Value>
           <Value name="Proportions">True</Value>
+          <Value name="Counts">False</Value>
           <Value name="percent.correct">False</Value>
           <Value name="total.correct">True</Value>
           <Value name="usesurrogate.2">False</Value>
@@ -132,8 +132,7 @@
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFileDataProfiling>C:\ProgramData\Alteryx\Engine\Engine_5268_ae2d2e30fba041d492f92895fc844103_\Engine_6024_e675d98bad0c44c99c9800e6e006ebcd_.yxdb</TempFileDataProfiling>
-          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_5268_ae2d2e30fba041d492f92895fc844103_\Engine_6024_33ddb05eaa714d989e0c1796249e6edc_.yxdb</TempFile>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_3956_37fe9604f3cb4351b003bd4ab093a6df_\Engine_6024_7228dae0b02040248d7095862aaa2102_.yxdb</TempFile>
           <Layout>
             <View1>
               <Hints>
@@ -156,8 +155,7 @@
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFileDataProfiling>C:\ProgramData\Alteryx\Engine\Engine_5268_ae2d2e30fba041d492f92895fc844103_\Engine_6024_713f98570b26407d961e44bf1485b699_.yxdb</TempFileDataProfiling>
-          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_5268_ae2d2e30fba041d492f92895fc844103_\Engine_6024_5068aa6c6dfc47ec945d0cfcf63983f8_.yxdb</TempFile>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_3956_37fe9604f3cb4351b003bd4ab093a6df_\Engine_6024_33cc5c47bf714a79a337172232d1c839_.yxdb</TempFile>
           <Layout>
             <ViewMode>Single</ViewMode>
             <ViewSize value="100" />
@@ -184,7 +182,7 @@
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_5268_ae2d2e30fba041d492f92895fc844103_\Engine_6024_496eb36ccbea49fa9f1f2515a0c9253c_.yxdb</TempFile>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_3956_37fe9604f3cb4351b003bd4ab093a6df_\Engine_6024_7b03746d99a44c82ac6b6101e4f1548e_.yxdb</TempFile>
           <Layout>
             <ViewMode>Single</ViewMode>
             <ViewSize value="100" />
@@ -211,8 +209,14 @@
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFileDataProfiling>C:\ProgramData\Alteryx\Engine\Engine_5268_ae2d2e30fba041d492f92895fc844103_\Engine_6024_5ce3b181ba284409ab9f5fd1cdd49b5f_.yxdb</TempFileDataProfiling>
-          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_5268_ae2d2e30fba041d492f92895fc844103_\Engine_6024_7fd7b73b84b24d03a1f12622aa222afb_.yxdb</TempFile>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_3956_37fe9604f3cb4351b003bd4ab093a6df_\Engine_6024_2c797eff11e141a7b769e3e42f6a0abb_.yxdb</TempFile>
+          <Layout>
+            <View1>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+          </Layout>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
@@ -228,8 +232,7 @@
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFileDataProfiling>C:\ProgramData\Alteryx\Engine\Engine_5268_ae2d2e30fba041d492f92895fc844103_\Engine_6024_bb2dc7bfa54e4426875b22f8051839fb_.yxdb</TempFileDataProfiling>
-          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_5268_ae2d2e30fba041d492f92895fc844103_\Engine_6024_259f6a4586614decbb7623e63bb0567f_.yxdb</TempFile>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_3956_37fe9604f3cb4351b003bd4ab093a6df_\Engine_6024_2b66c50007224a65bbc5f2b9f977dc7a_.yxdb</TempFile>
           <Layout>
             <ViewMode>Single</ViewMode>
             <ViewSize value="100" />
@@ -256,7 +259,8 @@
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_5268_ae2d2e30fba041d492f92895fc844103_\Engine_6024_bf30a07416eb4f8aa875d0f1402805cb_.yxdb</TempFile>
+          <TempFileDataProfiling>C:\ProgramData\Alteryx\Engine\Engine_3956_37fe9604f3cb4351b003bd4ab093a6df_\Engine_6024_606377a803c647f1b46c40834787e652_.yxdb</TempFileDataProfiling>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_3956_37fe9604f3cb4351b003bd4ab093a6df_\Engine_6024_71fdff564ed447f19a8aaefc909a5369_.yxdb</TempFile>
           <Layout>
             <ViewMode>Single</ViewMode>
             <ViewSize value="100" />
