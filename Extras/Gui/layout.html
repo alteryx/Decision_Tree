@@ -1,46 +1,69 @@
-<fieldset>
-<legend>Configuration</legend>
-<div id="accordion">
-  <h4 class="accordion-toggle">Setup Model</h4>
-  <div class='accordion-content default'>
+<div class='page has-hint' id='page-basic'>
+  <fieldset>
+    <legend>Setup</legend>
     {{ `Model Name` }}
     {{ `Y Var` }}
     {{ `X Vars` }}
-  </div>
-  <h4 class="accordion-toggle">Sampling Weights and Complexity Parameter</h4>
-  <div class='accordion-content'>
-    <div>
-      <div style='float:left;' id='div-set-cp'>{{ `set_cp` }}</div>
-      <div style='float:right;' id='div-cp'>{{ `cp` }}</div>
+    <!--  splitting_criteria  -->
+    <label for="splitting_criteria">Select model type</label>
+    <alteryx-pluginwidget type="RadioGroup" group="model_type" id="model_type" dataName="model_type">
+      <alteryx-option uiobject="Classification" default="true">classification</alteryx-option>
+      <alteryx-option uiobject="Regression">regression</alteryx-option>
+    </alteryx-pluginwidget>
+    <button class='default-button primary' onclick="switchToCustomize()" 
+        id='switch-to-customize'>
+      Customize
+    </button>
+  </fieldset>
+</div>
+<div class='page' id='page-customize'>
+  <fieldset>
+  <legend>Customize</legend>
+  <div class="tabs" id='header'>
+    <div class="tab is-tab-selected" data-page='advanced' id='advanced'>
+      Model
     </div>
-    
-    {{ `use.weights` }}
-    <div id='div-use.weights'>{{ `select.weights` }}</div>
+    <div class="tab" data-page='graphics' id='graphics'>
+      Plots
+    </div>
   </div>
-  <h4 class="accordion-toggle">Splitting Criteria and Surrogates</h4>
-  <div class='accordion-content'>
-    {{ `splitting_criteria` }}
-    {{ `surrogate_use` }}
-    {{ `surrogate_split_criteria` }}
+  <div class='tabpage has-hint' id='tabpage-advanced'>
+    <div id="accordion">
+    <h4 class="accordion-toggle">Sampling Weights and Complexity Parameter</h4>
+    <div class='accordion-content default'>
+      <div>
+        <div style='float:left;' id='div-set-cp'>{{ `set_cp` }}</div>
+        <div style='float:right;' id='div-cp'>{{ `cp` }}</div>
+      </div>
+      
+      {{ `use.weights` }}
+      <div id='div-use.weights'>{{ `select.weights` }}</div>
+    </div>
+    <h4 class="accordion-toggle">Splitting Criteria and Surrogates</h4>
+    <div class='accordion-content'>
+      {{ `splitting_criteria` }}
+      {{ `surrogate_use` }}
+      {{ `surrogate_split_criteria` }}
+    </div>
+    <h4 class="accordion-toggle">HyperParameters</h4>
+    <div class='accordion-content'>
+      {{ `min.split` }}
+      {{ `min.bucket` }}
+      {{ `xval.folds` }}
+      {{ `max.depth` }}
+      {{ `max.bins` }}
+    </div>
   </div>
-  <h4 class="accordion-toggle">HyperParameters</h4>
-  <div class='accordion-content'>
-    {{ `min.split` }}
-    {{ `min.bucket` }}
-    {{ `xval.folds` }}
-    {{ `max.depth` }}
-    {{ `max.bins` }}
   </div>
-  <h4 class="accordion-toggle">Plots</h4>
-  <div class="accordion-content">
+  <div class='tabpage has-hint' id='tabpage-graphics'>
     {{ `tree.plot` }}
     <div id='div-tree.plot'>
       {{ `tree_summary` }}
       {{ `Branch Dist` }}
       {{ `tree_plot_size` }}
       <div id='div-treeplot-in'>
-        {{ `tree.in.w` }}
-        {{ `tree.in.h` }}
+        <div id='div-treeplot-in-w'>{{ `tree.in.w` }}</div>
+        <div id='div-treeplot-in-h'>{{ `tree.in.h` }}</div>
       </div>
       <div id='div-treeplot-cm'>
         {{ `tree.cm.w` }}
@@ -64,20 +87,36 @@
         {{ `prune.pointsize` }}
       </div>
     </div>
-</div>
 </fieldset>
 
 <script>
+function switchToCustomize(){
+  $('#page-basic').hide()
+  $('#page-customize').show()
+  $(".tabpage").hide()
+  $('#tabpage-advanced').show()
+}
 $(document).ready(function($) {
-    $('#accordion').find('.accordion-toggle').click(function(){
+  $('#accordion').find('.accordion-toggle').click(function(){
 
       //Expand or collapse this panel
-      $(this).next().slideToggle('fast');
+    $(this).next().slideToggle('fast');
 
-      //Hide the other panels
-      $(".accordion-content").not($(this).next()).slideUp('fast');
+    //Hide the other panels
+    $(".accordion-content").not($(this).next()).slideUp('fast');
 
-    });
+  });
+  $('#page-customize').hide()
+  $('#page-basic').show()
+  $(".tabpage").hide()
+  $('#tabpage-advanced').show()
+  $('.tab').click(function(){
+    $('.tabpage').hide()
+    var activePage = $(this).data('page')
+    $('#tabpage-' + activePage).show()
+    $('.tab').removeClass('is-tab-selected')
+    $('#' + activePage).addClass('is-tab-selected')
+  })
 });
 </script>
 

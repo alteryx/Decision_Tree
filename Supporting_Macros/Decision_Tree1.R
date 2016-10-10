@@ -1,3 +1,15 @@
+#' ---
+#' title: Decision Tree
+#' author: Dan Putler, Dylan Blanchard, Ramnath Vaidyanathan
+#' output:
+#'   html_document:
+#'     toc: true
+#'     toc_depth: 4
+#' ---
+
+#' #### Read Configuration
+#'
+#'
 ## DO NOT MODIFY: Auto Inserted by AlteryxRhelper ----
 library(AlteryxPredictive)
 config <- list(
@@ -43,26 +55,21 @@ config <- list(
   `usesurrogate.2` = radioInput('%Question.usesurrogate.2%' , TRUE),
   `X Vars` = listInput('%Question.X Vars%', names(iris)[1:4]),
   `xval.folds` = numericInput('%Question.xval.folds%' , 10),
-  `Y Var` = dropdownInput('%Question.Y Var%', 'Species'),
-   method = 'class'
+  `Y Var` = dropdownInput('%Question.Y Var%', 'Species')
 )
 options(alteryx.wd = '%Engine.WorkflowDirectory%')
 options(alteryx.debug = config$debug)
 ##----
 
-config <- plyr::rename(config, c(
-  use.weights = 'used.weights', `Model Name` = 'model.name',
-  max.bins = 'maxNumBins', min.split = "minsplit", min.bucket = 'minbucket',
-  xval.folds = 'xval', max.depth = 'maxdepth', Counts = 'do.counts', 
-  `Branch Dist` = 'b.dist'
-))
-
+#' #### Read Inputs
+#'
+#' This is a named list of all inputs that stream into the R tool.
+#' We also specify defaults for use when R code is run outside Alteryx.
 
 inputs <- list(
-  data_stream1 = read.Alteryx2("#1", default = rev(iris)),
+  the.data = read.Alteryx2("#1", default = rev(iris)),
   XDFinfo = getXdfProperties("#1", list(is_XDF = FALSE, xdf_path = NULL))
 )
 
-results <- processDT(config = config, data = inputs)
-
-outputDTResultsAlteryx(results, config)
+#' #### Run and Output Results
+AlteryxPredictive:::runDecisionTree(inputs, config)
