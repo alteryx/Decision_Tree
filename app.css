@@ -11,9 +11,9 @@ input[type="checkbox"]{
  * out its children using flexbox, the exact same
  * as in the above "Stepper input" example.
  */
-display: flex;
+ display: flex;
 
-border-bottom: 1px solid #D7DBDD;
+ /* border-bottom: 1px solid #D7DBDD; */
 }
 
 .tab {
@@ -42,4 +42,12 @@ border-bottom: 1px solid #D7DBDD;
   position: fixed;
   bottom: 5px;
   display: hidden;
+}
+#switch-to-customize{
+  position: absolute;
+  right: 8px;
+  margin-top: 5px;
+}
+.pull-right{
+  float: right;
 }
