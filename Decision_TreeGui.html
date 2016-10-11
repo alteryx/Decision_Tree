@@ -33,12 +33,6 @@ Decision_Tree
 <label for="X Vars">Select the predictor variables</label>
 <alteryx-pluginwidget type="DropDown" dataType="FieldSelectorMulti" inputNumber="0" connectionNumber="0" fieldType="All" id="X Vars" dataName="X Vars"></alteryx-pluginwidget>
 
-    <!--  splitting_criteria  -->
-    <label for="splitting_criteria">Select model type</label>
-    <alteryx-pluginwidget type="RadioGroup" group="model_type" id="model_type" dataName="model_type">
-      <alteryx-option uiobject="Classification" default="true">classification</alteryx-option>
-      <alteryx-option uiobject="Regression">regression</alteryx-option>
-    </alteryx-pluginwidget>
     <button class='default-button primary' onclick="switchToCustomize()" 
         id='switch-to-customize'>
       Customize
@@ -80,17 +74,25 @@ Decision_Tree
 <label for="select.weights">Select the sampling weight field</label>
 <alteryx-pluginwidget type="DropDown" dataType="FieldSelector" inputNumber="0" connectionNumber="0" fieldType="All" id="select.weights" dataName="select.weights"></alteryx-pluginwidget>
 </div>
+      <!--  splitting_criteria  -->
+      <alteryx-pluginwidget type="CheckBox" text="Select model type" default="false" id="select.type" dataName="select.type"></alteryx-pluginwidget>
+      <div id='select-model-type'>
+      <alteryx-pluginwidget type="RadioGroup" group="model_type" id="model_type" dataName="model_type">
+        <alteryx-option uiobject="Classification" default="true">classification</alteryx-option>
+        <alteryx-option uiobject="Regression">regression</alteryx-option>
+        </div>
+      </alteryx-pluginwidget>
     </div>
     <h4 class="accordion-toggle">Splitting Criteria and Surrogates</h4>
     <div class='accordion-content'>
-      
+      <div id='show-for-classification'>
 <!--  splitting_criteria  -->
 <label for="splitting_criteria">The splitting criteria to use:</label>
 <alteryx-pluginwidget type="RadioGroup" group="splitting_criteria" id="splitting_criteria" dataName="splitting_criteria">
   <alteryx-option uiobject="Gini coefficient" default="true">use.gini</alteryx-option>
   <alteryx-option uiobject="Information index">use.information</alteryx-option>
 </alteryx-pluginwidget>
-
+</div>
       
 <!--  surrogate_use  -->
 <label for="surrogate_use">Surrogate use:</label>
