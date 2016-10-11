@@ -4,12 +4,6 @@
     {{ `Model Name` }}
     {{ `Y Var` }}
     {{ `X Vars` }}
-    <!--  splitting_criteria  -->
-    <label for="splitting_criteria">Select model type</label>
-    <alteryx-pluginwidget type="RadioGroup" group="model_type" id="model_type" dataName="model_type">
-      <alteryx-option uiobject="Classification" default="true">classification</alteryx-option>
-      <alteryx-option uiobject="Regression">regression</alteryx-option>
-    </alteryx-pluginwidget>
     <button class='default-button primary' onclick="switchToCustomize()" 
         id='switch-to-customize'>
       Customize
@@ -38,10 +32,18 @@
       
       {{ `use.weights` }}
       <div id='div-use.weights'>{{ `select.weights` }}</div>
+      <!--  splitting_criteria  -->
+      <alteryx-pluginwidget type="CheckBox" text="Select model type" default="false" id="select.type" dataName="select.type"></alteryx-pluginwidget>
+      <div id='select-model-type'>
+      <alteryx-pluginwidget type="RadioGroup" group="model_type" id="model_type" dataName="model_type">
+        <alteryx-option uiobject="Classification" default="true">classification</alteryx-option>
+        <alteryx-option uiobject="Regression">regression</alteryx-option>
+        </div>
+      </alteryx-pluginwidget>
     </div>
     <h4 class="accordion-toggle">Splitting Criteria and Surrogates</h4>
     <div class='accordion-content'>
-      {{ `splitting_criteria` }}
+      <div id='show-for-classification'>{{ `splitting_criteria` }}</div>
       {{ `surrogate_use` }}
       {{ `surrogate_split_criteria` }}
     </div>
