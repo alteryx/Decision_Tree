@@ -1,0 +1,480 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="10.5">
+  <Nodes>
+    <Node ToolID="3">
+      <GuiSettings>
+        <Position x="222" y="342" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="Model Name">Old_DT</Value>
+          <Value name="Y Var">Default</Value>
+          <Value name="X Vars">Chk_Bal + Duration + Credit_Hist</Value>
+          <Value name="use.weights">False</Value>
+          <Value name="select.weights">Duration</Value>
+          <Value name="cp">0</Value>
+          <Value name="select.type">True</Value>
+          <Value name="classification">True</Value>
+          <Value name="use.gini">True</Value>
+          <Value name="use.information">False</Value>
+          <Value name="regression">False</Value>
+          <Value name="min.split">20</Value>
+          <Value name="min.bucket">7</Value>
+          <Value name="usesurrogate.0">False</Value>
+          <Value name="usesurrogate.1">False</Value>
+          <Value name="usesurrogate.2">True</Value>
+          <Value name="total.correct">True</Value>
+          <Value name="percent.correct">False</Value>
+          <Value name="xval.folds">10</Value>
+          <Value name="max.depth">20</Value>
+          <Value name="max.bins" />
+          <Value name="tree.plot">False</Value>
+          <Value name="Counts">False</Value>
+          <Value name="Proportions">True</Value>
+          <Value name="Branch Dist">False</Value>
+          <Value name="tree.inches">True</Value>
+          <Value name="tree.in.w">5.50</Value>
+          <Value name="tree.in.h">5.50</Value>
+          <Value name="tree.centimeters">False</Value>
+          <Value name="tree.cm.w">13.00</Value>
+          <Value name="tree.cm.h">14.95</Value>
+          <Value name="tree.graph.resolution">1x</Value>
+          <Value name="tree.pointsize">8</Value>
+          <Value name="prune.plot">False</Value>
+          <Value name="prune.inches">True</Value>
+          <Value name="prune.in.w">5.50</Value>
+          <Value name="prune.in.h">5.50</Value>
+          <Value name="prune.centimeters">False</Value>
+          <Value name="prune.cm.w">13.00</Value>
+          <Value name="prune.cm.h">14.95</Value>
+          <Value name="prune.graph.resolution">1x</Value>
+          <Value name="prune.pointsize">10</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="Predictive Tools\Decision_Tree.yxmc" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="Decision_Tree">
+        <Position x="222" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="prune.pointsize">10</Value>
+          <Value name="prune.graph.resolution">1x</Value>
+          <Value name="prune.cm.h">14.95</Value>
+          <Value name="prune.cm.w">13</Value>
+          <Value name="prune.in.h">5.5</Value>
+          <Value name="prune.in.w">5.5</Value>
+          <Value name="pruning_plot_size">prune.inches</Value>
+          <Value name="prune.plot">False</Value>
+          <Value name="tree.pointsize">8</Value>
+          <Value name="tree.graph.resolution">1x</Value>
+          <Value name="tree.cm.h">14.95</Value>
+          <Value name="tree.cm.w">13</Value>
+          <Value name="tree.in.h">5.5</Value>
+          <Value name="tree.in.w">5.5</Value>
+          <Value name="tree_plot_size">tree.inches</Value>
+          <Value name="Branch Dist">False</Value>
+          <Value name="tree_summary">Proportions</Value>
+          <Value name="tree.plot">True</Value>
+          <Value name="max.bins">
+          </Value>
+          <Value name="max.depth">20</Value>
+          <Value name="xval.folds">10</Value>
+          <Value name="min.bucket">7</Value>
+          <Value name="min.split">20</Value>
+          <Value name="surrogate_split_criteria">total.correct</Value>
+          <Value name="surrogate_use">usesurrogate.0</Value>
+          <Value name="splitting_criteria">use.gini</Value>
+          <Value name="model_type">classification</Value>
+          <Value name="select.type">False</Value>
+          <Value name="select.weights" />
+          <Value name="cp">0</Value>
+          <Value name="set_cp">False</Value>
+          <Value name="X Vars">Chk_Bal,Duration,Credit_Hist</Value>
+          <Value name="Y Var">Default</Value>
+          <Value name="Model Name">New_DT</Value>
+          <Value name="regression">False</Value>
+          <Value name="classification">True</Value>
+          <Value name="tree.centimeters">False</Value>
+          <Value name="tree.inches">True</Value>
+          <Value name="prune.centimeters">False</Value>
+          <Value name="prune.inches">True</Value>
+          <Value name="Proportions">True</Value>
+          <Value name="Counts">False</Value>
+          <Value name="percent.correct">False</Value>
+          <Value name="total.correct">True</Value>
+          <Value name="usesurrogate.2">False</Value>
+          <Value name="usesurrogate.1">False</Value>
+          <Value name="usesurrogate.0">True</Value>
+          <Value name="use.information">False</Value>
+          <Value name="use.gini">True</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="Decision_Tree/Supporting_Macros/Decision_Tree.yxmc" EngineDll="Macro" EngineDllEntryPoint="Decision_Tree/Supporting_Macros/Decision_Tree.yxmc" />
+    </Node>
+    <Node ToolID="11">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="318" y="114" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\DBLANC~1\AppData\Local\Temp\Engine_3900_ac60ea6e73e3480488e4460b115d17ea_\Engine_5968_a273a9753806404fb57514af05b9fb44_.yxdb</TempFile>
+          <Layout>
+            <View1>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="12">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="318" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\DBLANC~1\AppData\Local\Temp\Engine_3900_ac60ea6e73e3480488e4460b115d17ea_\Engine_5968_21d9ecac610b432cb4f1fcc5023ae891_.yxdb</TempFile>
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Report</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="13">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="318" y="222" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFile>C:\Users\DBLANC~1\AppData\Local\Temp\Engine_3900_ac60ea6e73e3480488e4460b115d17ea_\Engine_5968_cb424bfc7ae24c6ca18711ecd504fd4f_.yxdb</TempFile>
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Report</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="14">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="318" y="282" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFileDataProfiling>C:\ProgramData\Alteryx\Engine\Engine_2116_5791c7d00e6045dfb2be6d9fb574269b_\Engine_4920_e992845af30946fd86b4e16dba511fae_.yxdb</TempFileDataProfiling>
+          <TempFile>C:\Users\DBLANC~1\AppData\Local\Temp\Engine_3900_ac60ea6e73e3480488e4460b115d17ea_\Engine_5968_5888d79517514b21a5dee5aff9c9ca77_.yxdb</TempFile>
+          <Layout>
+            <View1>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="15">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="318" y="342" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFileDataProfiling>C:\ProgramData\Alteryx\Engine\Engine_2116_5791c7d00e6045dfb2be6d9fb574269b_\Engine_4920_0883ff407b694ced8f833167f735318f_.yxdb</TempFileDataProfiling>
+          <TempFile>C:\Users\DBLANC~1\AppData\Local\Temp\Engine_3900_ac60ea6e73e3480488e4460b115d17ea_\Engine_5968_8ff3bcaf3ea04bf1a3ab41051190a5a2_.yxdb</TempFile>
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Report</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="16">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
+        <Position x="318" y="402" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <TempFileDataProfiling>C:\ProgramData\Alteryx\Engine\Engine_2116_5791c7d00e6045dfb2be6d9fb574269b_\Engine_4920_14c8843c504c4634b7754287f22ec64c_.yxdb</TempFileDataProfiling>
+          <TempFile>C:\Users\DBLANC~1\AppData\Local\Temp\Engine_3900_ac60ea6e73e3480488e4460b115d17ea_\Engine_5968_b92b54ea267044c68e22ff097d796098_.yxdb</TempFile>
+          <Layout>
+            <ViewMode>Single</ViewMode>
+            <ViewSize value="100" />
+            <View1>
+              <DefaultTab>Report</DefaultTab>
+              <Hints>
+                <Table />
+              </Hints>
+            </View1>
+            <View2 />
+          </Layout>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="19">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="198" y="138" width="100" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>New Plugin</Text>
+          <Font name="Segoe UI" size="9.75" style="0" />
+          <TextColor r="0" g="128" b="192" />
+          <FillColor name="White" />
+          <Shape shape="3" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="20">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="198" y="318" width="100" height="24" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Old Macro</Text>
+          <Font name="Segoe UI" size="9.75" style="0" />
+          <TextColor r="0" g="128" b="192" />
+          <FillColor name="White" />
+          <Shape shape="3" />
+          <Justification Justification="4" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="21">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="54" y="54" width="804" height="60" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>Basic Test</Text>
+          <Font name="Segoe UI" size="20.25" style="0" />
+          <TextColor name="White" />
+          <FillColor r="22" g="145" b="198" />
+          <Shape shape="0" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="22">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="390" y="54" width="456" height="60" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>This workflow is a basic test that compares the outputs of the refreshed decision tree plugin with the old macro.</Text>
+          <Font name="Segoe UI" size="9" style="0" />
+          <TextColor name="White" />
+          <FillColor r="111" g="111" b="111" />
+          <Shape shape="3" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="24">
+      <GuiSettings>
+        <Position x="90" y="246" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="xdf.path">.\Data\New_Donor.xdf</Value>
+          <Value name="model">True</Value>
+          <Value name="manipulate">False</Value>
+          <Value name="num.records">256000</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <Dependencies>
+          <Implicit />
+        </Dependencies>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Chk_Bal" size="1073741823" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;C:/Users/dblanchard/Documents/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="V_WString" />
+            <Field name="Duration" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;C:/Users/dblanchard/Documents/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="Int32" />
+            <Field name="Credit_Hist" size="1073741823" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;C:/Users/dblanchard/Documents/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="V_WString" />
+            <Field name="Purpose" size="1073741823" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;C:/Users/dblanchard/Documents/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="V_WString" />
+            <Field name="Amount" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;C:/Users/dblanchard/Documents/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="Int32" />
+            <Field name="Savings_Bonds" size="1073741823" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;C:/Users/dblanchard/Documents/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="V_WString" />
+            <Field name="Employ_Length" size="1073741823" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;C:/Users/dblanchard/Documents/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="V_WString" />
+            <Field name="Debt_Inco" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;C:/Users/dblanchard/Documents/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="Int32" />
+            <Field name="Gender_Marital" size="1073741823" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;C:/Users/dblanchard/Documents/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="V_WString" />
+            <Field name="Debtor_Guarantor" size="1073741823" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;C:/Users/dblanchard/Documents/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="V_WString" />
+            <Field name="Length_Res" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;C:/Users/dblanchard/Documents/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="Int32" />
+            <Field name="Property" size="1073741823" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;C:/Users/dblanchard/Documents/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="V_WString" />
+            <Field name="Age" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;C:/Users/dblanchard/Documents/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="Int32" />
+            <Field name="Otr_Install" size="1073741823" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;C:/Users/dblanchard/Documents/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="V_WString" />
+            <Field name="Tenure" size="1073741823" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;C:/Users/dblanchard/Documents/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="V_WString" />
+            <Field name="Num_Loans" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;C:/Users/dblanchard/Documents/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="Int32" />
+            <Field name="Job_Type" size="1073741823" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;C:/Users/dblanchard/Documents/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="V_WString" />
+            <Field name="Dependents" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;C:/Users/dblanchard/Documents/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="Int32" />
+            <Field name="Telephone" size="1073741823" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;C:/Users/dblanchard/Documents/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="V_WString" />
+            <Field name="Foreign_Worker" size="1073741823" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;C:/Users/dblanchard/Documents/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="V_WString" />
+            <Field name="Default" size="1073741823" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;C:/Users/dblanchard/Documents/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="V_WString" />
+            <Field name="Sample" size="1073741823" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;C:/Users/dblanchard/Documents/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings Macro="Input_XDF.yxmc" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="3" Connection="Output" />
+      <Destination ToolID="14" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Reports" />
+      <Destination ToolID="15" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="3" Connection="Interactive" />
+      <Destination ToolID="16" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Reports" />
+      <Destination ToolID="12" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="10" Connection="Interactive" />
+      <Destination ToolID="13" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="24" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="24" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="True" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>BasicXDFTest</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>
