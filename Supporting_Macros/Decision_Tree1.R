@@ -68,7 +68,7 @@ options(alteryx.debug = config$debug)
 
 inputs <- list(
   the.data = read.Alteryx2("#1", default = rev(iris)),
-  XDFinfo = getXdfProperties("#1", list(is_XDF = FALSE, xdf_path = NULL))
+  XDFInfo = getXdfProperties("#1", list(is_XDF = FALSE, xdf_path = NULL))
 )
 
 #' #### Run and Output Results
