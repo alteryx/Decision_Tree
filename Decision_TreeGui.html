@@ -26,12 +26,12 @@ Decision_Tree
      <div id='yvar' class="qconst">
 <!--  Y Var  -->
 <label for="Y Var">Select the target variable</label>
-<alteryx-pluginwidget type="DropDown" dataType="FieldSelector" inputNumber="0" connectionNumber="0" fieldType="All" id="Y Var" dataName="Y Var"></alteryx-pluginwidget>
+<alteryx-pluginwidget type="DropDown" dataType="FieldSelector" inputNumber="0" connectionNumber="0" fieldType="Numeric" id="Y Var" dataName="Y Var"></alteryx-pluginwidget>
 </div>
      <div id='xvars' class="qconst">
 <!--  X Vars  -->
 <label for="X Vars">Select the predictor variables</label>
-<alteryx-pluginwidget type="DropDown" dataType="FieldSelectorMulti" inputNumber="0" connectionNumber="0" fieldType="All" id="X Vars" dataName="X Vars"></alteryx-pluginwidget>
+<alteryx-pluginwidget type="MultiSelectListBox" dataType="MultiStringSelector" inputNumber="0" connectionNumber="0" fieldType="All" id="X Vars" dataName="X Vars"></alteryx-pluginwidget>
 </div>
      <button class='default-button primary' onclick="switchToCustomize()" 
         id='switch-to-customize'>
@@ -52,32 +52,26 @@ Decision_Tree
   </div>
   <div class='tabpage has-hint' id='tabpage-advanced'>
     <div id="accordion">
-    <h4 class="accordion-toggle">Sampling Weights and Complexity Parameter</h4>
+    <h4 class="accordion-toggle accordion-open">Model Type and Sampling Weights</h4>
     <div class='accordion-content default'>
-      <div>
-        <div style='float:left;' id='div-set-cp'>
-<!--  set_cp  -->
-<alteryx-pluginwidget type="CheckBox" text="Set complexity parameter" default="false" id="set_cp" dataName="set_cp"></alteryx-pluginwidget>
-</div>
-        <div style='float:right;' id='div-cp'>
-<!--  cp  -->
-<alteryx-pluginwidget type="NumericSpinner" default="0" min="0" max="1" step="0.1" id="cp" dataName="cp"></alteryx-pluginwidget>
-</div>
-      </div>
       
+<div class="clearfix togglebar" id="id-model_type">
+  <div class="label" style="float:left;">Model Type</div>
+  <div style="float:right;">
+    <div class="toggletabs">
+      <div class="toggletab is-tab-selected" data-page="auto" id="id-auto">Auto</div>
+      <div class="toggletab" data-page="classification" id="id-classification">Classification</div>
+      <div class="toggletab" data-page="regression" id="id-regression">Regression</div>
+    </div>
+  </div>
+</div>
+
       <div id='div-use.weights'>
 <!--  select.weights  -->
 <label for="select.weights">Select the sampling weight field</label>
-<alteryx-pluginwidget type="DropDown" dataType="FieldSelector" inputNumber="0" connectionNumber="0" fieldType="All" id="select.weights" dataName="select.weights"></alteryx-pluginwidget>
+<alteryx-pluginwidget type="DropDown" dataType="FieldSelector" inputNumber="0" connectionNumber="0" fieldType="All" clearable="true" id="select.weights" dataName="select.weights"></alteryx-pluginwidget>
 </div>
       <!--  splitting_criteria  -->
-      <alteryx-pluginwidget type="CheckBox" text="Select model type" default="false" id="select.type" dataName="select.type"></alteryx-pluginwidget>
-      <div id='select-model-type'>
-      <alteryx-pluginwidget type="RadioGroup" group="model_type" id="model_type" dataName="model_type">
-        <alteryx-option uiobject="Classification" default="true">classification</alteryx-option>
-        <alteryx-option uiobject="Regression">regression</alteryx-option>
-        </div>
-      </alteryx-pluginwidget>
     </div>
     <h4 class="accordion-toggle">Splitting Criteria and Surrogates</h4>
     <div class='accordion-content'>
@@ -91,19 +85,19 @@ Decision_Tree
 </div>
       
 <!--  surrogate_use  -->
-<label for="surrogate_use">Surrogate use:</label>
+<label for="surrogate_use">Use surrogates to</label>
 <alteryx-pluginwidget type="RadioGroup" group="surrogate_use" id="surrogate_use" dataName="surrogate_use">
-  <alteryx-option uiobject="Omit an observation with a missing value for the primary split rule" default="true">usesurrogate.0</alteryx-option>
-  <alteryx-option uiobject="Use surrogates in order to split records missing the candidate variable">usesurrogate.1</alteryx-option>
-  <alteryx-option uiobject="If all surrogates are missing, then send the observation in the majority direction">usesurrogate.2</alteryx-option>
+  <alteryx-option uiobject="Omit observations with missing value for primary split rule." default="true">usesurrogate.0</alteryx-option>
+  <alteryx-option uiobject="Split records missing the candidate variable.">usesurrogate.1</alteryx-option>
+  <alteryx-option uiobject="Send observation in majority direction if all surrogates are missing.">usesurrogate.2</alteryx-option>
 </alteryx-pluginwidget>
 
       
 <!--  surrogate_split_criteria  -->
-<label for="surrogate_split_criteria">Criteria for selecting the best surrogate split:</label>
+<label for="surrogate_split_criteria">Select best surrogate split using</label>
 <alteryx-pluginwidget type="RadioGroup" group="surrogate_split_criteria" id="surrogate_split_criteria" dataName="surrogate_split_criteria">
-  <alteryx-option uiobject="The total number of correct classifications for a potential candidate variable" default="true">total.correct</alteryx-option>
-  <alteryx-option uiobject="The percentage correct calculated over the non-missing values of a candidate variable">percent.correct</alteryx-option>
+  <alteryx-option uiobject="Number of correct classifications for a candidate variable." default="true">total.correct</alteryx-option>
+  <alteryx-option uiobject="Percentage of correct classifications for a candidate variable.">percent.correct</alteryx-option>
 </alteryx-pluginwidget>
 
     </div>
@@ -134,6 +128,16 @@ Decision_Tree
 <label for="max.bins">The maximum number of bins to use for each numeric variable</label>
 <alteryx-pluginwidget type="TextBox" password="false" placeholder="Default" id="max.bins" dataName="max.bins"></alteryx-pluginwidget>
 
+      <div>
+        <div style='float:left;' id='div-set-cp'>
+<!--  set_cp  -->
+<alteryx-pluginwidget type="CheckBox" text="Set complexity parameter" default="false" id="set_cp" dataName="set_cp"></alteryx-pluginwidget>
+</div>
+        <div style='float:right;' id='div-cp'>
+<!--  cp  -->
+<alteryx-pluginwidget type="NumericSpinner" default="0" min="0" max="1" step="0.1" id="cp" dataName="cp"></alteryx-pluginwidget>
+</div>
+      </div>
     </div>
   </div>
   </div>
@@ -143,25 +147,31 @@ Decision_Tree
 <alteryx-pluginwidget type="CheckBox" text="Tree plot" default="true" id="tree.plot" dataName="tree.plot"></alteryx-pluginwidget>
 
     <div id='div-tree.plot'>
-      
-<!--  tree_summary  -->
-<label for="tree_summary">Leaf summary</label>
-<alteryx-pluginwidget type="RadioGroup" group="tree_summary" id="tree_summary" dataName="tree_summary">
-  <alteryx-option uiobject="Counts" default="true">Counts</alteryx-option>
-  <alteryx-option uiobject="Proportions">Proportions</alteryx-option>
-</alteryx-pluginwidget>
-
-      
+      <div id='div-branch-dist'>
 <!--  Branch Dist  -->
-<alteryx-pluginwidget type="CheckBox" text="Uniform branch distances" default="true" id="Branch Dist" dataName="Branch Dist"></alteryx-pluginwidget>
+<alteryx-pluginwidget type="CheckBox" text="Uniform branch distances" default="true" showAsToggle="true" id="Branch Dist" dataName="Branch Dist"></alteryx-pluginwidget>
+</div>
+      
+<div class="clearfix togglebar" id="id-tree_summary">
+  <div class="label" style="float:left;">Leaf summary</div>
+  <div style="float:right;">
+    <div class="toggletabs">
+      <div class="toggletab is-tab-selected" data-page="Counts" id="id-Counts">Counts</div>
+      <div class="toggletab" data-page="Proportions" id="id-Proportions">Proportions</div>
+    </div>
+  </div>
+</div>
 
       
-<!--  tree_plot_size  -->
-<label for="tree_plot_size">Plot size</label>
-<alteryx-pluginwidget type="RadioGroup" group="tree_plot_size" id="tree_plot_size" dataName="tree_plot_size">
-  <alteryx-option uiobject="Inches" default="true">tree.inches</alteryx-option>
-  <alteryx-option uiobject="Centimeters">tree.centimeters</alteryx-option>
-</alteryx-pluginwidget>
+<div class="clearfix togglebar" id="id-tree_plot_size">
+  <div class="label" style="float:left;">Plot size</div>
+  <div style="float:right;">
+    <div class="toggletabs">
+      <div class="toggletab is-tab-selected" data-page="tree.inches" id="id-tree.inches">Inches</div>
+      <div class="toggletab" data-page="tree.centimeters" id="id-tree.centimeters">Centimeters</div>
+    </div>
+  </div>
+</div>
 
       <div id='div-treeplot-in'>
         <div id='div-treeplot-in-w'>
@@ -208,12 +218,15 @@ Decision_Tree
 
       <div id='div-prune.plot'>
         
-<!--  pruning_plot_size  -->
-<label for="pruning_plot_size">Plot size</label>
-<alteryx-pluginwidget type="RadioGroup" group="pruning_plot_size" id="pruning_plot_size" dataName="pruning_plot_size">
-  <alteryx-option uiobject="Inches" default="true">prune.inches</alteryx-option>
-  <alteryx-option uiobject="Centimeters">prune.centimeters</alteryx-option>
-</alteryx-pluginwidget>
+<div class="clearfix togglebar" id="id-pruning_plot_size">
+  <div class="label" style="float:left;">Plot size</div>
+  <div style="float:right;">
+    <div class="toggletabs">
+      <div class="toggletab is-tab-selected" data-page="prune.inches" id="id-prune.inches">Inches</div>
+      <div class="toggletab" data-page="prune.centimeters" id="id-prune.centimeters">Centimeters</div>
+    </div>
+  </div>
+</div>
 
         <div id='div-pruneplot-in'>
         
@@ -256,6 +269,8 @@ Decision_Tree
       </div>
     </div>
 </fieldset>
+  <button class='default-button primary' onclick="switchToHome()" id='switch-to-home'>Back</button>
+</div>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.2.0/intro.min.js'>
 </script>
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.2.0/introjs.min.css' />
@@ -266,10 +281,17 @@ function switchToCustomize(){
   $(".tabpage").hide()
   $('#tabpage-advanced').show()
 }
+function switchToHome(){
+  $('#page-basic').show()
+  $('#page-customize').hide()
+}
+$('#page-customize').hide()
+$('#page-basic').show()
 $(document).ready(function($) {
   $('#accordion').find('.accordion-toggle').click(function(){
-
-      //Expand or collapse this panel
+    $(this).toggleClass('accordion-open')
+    $('.accordion-toggle').not($(this)).removeClass('accordion-open')
+    //Expand or collapse this panel
     $(this).next().slideToggle('fast');
 
     //Hide the other panels
