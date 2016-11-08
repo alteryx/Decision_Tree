@@ -32,8 +32,7 @@ input[type="checkbox"]{
  * as in the above "Stepper input" example.
  */
   display: flex;
-
-  /* border-bottom: 1px solid #D7DBDD; */
+  border-bottom: 2px solid #1691C6;
 }
 
 .tab {
@@ -46,7 +45,7 @@ input[type="checkbox"]{
   color: #000000;
   font-size: 12px;
   /* border-bottom: 2px solid transparent; */
-  background: #DBDBDB;
+  background: rgb(230, 230, 230);
 }
 .tab:hover {
   background: #D8D8D8;
