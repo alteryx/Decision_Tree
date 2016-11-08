@@ -1,1 +1,18 @@
 # Override Configuration Properties
+"Y Var":
+  fieldType: Numeric
+"X Vars":
+  type: MultiSelectListBox
+  dataType: MultiStringSelector
+select.weights:
+  clearable: "true"
+model_type:
+  type: ToggleBar
+tree_summary:
+  type: ToggleBar
+pruning_plot_size:
+  type: ToggleBar
+tree_plot_size:
+  type: ToggleBar
+"Branch Dist":
+  showAsToggle: "true"
