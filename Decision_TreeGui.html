@@ -17,7 +17,6 @@ Decision_Tree
     
 <div class='page has-hint' id='page-basic'>
   <fieldset>
-    <legend>Setup</legend>
      <div id='mname' class="qconst">
 <!--  Model Name  -->
 <label for="Model Name">Model Name</label>
@@ -66,9 +65,12 @@ Decision_Tree
   </div>
 </div>
 
+      
+<!--  use.weights  -->
+<alteryx-pluginwidget type="CheckBox" text="Use sampling weights in model estimation" default="false" id="use.weights" dataName="use.weights"></alteryx-pluginwidget>
+
       <div id='div-use.weights'>
 <!--  select.weights  -->
-<label for="select.weights">Select the sampling weight field</label>
 <alteryx-pluginwidget type="DropDown" dataType="FieldSelector" inputNumber="0" connectionNumber="0" fieldType="All" clearable="true" id="select.weights" dataName="select.weights"></alteryx-pluginwidget>
 </div>
       <!--  splitting_criteria  -->
