@@ -25,15 +25,27 @@ input[type="checkbox"]{
  /* border-bottom: 1px solid #D7DBDD; */
 }
 
-/*
+.tabs {
+/**
+ * Setting display to flex makes this container lay
+ * out its children using flexbox, the exact same
+ * as in the above "Stepper input" example.
+ */
+  display: flex;
+
+  /* border-bottom: 1px solid #D7DBDD; */
+}
+
 .tab {
   cursor: pointer;
-  padding-left: 10px; 
+  padding-left: 25px; 
   padding-top: 5px;
   padding-bottom: 5px;
-  padding-right: 50px;
+  padding-right: 25px;
+  /* color: #16A2D7; */
   color: #000000;
   font-size: 12px;
+  /* border-bottom: 2px solid transparent; */
   background: #DBDBDB;
 }
 .tab:hover {
@@ -41,28 +53,11 @@ input[type="checkbox"]{
 }
 
 .tab.is-tab-selected {
+  /* border-bottom-color: #4EBBE4; */
   background: #1691c6;
-  color: white;
+  color: #ffffff;
   font: "Segoe UI Semibold";
-}
-*/
-
-.tab{
-  position: relative;
-  display: inline-block;
-  padding: 2px 0px;
-  font-family: 'Segoe UI';
   font-size: 12px;
-  cursor: pointer;
-  text-align: center;
-  color: black;
-  border: 1px solid #D9D9D9;
-  background-color: white;
-}
-.tab.is-tab-selected{
-  color: white;
-  border: 1px solid #8B8B8B;
-  background-color: #1691C6;
 }
 
 
@@ -79,6 +74,95 @@ input[type="checkbox"]{
 .pull-right{
   float: right;
 }
-#advanced, #graphics{
-  width: 60px;
+
+
+.toggletabs {
+  display: flex;
+}
+.toggletab{
+  position: relative;
+  display: inline-block;
+  padding: 2px 0px;
+  font-family: 'Segoe UI';
+  font-size: 12px;
+  cursor: pointer;
+  text-align: center;
+  color: black;
+  border: 1px solid #D9D9D9;
+  background-color: white;
+}
+.toggletab.is-tab-selected{
+  color: white;
+  border: 1px solid #8B8B8B;
+  background-color: #1691C6;
+}
+
+.toggletab {
+  width: 75px;
+}
+
+
+.clearfix:after {
+  clear: both;
+  content: ".";
+  display: block;
+  height: 0;
+  visibility: hidden;
+}
+.clearfix {
+  display: inline-block;
+}
+.clearfix {
+  display: block;
+}
+
+.togglebar {
+  height: 35px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+}
+
+.alteryx-toggle-switch-outer {
+  position: absolute !important;
+  right: 4px;
+}
+#div-branch-dist{
+  margin-bottom: 20px;
+}
+
+.accordion-toggle::before{
+  background-image: url("data:image/svg+xml;base64,PHN2ZyBpZD0iMzdlNmU4OTItNDRkYS00MmIwLTk4YjYtOWQ0Yjg2YzAzOTM1IiBkYXRhLW5hbWU9IkxheWVyIDEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDYuOCAxMS42Ij48ZGVmcz48c3R5bGU+LlwzNyA1YTBiOGVjLWNhY2EtNDA5Zi04OTQyLTE4Y2ZlYjljNzM5NntmaWxsOiMzMTRjNGE7fTwvc3R5bGU+PC9kZWZzPjx0aXRsZT5hcnJvd19yaWdodF9zbWw8L3RpdGxlPjxwYXRoIGNsYXNzPSI3NWEwYjhlYy1jYWNhLTQwOWYtODk0Mi0xOGNmZWI5YzczOTYiIGQ9Ik0yLDAuMzJDMi4zOCwwLjcyLDYuNDcsNSw2LjQ3LDVhMS4xMSwxLjExLDAsMCwxLDAsMS41OFMyLjM4LDEwLjg4LDIsMTEuMjhhMS4xOCwxLjE4LDAsMCwxLTEuNjEsMCwxLjA2LDEuMDYsMCwwLDEsMC0xLjU3TDQuMDksNS44LDAuMzUsMS44OUExLjA2LDEuMDYsMCwwLDEsLjM1LjMyLDEuMTgsMS4xOCwwLDAsMSwyLC4zMloiIHRyYW5zZm9ybT0idHJhbnNsYXRlKDAgMCkiLz48L3N2Zz4=");
+  background-size: 10px 10px;
+  height: 10px;
+  width: 10px;
+  content: "  ";
+  display: inline-block;
+  margin-right: 5px;
+}
+.accordion-toggle.accordion-open::before{
+  background-image: url("data:image/svg+xml;base64,PHN2ZyBpZD0iMmE4MjA2MGUtZDcwZS00MTZhLTg0MjItMzk3NWYwOTA2NzE0IiBkYXRhLW5hbWU9IkxheWVyIDEiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyIgdmlld0JveD0iMCAwIDExLjk5IDciPjxkZWZzPjxzdHlsZT4uZTBiNGJkNDctYzA5Ni00MDc1LTgyNDctMjNhOWE4ODBlNjQye2ZpbGw6IzMxNGM0YTt9PC9zdHlsZT48L2RlZnM+PHRpdGxlPmRvd25fYXJyb3dfc21sPC90aXRsZT48cGF0aCBjbGFzcz0iZTBiNGJkNDctYzA5Ni00MDc1LTgyNDctMjNhOWE4ODBlNjQyIiBkPSJNMTEuNjcsMmMtMC40Mi40My00Ljg2LDQuNjQtNC44Niw0LjY0QTEuMTYsMS4xNiwwLDAsMSw2LDdhMS4xOCwxLjE4LDAsMCwxLS44Mi0wLjM0UzAuNzUsMi40NS4zMywyQTEuMjIsMS4yMiwwLDAsMSwuMzMuMzYsMS4xLDEuMSwwLDAsMSwyLC4zNkw2LDQuMjJsNC0zLjg2YTEuMSwxLjEsMCwwLDEsMS42MywwQTEuMjIsMS4yMiwwLDAsMSwxMS42NywyWiIgdHJhbnNmb3JtPSJ0cmFuc2xhdGUoMCAwKSIvPjwvc3ZnPg==");
+  background-size: 10px 10px;
+  height: 10px;
+  width: 10px;
+  content: "  ";
+  display: inline-block;
+  margin-right: 5px;
+}
+
+#xvars label {
+  margin-bottom: 5px;
+}
+.accordion-content{
+  margin-left: 12.5px;
+}
+#div-tree\.plot, #div-prune\.plot{
+  margin-left: 30px;
+}
+.accordion-toggle {
+  background: rgb(245, 245, 245);
+  margin-left: -12px;
+  margin-right: -12px;
+  padding-top: 6px;
+  padding-bottom: 6px;
+  padding-left: 10px;
 }
