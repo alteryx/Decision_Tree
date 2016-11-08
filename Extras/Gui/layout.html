@@ -23,22 +23,11 @@
   </div>
   <div class='tabpage has-hint' id='tabpage-advanced'>
     <div id="accordion">
-    <h4 class="accordion-toggle">Sampling Weights and Complexity Parameter</h4>
+    <h4 class="accordion-toggle accordion-open">Model Type and Sampling Weights</h4>
     <div class='accordion-content default'>
-      <div>
-        <div style='float:left;' id='div-set-cp'>{{ `set_cp` }}</div>
-        <div style='float:right;' id='div-cp'>{{ `cp` }}</div>
-      </div>
-      
+      {{ `model_type` }}
       <div id='div-use.weights'>{{ `select.weights` }}</div>
       <!--  splitting_criteria  -->
-      <alteryx-pluginwidget type="CheckBox" text="Select model type" default="false" id="select.type" dataName="select.type"></alteryx-pluginwidget>
-      <div id='select-model-type'>
-      <alteryx-pluginwidget type="RadioGroup" group="model_type" id="model_type" dataName="model_type">
-        <alteryx-option uiobject="Classification" default="true">classification</alteryx-option>
-        <alteryx-option uiobject="Regression">regression</alteryx-option>
-        </div>
-      </alteryx-pluginwidget>
     </div>
     <h4 class="accordion-toggle">Splitting Criteria and Surrogates</h4>
     <div class='accordion-content'>
@@ -53,14 +42,18 @@
       {{ `xval.folds` }}
       {{ `max.depth` }}
       {{ `max.bins` }}
+      <div>
+        <div style='float:left;' id='div-set-cp'>{{ `set_cp` }}</div>
+        <div style='float:right;' id='div-cp'>{{ `cp` }}</div>
+      </div>
     </div>
   </div>
   </div>
   <div class='tabpage has-hint' id='tabpage-graphics'>
     {{ `tree.plot` }}
     <div id='div-tree.plot'>
+      <div id='div-branch-dist'>{{ `Branch Dist` }}</div>
       {{ `tree_summary` }}
-      {{ `Branch Dist` }}
       {{ `tree_plot_size` }}
       <div id='div-treeplot-in'>
         <div id='div-treeplot-in-w'>{{ `tree.in.w` }}</div>
@@ -89,6 +82,8 @@
       </div>
     </div>
 </fieldset>
+  <button class='default-button primary' onclick="switchToHome()" id='switch-to-home'>Back</button>
+</div>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.2.0/intro.min.js'>
 </script>
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.2.0/introjs.min.css' />
@@ -99,10 +94,17 @@ function switchToCustomize(){
   $(".tabpage").hide()
   $('#tabpage-advanced').show()
 }
+function switchToHome(){
+  $('#page-basic').show()
+  $('#page-customize').hide()
+}
+$('#page-customize').hide()
+$('#page-basic').show()
 $(document).ready(function($) {
   $('#accordion').find('.accordion-toggle').click(function(){
-
-      //Expand or collapse this panel
+    $(this).toggleClass('accordion-open')
+    $('.accordion-toggle').not($(this)).removeClass('accordion-open')
+    //Expand or collapse this panel
     $(this).next().slideToggle('fast');
 
     //Hide the other panels
