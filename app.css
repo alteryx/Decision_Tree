@@ -70,6 +70,10 @@ input[type="checkbox"]{
   right: 8px;
   margin-top: 5px;
 }
+#switch-to-home{
+  position: absolute;
+  bottom: 5px;
+}
 .pull-right{
   float: right;
 }
@@ -153,6 +157,8 @@ input[type="checkbox"]{
 }
 .accordion-content{
   margin-left: 12.5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 #div-tree\.plot, #div-prune\.plot{
   margin-left: 30px;
@@ -164,4 +170,15 @@ input[type="checkbox"]{
   padding-top: 6px;
   padding-bottom: 6px;
   padding-left: 10px;
+}
+h4.accordion-toggle{
+  -webkit-margin-before: 0;
+  -webkit-margin-after: 1px;
+}
+#page-basic fieldset{
+  border-top: 0px !important;
+}
+#div-use\.weights{
+  margin-left: 28px;
+  margin-top: -8px;
 }
