@@ -6203,9 +6203,22 @@ No Text Styling</DefaultAnnotationText>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2"/>
     </Node>
+    <Node ToolID="184">
+      <GuiSettings Plugin="AlteryxGuiToolkit.Questions.LabelGroup.LabelGroup">
+        <Position x="0" y="0" width="59" height="59"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration/>
+        <Annotation DisplayMode="0">
+          <Name>model_type</Name>
+          <DefaultAnnotationText/>
+          <Left value="False"/>
+        </Annotation>
+      </Properties>
+    </Node>
     <Node ToolID="178">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="738" y="150" width="667" height="98.00003"/>
+        <Position x="738" y="149.9999" width="667" height="98.00011"/>
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -6223,7 +6236,7 @@ No Text Styling</DefaultAnnotationText>
       <ChildNodes>
         <Node ToolID="160">
           <GuiSettings Plugin="AlteryxGuiToolkit.Questions.CheckBoxGroup.CheckBoxGroup">
-            <Position x="748" y="179" width="59" height="59"/>
+            <Position x="748" y="178.9999" width="59" height="59"/>
           </GuiSettings>
           <Properties>
             <Configuration/>
@@ -6355,7 +6368,7 @@ No Text Styling</DefaultAnnotationText>
     </Node>
     <Node ToolID="176">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="56" y="145" width="677" height="266"/>
+        <Position x="56.00002" y="144.9998" width="677" height="314.0002"/>
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -6373,7 +6386,7 @@ No Text Styling</DefaultAnnotationText>
       <ChildNodes>
         <Node ToolID="174">
           <GuiSettings Plugin="AlteryxGuiToolkit.Questions.NumericUpDown.NumericUpDown">
-            <Position x="86.00002" y="273.0001" width="59" height="59"/>
+            <Position x="85.99993" y="273" width="59" height="59"/>
           </GuiSettings>
           <Properties>
             <Configuration/>
@@ -6386,7 +6399,7 @@ No Text Styling</DefaultAnnotationText>
         </Node>
         <Node ToolID="175">
           <GuiSettings Plugin="AlteryxGuiToolkit.Questions.CheckBoxGroup.CheckBoxGroup">
-            <Position x="86.00002" y="213" width="59" height="59"/>
+            <Position x="86.00006" y="213" width="59" height="59"/>
           </GuiSettings>
           <Properties>
             <Configuration/>
@@ -6399,7 +6412,7 @@ No Text Styling</DefaultAnnotationText>
         </Node>
         <Node ToolID="116">
           <GuiSettings Plugin="AlteryxGuiToolkit.Questions.RadioButtonGroup.RadioButtonGroup">
-            <Position x="158" y="213" width="59" height="59"/>
+            <Position x="157.9999" y="213.0001" width="59" height="59"/>
           </GuiSettings>
           <Properties>
             <Configuration/>
@@ -6412,7 +6425,7 @@ No Text Styling</DefaultAnnotationText>
         </Node>
         <Node ToolID="117">
           <GuiSettings Plugin="AlteryxGuiToolkit.Questions.RadioButtonGroup.RadioButtonGroup">
-            <Position x="158" y="273" width="59" height="59"/>
+            <Position x="158" y="272.9999" width="59" height="59"/>
           </GuiSettings>
           <Properties>
             <Configuration/>
@@ -6425,7 +6438,7 @@ No Text Styling</DefaultAnnotationText>
         </Node>
         <Node ToolID="119">
           <GuiSettings Plugin="AlteryxGuiToolkit.Questions.RadioButtonGroup.RadioButtonGroup">
-            <Position x="230" y="213.0001" width="59" height="59"/>
+            <Position x="230" y="213.0002" width="59" height="59"/>
           </GuiSettings>
           <Properties>
             <Configuration/>
@@ -6438,25 +6451,12 @@ No Text Styling</DefaultAnnotationText>
         </Node>
         <Node ToolID="120">
           <GuiSettings Plugin="AlteryxGuiToolkit.Questions.RadioButtonGroup.RadioButtonGroup">
-            <Position x="230" y="273" width="59" height="59"/>
+            <Position x="230" y="272.9999" width="59" height="59"/>
           </GuiSettings>
           <Properties>
             <Configuration/>
             <Annotation DisplayMode="0">
               <Name>regression</Name>
-              <DefaultAnnotationText/>
-              <Left value="False"/>
-            </Annotation>
-          </Properties>
-        </Node>
-        <Node ToolID="121">
-          <GuiSettings Plugin="AlteryxGuiToolkit.Questions.CheckBoxGroup.CheckBoxGroup">
-            <Position x="234" y="342" width="59" height="59"/>
-          </GuiSettings>
-          <Properties>
-            <Configuration/>
-            <Annotation DisplayMode="0">
-              <Name>select.type</Name>
               <DefaultAnnotationText/>
               <Left value="False"/>
             </Annotation>
@@ -6661,7 +6661,7 @@ Split Criteria</Text>
         </Node>
         <Node ToolID="181">
           <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
-            <Position x="66" y="174" width="100" height="36"/>
+            <Position x="66.00002" y="173.9998" width="100" height="36"/>
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -6719,6 +6719,32 @@ Type
             </Configuration>
             <Annotation DisplayMode="0">
               <Name/>
+              <DefaultAnnotationText/>
+              <Left value="False"/>
+            </Annotation>
+          </Properties>
+        </Node>
+        <Node ToolID="185">
+          <GuiSettings Plugin="AlteryxGuiToolkit.Questions.RadioButtonGroup.RadioButtonGroup">
+            <Position x="234" y="330" width="59" height="59"/>
+          </GuiSettings>
+          <Properties>
+            <Configuration/>
+            <Annotation DisplayMode="0">
+              <Name>auto</Name>
+              <DefaultAnnotationText/>
+              <Left value="False"/>
+            </Annotation>
+          </Properties>
+        </Node>
+        <Node ToolID="121">
+          <GuiSettings Plugin="AlteryxGuiToolkit.Questions.CheckBoxGroup.CheckBoxGroup">
+            <Position x="234" y="390" width="59" height="59"/>
+          </GuiSettings>
+          <Properties>
+            <Configuration/>
+            <Annotation DisplayMode="0">
+              <Name>select.type</Name>
               <DefaultAnnotationText/>
               <Left value="False"/>
             </Annotation>
@@ -6824,7 +6850,7 @@ Union</Text>
     </Node>
     <Node ToolID="168">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="54" y="414" width="708.0002" height="201"/>
+        <Position x="54" y="462" width="708.0002" height="201.0001"/>
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -6842,7 +6868,7 @@ Union</Text>
       <ChildNodes>
         <Node ToolID="106">
           <GuiSettings Plugin="AlteryxGuiToolkit.Questions.TextBox.TextBox">
-            <Position x="64.0005" y="443" width="59" height="59"/>
+            <Position x="64.00043" y="491" width="59" height="59"/>
           </GuiSettings>
           <Properties>
             <Configuration/>
@@ -6855,7 +6881,7 @@ Union</Text>
         </Node>
         <Node ToolID="109">
           <GuiSettings Plugin="AlteryxGuiToolkit.Questions.DropDownListBox.DropDown">
-            <Position x="152.5005" y="443" width="59" height="59"/>
+            <Position x="152.5005" y="491.0002" width="59" height="59"/>
           </GuiSettings>
           <Properties>
             <Configuration/>
@@ -6868,7 +6894,7 @@ Union</Text>
         </Node>
         <Node ToolID="110">
           <GuiSettings Plugin="AlteryxGuiToolkit.Questions.DropDownListBox.ListBox">
-            <Position x="474" y="449.9999" width="59" height="59"/>
+            <Position x="474" y="498.0001" width="59" height="59"/>
           </GuiSettings>
           <Properties>
             <Configuration/>
@@ -6881,7 +6907,7 @@ Union</Text>
         </Node>
         <Node ToolID="111">
           <GuiSettings Plugin="AlteryxGuiToolkit.Questions.DropDownListBox.DropDown">
-            <Position x="690" y="449.9999" width="59" height="59"/>
+            <Position x="690" y="498.0001" width="59" height="59"/>
           </GuiSettings>
           <Properties>
             <Configuration/>
@@ -6894,7 +6920,7 @@ Union</Text>
         </Node>
         <Node ToolID="112">
           <GuiSettings Plugin="AlteryxGuiToolkit.Questions.CheckBoxGroup.CheckBoxGroup">
-            <Position x="618" y="449.9999" width="59" height="59"/>
+            <Position x="618" y="498.0001" width="59" height="59"/>
           </GuiSettings>
           <Properties>
             <Configuration/>
@@ -6907,7 +6933,7 @@ Union</Text>
         </Node>
         <Node ToolID="167">
           <GuiSettings Plugin="AlteryxGuiToolkit.Error.Error">
-            <Position x="546" y="545.9999" width="59" height="59"/>
+            <Position x="546" y="594.0001" width="59" height="59"/>
           </GuiSettings>
           <Properties>
             <Configuration/>
@@ -6920,7 +6946,7 @@ Union</Text>
         </Node>
         <Node ToolID="97">
           <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
-            <Position x="150" y="545.9999" width="59" height="59"/>
+            <Position x="150" y="594.0001" width="59" height="59"/>
           </GuiSettings>
           <Properties>
             <Configuration/>
@@ -6933,7 +6959,7 @@ Union</Text>
         </Node>
         <Node ToolID="98">
           <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
-            <Position x="390" y="545.9999" width="59" height="59"/>
+            <Position x="390" y="594.0001" width="59" height="59"/>
           </GuiSettings>
           <Properties>
             <Configuration/>
@@ -6946,7 +6972,7 @@ Union</Text>
         </Node>
         <Node ToolID="99">
           <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
-            <Position x="234" y="545.9999" width="59" height="59"/>
+            <Position x="234" y="594.0001" width="59" height="59"/>
           </GuiSettings>
           <Properties>
             <Configuration/>
@@ -6959,7 +6985,7 @@ Union</Text>
         </Node>
         <Node ToolID="96">
           <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
-            <Position x="618" y="545.9999" width="59" height="59"/>
+            <Position x="618" y="594.0001" width="59" height="59"/>
           </GuiSettings>
           <Properties>
             <Configuration/>
@@ -6972,7 +6998,7 @@ Union</Text>
         </Node>
         <Node ToolID="100">
           <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
-            <Position x="64" y="544.0001" width="59" height="59"/>
+            <Position x="64" y="592.0005" width="59" height="59"/>
           </GuiSettings>
           <Properties>
             <Configuration/>
@@ -6985,7 +7011,7 @@ Union</Text>
         </Node>
         <Node ToolID="101">
           <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
-            <Position x="474" y="545.9999" width="59" height="59"/>
+            <Position x="474" y="594.0001" width="59" height="59"/>
           </GuiSettings>
           <Properties>
             <Configuration/>
@@ -6998,7 +7024,7 @@ Union</Text>
         </Node>
         <Node ToolID="102">
           <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
-            <Position x="306" y="545.9999" width="59" height="59"/>
+            <Position x="306" y="594.0001" width="59" height="59"/>
           </GuiSettings>
           <Properties>
             <Configuration/>
@@ -7011,7 +7037,7 @@ Union</Text>
         </Node>
         <Node ToolID="103">
           <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
-            <Position x="693.0002" y="543.9999" width="59" height="59"/>
+            <Position x="693.0002" y="592.0001" width="59" height="59"/>
           </GuiSettings>
           <Properties>
             <Configuration/>
@@ -7026,7 +7052,7 @@ Union</Text>
     </Node>
     <Node ToolID="177">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="738" y="246" width="667" height="98.00006"/>
+        <Position x="738" y="245.9999" width="667" height="98.00021"/>
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -7044,7 +7070,7 @@ Union</Text>
       <ChildNodes>
         <Node ToolID="141">
           <GuiSettings Plugin="AlteryxGuiToolkit.Questions.NumericUpDown.NumericUpDown">
-            <Position x="820" y="275" width="59" height="59"/>
+            <Position x="820" y="274.9999" width="59" height="59"/>
           </GuiSettings>
           <Properties>
             <Configuration/>
@@ -7833,6 +7859,12 @@ Union</Text>
         <Value/>
         <IsNumeric value="False"/>
       </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>auto</Name>
+        <Value/>
+        <IsNumeric value="False"/>
+      </Constant>
     </Constants>
     <MetaInfo>
       <NameIsFileName value="False"/>
@@ -8106,7 +8138,25 @@ If the target variable is a continuous variable, a regression tree is constructe
               <Description>Model type</Description>
               <Name>select.type</Name>
               <ToolId value="121"/>
+              <Questions/>
+              <Default value="False"/>
+              <Collapsable value="True"/>
+            </Question>
+            <Question>
+              <Type>LabelGroup</Type>
+              <Description>Model Type</Description>
+              <Name>model_type</Name>
+              <ToolId value="184"/>
               <Questions>
+                <Question>
+                  <Type>RadioGroup</Type>
+                  <Description>Auto</Description>
+                  <Name>auto</Name>
+                  <ToolId value="185"/>
+                  <Questions/>
+                  <Default value="False"/>
+                  <Collapsable value="False"/>
+                </Question>
                 <Question>
                   <Type>RadioGroup</Type>
                   <Description>Classification</Description>
@@ -8153,8 +8203,6 @@ If the target variable is a continuous variable, a regression tree is constructe
                   <Collapsable value="False"/>
                 </Question>
               </Questions>
-              <Default value="False"/>
-              <Collapsable value="True"/>
             </Question>
             <Question>
               <Type>NumericUpDown</Type>
@@ -8180,13 +8228,13 @@ If the target variable is a continuous variable, a regression tree is constructe
             </Question>
             <Question>
               <Type>LabelGroup</Type>
-              <Description>Surrogate use:</Description>
+              <Description>Use surrogates to</Description>
               <Name>surrogate_use</Name>
               <ToolId value="127"/>
               <Questions>
                 <Question>
                   <Type>RadioGroup</Type>
-                  <Description>Omit an observation with a missing value for the primary split rule</Description>
+                  <Description>Omit observations with missing value for primary split rule.</Description>
                   <Name>usesurrogate.0</Name>
                   <ToolId value="124"/>
                   <Questions/>
@@ -8195,7 +8243,7 @@ If the target variable is a continuous variable, a regression tree is constructe
                 </Question>
                 <Question>
                   <Type>RadioGroup</Type>
-                  <Description>Use surrogates in order to split records missing the candidate variable</Description>
+                  <Description>Split records missing the candidate variable.</Description>
                   <Name>usesurrogate.1</Name>
                   <ToolId value="125"/>
                   <Questions/>
@@ -8204,7 +8252,7 @@ If the target variable is a continuous variable, a regression tree is constructe
                 </Question>
                 <Question>
                   <Type>RadioGroup</Type>
-                  <Description>If all surrogates are missing, then send the observation in the majority direction</Description>
+                  <Description>Send observation in majority direction if all surrogates are missing.</Description>
                   <Name>usesurrogate.2</Name>
                   <ToolId value="126"/>
                   <Questions/>
@@ -8215,13 +8263,13 @@ If the target variable is a continuous variable, a regression tree is constructe
             </Question>
             <Question>
               <Type>LabelGroup</Type>
-              <Description>Criteria for selecting the best surrogate split:</Description>
+              <Description>Select best surrogate split using</Description>
               <Name>surrogate_split_criteria</Name>
               <ToolId value="130"/>
               <Questions>
                 <Question>
                   <Type>RadioGroup</Type>
-                  <Description>The total number of correct classifications for a potential candidate variable</Description>
+                  <Description>Number of correct classifications for a candidate variable.</Description>
                   <Name>total.correct</Name>
                   <ToolId value="128"/>
                   <Questions/>
@@ -8230,7 +8278,7 @@ If the target variable is a continuous variable, a regression tree is constructe
                 </Question>
                 <Question>
                   <Type>RadioGroup</Type>
-                  <Description>The percentage correct calculated over the non-missing values of a candidate variable</Description>
+                  <Description>Percentage of correct classifications for a candidate variable.</Description>
                   <Name>percent.correct</Name>
                   <ToolId value="129"/>
                   <Questions/>
