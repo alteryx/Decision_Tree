@@ -54,16 +54,13 @@ Decision_Tree
     <h4 class="accordion-toggle accordion-open">Model Type and Sampling Weights</h4>
     <div class='accordion-content default'>
       
-<div class="clearfix togglebar" id="id-model_type">
-  <div class="label" style="float:left;">Model Type</div>
-  <div style="float:right;">
-    <div class="toggletabs">
-      <div class="toggletab is-tab-selected" data-page="auto" id="id-auto">Auto</div>
-      <div class="toggletab" data-page="classification" id="id-classification">Classification</div>
-      <div class="toggletab" data-page="regression" id="id-regression">Regression</div>
-    </div>
-  </div>
-</div>
+<!--  model_type  -->
+<label for="model_type">Model Type</label>
+<alteryx-pluginwidget type="ToggleBar" group="model_type" id="model_type" dataName="model_type">
+  <alteryx-option uiobject="Auto" default="true">auto</alteryx-option>
+  <alteryx-option uiobject="Classification">classification</alteryx-option>
+  <alteryx-option uiobject="Regression">regression</alteryx-option>
+</alteryx-pluginwidget>
 
       
 <!--  use.weights  -->
@@ -71,6 +68,7 @@ Decision_Tree
 
       <div id='div-use.weights'>
 <!--  select.weights  -->
+<label for="select.weights"></label>
 <alteryx-pluginwidget type="DropDown" dataType="FieldSelector" inputNumber="0" connectionNumber="0" fieldType="All" clearable="true" id="select.weights" dataName="select.weights"></alteryx-pluginwidget>
 </div>
       <!--  splitting_criteria  -->
@@ -137,6 +135,7 @@ Decision_Tree
 </div>
         <div style='float:right;' id='div-cp'>
 <!--  cp  -->
+<label for="cp"></label>
 <alteryx-pluginwidget type="NumericSpinner" default="0" min="0" max="1" step="0.1" id="cp" dataName="cp"></alteryx-pluginwidget>
 </div>
       </div>
@@ -154,26 +153,20 @@ Decision_Tree
 <alteryx-pluginwidget type="CheckBox" text="Uniform branch distances" default="true" showAsToggle="true" id="Branch Dist" dataName="Branch Dist"></alteryx-pluginwidget>
 </div>
       
-<div class="clearfix togglebar" id="id-tree_summary">
-  <div class="label" style="float:left;">Leaf summary</div>
-  <div style="float:right;">
-    <div class="toggletabs">
-      <div class="toggletab is-tab-selected" data-page="Counts" id="id-Counts">Counts</div>
-      <div class="toggletab" data-page="Proportions" id="id-Proportions">Proportions</div>
-    </div>
-  </div>
-</div>
+<!--  tree_summary  -->
+<label for="tree_summary">Leaf summary</label>
+<alteryx-pluginwidget type="ToggleBar" group="tree_summary" id="tree_summary" dataName="tree_summary">
+  <alteryx-option uiobject="Counts" default="true">Counts</alteryx-option>
+  <alteryx-option uiobject="Proportions">Proportions</alteryx-option>
+</alteryx-pluginwidget>
 
       
-<div class="clearfix togglebar" id="id-tree_plot_size">
-  <div class="label" style="float:left;">Plot size</div>
-  <div style="float:right;">
-    <div class="toggletabs">
-      <div class="toggletab is-tab-selected" data-page="tree.inches" id="id-tree.inches">Inches</div>
-      <div class="toggletab" data-page="tree.centimeters" id="id-tree.centimeters">Centimeters</div>
-    </div>
-  </div>
-</div>
+<!--  tree_plot_size  -->
+<label for="tree_plot_size">Plot size</label>
+<alteryx-pluginwidget type="ToggleBar" group="tree_plot_size" id="tree_plot_size" dataName="tree_plot_size">
+  <alteryx-option uiobject="Inches" default="true">tree.inches</alteryx-option>
+  <alteryx-option uiobject="Centimeters">tree.centimeters</alteryx-option>
+</alteryx-pluginwidget>
 
       <div id='div-treeplot-in'>
         <div id='div-treeplot-in-w'>
@@ -220,15 +213,12 @@ Decision_Tree
 
       <div id='div-prune.plot'>
         
-<div class="clearfix togglebar" id="id-pruning_plot_size">
-  <div class="label" style="float:left;">Plot size</div>
-  <div style="float:right;">
-    <div class="toggletabs">
-      <div class="toggletab is-tab-selected" data-page="prune.inches" id="id-prune.inches">Inches</div>
-      <div class="toggletab" data-page="prune.centimeters" id="id-prune.centimeters">Centimeters</div>
-    </div>
-  </div>
-</div>
+<!--  pruning_plot_size  -->
+<label for="pruning_plot_size">Plot size</label>
+<alteryx-pluginwidget type="ToggleBar" group="pruning_plot_size" id="pruning_plot_size" dataName="pruning_plot_size">
+  <alteryx-option uiobject="Inches" default="true">prune.inches</alteryx-option>
+  <alteryx-option uiobject="Centimeters">prune.centimeters</alteryx-option>
+</alteryx-pluginwidget>
 
         <div id='div-pruneplot-in'>
         
