@@ -1,11 +1,12 @@
 # Override Configuration Properties
 "Y Var":
-  fieldType: Numeric
+  fieldType: All
 "X Vars":
   type: MultiSelectListBox
   dataType: MultiStringSelector
 select.weights:
   clearable: "true"
+  fieldType: Numeric
 model_type:
   type: ToggleBar
 tree_summary:
