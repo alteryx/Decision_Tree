@@ -15,5 +15,3 @@ pruning_plot_size:
   type: ToggleBar
 tree_plot_size:
   type: ToggleBar
-"Branch Dist":
-  showAsToggle: "true"
