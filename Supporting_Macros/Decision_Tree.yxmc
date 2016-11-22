@@ -8035,7 +8035,7 @@ If the target variable is a continuous variable, a regression tree is constructe
               <Name>cp</Name>
               <ToolId value="174"/>
               <Minimum value="0"/>
-              <Maximum value="1"/>
+              <Maximum value="0.9999999999"/>
               <Increment value="0.1"/>
               <Default value="0"/>
               <Decimals value="1"/>
