@@ -70,7 +70,6 @@
           <Value name="prune.cm.w">13</Value>
           <Value name="prune.in.h">5.5</Value>
           <Value name="prune.in.w">5.5</Value>
-          <Value name="pruning_plot_size">prune.inches</Value>
           <Value name="prune.plot">False</Value>
           <Value name="tree.pointsize">8</Value>
           <Value name="tree.graph.resolution">1x</Value>
@@ -78,10 +77,10 @@
           <Value name="tree.cm.w">13</Value>
           <Value name="tree.in.h">5.5</Value>
           <Value name="tree.in.w">5.5</Value>
-          <Value name="tree_plot_size">tree.inches</Value>
           <Value name="Branch Dist">False</Value>
-          <Value name="tree_summary">Proportions</Value>
           <Value name="tree.plot">True</Value>
+          <Value name="cp">0</Value>
+          <Value name="set_cp">False</Value>
           <Value name="max.bins">
           </Value>
           <Value name="max.depth">20</Value>
@@ -91,22 +90,24 @@
           <Value name="surrogate_split_criteria">total.correct</Value>
           <Value name="surrogate_use">usesurrogate.0</Value>
           <Value name="splitting_criteria">use.gini</Value>
-          <Value name="model_type">classification</Value>
-          <Value name="select.type">False</Value>
           <Value name="select.weights" />
-          <Value name="cp">0</Value>
-          <Value name="set_cp">False</Value>
+          <Value name="use.weights">False</Value>
           <Value name="X Vars">Chk_Bal,Duration,Credit_Hist</Value>
           <Value name="Y Var">Default</Value>
           <Value name="Model Name">New_DT</Value>
-          <Value name="regression">False</Value>
-          <Value name="classification">True</Value>
           <Value name="tree.centimeters">False</Value>
           <Value name="tree.inches">True</Value>
+          <Value name="tree_plot_size">tree.inches</Value>
           <Value name="prune.centimeters">False</Value>
           <Value name="prune.inches">True</Value>
+          <Value name="pruning_plot_size">prune.inches</Value>
           <Value name="Proportions">True</Value>
           <Value name="Counts">False</Value>
+          <Value name="tree_summary">Proportions</Value>
+          <Value name="regression">False</Value>
+          <Value name="classification">True</Value>
+          <Value name="auto">False</Value>
+          <Value name="model_type">classification</Value>
           <Value name="percent.correct">False</Value>
           <Value name="total.correct">True</Value>
           <Value name="usesurrogate.2">False</Value>
@@ -114,6 +115,9 @@
           <Value name="usesurrogate.0">True</Value>
           <Value name="use.information">False</Value>
           <Value name="use.gini">True</Value>
+          <Value name="curToggle">toggle-main</Value>
+          <Value name="curTab">advanced</Value>
+          <Value name="curPage">Home</Value>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
@@ -129,8 +133,8 @@
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFileDataProfiling>C:\Users\DBLANC~1\AppData\Local\Temp\Engine_14224_0fac7de6d215435b9d952976093f473c_\Engine_12916_cd4b0ffce89c46b3b097a4b5d7a69bb7_.yxdb</TempFileDataProfiling>
-          <TempFile>C:\Users\DBLANC~1\AppData\Local\Temp\Engine_14224_0fac7de6d215435b9d952976093f473c_\Engine_12916_544a6d9a64594821a7824066af6d1caa_.yxdb</TempFile>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_4604_8cebd32cf1514438824e4d4c9eaa1710_\Engine_1200_72b77a777256407e99d425d567a8e516_.yxdb</TempFile>
+          <TempFileDataProfiling>C:\ProgramData\Alteryx\Engine\Engine_4604_8cebd32cf1514438824e4d4c9eaa1710_\Engine_1200_ba3f5c6b612a47dd83a8db0d5d8368f9_.yxdb</TempFileDataProfiling>
           <Layout>
             <View1>
               <Hints>
@@ -153,8 +157,8 @@
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\Users\DBLANC~1\AppData\Local\Temp\Engine_14224_0fac7de6d215435b9d952976093f473c_\Engine_12916_09856932b2e5461c94e51eca9a8a685b_.yxdb</TempFile>
-          <TempFileDataProfiling>C:\Users\DBLANC~1\AppData\Local\Temp\Engine_14224_0fac7de6d215435b9d952976093f473c_\Engine_12916_c7ffcdf08c584522ae6578b06f72237b_.yxdb</TempFileDataProfiling>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_4604_8cebd32cf1514438824e4d4c9eaa1710_\Engine_1200_074fd3468868489ebe40f19b38e2b12e_.yxdb</TempFile>
+          <TempFileDataProfiling>C:\ProgramData\Alteryx\Engine\Engine_4604_8cebd32cf1514438824e4d4c9eaa1710_\Engine_1200_b96be389d960469096e59d8de43b1f9c_.yxdb</TempFileDataProfiling>
           <Layout>
             <ViewMode>Single</ViewMode>
             <ViewSize value="100" />
@@ -181,8 +185,8 @@
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFileDataProfiling>C:\Users\DBLANC~1\AppData\Local\Temp\Engine_14224_0fac7de6d215435b9d952976093f473c_\Engine_12916_338e02e202774432b6f4a69bcbe8c5c6_.yxdb</TempFileDataProfiling>
-          <TempFile>C:\Users\DBLANC~1\AppData\Local\Temp\Engine_14224_0fac7de6d215435b9d952976093f473c_\Engine_12916_4f56ffec965f4f1d932275ccccdbd05b_.yxdb</TempFile>
+          <TempFileDataProfiling>C:\ProgramData\Alteryx\Engine\Engine_4604_8cebd32cf1514438824e4d4c9eaa1710_\Engine_1200_b8f80bbe70344d95b19445ee63654903_.yxdb</TempFileDataProfiling>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_4604_8cebd32cf1514438824e4d4c9eaa1710_\Engine_1200_7ef84adc3df4484985e48835cc58d4cd_.yxdb</TempFile>
           <Layout>
             <ViewMode>Single</ViewMode>
             <ViewSize value="100" />
@@ -209,8 +213,8 @@
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFileDataProfiling>C:\Users\DBLANC~1\AppData\Local\Temp\Engine_14224_0fac7de6d215435b9d952976093f473c_\Engine_12916_848b31c13508423587a7a1ba39e012ee_.yxdb</TempFileDataProfiling>
-          <TempFile>C:\Users\DBLANC~1\AppData\Local\Temp\Engine_14224_0fac7de6d215435b9d952976093f473c_\Engine_12916_abddce67ec6f4d29ad6d27a29287bec2_.yxdb</TempFile>
+          <TempFileDataProfiling>C:\ProgramData\Alteryx\Engine\Engine_4604_8cebd32cf1514438824e4d4c9eaa1710_\Engine_1200_d5fa3ff6e8ec4e0393db38c1dcf0f3c7_.yxdb</TempFileDataProfiling>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_4604_8cebd32cf1514438824e4d4c9eaa1710_\Engine_1200_ab160ae85fb9452aa166e2d53b673ad6_.yxdb</TempFile>
           <Layout>
             <View1>
               <Hints>
@@ -233,8 +237,8 @@
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFileDataProfiling>C:\Users\DBLANC~1\AppData\Local\Temp\Engine_14224_0fac7de6d215435b9d952976093f473c_\Engine_12916_8d9b42e2438d4e1ea33059b4c7214f6c_.yxdb</TempFileDataProfiling>
-          <TempFile>C:\Users\DBLANC~1\AppData\Local\Temp\Engine_14224_0fac7de6d215435b9d952976093f473c_\Engine_12916_adf09f05b5e847f88eb2b67616077cb0_.yxdb</TempFile>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_4604_8cebd32cf1514438824e4d4c9eaa1710_\Engine_1200_3f89482cf4ed4b0ebda4ce3a2d47f099_.yxdb</TempFile>
+          <TempFileDataProfiling>C:\ProgramData\Alteryx\Engine\Engine_4604_8cebd32cf1514438824e4d4c9eaa1710_\Engine_1200_65084c18ab2743848fe8cee7738dd3b6_.yxdb</TempFileDataProfiling>
           <Layout>
             <ViewMode>Single</ViewMode>
             <ViewSize value="100" />
@@ -261,8 +265,8 @@
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\Users\DBLANC~1\AppData\Local\Temp\Engine_14224_0fac7de6d215435b9d952976093f473c_\Engine_12916_cb815d7e343d41d793a24dee150ba0b0_.yxdb</TempFile>
-          <TempFileDataProfiling>C:\Users\DBLANC~1\AppData\Local\Temp\Engine_14224_0fac7de6d215435b9d952976093f473c_\Engine_12916_abc3eaddafc14ed89c89e5e97e5405d0_.yxdb</TempFileDataProfiling>
+          <TempFileDataProfiling>C:\ProgramData\Alteryx\Engine\Engine_4604_8cebd32cf1514438824e4d4c9eaa1710_\Engine_1200_49088733a23949368b2754d78b30709d_.yxdb</TempFileDataProfiling>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_4604_8cebd32cf1514438824e4d4c9eaa1710_\Engine_1200_f47c760e17214d7a824a0e4003188d48_.yxdb</TempFile>
           <Layout>
             <ViewMode>Single</ViewMode>
             <ViewSize value="100" />

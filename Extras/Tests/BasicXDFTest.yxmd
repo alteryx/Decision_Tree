@@ -129,7 +129,8 @@
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\Users\DBLANC~1\AppData\Local\Temp\Engine_3900_ac60ea6e73e3480488e4460b115d17ea_\Engine_5968_a273a9753806404fb57514af05b9fb44_.yxdb</TempFile>
+          <TempFileDataProfiling>C:\ProgramData\Alteryx\Engine\Engine_5464_9f20c5da3f09424ca54204e5cf2775c4_\Engine_2336_666c083dc5af4bfda22b98e98764ade2_.yxdb</TempFileDataProfiling>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_5464_9f20c5da3f09424ca54204e5cf2775c4_\Engine_2336_e04758a639df4e57a1382e6a136366a1_.yxdb</TempFile>
           <Layout>
             <View1>
               <Hints>
@@ -152,7 +153,8 @@
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\Users\DBLANC~1\AppData\Local\Temp\Engine_3900_ac60ea6e73e3480488e4460b115d17ea_\Engine_5968_21d9ecac610b432cb4f1fcc5023ae891_.yxdb</TempFile>
+          <TempFileDataProfiling>C:\ProgramData\Alteryx\Engine\Engine_5464_9f20c5da3f09424ca54204e5cf2775c4_\Engine_2336_e57a613bebfb4272867ddcb1933a09d5_.yxdb</TempFileDataProfiling>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_5464_9f20c5da3f09424ca54204e5cf2775c4_\Engine_2336_29ea3ca519424648bf7851b408ba4f51_.yxdb</TempFile>
           <Layout>
             <ViewMode>Single</ViewMode>
             <ViewSize value="100" />
@@ -179,7 +181,8 @@
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\Users\DBLANC~1\AppData\Local\Temp\Engine_3900_ac60ea6e73e3480488e4460b115d17ea_\Engine_5968_cb424bfc7ae24c6ca18711ecd504fd4f_.yxdb</TempFile>
+          <TempFileDataProfiling>C:\ProgramData\Alteryx\Engine\Engine_5464_9f20c5da3f09424ca54204e5cf2775c4_\Engine_2336_4f89d160fff240dcb626147d5126a509_.yxdb</TempFileDataProfiling>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_5464_9f20c5da3f09424ca54204e5cf2775c4_\Engine_2336_75cc0343c70a40bc84200f70c270411c_.yxdb</TempFile>
           <Layout>
             <ViewMode>Single</ViewMode>
             <ViewSize value="100" />
@@ -206,8 +209,8 @@
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFileDataProfiling>C:\ProgramData\Alteryx\Engine\Engine_2116_5791c7d00e6045dfb2be6d9fb574269b_\Engine_4920_e992845af30946fd86b4e16dba511fae_.yxdb</TempFileDataProfiling>
-          <TempFile>C:\Users\DBLANC~1\AppData\Local\Temp\Engine_3900_ac60ea6e73e3480488e4460b115d17ea_\Engine_5968_5888d79517514b21a5dee5aff9c9ca77_.yxdb</TempFile>
+          <TempFileDataProfiling>C:\ProgramData\Alteryx\Engine\Engine_5464_9f20c5da3f09424ca54204e5cf2775c4_\Engine_2336_5f9022e6837549868f74b1f2c1c6e5ef_.yxdb</TempFileDataProfiling>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_5464_9f20c5da3f09424ca54204e5cf2775c4_\Engine_2336_23261fb8a09142a08429073bee89ae59_.yxdb</TempFile>
           <Layout>
             <View1>
               <Hints>
@@ -230,8 +233,8 @@
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFileDataProfiling>C:\ProgramData\Alteryx\Engine\Engine_2116_5791c7d00e6045dfb2be6d9fb574269b_\Engine_4920_0883ff407b694ced8f833167f735318f_.yxdb</TempFileDataProfiling>
-          <TempFile>C:\Users\DBLANC~1\AppData\Local\Temp\Engine_3900_ac60ea6e73e3480488e4460b115d17ea_\Engine_5968_8ff3bcaf3ea04bf1a3ab41051190a5a2_.yxdb</TempFile>
+          <TempFileDataProfiling>C:\ProgramData\Alteryx\Engine\Engine_5464_9f20c5da3f09424ca54204e5cf2775c4_\Engine_2336_819b025e52c045f4ae11dc8c7e0b0157_.yxdb</TempFileDataProfiling>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_5464_9f20c5da3f09424ca54204e5cf2775c4_\Engine_2336_e70908dafe8f483aae828084f22147ec_.yxdb</TempFile>
           <Layout>
             <ViewMode>Single</ViewMode>
             <ViewSize value="100" />
@@ -258,8 +261,8 @@
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFileDataProfiling>C:\ProgramData\Alteryx\Engine\Engine_2116_5791c7d00e6045dfb2be6d9fb574269b_\Engine_4920_14c8843c504c4634b7754287f22ec64c_.yxdb</TempFileDataProfiling>
-          <TempFile>C:\Users\DBLANC~1\AppData\Local\Temp\Engine_3900_ac60ea6e73e3480488e4460b115d17ea_\Engine_5968_b92b54ea267044c68e22ff097d796098_.yxdb</TempFile>
+          <TempFileDataProfiling>C:\ProgramData\Alteryx\Engine\Engine_5464_9f20c5da3f09424ca54204e5cf2775c4_\Engine_2336_5c323ee68935425baf807c871511918f_.yxdb</TempFileDataProfiling>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_5464_9f20c5da3f09424ca54204e5cf2775c4_\Engine_2336_2ed87623ae9949eabe01c637bf29b33f_.yxdb</TempFile>
           <Layout>
             <ViewMode>Single</ViewMode>
             <ViewSize value="100" />
@@ -360,9 +363,9 @@
         </Annotation>
       </Properties>
     </Node>
-    <Node ToolID="24">
+    <Node ToolID="25">
       <GuiSettings>
-        <Position x="90" y="246" />
+        <Position x="54" y="222" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -381,32 +384,32 @@
         </Dependencies>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="Chk_Bal" size="1073741823" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;C:/Users/dblanchard/Documents/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="V_WString" />
-            <Field name="Duration" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;C:/Users/dblanchard/Documents/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="Int32" />
-            <Field name="Credit_Hist" size="1073741823" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;C:/Users/dblanchard/Documents/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="V_WString" />
-            <Field name="Purpose" size="1073741823" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;C:/Users/dblanchard/Documents/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="V_WString" />
-            <Field name="Amount" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;C:/Users/dblanchard/Documents/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="Int32" />
-            <Field name="Savings_Bonds" size="1073741823" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;C:/Users/dblanchard/Documents/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="V_WString" />
-            <Field name="Employ_Length" size="1073741823" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;C:/Users/dblanchard/Documents/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="V_WString" />
-            <Field name="Debt_Inco" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;C:/Users/dblanchard/Documents/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="Int32" />
-            <Field name="Gender_Marital" size="1073741823" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;C:/Users/dblanchard/Documents/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="V_WString" />
-            <Field name="Debtor_Guarantor" size="1073741823" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;C:/Users/dblanchard/Documents/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="V_WString" />
-            <Field name="Length_Res" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;C:/Users/dblanchard/Documents/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="Int32" />
-            <Field name="Property" size="1073741823" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;C:/Users/dblanchard/Documents/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="V_WString" />
-            <Field name="Age" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;C:/Users/dblanchard/Documents/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="Int32" />
-            <Field name="Otr_Install" size="1073741823" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;C:/Users/dblanchard/Documents/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="V_WString" />
-            <Field name="Tenure" size="1073741823" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;C:/Users/dblanchard/Documents/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="V_WString" />
-            <Field name="Num_Loans" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;C:/Users/dblanchard/Documents/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="Int32" />
-            <Field name="Job_Type" size="1073741823" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;C:/Users/dblanchard/Documents/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="V_WString" />
-            <Field name="Dependents" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;C:/Users/dblanchard/Documents/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="Int32" />
-            <Field name="Telephone" size="1073741823" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;C:/Users/dblanchard/Documents/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="V_WString" />
-            <Field name="Foreign_Worker" size="1073741823" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;C:/Users/dblanchard/Documents/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="V_WString" />
-            <Field name="Default" size="1073741823" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;C:/Users/dblanchard/Documents/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="V_WString" />
-            <Field name="Sample" size="1073741823" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;C:/Users/dblanchard/Documents/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="V_WString" />
+            <Field name="Chk_Bal" size="1073741823" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;//vmware-host/Shared Folders/SNIPPETS/dev/Predictive_Tools/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="V_WString" />
+            <Field name="Duration" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;//vmware-host/Shared Folders/SNIPPETS/dev/Predictive_Tools/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="Int32" />
+            <Field name="Credit_Hist" size="1073741823" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;//vmware-host/Shared Folders/SNIPPETS/dev/Predictive_Tools/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="V_WString" />
+            <Field name="Purpose" size="1073741823" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;//vmware-host/Shared Folders/SNIPPETS/dev/Predictive_Tools/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="V_WString" />
+            <Field name="Amount" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;//vmware-host/Shared Folders/SNIPPETS/dev/Predictive_Tools/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="Int32" />
+            <Field name="Savings_Bonds" size="1073741823" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;//vmware-host/Shared Folders/SNIPPETS/dev/Predictive_Tools/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="V_WString" />
+            <Field name="Employ_Length" size="1073741823" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;//vmware-host/Shared Folders/SNIPPETS/dev/Predictive_Tools/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="V_WString" />
+            <Field name="Debt_Inco" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;//vmware-host/Shared Folders/SNIPPETS/dev/Predictive_Tools/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="Int32" />
+            <Field name="Gender_Marital" size="1073741823" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;//vmware-host/Shared Folders/SNIPPETS/dev/Predictive_Tools/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="V_WString" />
+            <Field name="Debtor_Guarantor" size="1073741823" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;//vmware-host/Shared Folders/SNIPPETS/dev/Predictive_Tools/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="V_WString" />
+            <Field name="Length_Res" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;//vmware-host/Shared Folders/SNIPPETS/dev/Predictive_Tools/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="Int32" />
+            <Field name="Property" size="1073741823" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;//vmware-host/Shared Folders/SNIPPETS/dev/Predictive_Tools/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="V_WString" />
+            <Field name="Age" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;//vmware-host/Shared Folders/SNIPPETS/dev/Predictive_Tools/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="Int32" />
+            <Field name="Otr_Install" size="1073741823" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;//vmware-host/Shared Folders/SNIPPETS/dev/Predictive_Tools/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="V_WString" />
+            <Field name="Tenure" size="1073741823" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;//vmware-host/Shared Folders/SNIPPETS/dev/Predictive_Tools/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="V_WString" />
+            <Field name="Num_Loans" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;//vmware-host/Shared Folders/SNIPPETS/dev/Predictive_Tools/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="Int32" />
+            <Field name="Job_Type" size="1073741823" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;//vmware-host/Shared Folders/SNIPPETS/dev/Predictive_Tools/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="V_WString" />
+            <Field name="Dependents" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;//vmware-host/Shared Folders/SNIPPETS/dev/Predictive_Tools/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="Int32" />
+            <Field name="Telephone" size="1073741823" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;//vmware-host/Shared Folders/SNIPPETS/dev/Predictive_Tools/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="V_WString" />
+            <Field name="Foreign_Worker" size="1073741823" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;//vmware-host/Shared Folders/SNIPPETS/dev/Predictive_Tools/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="V_WString" />
+            <Field name="Default" size="1073741823" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;//vmware-host/Shared Folders/SNIPPETS/dev/Predictive_Tools/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="V_WString" />
+            <Field name="Sample" size="1073741823" source="{&quot;Context&quot;:&quot;XDF&quot;,&quot;File.Loc&quot;:&quot;//vmware-host/Shared Folders/SNIPPETS/dev/Predictive_Tools/Decision_Tree/Extras/Tests/Data/New_Donor.xdf&quot;}" type="V_WString" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
-      <EngineSettings Macro="Input_XDF.yxmc" />
+      <EngineSettings Macro="XDF_Macros\Input_XDF.yxmc" />
     </Node>
   </Nodes>
   <Connections>
@@ -435,12 +438,12 @@
       <Destination ToolID="13" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="24" Connection="Output" />
-      <Destination ToolID="10" Connection="Input" />
+      <Origin ToolID="25" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="24" Connection="Output" />
-      <Destination ToolID="3" Connection="Input" />
+      <Origin ToolID="25" Connection="Output" />
+      <Destination ToolID="10" Connection="Input" />
     </Connection>
   </Connections>
   <Properties>
@@ -472,6 +475,10 @@
       <Company />
       <Copyright />
       <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
     </MetaInfo>
     <Events>
       <Enabled value="True" />

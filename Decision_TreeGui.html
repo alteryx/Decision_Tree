@@ -25,20 +25,19 @@ Decision_Tree
      <div id='yvar' class="qconst">
 <!--  Y Var  -->
 <label for="Y Var">Select the target variable</label>
-<alteryx-pluginwidget type="DropDown" dataType="FieldSelector" inputNumber="0" connectionNumber="0" fieldType="Numeric" id="Y Var" dataName="Y Var"></alteryx-pluginwidget>
+<alteryx-pluginwidget type="DropDown" dataType="FieldSelector" inputNumber="0" connectionNumber="0" fieldType="All" id="Y Var" dataName="Y Var"></alteryx-pluginwidget>
 </div>
      <div id='xvars' class="qconst">
 <!--  X Vars  -->
 <label for="X Vars">Select the predictor variables</label>
 <alteryx-pluginwidget type="MultiSelectListBox" dataType="MultiStringSelector" inputNumber="0" connectionNumber="0" fieldType="All" id="X Vars" dataName="X Vars"></alteryx-pluginwidget>
 </div>
-     <button class='default-button primary' onclick="switchToCustomize()" 
-        id='switch-to-customize'>
+     <button class='default-button primary' id='switch-to-customize'>
         Customize
      </button>
   </fieldset>
 </div>
-<div class='page' id='page-customize'>
+<div class='page' id='page-customize' style='display:none;'>
   <fieldset>
   <legend>Customize</legend>
   <div class="tabs" id='header'>
@@ -50,9 +49,11 @@ Decision_Tree
     </div>
   </div>
   <div class='tabpage has-hint' id='tabpage-advanced'>
-    <div id="accordion">
-    <h4 class="accordion-toggle accordion-open">Model Type and Sampling Weights</h4>
-    <div class='accordion-content default'>
+    <div id="dt-accordion">
+    <h4 class="accordion-toggle" id="toggle-main">
+      Model Type and Sampling Weights
+    </h4>
+    <div class='accordion-content'>
       
 <!--  model_type  -->
 <label for="model_type">Model Type</label>
@@ -64,16 +65,17 @@ Decision_Tree
 
       
 <!--  use.weights  -->
-<alteryx-pluginwidget type="CheckBox" text="Use sampling weights in model estimation" default="false" id="use.weights" dataName="use.weights"></alteryx-pluginwidget>
+<alteryx-pluginwidget type="CheckBox" text="Use sampling weights in model estimation" id="use.weights" dataName="use.weights" defaultValue="false"></alteryx-pluginwidget>
 
       <div id='div-use.weights'>
 <!--  select.weights  -->
-<label for="select.weights"></label>
-<alteryx-pluginwidget type="DropDown" dataType="FieldSelector" inputNumber="0" connectionNumber="0" fieldType="All" clearable="true" id="select.weights" dataName="select.weights"></alteryx-pluginwidget>
+<alteryx-pluginwidget type="DropDown" dataType="FieldSelector" inputNumber="0" connectionNumber="0" fieldType="Numeric" clearable="true" id="select.weights" dataName="select.weights"></alteryx-pluginwidget>
 </div>
       <!--  splitting_criteria  -->
     </div>
-    <h4 class="accordion-toggle">Splitting Criteria and Surrogates</h4>
+    <h4 class="accordion-toggle" id="toggle-split">
+      Splitting Criteria and Surrogates
+    </h4>
     <div class='accordion-content'>
       <div id='show-for-classification'>
 <!--  splitting_criteria  -->
@@ -101,7 +103,9 @@ Decision_Tree
 </alteryx-pluginwidget>
 
     </div>
-    <h4 class="accordion-toggle">HyperParameters</h4>
+    <h4 class="accordion-toggle" id='toggle-hyperparameters'>
+      HyperParameters
+    </h4>
     <div class='accordion-content'>
       
 <!--  min.split  -->
@@ -131,12 +135,11 @@ Decision_Tree
       <div>
         <div style='float:left;' id='div-set-cp'>
 <!--  set_cp  -->
-<alteryx-pluginwidget type="CheckBox" text="Set complexity parameter" default="false" id="set_cp" dataName="set_cp"></alteryx-pluginwidget>
+<alteryx-pluginwidget type="CheckBox" text="Set complexity parameter" id="set_cp" dataName="set_cp" defaultValue="false"></alteryx-pluginwidget>
 </div>
         <div style='float:right;' id='div-cp'>
 <!--  cp  -->
-<label for="cp"></label>
-<alteryx-pluginwidget type="NumericSpinner" default="0" min="0" max="1" step="0.1" id="cp" dataName="cp"></alteryx-pluginwidget>
+<alteryx-pluginwidget type="NumericSpinner" default="0" min="0" max="0.9999999999" step="0.1" id="cp" dataName="cp"></alteryx-pluginwidget>
 </div>
       </div>
     </div>
@@ -145,12 +148,12 @@ Decision_Tree
   <div class='tabpage has-hint' id='tabpage-graphics'>
     
 <!--  tree.plot  -->
-<alteryx-pluginwidget type="CheckBox" text="Tree plot" default="true" id="tree.plot" dataName="tree.plot"></alteryx-pluginwidget>
+<alteryx-pluginwidget type="CheckBox" text="Tree plot" id="tree.plot" dataName="tree.plot" defaultValue="true"></alteryx-pluginwidget>
 
     <div id='div-tree.plot'>
       <div id='div-branch-dist'>
 <!--  Branch Dist  -->
-<alteryx-pluginwidget type="CheckBox" text="Uniform branch distances" default="true" showAsToggle="true" id="Branch Dist" dataName="Branch Dist"></alteryx-pluginwidget>
+<alteryx-pluginwidget type="CheckBox" text="Uniform branch distances" id="Branch Dist" dataName="Branch Dist" defaultValue="true"></alteryx-pluginwidget>
 </div>
       
 <!--  tree_summary  -->
@@ -209,7 +212,7 @@ Decision_Tree
     </div>
       
 <!--  prune.plot  -->
-<alteryx-pluginwidget type="CheckBox" text="Pruning plot" default="false" id="prune.plot" dataName="prune.plot"></alteryx-pluginwidget>
+<alteryx-pluginwidget type="CheckBox" text="Pruning plot" id="prune.plot" dataName="prune.plot" defaultValue="false"></alteryx-pluginwidget>
 
       <div id='div-prune.plot'>
         
@@ -261,48 +264,11 @@ Decision_Tree
       </div>
     </div>
 </fieldset>
-  <button class='default-button primary' onclick="switchToHome()" id='switch-to-home'>Back</button>
+  <button class='default-button primary' id='switch-to-home'>Back</button>
 </div>
 <script src='https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.2.0/intro.min.js'>
 </script>
 <link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.2.0/introjs.min.css' />
-<script>
-function switchToCustomize(){
-  $('#page-basic').hide()
-  $('#page-customize').show()
-  $(".tabpage").hide()
-  $('#tabpage-advanced').show()
-}
-function switchToHome(){
-  $('#page-basic').show()
-  $('#page-customize').hide()
-}
-$('#page-customize').hide()
-$('#page-basic').show()
-$(document).ready(function($) {
-  $('#accordion').find('.accordion-toggle').click(function(){
-    $(this).toggleClass('accordion-open')
-    $('.accordion-toggle').not($(this)).removeClass('accordion-open')
-    //Expand or collapse this panel
-    $(this).next().slideToggle('fast');
-
-    //Hide the other panels
-    $(".accordion-content").not($(this).next()).slideUp('fast');
-
-  });
-  $('#page-customize').hide()
-  $('#page-basic').show()
-  $(".tabpage").hide()
-  $('#tabpage-advanced').show()
-  $('.tab').click(function(){
-    $('.tabpage').hide()
-    var activePage = $(this).data('page')
-    $('#tabpage-' + activePage).show()
-    $('.tab').removeClass('is-tab-selected')
-    $('#' + activePage).addClass('is-tab-selected')
-  })
-});
-</script>
 
 <!-- CSS -->
 <style>

@@ -182,3 +182,7 @@ h4.accordion-toggle{
   margin-left: 28px;
   margin-top: -8px;
 }
+/* increase size of grid text cell */
+.alteryx-grid-text-cell {
+  width: 200px !important;
+}
