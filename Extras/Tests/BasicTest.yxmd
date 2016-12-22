@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<AlteryxDocument yxmdVer="10.5">
+<AlteryxDocument yxmdVer="11.0">
   <Nodes>
     <Node ToolID="3">
       <GuiSettings>
@@ -58,82 +58,13 @@
       </Properties>
       <EngineSettings Macro="Predictive Tools\Decision_Tree.yxmc" />
     </Node>
-    <Node ToolID="10">
-      <GuiSettings Plugin="Decision_Tree">
-        <Position x="222" y="162" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <Value name="prune.pointsize">10</Value>
-          <Value name="prune.graph.resolution">1x</Value>
-          <Value name="prune.cm.h">14.95</Value>
-          <Value name="prune.cm.w">13</Value>
-          <Value name="prune.in.h">5.5</Value>
-          <Value name="prune.in.w">5.5</Value>
-          <Value name="prune.plot">False</Value>
-          <Value name="tree.pointsize">8</Value>
-          <Value name="tree.graph.resolution">1x</Value>
-          <Value name="tree.cm.h">14.95</Value>
-          <Value name="tree.cm.w">13</Value>
-          <Value name="tree.in.h">5.5</Value>
-          <Value name="tree.in.w">5.5</Value>
-          <Value name="Branch Dist">False</Value>
-          <Value name="tree.plot">True</Value>
-          <Value name="cp">0</Value>
-          <Value name="set_cp">False</Value>
-          <Value name="max.bins">
-          </Value>
-          <Value name="max.depth">20</Value>
-          <Value name="xval.folds">10</Value>
-          <Value name="min.bucket">7</Value>
-          <Value name="min.split">20</Value>
-          <Value name="surrogate_split_criteria">total.correct</Value>
-          <Value name="surrogate_use">usesurrogate.0</Value>
-          <Value name="splitting_criteria">use.gini</Value>
-          <Value name="select.weights" />
-          <Value name="use.weights">False</Value>
-          <Value name="X Vars">Chk_Bal,Duration,Credit_Hist</Value>
-          <Value name="Y Var">Default</Value>
-          <Value name="Model Name">New_DT</Value>
-          <Value name="tree.centimeters">False</Value>
-          <Value name="tree.inches">True</Value>
-          <Value name="tree_plot_size">tree.inches</Value>
-          <Value name="prune.centimeters">False</Value>
-          <Value name="prune.inches">True</Value>
-          <Value name="pruning_plot_size">prune.inches</Value>
-          <Value name="Proportions">True</Value>
-          <Value name="Counts">False</Value>
-          <Value name="tree_summary">Proportions</Value>
-          <Value name="regression">False</Value>
-          <Value name="classification">True</Value>
-          <Value name="auto">False</Value>
-          <Value name="model_type">classification</Value>
-          <Value name="percent.correct">False</Value>
-          <Value name="total.correct">True</Value>
-          <Value name="usesurrogate.2">False</Value>
-          <Value name="usesurrogate.1">False</Value>
-          <Value name="usesurrogate.0">True</Value>
-          <Value name="use.information">False</Value>
-          <Value name="use.gini">True</Value>
-          <Value name="curToggle">toggle-main</Value>
-          <Value name="curTab">advanced</Value>
-          <Value name="curPage">Home</Value>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText />
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings Macro="Decision_Tree/Supporting_Macros/Decision_Tree.yxmc" EngineDll="Macro" EngineDllEntryPoint="Decision_Tree/Supporting_Macros/Decision_Tree.yxmc" />
-    </Node>
     <Node ToolID="11">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
         <Position x="318" y="114" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_4604_8cebd32cf1514438824e4d4c9eaa1710_\Engine_1200_72b77a777256407e99d425d567a8e516_.yxdb</TempFile>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_7152_86fe3b0285b443ddbfbe41b8efa4e1d1_\Engine_2532_ee282fcf0e8744a98b2820c313395cd7_.yxdb</TempFile>
           <TempFileDataProfiling>C:\ProgramData\Alteryx\Engine\Engine_4604_8cebd32cf1514438824e4d4c9eaa1710_\Engine_1200_ba3f5c6b612a47dd83a8db0d5d8368f9_.yxdb</TempFileDataProfiling>
           <Layout>
             <View1>
@@ -157,7 +88,7 @@
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_4604_8cebd32cf1514438824e4d4c9eaa1710_\Engine_1200_074fd3468868489ebe40f19b38e2b12e_.yxdb</TempFile>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_7152_86fe3b0285b443ddbfbe41b8efa4e1d1_\Engine_2532_1f2285153940499aa367bcdadd120bae_.yxdb</TempFile>
           <TempFileDataProfiling>C:\ProgramData\Alteryx\Engine\Engine_4604_8cebd32cf1514438824e4d4c9eaa1710_\Engine_1200_b96be389d960469096e59d8de43b1f9c_.yxdb</TempFileDataProfiling>
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -185,8 +116,8 @@
       </GuiSettings>
       <Properties>
         <Configuration>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_7152_86fe3b0285b443ddbfbe41b8efa4e1d1_\Engine_2532_4b3372ba754944158c04e62ab07aa786_.yxdb</TempFile>
           <TempFileDataProfiling>C:\ProgramData\Alteryx\Engine\Engine_4604_8cebd32cf1514438824e4d4c9eaa1710_\Engine_1200_b8f80bbe70344d95b19445ee63654903_.yxdb</TempFileDataProfiling>
-          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_4604_8cebd32cf1514438824e4d4c9eaa1710_\Engine_1200_7ef84adc3df4484985e48835cc58d4cd_.yxdb</TempFile>
           <Layout>
             <ViewMode>Single</ViewMode>
             <ViewSize value="100" />
@@ -214,7 +145,7 @@
       <Properties>
         <Configuration>
           <TempFileDataProfiling>C:\ProgramData\Alteryx\Engine\Engine_4604_8cebd32cf1514438824e4d4c9eaa1710_\Engine_1200_d5fa3ff6e8ec4e0393db38c1dcf0f3c7_.yxdb</TempFileDataProfiling>
-          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_4604_8cebd32cf1514438824e4d4c9eaa1710_\Engine_1200_ab160ae85fb9452aa166e2d53b673ad6_.yxdb</TempFile>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_7152_86fe3b0285b443ddbfbe41b8efa4e1d1_\Engine_2532_223d2c9ea02542e38027c7899d951c43_.yxdb</TempFile>
           <Layout>
             <View1>
               <Hints>
@@ -237,7 +168,7 @@
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_4604_8cebd32cf1514438824e4d4c9eaa1710_\Engine_1200_3f89482cf4ed4b0ebda4ce3a2d47f099_.yxdb</TempFile>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_7152_86fe3b0285b443ddbfbe41b8efa4e1d1_\Engine_2532_1a24d2a9db8a496aa9ae55712afd65d5_.yxdb</TempFile>
           <TempFileDataProfiling>C:\ProgramData\Alteryx\Engine\Engine_4604_8cebd32cf1514438824e4d4c9eaa1710_\Engine_1200_65084c18ab2743848fe8cee7738dd3b6_.yxdb</TempFileDataProfiling>
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -266,7 +197,7 @@
       <Properties>
         <Configuration>
           <TempFileDataProfiling>C:\ProgramData\Alteryx\Engine\Engine_4604_8cebd32cf1514438824e4d4c9eaa1710_\Engine_1200_49088733a23949368b2754d78b30709d_.yxdb</TempFileDataProfiling>
-          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_4604_8cebd32cf1514438824e4d4c9eaa1710_\Engine_1200_f47c760e17214d7a824a0e4003188d48_.yxdb</TempFile>
+          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_7152_86fe3b0285b443ddbfbe41b8efa4e1d1_\Engine_2532_6893bb77e99942f8842a6fb1bedff985_.yxdb</TempFile>
           <Layout>
             <ViewMode>Single</ViewMode>
             <ViewSize value="100" />
@@ -7609,6 +7540,75 @@
         </Annotation>
       </Properties>
     </Node>
+    <Node ToolID="24">
+      <GuiSettings Plugin="Decision_Tree">
+        <Position x="222" y="162" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="curPage">Customize</Value>
+          <Value name="curTab">Model</Value>
+          <Value name="curToggle">toggle-main</Value>
+          <Value name="use.gini">True</Value>
+          <Value name="use.information">False</Value>
+          <Value name="usesurrogate.0">True</Value>
+          <Value name="usesurrogate.1">False</Value>
+          <Value name="usesurrogate.2">False</Value>
+          <Value name="total.correct">True</Value>
+          <Value name="percent.correct">False</Value>
+          <Value name="model_type">classification</Value>
+          <Value name="auto">False</Value>
+          <Value name="classification">True</Value>
+          <Value name="regression">False</Value>
+          <Value name="tree_summary">Counts</Value>
+          <Value name="Counts">True</Value>
+          <Value name="Proportions">False</Value>
+          <Value name="pruning_plot_size">prune.inches</Value>
+          <Value name="prune.inches">True</Value>
+          <Value name="prune.centimeters">False</Value>
+          <Value name="tree_plot_size">tree.inches</Value>
+          <Value name="tree.inches">True</Value>
+          <Value name="tree.centimeters">False</Value>
+          <Value name="Model Name">New_DT</Value>
+          <Value name="Y Var">Default</Value>
+          <Value name="X Vars">Chk_Bal,Duration</Value>
+          <Value name="use.weights">False</Value>
+          <Value name="select.weights" />
+          <Value name="splitting_criteria">use.gini</Value>
+          <Value name="surrogate_use">usesurrogate.0</Value>
+          <Value name="surrogate_split_criteria">total.correct</Value>
+          <Value name="min.split">20</Value>
+          <Value name="min.bucket">7</Value>
+          <Value name="xval.folds">10</Value>
+          <Value name="max.depth">20</Value>
+          <Value name="max.bins">
+          </Value>
+          <Value name="set_cp">False</Value>
+          <Value name="cp">0</Value>
+          <Value name="tree.plot">False</Value>
+          <Value name="Branch Dist">False</Value>
+          <Value name="tree.in.w">5.5</Value>
+          <Value name="tree.in.h">5.5</Value>
+          <Value name="tree.cm.w">13</Value>
+          <Value name="tree.cm.h">14.95</Value>
+          <Value name="tree.graph.resolution">1x</Value>
+          <Value name="tree.pointsize">8</Value>
+          <Value name="prune.plot">False</Value>
+          <Value name="prune.in.w">5.5</Value>
+          <Value name="prune.in.h">5.5</Value>
+          <Value name="prune.cm.w">13</Value>
+          <Value name="prune.cm.h">14.95</Value>
+          <Value name="prune.graph.resolution">1x</Value>
+          <Value name="prune.pointsize">10</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="Decision_Tree/Supporting_Macros/Decision_Tree.yxmc" EngineDll="Macro" EngineDllEntryPoint="Decision_Tree/Supporting_Macros/Decision_Tree.yxmc" />
+    </Node>
   </Nodes>
   <Connections>
     <Connection>
@@ -7624,24 +7624,24 @@
       <Destination ToolID="16" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="10" Connection="Output" />
-      <Destination ToolID="11" Connection="Input" />
+      <Origin ToolID="18" Connection="Output" />
+      <Destination ToolID="3" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="10" Connection="Reports" />
+      <Origin ToolID="18" Connection="Output" />
+      <Destination ToolID="24" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="24" Connection="Reports" />
       <Destination ToolID="12" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="10" Connection="Interactive" />
+      <Origin ToolID="24" Connection="Output" />
+      <Destination ToolID="11" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="24" Connection="Interactive" />
       <Destination ToolID="13" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="18" Connection="Output" />
-      <Destination ToolID="10" Connection="Input" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="18" Connection="Output" />
-      <Destination ToolID="3" Connection="Input" />
     </Connection>
   </Connections>
   <Properties>
