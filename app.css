@@ -51,7 +51,7 @@ input[type="checkbox"]{
   background: #D8D8D8;
 }
 
-.tab.is-tab-selected {
+.tab.active {
   /* border-bottom-color: #4EBBE4; */
   background: #1691c6;
   color: #ffffff;
@@ -76,10 +76,12 @@ input[type="checkbox"]{
   color: #1691c6;
   border-color: #1691c6;
 }
+/*
 #switch-to-home{
   position: absolute;
   bottom: 5px;
 }
+*/
 .pull-right{
   float: right;
 }
@@ -213,7 +215,7 @@ input[type="checkbox"]{
   background: none;
   border: 1px solid rgb(230, 230, 230);
 }
-.fd-header .tabs .tab.is-tab-selected {
+.fd-header .tabs .tab.active {
   /* border-bottom-color: #4EBBE4; */
   background: #1691c6;
   color: #ffffff;
