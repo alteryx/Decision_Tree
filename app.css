@@ -226,3 +226,6 @@ input[type="checkbox"]{
 #weight-vec{
   margin-top: -10px;
 }
+.indent-one {
+  margin-left: 30px;
+}
