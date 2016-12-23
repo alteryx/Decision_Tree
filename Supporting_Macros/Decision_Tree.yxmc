@@ -1,5 +1,5 @@
 <?xml version="1.0"?>
-<AlteryxDocument yxmdVer="10.5">
+<AlteryxDocument yxmdVer="11.0">
   <Nodes>
     <Node ToolID="19">
       <GuiSettings Plugin="AlteryxBasePluginsGui.AlteryxSelect.AlteryxSelect">
@@ -97,7 +97,7 @@ Decision Tree</Text>
 library(AlteryxPredictive)
 config &lt;- list(
 	`bands` = numericInput('%Question.bands%', 10),
-	`bands.check` = checkboxInput('%Question.bands.check%', FALSE),
+	`bands.check` = checkboxInput('%Question.bands_check%', FALSE),
   `Branch Dist` = checkboxInput('%Question.Branch Dist%' , TRUE),
   `classification` = radioInput('%Question.classification%' , TRUE),
   `Counts` = radioInput('%Question.Counts%' , FALSE),
@@ -6814,7 +6814,7 @@ No Text Styling</DefaultAnnotationText>
     </Node>
     <Node ToolID="176">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="56.00014" y="144.9998" width="677" height="314.0002"/>
+        <Position x="56.00013" y="144.9998" width="677" height="314.0002"/>
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -6832,7 +6832,7 @@ No Text Styling</DefaultAnnotationText>
       <ChildNodes>
         <Node ToolID="174">
           <GuiSettings Plugin="AlteryxGuiToolkit.Questions.NumericUpDown.NumericUpDown">
-            <Position x="85.99996" y="272.9998" width="59" height="59"/>
+            <Position x="85.99993" y="272.9999" width="59" height="59"/>
           </GuiSettings>
           <Properties>
             <Configuration/>
@@ -7674,7 +7674,7 @@ Union</Text>
     </Node>
     <Node ToolID="215">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="798.0002" y="348.9997" width="1346" height="217.9999"/>
+        <Position x="798.0002" y="348.9996" width="1346" height="218.0001"/>
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -7732,7 +7732,7 @@ Union</Text>
         </Node>
         <Node ToolID="210">
           <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
-            <Position x="808.0002" y="382.9998" width="100" height="36"/>
+            <Position x="808.0002" y="383" width="100" height="36"/>
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -7752,7 +7752,7 @@ Union</Text>
         </Node>
         <Node ToolID="211">
           <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
-            <Position x="1110" y="377.9997" width="100" height="36"/>
+            <Position x="1110" y="377.9996" width="100" height="36"/>
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -7792,7 +7792,7 @@ Union</Text>
         </Node>
         <Node ToolID="216">
           <GuiSettings Plugin="AlteryxGuiToolkit.Questions.NumericUpDown.NumericUpDown">
-            <Position x="834.0001" y="413.9997" width="59" height="59"/>
+            <Position x="834.0001" y="413.9995" width="59" height="59"/>
           </GuiSettings>
           <Properties>
             <Configuration/>
@@ -7826,7 +7826,7 @@ Union</Text>
         </Node>
         <Node ToolID="218">
           <GuiSettings Plugin="AlteryxGuiToolkit.Questions.CheckBoxGroup.CheckBoxGroup">
-            <Position x="930.0001" y="413.9997" width="59" height="59"/>
+            <Position x="930.0001" y="413.9996" width="59" height="59"/>
           </GuiSettings>
           <Properties>
             <Configuration/>
@@ -7852,7 +7852,7 @@ Union</Text>
         </Node>
         <Node ToolID="220">
           <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
-            <Position x="1002" y="378" width="100" height="36"/>
+            <Position x="1002" y="377.9999" width="100" height="36"/>
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -7877,7 +7877,7 @@ Union</Text>
           <Properties>
             <Configuration/>
             <Annotation DisplayMode="0">
-              <Name>bands.check</Name>
+              <Name>bands_check</Name>
               <DefaultAnnotationText/>
               <Left value="False"/>
             </Annotation>
@@ -7885,7 +7885,7 @@ Union</Text>
         </Node>
         <Node ToolID="222">
           <GuiSettings Plugin="AlteryxGuiToolkit.Questions.NumericUpDown.NumericUpDown">
-            <Position x="1134" y="497.9997" width="59" height="59"/>
+            <Position x="1134" y="497.9998" width="59" height="59"/>
           </GuiSettings>
           <Properties>
             <Configuration/>
@@ -8066,7 +8066,6 @@ Union</Text>
             <Configuration/>
             <Annotation DisplayMode="0">
               <Name>seed</Name>
-              <AnnotationText>By the default value 0, all of the data is used to train the model. If a larger value is selected, that percent of data will be held from training and used for evaluation of model accuracy.</AnnotationText>
               <DefaultAnnotationText/>
               <Left value="False"/>
             </Annotation>
@@ -8624,7 +8623,7 @@ Union</Text>
       </Constant>
       <Constant>
         <Namespace>Question</Namespace>
-        <Name>bands.check</Name>
+        <Name>bands_check</Name>
         <Value>False</Value>
         <IsNumeric value="False"/>
       </Constant>
@@ -9163,7 +9162,7 @@ ENDIF</Expression>
             <Question>
               <Type>BooleanGroup</Type>
               <Description>Threshold number of bands to group rules into</Description>
-              <Name>bands.check</Name>
+              <Name>bands_check</Name>
               <ToolId value="221"/>
               <Questions/>
               <Default value="False"/>

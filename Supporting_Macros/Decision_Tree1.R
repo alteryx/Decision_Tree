@@ -14,7 +14,7 @@
 library(AlteryxPredictive)
 config <- list(
 	`bands` = numericInput('%Question.bands%', 10),
-	`bands.check` = checkboxInput('%Question.bands.check%', FALSE),
+	`bands.check` = checkboxInput('%Question.bands_check%', FALSE),
   `Branch Dist` = checkboxInput('%Question.Branch Dist%' , TRUE),
   `classification` = radioInput('%Question.classification%' , TRUE),
   `Counts` = radioInput('%Question.Counts%' , FALSE),

@@ -45,7 +45,7 @@
      
   <div class="content">
     <div class="content-padded">
-        <div id='tabpage-model' class='tabpage'>
+        <div id='tabpage-model-rpart' class='tabpage'>
           <div id="dt-accordion">
           <h4 class="accordion-toggle" id="toggle-main">
             Model Type and Sampling Weights
@@ -111,6 +111,29 @@
             {{ `prune.graph.resolution` }}
             {{ `prune.pointsize` }}
           </div>
+        </div>
+        <div id='tabpage-model' class='tabpage'>
+          <div id='div-trials'>
+          {{ trials }}
+          </div>
+          {{ rules }}
+          <div id = 'show-on-rules' class='indent-one'> 
+           {{ bands_check }}
+           <div id = 'show-on-bandscheck'>
+             {{  bands  }}
+          </div>
+         </div>
+            {{ `use.weights` }}
+            <div id='div-use.weights2'>{{ `select.weights` }}</div>
+            {{ subset }}
+            {{ winnow }}
+            {{ GlobalPruning }}
+            {{ CF }}
+            {{ minCases }}
+            {{ fuzzyThreshold }}
+            {{ sample }}
+            {{ seed }}
+            {{ earlyStopping }}
         </div>
     </div>
   </div>
