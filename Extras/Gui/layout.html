@@ -1,9 +1,9 @@
  <!-- Include the compiled Ratchet CSS -->
-<link href="./ratchet/css/ratchet.css" rel="stylesheet">
+<link href="./assets/ratchet/css/ratchet.css" rel="stylesheet">
 <!-- <link rel="stylesheet" href="./ratchet/css/ratchet-theme-alteryx.css"> -->
 
 <!-- Include the compiled Ratchet JS -->
-<script src="./ratchet/js/ratchet.min.js"></script>
+<!-- <script src="./ratchet/js/ratchet.min.js"></script> -->
 
 <!-- Make sure all your bars are the first things in your <body> -->
 <div class='page has-hint' id='page-basic'>
@@ -45,40 +45,69 @@
      
   <div class="content">
     <div class="content-padded">
-        <div id='tabpage-model-rpart' class='tabpage'>
-          <div id="dt-accordion">
-          <h4 class="accordion-toggle" id="toggle-main">
-            Model Type and Sampling Weights
-          </h4>
-          <div class='accordion-content'>
-            {{ `model_type` }}
-            {{ `use.weights` }}
-            <div id='div-use.weights'>{{ `select.weights` }}</div>
-            <!--  splitting_criteria  -->
-          </div>
-          <h4 class="accordion-toggle" id="toggle-split">
-            Splitting Criteria and Surrogates
-          </h4>
-          <div class='accordion-content'>
-            <div id='show-for-classification'>{{ `splitting_criteria` }}</div>
-            {{ `surrogate_use` }}
-            {{ `surrogate_split_criteria` }}
-          </div>
-          <h4 class="accordion-toggle" id='toggle-hyperparameters'>
-            HyperParameters
-          </h4>
-          <div class='accordion-content'>
-            {{ `min.split` }}
-            {{ `min.bucket` }}
-            {{ `xval.folds` }}
-            {{ `max.depth` }}
-            {{ `max.bins` }}
-            <div>
-              <div style='float:left;' id='div-set-cp'>{{ `set_cp` }}</div>
-              <div style='float:right;' id='div-cp'>{{ `cp` }}</div>
+        <div>
+          <div id='model-algo'>{{ model.algorithm }}</div>
+          <div id='tabpage-model-rpart' class='tabpage'>
+            <div id="dt-accordion">
+            <h4 class="accordion-toggle" id="toggle-main">
+              Model Type and Sampling Weights
+            </h4>
+            <div class='accordion-content'>
+              {{ `model_type` }}
+              {{ `use.weights` }}
+              <div id='div-use.weights'>{{ `select.weights` }}</div>
+              <!--  splitting_criteria  -->
+            </div>
+            <h4 class="accordion-toggle" id="toggle-split">
+              Splitting Criteria and Surrogates
+            </h4>
+            <div class='accordion-content'>
+              <div id='show-for-classification'>{{ `splitting_criteria` }}</div>
+              {{ `surrogate_use` }}
+              {{ `surrogate_split_criteria` }}
+            </div>
+            <h4 class="accordion-toggle" id='toggle-hyperparameters'>
+              HyperParameters
+            </h4>
+            <div class='accordion-content'>
+              {{ `min.split` }}
+              {{ `min.bucket` }}
+              {{ `xval.folds` }}
+              {{ `max.depth` }}
+              {{ `max.bins` }}
+              <div>
+                <div style='float:left;' id='div-set-cp'>{{ `set_cp` }}</div>
+                <div style='float:right;' id='div-cp'>{{ `cp` }}</div>
+              </div>
             </div>
           </div>
-        </div>
+          </div>
+          <div id='tabpage-model-c50' class='tabpage'>
+            <div id='div-trials'>
+            {{ trials }}
+            </div>
+            {{ rules }}
+            <div id = 'show-on-rules' class='indent-one'> 
+             {{ bands_check }}
+             <div id = 'show-on-bandscheck'>
+               {{  bands  }}
+            </div>
+           </div>
+              {{ `use.weights` }}
+              <div id='div-use.weights2' class='indent-one'>
+                {{ `select.weights` }}
+              </div>
+              {{ subset }}
+              {{ winnow }}
+              {{ GlobalPruning }}
+              {{ CF }}
+              {{ minCases }}
+              {{ fuzzyThreshold }}
+              {{ sample }}
+              {{ seed }}
+              {{ earlyStopping }}
+              {{ `display.static` }}
+          </div>
         </div>
         <div class="tabpage" id='tabpage-graphics'>
           {{ `tree.plot` }}
@@ -111,30 +140,6 @@
             {{ `prune.graph.resolution` }}
             {{ `prune.pointsize` }}
           </div>
-        </div>
-        <div id='tabpage-model' class='tabpage'>
-          <div id='div-trials'>
-          {{ trials }}
-          </div>
-          {{ rules }}
-          <div id = 'show-on-rules' class='indent-one'> 
-           {{ bands_check }}
-           <div id = 'show-on-bandscheck'>
-             {{  bands  }}
-          </div>
-         </div>
-            {{ `use.weights` }}
-            <div id='div-use.weights2'>{{ `select.weights` }}</div>
-            {{ subset }}
-            {{ winnow }}
-            {{ GlobalPruning }}
-            {{ CF }}
-            {{ minCases }}
-            {{ fuzzyThreshold }}
-            {{ sample }}
-            {{ seed }}
-            {{ earlyStopping }}
-            {{ `display.static` }}
         </div>
     </div>
   </div>
