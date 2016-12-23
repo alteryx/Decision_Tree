@@ -16,11 +16,11 @@ Decision_Tree
 <body>
     
  <!-- Include the compiled Ratchet CSS -->
-<link href="./ratchet/css/ratchet.css" rel="stylesheet">
+<link href="./assets/ratchet/css/ratchet.css" rel="stylesheet">
 <!-- <link rel="stylesheet" href="./ratchet/css/ratchet-theme-alteryx.css"> -->
 
 <!-- Include the compiled Ratchet JS -->
-<script src="./ratchet/js/ratchet.min.js"></script>
+<!-- <script src="./ratchet/js/ratchet.min.js"></script> -->
 
 <!-- Make sure all your bars are the first things in your <body> -->
 <div class='page has-hint' id='page-basic'>
@@ -74,13 +74,22 @@ Decision_Tree
      
   <div class="content">
     <div class="content-padded">
-        <div id='tabpage-model-rpart' class='tabpage'>
-          <div id="dt-accordion">
-          <h4 class="accordion-toggle" id="toggle-main">
-            Model Type and Sampling Weights
-          </h4>
-          <div class='accordion-content'>
-            
+        <div>
+          <div id='model-algo'>
+<!--  model.algorithm  -->
+<label for="model.algorithm">Choose Algorithm</label>
+<alteryx-pluginwidget type="DropDown" id="model.algorithm" dataName="model.algorithm">
+  <alteryx-option uiobject="rpart" default="true">rpart</alteryx-option>
+  <alteryx-option uiobject="C5.0">C5.0</alteryx-option>
+</alteryx-pluginwidget>
+</div>
+          <div id='tabpage-model-rpart' class='tabpage'>
+            <div id="dt-accordion">
+            <h4 class="accordion-toggle" id="toggle-main">
+              Model Type and Sampling Weights
+            </h4>
+            <div class='accordion-content'>
+              
 <div class="clearfix togglebar" id="id-model_type">
   <div class="label" style="float:left;">Model Type</div>
   <div style="float:right;">
@@ -92,21 +101,21 @@ Decision_Tree
   </div>
 </div>
 
-            
+              
 <!--  use.weights  -->
 <alteryx-pluginwidget type="CheckBox" text="Use sampling weights in model estimation" id="use.weights" dataName="use.weights" defaultValue="false"></alteryx-pluginwidget>
 
-            <div id='div-use.weights'>
+              <div id='div-use.weights'>
 <!--  select.weights  -->
 <alteryx-pluginwidget type="DropDown" dataType="FieldSelector" inputNumber="0" connectionNumber="0" fieldType="Numeric" clearable="true" id="select.weights" dataName="select.weights"></alteryx-pluginwidget>
 </div>
-            <!--  splitting_criteria  -->
-          </div>
-          <h4 class="accordion-toggle" id="toggle-split">
-            Splitting Criteria and Surrogates
-          </h4>
-          <div class='accordion-content'>
-            <div id='show-for-classification'>
+              <!--  splitting_criteria  -->
+            </div>
+            <h4 class="accordion-toggle" id="toggle-split">
+              Splitting Criteria and Surrogates
+            </h4>
+            <div class='accordion-content'>
+              <div id='show-for-classification'>
 <!--  splitting_criteria  -->
 <label for="splitting_criteria">The splitting criteria to use:</label>
 <alteryx-pluginwidget type="RadioGroup" group="splitting_criteria" id="splitting_criteria" dataName="splitting_criteria">
@@ -114,7 +123,7 @@ Decision_Tree
   <alteryx-option uiobject="Information index">use.information</alteryx-option>
 </alteryx-pluginwidget>
 </div>
-            
+              
 <!--  surrogate_use  -->
 <label for="surrogate_use">Use surrogates to</label>
 <alteryx-pluginwidget type="RadioGroup" group="surrogate_use" id="surrogate_use" dataName="surrogate_use">
@@ -123,7 +132,7 @@ Decision_Tree
   <alteryx-option uiobject="Send observation in majority direction if all surrogates are missing.">usesurrogate.2</alteryx-option>
 </alteryx-pluginwidget>
 
-            
+              
 <!--  surrogate_split_criteria  -->
 <label for="surrogate_split_criteria">Select best surrogate split using</label>
 <alteryx-pluginwidget type="RadioGroup" group="surrogate_split_criteria" id="surrogate_split_criteria" dataName="surrogate_split_criteria">
@@ -131,48 +140,129 @@ Decision_Tree
   <alteryx-option uiobject="Percentage of correct classifications for a candidate variable.">percent.correct</alteryx-option>
 </alteryx-pluginwidget>
 
-          </div>
-          <h4 class="accordion-toggle" id='toggle-hyperparameters'>
-            HyperParameters
-          </h4>
-          <div class='accordion-content'>
-            
+            </div>
+            <h4 class="accordion-toggle" id='toggle-hyperparameters'>
+              HyperParameters
+            </h4>
+            <div class='accordion-content'>
+              
 <!--  min.split  -->
 <label for="min.split">The minimum number of records needed to allow for a split</label>
 <alteryx-pluginwidget type="NumericSpinner" default="20" min="2" max="10000" step="1" id="min.split" dataName="min.split"></alteryx-pluginwidget>
 
-            
+              
 <!--  min.bucket  -->
 <label for="min.bucket">The allowed minimum number of records in a terminal node</label>
 <alteryx-pluginwidget type="NumericSpinner" default="7" min="1" max="5000" step="1" id="min.bucket" dataName="min.bucket"></alteryx-pluginwidget>
 
-            
+              
 <!--  xval.folds  -->
 <label for="xval.folds">The number of folds to use in the cross validation to prune the tree</label>
 <alteryx-pluginwidget type="NumericSpinner" default="10" min="2" max="20" step="1" id="xval.folds" dataName="xval.folds"></alteryx-pluginwidget>
 
-            
+              
 <!--  max.depth  -->
 <label for="max.depth">The maximum allowed depth of any node in the final tree</label>
 <alteryx-pluginwidget type="NumericSpinner" default="20" min="2" max="50" step="1" id="max.depth" dataName="max.depth"></alteryx-pluginwidget>
 
-            
+              
 <!--  max.bins  -->
 <label for="max.bins">The maximum number of bins to use for each numeric variable</label>
 <alteryx-pluginwidget type="TextBox" password="false" placeholder="Default" id="max.bins" dataName="max.bins"></alteryx-pluginwidget>
 
-            <div>
-              <div style='float:left;' id='div-set-cp'>
+              <div>
+                <div style='float:left;' id='div-set-cp'>
 <!--  set_cp  -->
 <alteryx-pluginwidget type="CheckBox" text="Set complexity parameter" id="set_cp" dataName="set_cp" defaultValue="false"></alteryx-pluginwidget>
 </div>
-              <div style='float:right;' id='div-cp'>
+                <div style='float:right;' id='div-cp'>
 <!--  cp  -->
 <alteryx-pluginwidget type="NumericSpinner" default="0" min="0" max="1" step="0.1" id="cp" dataName="cp"></alteryx-pluginwidget>
 </div>
+              </div>
             </div>
           </div>
-        </div>
+          </div>
+          <div id='tabpage-model-c50' class='tabpage'>
+            <div id='div-trials'>
+            
+<!--  trials  -->
+<label for="trials">Select number of boosting iterations</label>
+<alteryx-pluginwidget type="NumericSpinner" default="1" min="1" max="1000000" step="1" id="trials" dataName="trials"></alteryx-pluginwidget>
+
+            </div>
+            
+<!--  rules  -->
+<alteryx-pluginwidget type="CheckBox" text="Decompose tree into rule-based model" id="rules" dataName="rules" defaultValue="false"></alteryx-pluginwidget>
+
+            <div id = 'show-on-rules' class='indent-one'> 
+             
+<!--  bands_check  -->
+<alteryx-pluginwidget type="CheckBox" text="Threshold number of bands to group rules into" id="bands_check" dataName="bands_check" defaultValue="false"></alteryx-pluginwidget>
+
+             <div id = 'show-on-bandscheck'>
+               
+<!--  bands  -->
+<label for="bands">Select number of bands to group rules into</label>
+<alteryx-pluginwidget type="NumericSpinner" default="10" min="0" max="1000" step="1" id="bands" dataName="bands"></alteryx-pluginwidget>
+
+            </div>
+           </div>
+              
+<!--  use.weights  -->
+<alteryx-pluginwidget type="CheckBox" text="Use sampling weights in model estimation" id="use.weights" dataName="use.weights" defaultValue="false"></alteryx-pluginwidget>
+
+              <div id='div-use.weights2' class='indent-one'>
+                
+<!--  select.weights  -->
+<alteryx-pluginwidget type="DropDown" dataType="FieldSelector" inputNumber="0" connectionNumber="0" fieldType="Numeric" clearable="true" id="select.weights" dataName="select.weights"></alteryx-pluginwidget>
+
+              </div>
+              
+<!--  subset  -->
+<alteryx-pluginwidget type="CheckBox" text="Model should evaluate groups of discrete predictors for splits" id="subset" dataName="subset" defaultValue="false"></alteryx-pluginwidget>
+
+              
+<!--  winnow  -->
+<alteryx-pluginwidget type="CheckBox" text="Use predictor winnowing (i.e. feature selection)" id="winnow" dataName="winnow" defaultValue="false"></alteryx-pluginwidget>
+
+              
+<!--  GlobalPruning  -->
+<alteryx-pluginwidget type="CheckBox" text="Prune Tree" id="GlobalPruning" dataName="GlobalPruning" defaultValue="true"></alteryx-pluginwidget>
+
+              
+<!--  CF  -->
+<label for="CF">Select confidence factor</label>
+<alteryx-pluginwidget type="NumericSpinner" default="0.25" min="0.001" max="0.999" step="0.01" id="CF" dataName="CF"></alteryx-pluginwidget>
+
+              
+<!--  minCases  -->
+<label for="minCases">Select number of samples that must be in at least 2 splits</label>
+<alteryx-pluginwidget type="NumericSpinner" default="2" min="0" max="1000000" step="1" id="minCases" dataName="minCases"></alteryx-pluginwidget>
+
+              
+<!--  fuzzyThreshold  -->
+<alteryx-pluginwidget type="CheckBox" text="Evaluate advanced splits in the data" id="fuzzyThreshold" dataName="fuzzyThreshold" defaultValue="true"></alteryx-pluginwidget>
+
+              
+<!--  sample  -->
+<label for="sample">Percent of data held from training for model evaluation</label>
+<alteryx-pluginwidget type="NumericSpinner" default="0" min="0" max="0.99" step="0.01" id="sample" dataName="sample"></alteryx-pluginwidget>
+
+              
+<!--  seed  -->
+<label for="seed">Select random seed for algorithm</label>
+<alteryx-pluginwidget type="NumericSpinner" default="1" min="1" max="1000000" step="1" id="seed" dataName="seed"></alteryx-pluginwidget>
+
+              
+<!--  earlyStopping  -->
+<alteryx-pluginwidget type="CheckBox" text="Use stopping method for boosting" id="earlyStopping" dataName="earlyStopping" defaultValue="true"></alteryx-pluginwidget>
+
+              
+<!--  display.static  -->
+<alteryx-pluginwidget type="CheckBox" text="Display Static Report" id="display.static" dataName="display.static" defaultValue="true"></alteryx-pluginwidget>
+
+          </div>
         </div>
         <div class="tabpage" id='tabpage-graphics'>
           
@@ -300,84 +390,6 @@ Decision_Tree
 <alteryx-pluginwidget type="NumericSpinner" default="10" min="5" max="100" step="1" id="prune.pointsize" dataName="prune.pointsize"></alteryx-pluginwidget>
 
           </div>
-        </div>
-        <div id='tabpage-model' class='tabpage'>
-          <div id='div-trials'>
-          
-<!--  trials  -->
-<label for="trials">Select number of boosting iterations</label>
-<alteryx-pluginwidget type="NumericSpinner" default="1" min="1" max="1000000" step="1" id="trials" dataName="trials"></alteryx-pluginwidget>
-
-          </div>
-          
-<!--  rules  -->
-<alteryx-pluginwidget type="CheckBox" text="Decompose tree into rule-based model" id="rules" dataName="rules" defaultValue="false"></alteryx-pluginwidget>
-
-          <div id = 'show-on-rules' class='indent-one'> 
-           
-<!--  bands_check  -->
-<alteryx-pluginwidget type="CheckBox" text="Threshold number of bands to group rules into" id="bands_check" dataName="bands_check" defaultValue="false"></alteryx-pluginwidget>
-
-           <div id = 'show-on-bandscheck'>
-             
-<!--  bands  -->
-<label for="bands">Select number of bands to group rules into</label>
-<alteryx-pluginwidget type="NumericSpinner" default="10" min="0" max="1000" step="1" id="bands" dataName="bands"></alteryx-pluginwidget>
-
-          </div>
-         </div>
-            
-<!--  use.weights  -->
-<alteryx-pluginwidget type="CheckBox" text="Use sampling weights in model estimation" id="use.weights" dataName="use.weights" defaultValue="false"></alteryx-pluginwidget>
-
-            <div id='div-use.weights2'>
-<!--  select.weights  -->
-<alteryx-pluginwidget type="DropDown" dataType="FieldSelector" inputNumber="0" connectionNumber="0" fieldType="Numeric" clearable="true" id="select.weights" dataName="select.weights"></alteryx-pluginwidget>
-</div>
-            
-<!--  subset  -->
-<alteryx-pluginwidget type="CheckBox" text="Model should evaluate groups of discrete predictors for splits" id="subset" dataName="subset" defaultValue="false"></alteryx-pluginwidget>
-
-            
-<!--  winnow  -->
-<alteryx-pluginwidget type="CheckBox" text="Use predictor winnowing (i.e. feature selection)" id="winnow" dataName="winnow" defaultValue="false"></alteryx-pluginwidget>
-
-            
-<!--  GlobalPruning  -->
-<alteryx-pluginwidget type="CheckBox" text="Prune Tree" id="GlobalPruning" dataName="GlobalPruning" defaultValue="true"></alteryx-pluginwidget>
-
-            
-<!--  CF  -->
-<label for="CF">Select confidence factor</label>
-<alteryx-pluginwidget type="NumericSpinner" default="0.25" min="0.001" max="0.999" step="0.01" id="CF" dataName="CF"></alteryx-pluginwidget>
-
-            
-<!--  minCases  -->
-<label for="minCases">Select number of samples that must be in at least 2 splits</label>
-<alteryx-pluginwidget type="NumericSpinner" default="2" min="0" max="1000000" step="1" id="minCases" dataName="minCases"></alteryx-pluginwidget>
-
-            
-<!--  fuzzyThreshold  -->
-<alteryx-pluginwidget type="CheckBox" text="Evaluate advanced splits in the data" id="fuzzyThreshold" dataName="fuzzyThreshold" defaultValue="true"></alteryx-pluginwidget>
-
-            
-<!--  sample  -->
-<label for="sample">Percent of data held from training for model evaluation</label>
-<alteryx-pluginwidget type="NumericSpinner" default="0" min="0" max="0.99" step="0.01" id="sample" dataName="sample"></alteryx-pluginwidget>
-
-            
-<!--  seed  -->
-<label for="seed">Select random seed for algorithm</label>
-<alteryx-pluginwidget type="NumericSpinner" default="1" min="1" max="1000000" step="1" id="seed" dataName="seed"></alteryx-pluginwidget>
-
-            
-<!--  earlyStopping  -->
-<alteryx-pluginwidget type="CheckBox" text="Use stopping method for boosting" id="earlyStopping" dataName="earlyStopping" defaultValue="true"></alteryx-pluginwidget>
-
-            
-<!--  display.static  -->
-<alteryx-pluginwidget type="CheckBox" text="Display Static Report" id="display.static" dataName="display.static" defaultValue="true"></alteryx-pluginwidget>
-
         </div>
     </div>
   </div>
