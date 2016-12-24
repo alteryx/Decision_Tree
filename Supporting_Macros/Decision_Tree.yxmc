@@ -6891,7 +6891,7 @@ No Text Styling</DefaultAnnotationText>
       <ChildNodes>
         <Node ToolID="174">
           <GuiSettings Plugin="AlteryxGuiToolkit.Questions.NumericUpDown.NumericUpDown">
-            <Position x="86.00002" y="272.9999" width="59" height="59"/>
+            <Position x="85.99996" y="272.9998" width="59" height="59"/>
           </GuiSettings>
           <Properties>
             <Configuration/>
@@ -6904,7 +6904,7 @@ No Text Styling</DefaultAnnotationText>
         </Node>
         <Node ToolID="175">
           <GuiSettings Plugin="AlteryxGuiToolkit.Questions.CheckBoxGroup.CheckBoxGroup">
-            <Position x="85.99988" y="213" width="59" height="59"/>
+            <Position x="85.99987" y="213" width="59" height="59"/>
           </GuiSettings>
           <Properties>
             <Configuration/>
@@ -6917,7 +6917,7 @@ No Text Styling</DefaultAnnotationText>
         </Node>
         <Node ToolID="116">
           <GuiSettings Plugin="AlteryxGuiToolkit.Questions.RadioButtonGroup.RadioButtonGroup">
-            <Position x="157.9999" y="213.0004" width="59" height="59"/>
+            <Position x="157.9999" y="213.0005" width="59" height="59"/>
           </GuiSettings>
           <Properties>
             <Configuration/>
@@ -7733,7 +7733,7 @@ Union</Text>
     </Node>
     <Node ToolID="215">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="798.0002" y="348.9997" width="1346" height="217.9999"/>
+        <Position x="798.0002" y="348.9996" width="1346" height="218.0001"/>
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -7811,7 +7811,7 @@ Union</Text>
         </Node>
         <Node ToolID="211">
           <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
-            <Position x="1110" y="377.9997" width="100" height="36"/>
+            <Position x="1110" y="377.9996" width="100" height="36"/>
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -7885,7 +7885,7 @@ Union</Text>
         </Node>
         <Node ToolID="218">
           <GuiSettings Plugin="AlteryxGuiToolkit.Questions.CheckBoxGroup.CheckBoxGroup">
-            <Position x="930.0001" y="413.9995" width="59" height="59"/>
+            <Position x="930.0001" y="413.9993" width="59" height="59"/>
           </GuiSettings>
           <Properties>
             <Configuration/>
@@ -7944,7 +7944,7 @@ Union</Text>
         </Node>
         <Node ToolID="222">
           <GuiSettings Plugin="AlteryxGuiToolkit.Questions.NumericUpDown.NumericUpDown">
-            <Position x="1134" y="497.9997" width="59" height="59"/>
+            <Position x="1134" y="497.9998" width="59" height="59"/>
           </GuiSettings>
           <Properties>
             <Configuration/>
@@ -9685,7 +9685,7 @@ C5.0
           <Questions>
             <Question>
               <Type>BooleanGroup</Type>
-              <Description>Tree plot</Description>
+              <Description>Display Tree Plot?</Description>
               <Name>tree.plot</Name>
               <ToolId value="150"/>
               <Questions>
@@ -9834,7 +9834,7 @@ C5.0
             </Question>
             <Question>
               <Type>BooleanGroup</Type>
-              <Description>Pruning plot</Description>
+              <Description>Display Prune Plot?</Description>
               <Name>prune.plot</Name>
               <ToolId value="160"/>
               <Questions>
