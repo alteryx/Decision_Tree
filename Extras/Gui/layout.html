@@ -1,232 +1,201 @@
- <!-- Include the compiled Ratchet CSS -->
-<link href="./assets/ratchet/css/ratchet.css" rel="stylesheet">
-<!-- <link rel="stylesheet" href="./ratchet/css/ratchet-theme-alteryx.css"> -->
-
-<!-- Include the compiled Ratchet JS -->
-<!-- <script src="./ratchet/js/ratchet.min.js"></script> -->
-
-<!-- Make sure all your bars are the first things in your <body> -->
+<!-- SETUP -->
 <div class='page has-hint' id='page-basic'>
-  <header class="bar bar-nav">
-    <h1 class="title">
-      Setup
-    </h1>
-  </header>
+  
+  <div class='fd-header'>
+    <div class='fd-header-title-text'>Setup</div>
+  </div>
 
-  <!-- Wrap all non-bar HTML in the .content div 
-    (this is actually what scrolls) -->
   <div class="content">
     <div class="content-padded">
+      
       <div id='mname' class="qconst">{{ `Model Name` }}</div>
       <div id='yvar' class="qconst">{{ `Y Var` }}</div>
       <div id='xvars' class="qconst">{{ `X Vars` }}</div>
-      <button class="btn pull-left" id="switch-to-customize">
+      <button class="btn pull-left switch" id="switch-to-customize"
+        data-page='Customize'
+      >
         Customize
-        <a class="icon icon-right-nav pull-right"></a>
+        <i class = 'en-right-open-big pull-right'></i>
       </button>
+      
     </div>
   </div>
+  
 </div>
+
+<!-- CUSTOMIZE -->
 <div class='page' id='page-customize' style='display:none;'>
-  <header class="bar bar-nav">
-    <a class="icon icon-left-nav pull-left" id='switch-to-home'></a>
-    <h1 class="title">Customize</h1>
-  </header>
   
-  <nav class="bar bar-tab">
-    <a class="tab-item active mytab" href="#" data-page='model' id='model'>
+  <!-- HEADER -->
+  <div class='fd-header'>
+    <div class='fd-header-title'>
+      <i class = 'en-left-open-big switch' id='switch-to-home' 
+        data-page='Home'
+      >
+      </i> 
+      <span class='fd-header-title-text'>Customize</span>
+    </div>
+  </div>
+  
+  <!-- TABS -->
+  <div class="tabs" id='header'>
+    <div class="tab tab-one-half active mytab" data-page='model' id='model'>
       Model
-    </a>
-    <a class="tab-item mytab" href="#" data-page='graphics' id='graphics'>
-      Graphics
-    </a>
-  </nav>
+    </div>
+    <div class="tab tab-one-half mytab" data-page='graphics' id='graphics'>
+      Plots
+    </div>
+  </div>
   
-     
+  <!-- CONTENT -->
   <div class="content">
     <div class="content-padded">
+      
         <div>
           <div id='model-algo'>{{ model.algorithm }}</div>
           <div id='tabpage-model-rpart' class='tabpage'>
-            <div id="dt-accordion">
-            <h4 class="accordion-toggle" id="toggle-main">
-              Model Type and Sampling Weights
-            </h4>
-            <div class='accordion-content'>
-              {{ `model_type` }}
-              {{ `use.weights` }}
-              <div id='div-use.weights'>{{ `select.weights` }}</div>
-              <!--  splitting_criteria  -->
-            </div>
-            <h4 class="accordion-toggle" id="toggle-split">
-              Splitting Criteria and Surrogates
-            </h4>
-            <div class='accordion-content'>
-              <div id='show-for-classification'>{{ `splitting_criteria` }}</div>
-              {{ `surrogate_use` }}
-              {{ `surrogate_split_criteria` }}
-            </div>
-            <h4 class="accordion-toggle" id='toggle-hyperparameters'>
-              HyperParameters
-            </h4>
-            <div class='accordion-content'>
-              {{ `min.split` }}
-              {{ `min.bucket` }}
-              {{ `xval.folds` }}
-              {{ `max.depth` }}
-              {{ `max.bins` }}
-              <div>
-                <div style='float:left;' id='div-set-cp'>{{ `set_cp` }}</div>
-                <div style='float:right;' id='div-cp'>{{ `cp` }}</div>
+            <div class="dt-accordion">
+              <h4 class="accordion-toggle" id="toggle-main">
+                Model Type and Sampling Weights
+              </h4>
+              <div class='accordion-content'>
+                {{ `model_type` }}
+                {{ `use.weights` }}
+                <div id='div-use.weights' class='indent-one'>
+                  {{ `select.weights` }}
+                </div>
+                <!--  splitting_criteria  -->
+              </div>
+              <h4 class="accordion-toggle" id="toggle-split">
+                Splitting Criteria and Surrogates
+              </h4>
+              <div class='accordion-content'>
+                <div id='show-for-classification'>{{ `splitting_criteria` }}</div>
+                {{ `surrogate_use` }}
+                {{ `surrogate_split_criteria` }}
+              </div>
+              <h4 class="accordion-toggle" id='toggle-hyperparameters'>
+                HyperParameters
+              </h4>
+              <div class='accordion-content'>
+                {{ `min.split` }}
+                {{ `min.bucket` }}
+                {{ `xval.folds` }}
+                {{ `max.depth` }}
+                {{ `max.bins` }}
+                <div>
+                  <div style='float:left;' id='div-set-cp'>{{ `set_cp` }}</div>
+                  <div style='float:right;' id='div-cp'>{{ `cp` }}</div>
+                </div>
               </div>
             </div>
           </div>
-          </div>
+          
           <div id='tabpage-model-c50' class='tabpage'>
-            <div id='div-trials'>
-            {{ trials }}
-            </div>
-            {{ rules }}
-            <div id = 'show-on-rules' class='indent-one'> 
-             {{ bands_check }}
-             <div id = 'show-on-bandscheck'>
-               {{  bands  }}
-            </div>
-           </div>
-              {{ `use.weights` }}
-              <div id='div-use.weights2' class='indent-one'>
-                {{ `select.weights` }}
+             <div class="dt-accordion">
+               
+               <h4 class='accordion-toggle' id='toggle-c50toggle1'>
+                 Toggle 1
+               </h4>
+               <div class='accordion-content'>
+                  {{ rules }}
+                  <div id = 'show-on-rules' class='indent-one'> 
+                   {{ bands_check }}
+                   <div id = 'show-on-bandscheck'>
+                     {{  bands  }}
+                  </div>
+                 </div>
+                 {{ `use.weights` }}
+                 <div id='div-use.weights2' class='indent-one'>
+                    {{ `select.weights` }}
+                 </div>
               </div>
-              {{ subset }}
-              {{ winnow }}
-              {{ GlobalPruning }}
-              {{ CF }}
-              {{ minCases }}
-              {{ fuzzyThreshold }}
-              {{ sample }}
-              {{ seed }}
-              {{ earlyStopping }}
-              {{ `display.static` }}
+              
+               <h4 class='accordion-toggle' id='toggle-c50toggle2'>
+                 Toggle2
+               </h4>
+               <div class='accordion-content'>
+                {{ subset }}
+                {{ winnow }}
+                {{ GlobalPruning }}
+                {{ fuzzyThreshold }}
+                {{ earlyStopping }}
+                {{ `display.static` }}
+              </div>
+              
+               <h4 class='accordion-toggle' id='toggle-c50toggle3'>
+                 Toggle3
+               </h4>
+               <div class='accordion-content'>
+                 <div id='div-trials'>{{ trials }}</div>
+                 {{ CF }}
+                 {{ minCases }}
+                 {{ sample }}
+                 {{ seed }}
+               </div>
+              
           </div>
         </div>
-        <div class="tabpage" id='tabpage-graphics'>
-          {{ `tree.plot` }}
-          <div id='div-tree.plot'>
-            <div id='div-branch-dist'>{{ `Branch Dist` }}</div>
-            {{ `tree_summary` }}
-            {{ `tree_plot_size` }}
-            <div id='div-treeplot-in'>
-              <div id='div-treeplot-in-w'>{{ `tree.in.w` }}</div>
-              <div id='div-treeplot-in-h'>{{ `tree.in.h` }}</div>
-            </div>
-            <div id='div-treeplot-cm'>
-              {{ `tree.cm.w` }}
-              {{ `tree.cm.h` }}     
-            </div>
-            {{ `tree.graph.resolution` }}
-            {{ `tree.pointsize` }}
-          </div>
-          {{ `prune.plot` }}
-          <div id='div-prune.plot'>
-            {{ `pruning_plot_size` }}
-            <div id='div-pruneplot-in'>
-            {{ `prune.in.w` }}
-            {{ `prune.in.h` }}
-            </div>
-            <div id='div-pruneplot-cm'>
-            {{ `prune.cm.w` }}
-            {{ `prune.cm.h` }}
-            </div>
-            {{ `prune.graph.resolution` }}
-            {{ `prune.pointsize` }}
-          </div>
+        
+          <div class="tabpage" id='tabpage-graphics'>
+            <div class="dt-accordion">
+             
+              <h4 class="accordion-toggle" id="toggle-treeplot">
+                Tree Plot
+              </h4>
+              <div class='accordion-content'>
+                {{ `tree.plot` }}
+                <div id='div-tree.plot'>
+                  <div id='div-branch-dist'>{{ `Branch Dist` }}</div>
+                  {{ `tree_summary` }}
+                  {{ `tree_plot_size` }}
+                  <div id='div-treeplot-in'>
+                    <div id='div-treeplot-in-w'>{{ `tree.in.w` }}</div>
+                    <div id='div-treeplot-in-h'>{{ `tree.in.h` }}</div>
+                  </div>
+                  <div id='div-treeplot-cm'>
+                    {{ `tree.cm.w` }}
+                    {{ `tree.cm.h` }}     
+                  </div>
+                  {{ `tree.graph.resolution` }}
+                  {{ `tree.pointsize` }}
+                </div>
+              </div>
+              
+              <h4 class="accordion-toggle" id="toggle-pruneplot">
+                Prune Plot
+              </h4>
+              <div class='accordion-content'>
+                {{ `prune.plot` }}
+                <div id='div-prune.plot'>
+                  {{ `pruning_plot_size` }}
+                  <div id='div-pruneplot-in'>
+                  {{ `prune.in.w` }}
+                  {{ `prune.in.h` }}
+                  </div>
+                  <div id='div-pruneplot-cm'>
+                  {{ `prune.cm.w` }}
+                  {{ `prune.cm.h` }}
+                  </div>
+                  {{ `prune.graph.resolution` }}
+                  {{ `prune.pointsize` }}
+                </div>
+              </div>
+              
+           </div>
         </div>
     </div>
+    
+    </div>
   </div>
+  
 </div>
-
 <style>
-.accordion-toggle {cursor: pointer;}
-.accordion-content {display: none;}
-.accordion-content.default {display: block;}
-h4.accordion-toggle{
-  font-size: 14px;
-  font-weight: bold;
-  color: black;
-  opacity: 0.8;
-  -webkit-margin-before: 0;
-  -webkit-margin-after: 1px;
-  padding-top: 12px;
-  padding-bottom: 12px;
-}
-.content-padded{
-  margin-left: 13px;
-  margin-right: 13px;
-}
-header.bar{
-  background: rgb(240, 240, 240);
-}
-.bar-tab .tab-item {
-  cursor: pointer;
-  padding-left: 25px; 
-  padding-top: 5px;
-  padding-bottom: 5px;
-  padding-right: 25px;
-  color: #000000;
-  font-size: 14px;
-  background: rgb(230, 230, 230);
-  height: 20px;
-  border-bottom: 2px solid #1691C6;
-}
-.bar-tab .tab-item:hover {
-  background: #D8D8D8;
-}
-
-.bar-tab .tab-item.active {
-  background: #1691c6;
-  color: #ffffff;
-  font: "Segoe UI Semibold";
-}
-.accordion-toggle {
-  background: none;
-  border-bottom: 1px solid #ddd;
-  margin-left: -12px;
-  margin-right: -12px;
-  padding-top: 6px;
-  padding-bottom: 6px;
-  padding-left: 10px;
-}
-#page-customize .content {
-  padding-top: 75px;
-}
-#switch-to-customize{
-  position: absolute;
-  right: 0px;
-  margin-top: 5px;
-  background-color: white;
-  border-radius: 15px;
-  width: 150px;
-  text-align: left;
-  color: #1691c6;
-  border-color: #1691c6;
-}
-.bar.bar-tab {
-  height: 20px;
-  top: 30px;
-}
-.title {
-  line-height: 30px;
-}
-#switch-to-home {
-  cursor: pointer;
-  color: black;
-  opacity: 0.8;
-  bottom: 0px;
-  font-size: 18px;
-  padding-top: 6px;
-  padding-bottom: 6px;
-}
-.bar {
-  height: 30px;
-}
+  /* HACK: To remove gap between tabs and content */
+  .dt-accordion{
+    margin-top: -10px;
+  }
+  #model-algo {
+    margin-bottom: 10px;
+  }
 </style>
