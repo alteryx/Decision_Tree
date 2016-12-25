@@ -50,10 +50,11 @@
   <!-- CONTENT -->
   <div class="content">
     <div class="content-padded">
-      
-        <div>
+       <div class="tabpage" id='tabpage-model'>
+         
           <div id='model-algo'>{{ model.algorithm }}</div>
-          <div id='tabpage-model-rpart' class='tabpage'>
+          
+          <div id='tabpage-model-rpart'>
             <div class="dt-accordion">
               <h4 class="accordion-toggle" id="toggle-main">
                 Model Type and Sampling Weights
@@ -91,7 +92,7 @@
             </div>
           </div>
           
-          <div id='tabpage-model-c50' class='tabpage'>
+          <div id='tabpage-model-c50'>
              <div class="dt-accordion">
                
                <h4 class='accordion-toggle' id='toggle-c50toggle1'>
@@ -136,6 +137,8 @@
               
           </div>
         </div>
+
+      </div>
         
           <div class="tabpage" id='tabpage-graphics'>
             <div class="dt-accordion">
@@ -184,8 +187,7 @@
               
            </div>
         </div>
-    </div>
-    
+   
     </div>
   </div>
   
