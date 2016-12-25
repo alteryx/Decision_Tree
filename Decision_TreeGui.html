@@ -464,7 +464,29 @@ var items = {
     "surrogate_use": ["usesurrogate.0", "usesurrogate.1", "usesurrogate.2"],
     "surrogate_split_criteria": ["total.correct", "percent.correct"]
   }
-}
+};
+/* Enter any Display Rules 
+Each key refers to the id of a div whose display is to be controlled. The values
+indicate the name of the dataItem controlling the display and an optional condition or value for which the div is to be displayed. For example, these rules imply
+1. display div with id 'show-on-rules' when 'rules' is true.
+2. display div with id 'show-for-classification' when 'model_type' is 'classification'.
+*/
+var displayRules = {
+  'div-use.weights': 'use.weights',
+  'div-use.weights2': 'use.weights',
+  'div-tree.plot': 'tree.plot',
+  'div-prune.plot': 'prune.plot',
+  'div-treeplot-in': ['tree_plot_size', 'tree.inches'],
+  'div-treeplot-cm': ['tree_plot_size', 'tree.centimeters'],
+  'div-pruneplot-in': ['pruning_plot_size', 'prune.inches'],
+  'div-pruneplot-cm': ['pruning_plot_size', 'prune.centimeters'],
+  'div-cp': 'set_cp',
+  'show-for-classification': ['model_type', 'classification'],
+  'show-on-rules': 'rules',
+  'show-on-bandscheck': 'bands_check',
+  'tabpage-model-rpart': ['model.algorithm', 'rpart'],
+  'tabpage-model-c50': ['model.algorithm', 'C5.0']
+};
 </script>
 
   <script src="./assets/alteryx-utils.js"></script>
