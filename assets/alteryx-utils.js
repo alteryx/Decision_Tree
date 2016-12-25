@@ -299,3 +299,13 @@ function switchPage(to){
   }
 }
 
+function initializeDataItemsBeforeLoad(dataItem, items){
+  initializeDataItems(dataItem, items.itemsToInitialize);
+  initializeRadioItems(dataItem, items.radioItems);
+  initializeToggleBarItems(dataItem, items.toggleBarItems);
+}
+
+function syncDataItemsAfterLoad(items){
+  Object.keys(items.radioItems).forEach(syncRadio);
+  Object.keys(items.toggleBarItems).forEach(setupToggleBar);
+}
