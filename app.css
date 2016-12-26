@@ -1,7 +1,6 @@
-/* HACK: To remove gap between tabs and content */
-.dt-accordion{
+#tabpage-graphics{
   margin-top: -10px;
 }
-#model-algo {
-  margin-bottom: 10px;
+#div-model-algorithm, #model-algo{
+  margin-bottom: 8px;
 }
