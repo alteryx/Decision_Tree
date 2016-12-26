@@ -1,268 +1,200 @@
-<div class="page" id="page-basic">
-  <div class="fd-header">Setup</div>
-  <div class="content">
-    <div class="content-padded">
-      <div id="div-model-name">
-        <!--  Model Name  -->
-        <label for="Model Name">Model Name</label>
-        <alteryx-pluginwidget type="TextBox" password="false" id="Model Name" dataName="Model Name"></alteryx-pluginwidget>
-      </div>
-      <div id="div-y-var">
-        <!--  Y Var  -->
-        <label for="Y Var">Select the target variable</label>
-        <alteryx-pluginwidget type="DropDown" dataType="FieldSelector" inputNumber="0" connectionNumber="0" fieldType="All" id="Y Var" dataName="Y Var"></alteryx-pluginwidget>
-      </div>
-      <div id="div-x-vars">
-        <!--  X Vars  -->
-        <label for="X Vars">Select the predictor variables</label>
-        <alteryx-pluginwidget type="MultiSelectListBox" dataType="MultiStringSelector" inputNumber="0" connectionNumber="0" fieldType="All" id="X Vars" dataName="X Vars"></alteryx-pluginwidget>
-      </div>
-      <button class="switch" id="switch-to-customize" data-page="Customize">
-        Customize
-        <i class="en-right-open-big pull-right"></i>
-      </button>
-    </div>
-  </div>
-</div>
-<div class="page" id="page-customize" style="display:none;">
-  <div class="fd-header">
-    <i class="en-left-open-big switch" id="switch-to-home" data-page="Home"></i>
-    Customize
-  </div>
-  <div class="tabs" id="header">
-    <div class="tab" data-page="model" id="model" style="width:50%">Model</div>
-    <div class="tab" data-page="graphics" id="graphics" style="width:50%">Plots</div>
-  </div>
-  <div class="content">
-    <div class="content-padded">
-      <div class="tabpage" id="tabpage-model" data-id="model" data-title="Model">
-        <div id="div-model-algorithm">
-          <!--  model.algorithm  -->
-          <label for="model.algorithm">Choose Algorithm</label>
-          <alteryx-pluginwidget type="DropDown" id="model.algorithm" dataName="model.algorithm">
-            <alteryx-option uiobject="rpart" default="true">rpart</alteryx-option>
-            <alteryx-option uiobject="C5.0">C5.0</alteryx-option>
-          </alteryx-pluginwidget>
-        </div>
-        <div class="dt-accordion">
-          <h4 class="accordion-toggle" id="toggle-main">Model and Sampling Weights</h4>
-          <div class="accordion-content">
-            <div id="div-">
-              <div class="clearfix togglebar" id="id-model_type">
-                <div class="label" style="float:left;">Model Type</div>
-                <div style="float:right;">
-                  <div class="toggletabs">
-                    <div class="toggletab is-tab-selected" data-page="auto" id="id-auto">Auto</div>
-                    <div class="toggletab" data-page="classification" id="id-classification">Classification</div>
-                    <div class="toggletab" data-page="regression" id="id-regression">Regression</div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div id="div-use-weights">
-              <!--  use.weights  -->
-              <alteryx-pluginwidget type="CheckBox" text="Use sampling weights in model estimation" id="use.weights" dataName="use.weights" defaultValue="false"></alteryx-pluginwidget>
-            </div>
-            <div id="div-select-weights">
-              <!--  select.weights  -->
-              <alteryx-pluginwidget type="DropDown" dataType="FieldSelector" inputNumber="0" connectionNumber="0" fieldType="Numeric" clearable="true" id="select.weights" dataName="select.weights"></alteryx-pluginwidget>
-            </div>
-          </div>
-          <h4 class="accordion-toggle" id="toggle-split">Splitting Criteria and Surrogates</h4>
-          <div class="accordion-content">
-            <div id="div-splitting-criteria">
-              <!--  splitting_criteria  -->
-              <label for="splitting_criteria">The splitting criteria to use:</label>
-              <alteryx-pluginwidget type="RadioGroup" group="splitting_criteria" id="splitting_criteria" dataName="splitting_criteria">
-                <alteryx-option uiobject="Gini coefficient" default="true">use.gini</alteryx-option>
-                <alteryx-option uiobject="Information index">use.information</alteryx-option>
-              </alteryx-pluginwidget>
-            </div>
-            <div id="div-surrogate-use">
-              <!--  surrogate_use  -->
-              <label for="surrogate_use">Use surrogates to</label>
-              <alteryx-pluginwidget type="RadioGroup" group="surrogate_use" id="surrogate_use" dataName="surrogate_use">
-                <alteryx-option uiobject="Omit observations with missing value for primary split rule." default="true">usesurrogate.0</alteryx-option>
-                <alteryx-option uiobject="Split records missing the candidate variable.">usesurrogate.1</alteryx-option>
-                <alteryx-option uiobject="Send observation in majority direction if all surrogates are missing.">usesurrogate.2</alteryx-option>
-              </alteryx-pluginwidget>
-            </div>
-            <div id="div-surrogate-split-criteria">
-              <!--  surrogate_split_criteria  -->
-              <label for="surrogate_split_criteria">Select best surrogate split using</label>
-              <alteryx-pluginwidget type="RadioGroup" group="surrogate_split_criteria" id="surrogate_split_criteria" dataName="surrogate_split_criteria">
-                <alteryx-option uiobject="Number of correct classifications for a candidate variable." default="true">total.correct</alteryx-option>
-                <alteryx-option uiobject="Percentage of correct classifications for a candidate variable.">percent.correct</alteryx-option>
-              </alteryx-pluginwidget>
-            </div>
-          </div>
-          <h4 class="accordion-toggle" id="toggle-hyperparameters">Numerical Hyperparameters</h4>
-          <div class="accordion-content">
-            <div id="div-set-cp">
-              <!--  set_cp  -->
-              <alteryx-pluginwidget type="CheckBox" text="Set complexity parameter" id="set_cp" dataName="set_cp" defaultValue="false"></alteryx-pluginwidget>
-            </div>
-            <div id="div-cp">
-              <!--  cp  -->
-              <alteryx-pluginwidget type="NumericSpinner" default="0" min="0" max="1" step="0.1" id="cp" dataName="cp"></alteryx-pluginwidget>
-            </div>
-            <div id="div-min-split">
-              <!--  min.split  -->
-              <label for="min.split">The minimum number of records needed to allow for a split</label>
-              <alteryx-pluginwidget type="NumericSpinner" default="20" min="2" max="10000" step="1" id="min.split" dataName="min.split"></alteryx-pluginwidget>
-            </div>
-            <div id="div-min-bucket">
-              <!--  min.bucket  -->
-              <label for="min.bucket">The allowed minimum number of records in a terminal node</label>
-              <alteryx-pluginwidget type="NumericSpinner" default="7" min="1" max="5000" step="1" id="min.bucket" dataName="min.bucket"></alteryx-pluginwidget>
-            </div>
-            <div id="div-xval-folds">
-              <!--  xval.folds  -->
-              <label for="xval.folds">The number of folds to use in the cross validation to prune the tree</label>
-              <alteryx-pluginwidget type="NumericSpinner" default="10" min="2" max="20" step="1" id="xval.folds" dataName="xval.folds"></alteryx-pluginwidget>
-            </div>
-            <div id="div-max-depth">
-              <!--  max.depth  -->
-              <label for="max.depth">The maximum allowed depth of any node in the final tree</label>
-              <alteryx-pluginwidget type="NumericSpinner" default="20" min="2" max="50" step="1" id="max.depth" dataName="max.depth"></alteryx-pluginwidget>
-            </div>
-            <div id="div-max-bins">
-              <!--  max.bins  -->
-              <label for="max.bins">The maximum number of bins to use for each numeric variable</label>
-              <alteryx-pluginwidget type="TextBox" password="false" placeholder="Default" id="max.bins" dataName="max.bins"></alteryx-pluginwidget>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="tabpage" id="tabpage-graphics" data-id="graphics" data-title="Plots">
-        <div class="dt-accordion">
-          <h4 class="accordion-toggle" id="tree-plot">Tree Plot</h4>
-          <div class="accordion-content">
-            <div id="div-tree-plot">
-              <!--  tree.plot  -->
-              <alteryx-pluginwidget type="CheckBox" text="Display Tree Plot?" id="tree.plot" dataName="tree.plot" defaultValue="true"></alteryx-pluginwidget>
-            </div>
-            <div id="show-tree-plot-options">
-              <div id="div-branch-dist">
-                <!--  Branch Dist  -->
-                <alteryx-pluginwidget type="CheckBox" text="Uniform branch distances" id="Branch Dist" dataName="Branch Dist" defaultValue="true"></alteryx-pluginwidget>
-              </div>
-              <div id="div-">
-                <div class="clearfix togglebar" id="id-tree_summary">
-                  <div class="label" style="float:left;">Leaf summary</div>
-                  <div style="float:right;">
-                    <div class="toggletabs">
-                      <div class="toggletab is-tab-selected" data-page="Counts" id="id-Counts">Counts</div>
-                      <div class="toggletab" data-page="Proportions" id="id-Proportions">Proportions</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div id="show-tree-plot-size-in-in">
-                <div id="div-tree-in-w">
-                  <!--  tree.in.w  -->
-                  <label for="tree.in.w">Width</label>
-                  <alteryx-pluginwidget type="NumericSpinner" default="5.5" min="1" max="100" step="0.05" id="tree.in.w" dataName="tree.in.w"></alteryx-pluginwidget>
-                </div>
-                <div id="div-tree-in-h">
-                  <!--  tree.in.h  -->
-                  <label for="tree.in.h">Height</label>
-                  <alteryx-pluginwidget type="NumericSpinner" default="5.5" min="1" max="100" step="0.05" id="tree.in.h" dataName="tree.in.h"></alteryx-pluginwidget>
-                </div>
-              </div>
-              <div id="show-tree-plot-size-in-cm">
-                <div id="div-tree-cm-w">
-                  <!--  tree.cm.w  -->
-                  <label for="tree.cm.w">Width</label>
-                  <alteryx-pluginwidget type="NumericSpinner" default="13" min="1" max="100" step="0.05" id="tree.cm.w" dataName="tree.cm.w"></alteryx-pluginwidget>
-                </div>
-                <div id="div-tree-cm-h">
-                  <!--  tree.cm.h  -->
-                  <label for="tree.cm.h">Height</label>
-                  <alteryx-pluginwidget type="NumericSpinner" default="14.95" min="1" max="100" step="0.05" id="tree.cm.h" dataName="tree.cm.h"></alteryx-pluginwidget>
-                </div>
-              </div>
-              <div id="div-tree-graph-resolution">
-                <!--  tree.graph.resolution  -->
-                <label for="tree.graph.resolution">Graph resolution</label>
-                <alteryx-pluginwidget type="DropDown" id="tree.graph.resolution" dataName="tree.graph.resolution">
-                  <alteryx-option uiobject="1x (96 dpi)" default="true">1x</alteryx-option>
-                  <alteryx-option uiobject="2x (192 dpi)">2x</alteryx-option>
-                  <alteryx-option uiobject="3x (288 dpi)">3x</alteryx-option>
-                </alteryx-pluginwidget>
-              </div>
-              <div id="div-tree-pointsize">
-                <!--  tree.pointsize  -->
-                <label for="tree.pointsize">Base font size (points)</label>
-                <alteryx-pluginwidget type="NumericSpinner" default="8" min="5" max="100" step="1" id="tree.pointsize" dataName="tree.pointsize"></alteryx-pluginwidget>
-              </div>
-            </div>
-          </div>
-          <h4 class="accordion-toggle" id="prune-plot">Prune Plot</h4>
-          <div class="accordion-content">
-            <div id="div-prune-plot">
-              <!--  prune.plot  -->
-              <alteryx-pluginwidget type="CheckBox" text="Display Prune Plot?" id="prune.plot" dataName="prune.plot" defaultValue="false"></alteryx-pluginwidget>
-            </div>
-            <div id="show-prune-plot-options">
-              <div id="div-">
-                <div class="clearfix togglebar" id="id-pruning_plot_size">
-                  <div class="label" style="float:left;">Plot size</div>
-                  <div style="float:right;">
-                    <div class="toggletabs">
-                      <div class="toggletab is-tab-selected" data-page="prune.inches" id="id-prune.inches">Inches</div>
-                      <div class="toggletab" data-page="prune.centimeters" id="id-prune.centimeters">Centimeters</div>
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div id="show-prune-plot-size-in-in">
-                <div id="div-prune-in-w">
-                  <!--  prune.in.w  -->
-                  <label for="prune.in.w">Width</label>
-                  <alteryx-pluginwidget type="NumericSpinner" default="5.5" min="1" max="100" step="0.05" id="prune.in.w" dataName="prune.in.w"></alteryx-pluginwidget>
-                </div>
-                <div id="div-prune-in-h">
-                  <!--  prune.in.h  -->
-                  <label for="prune.in.h">Height</label>
-                  <alteryx-pluginwidget type="NumericSpinner" default="5.5" min="1" max="100" step="0.05" id="prune.in.h" dataName="prune.in.h"></alteryx-pluginwidget>
-                </div>
-              </div>
-              <div id="show-prune-plot-size-in-cm">
-                <div id="div-prune-cm-w">
-                  <!--  prune.cm.w  -->
-                  <label for="prune.cm.w">Width</label>
-                  <alteryx-pluginwidget type="NumericSpinner" default="13" min="1" max="100" step="0.05" id="prune.cm.w" dataName="prune.cm.w"></alteryx-pluginwidget>
-                </div>
-                <div id="div-prune-cm-h">
-                  <!--  prune.cm.h  -->
-                  <label for="prune.cm.h">Height</label>
-                  <alteryx-pluginwidget type="NumericSpinner" default="14.95" min="1" max="100" step="0.05" id="prune.cm.h" dataName="prune.cm.h"></alteryx-pluginwidget>
-                </div>
-              </div>
-              <div id="div-prune-graph-resolution">
-                <!--  prune.graph.resolution  -->
-                <label for="prune.graph.resolution">Graph resolution</label>
-                <alteryx-pluginwidget type="DropDown" id="prune.graph.resolution" dataName="prune.graph.resolution">
-                  <alteryx-option uiobject="1x (96 dpi)" default="true">1x</alteryx-option>
-                  <alteryx-option uiobject="2x (192 dpi)">2x</alteryx-option>
-                  <alteryx-option uiobject="3x (288 dpi)">3x</alteryx-option>
-                </alteryx-pluginwidget>
-              </div>
-              <div id="div-prune-pointsize">
-                <!--  prune.pointsize  -->
-                <label for="prune.pointsize">Base font size (points)</label>
-                <alteryx-pluginwidget type="NumericSpinner" default="10" min="5" max="100" step="1" id="prune.pointsize" dataName="prune.pointsize"></alteryx-pluginwidget>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div>
-  </div>
-</div>
-<script>
+<!-- SETUP -->
+<div class='page has-hint' id='page-basic'>
   
+  <div class='fd-header'>
+    <div class='fd-header-title-text'>Setup</div>
+  </div>
+
+  <div class="content">
+    <div class="content-padded">
+      
+      <div id='mname' class="qconst">{{ `Model Name` }}</div>
+      <div id='yvar' class="qconst">{{ `Y Var` }}</div>
+      <div id='xvars' class="qconst">{{ `X Vars` }}</div>
+      <button class="btn pull-left switch" id="switch-to-customize"
+        data-page='Customize'
+      >
+        Customize
+        <i class = 'en-right-open-big pull-right'></i>
+      </button>
+      
+    </div>
+  </div>
+  
+</div>
+
+<!-- CUSTOMIZE -->
+<div class='page' id='page-customize' style='display:none;'>
+  
+  <!-- HEADER -->
+  <div class='fd-header'>
+    <div class='fd-header-title'>
+      <i class = 'en-left-open-big switch' id='switch-to-home' 
+        data-page='Home'
+      >
+      </i> 
+      <span class='fd-header-title-text'>Customize</span>
+    </div>
+  </div>
+  
+  <!-- TABS -->
+  <div class="tabs" id='header'>
+    <div class="tab tab-one-half active mytab" data-page='model' id='model'>
+      Model
+    </div>
+    <div class="tab tab-one-half mytab" data-page='graphics' id='graphics'>
+      Plots
+    </div>
+  </div>
+  
+  <!-- CONTENT -->
+  <div class="content">
+    <div class="content-padded">
+       <div class="tabpage" id='tabpage-model'>
+         
+          <div id='model-algo'>{{ model.algorithm }}</div>
+          
+          <div id='tabpage-model-rpart'>
+            <div class="dt-accordion">
+              <h4 class="accordion-toggle" id="toggle-main">
+                Model Type and Sampling Weights
+              </h4>
+              <div class='accordion-content'>
+                {{ `model_type` }}
+                {{ `use.weights` }}
+                <div id='div-use.weights' class='indent-one'>
+                  {{ `select.weights` }}
+                </div>
+                <!--  splitting_criteria  -->
+              </div>
+              <h4 class="accordion-toggle" id="toggle-split">
+                Splitting Criteria and Surrogates
+              </h4>
+              <div class='accordion-content'>
+                <div id='show-for-classification'>{{ `splitting_criteria` }}</div>
+                {{ `surrogate_use` }}
+                {{ `surrogate_split_criteria` }}
+              </div>
+              <h4 class="accordion-toggle" id='toggle-hyperparameters'>
+                HyperParameters
+              </h4>
+              <div class='accordion-content'>
+                {{ `min.split` }}
+                {{ `min.bucket` }}
+                {{ `xval.folds` }}
+                {{ `max.depth` }}
+                {{ `max.bins` }}
+                <div>
+                  <div style='float:left;' id='div-set-cp'>{{ `set_cp` }}</div>
+                  <div style='float:right;' id='div-cp'>{{ `cp` }}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div id='tabpage-model-c50'>
+             <div class="dt-accordion">
+               
+               <h4 class='accordion-toggle' id='toggle-c50toggle1'>
+                 Toggle 1
+               </h4>
+               <div class='accordion-content'>
+                  {{ rules }}
+                  <div id = 'show-on-rules' class='indent-one'> 
+                   {{ bands_check }}
+                   <div id = 'show-on-bandscheck'>
+                     {{  bands  }}
+                  </div>
+                 </div>
+                 {{ `use.weights` }}
+                 <div id='div-use.weights2' class='indent-one'>
+                    {{ `select.weights` }}
+                 </div>
+              </div>
+              
+               <h4 class='accordion-toggle' id='toggle-c50toggle2'>
+                 Toggle2
+               </h4>
+               <div class='accordion-content'>
+                {{ subset }}
+                {{ winnow }}
+                {{ GlobalPruning }}
+                {{ fuzzyThreshold }}
+                {{ earlyStopping }}
+                {{ `display.static` }}
+              </div>
+              
+               <h4 class='accordion-toggle' id='toggle-c50toggle3'>
+                 Toggle3
+               </h4>
+               <div class='accordion-content'>
+                 <div id='div-trials'>{{ trials }}</div>
+                 {{ CF }}
+                 {{ minCases }}
+                 {{ sample }}
+                 {{ seed }}
+               </div>
+              
+          </div>
+        </div>
+
+      </div>
+        
+          <div class="tabpage" id='tabpage-graphics'>
+            <div class="dt-accordion">
+             
+              <h4 class="accordion-toggle" id="toggle-treeplot">
+                Tree Plot
+              </h4>
+              <div class='accordion-content'>
+                {{ `tree.plot` }}
+                <div id='div-tree.plot'>
+                  <div id='div-branch-dist'>{{ `Branch Dist` }}</div>
+                  {{ `tree_summary` }}
+                  {{ `tree_plot_size` }}
+                  <div id='div-treeplot-in'>
+                    <div id='div-treeplot-in-w'>{{ `tree.in.w` }}</div>
+                    <div id='div-treeplot-in-h'>{{ `tree.in.h` }}</div>
+                  </div>
+                  <div id='div-treeplot-cm'>
+                    {{ `tree.cm.w` }}
+                    {{ `tree.cm.h` }}     
+                  </div>
+                  {{ `tree.graph.resolution` }}
+                  {{ `tree.pointsize` }}
+                </div>
+              </div>
+              
+              <h4 class="accordion-toggle" id="toggle-pruneplot">
+                Prune Plot
+              </h4>
+              <div class='accordion-content'>
+                {{ `prune.plot` }}
+                <div id='div-prune.plot'>
+                  {{ `pruning_plot_size` }}
+                  <div id='div-pruneplot-in'>
+                  {{ `prune.in.w` }}
+                  {{ `prune.in.h` }}
+                  </div>
+                  <div id='div-pruneplot-cm'>
+                  {{ `prune.cm.w` }}
+                  {{ `prune.cm.h` }}
+                  </div>
+                  {{ `prune.graph.resolution` }}
+                  {{ `prune.pointsize` }}
+                </div>
+              </div>
+              
+           </div>
+        </div>
+   
+    </div>
+  </div>
+  
+</div>
+
+<!-- Auto Generated by jvMakeDataItemsToInitialize -->
+<script>
 var items = {
   "itemsToInitialize": {
     "curPage": "Home",
@@ -280,19 +212,27 @@ var items = {
     "surrogate_use": ["usesurrogate.0", "usesurrogate.1", "usesurrogate.2"],
     "surrogate_split_criteria": ["total.correct", "percent.correct"]
   }
-}
-
-  
+};
+/* Enter any Display Rules 
+Each key refers to the id of a div whose display is to be controlled. The values
+indicate the name of the dataItem controlling the display and an optional condition or value for which the div is to be displayed. For example, these rules imply
+1. display div with id 'show-on-rules' when 'rules' is true.
+2. display div with id 'show-for-classification' when 'model_type' is 'classification'.
+*/
 var displayRules = {
-  "div-select-weights": "use.weights",
-  "show-tree-plot-options": "tree.plot",
-  "show-prune-plot-options": "prune.plot",
-  "show-tree-plot-size-in-in": ["tree_plot_size", "tree.inches"],
-  "show-tree-plot-size-in-cm": ["tree_plot_size", "tree.centimeters"],
-  "show-prune-plot-size-in-in": ["pruning_plot_size", "prune.inches"],
-  "show-prune-plot-size-in-cm": ["pruning_plot_size", "prune.centimeters"],
-  "div-cp": "set_cp",
-  "div-splitting-criteria": ["model_type", "classification"]
-}
-
+  'div-use.weights': 'use.weights',
+  'div-use.weights2': 'use.weights',
+  'div-tree.plot': 'tree.plot',
+  'div-prune.plot': 'prune.plot',
+  'div-treeplot-in': ['tree_plot_size', 'tree.inches'],
+  'div-treeplot-cm': ['tree_plot_size', 'tree.centimeters'],
+  'div-pruneplot-in': ['pruning_plot_size', 'prune.inches'],
+  'div-pruneplot-cm': ['pruning_plot_size', 'prune.centimeters'],
+  'div-cp': 'set_cp',
+  'show-for-classification': ['model_type', 'classification'],
+  'show-on-rules': 'rules',
+  'show-on-bandscheck': 'bands_check',
+  'tabpage-model-rpart': ['model.algorithm', 'rpart'],
+  'tabpage-model-c50': ['model.algorithm', 'C5.0']
+};
 </script>
