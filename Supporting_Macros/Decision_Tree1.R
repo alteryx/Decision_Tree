@@ -70,7 +70,14 @@ config <- list(
 	`GlobalPruning` = checkboxInput('%Question.GlobalPruning%', TRUE),
   `X Vars` = listInput('%Question.X Vars%', names(iris)[1:4]),
   `xval.folds` = numericInput('%Question.xval.folds%' , 10),
-  `Y Var` = dropdownInput('%Question.Y Var%', 'Species')
+  `Y Var` = dropdownInput('%Question.Y Var%', 'Species'),
+	use_cv = checkboxInput('%Question.use_cv%', TRUE),
+	set_seed_cv = checkboxInput('%Question.set_seed_cv%', TRUE),
+	cv_seed = numericInput('%Question.cv_seed%' , 1),
+	numberFolds = numericInput('%Question.numberFolds%' , 5),
+	numberTrials = numericInput('%Question.numberFolds%' , 3),
+	posClass = textInput('%Question.posClass%' , NULL),
+	stratified = checkboxInput('%Question.stratified%', FALSE)
 )
 options(alteryx.wd = '%Engine.WorkflowDirectory%')
 options(alteryx.debug = config$debug)

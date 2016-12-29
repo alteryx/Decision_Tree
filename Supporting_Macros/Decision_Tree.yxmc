@@ -153,7 +153,14 @@ config &lt;- list(
 	`GlobalPruning` = checkboxInput('%Question.GlobalPruning%', TRUE),
   `X Vars` = listInput('%Question.X Vars%', names(iris)[1:4]),
   `xval.folds` = numericInput('%Question.xval.folds%' , 10),
-  `Y Var` = dropdownInput('%Question.Y Var%', 'Species')
+  `Y Var` = dropdownInput('%Question.Y Var%', 'Species'),
+	use_cv = checkboxInput('%Question.use_cv%', TRUE),
+	set_seed_cv = checkboxInput('%Question.set_seed_cv%', TRUE),
+	cv_seed = numericInput('%Question.cv_seed%' , 1),
+	numberFolds = numericInput('%Question.numberFolds%' , 5),
+	numberTrials = numericInput('%Question.numberFolds%' , 3),
+	posClass = textInput('%Question.posClass%' , NULL),
+	stratified = checkboxInput('%Question.stratified%', FALSE)
 )
 options(alteryx.wd = '%Engine.WorkflowDirectory%')
 options(alteryx.debug = config$debug)
@@ -6662,6 +6669,117 @@ No Text Styling</DefaultAnnotationText>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput"/>
     </Node>
+    <Node ToolID="261">
+      <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
+        <Position x="1553" y="142" width="493" height="128"/>
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Caption>Cross-validation Params</Caption>
+          <Style TextColor="#314c4a" FillColor="#ecf2f2" BorderColor="#314c4a" Transparency="25" Margin="25"/>
+          <Disabled value="False"/>
+          <Folded value="False"/>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name/>
+          <DefaultAnnotationText/>
+          <Left value="False"/>
+        </Annotation>
+      </Properties>
+      <ChildNodes>
+        <Node ToolID="262">
+          <GuiSettings Plugin="AlteryxGuiToolkit.Questions.CheckBoxGroup.CheckBoxGroup">
+            <Position x="1578" y="186" width="59" height="59"/>
+          </GuiSettings>
+          <Properties>
+            <Configuration/>
+            <Annotation DisplayMode="0">
+              <Name>use_cv</Name>
+              <DefaultAnnotationText/>
+              <Left value="False"/>
+            </Annotation>
+          </Properties>
+        </Node>
+        <Node ToolID="263">
+          <GuiSettings Plugin="AlteryxGuiToolkit.Questions.CheckBoxGroup.CheckBoxGroup">
+            <Position x="1650" y="186" width="59" height="59"/>
+          </GuiSettings>
+          <Properties>
+            <Configuration/>
+            <Annotation DisplayMode="0">
+              <Name>set_seed_cv</Name>
+              <DefaultAnnotationText/>
+              <Left value="False"/>
+            </Annotation>
+          </Properties>
+        </Node>
+        <Node ToolID="264">
+          <GuiSettings Plugin="AlteryxGuiToolkit.Questions.NumericUpDown.NumericUpDown">
+            <Position x="1722" y="186" width="59" height="59"/>
+          </GuiSettings>
+          <Properties>
+            <Configuration/>
+            <Annotation DisplayMode="0">
+              <Name>cv_seed</Name>
+              <DefaultAnnotationText/>
+              <Left value="False"/>
+            </Annotation>
+          </Properties>
+        </Node>
+        <Node ToolID="265">
+          <GuiSettings Plugin="AlteryxGuiToolkit.Questions.NumericUpDown.NumericUpDown">
+            <Position x="1782" y="186" width="59" height="59"/>
+          </GuiSettings>
+          <Properties>
+            <Configuration/>
+            <Annotation DisplayMode="0">
+              <Name>numberFolds</Name>
+              <DefaultAnnotationText/>
+              <Left value="False"/>
+            </Annotation>
+          </Properties>
+        </Node>
+        <Node ToolID="266">
+          <GuiSettings Plugin="AlteryxGuiToolkit.Questions.NumericUpDown.NumericUpDown">
+            <Position x="1842" y="186" width="59" height="59"/>
+          </GuiSettings>
+          <Properties>
+            <Configuration/>
+            <Annotation DisplayMode="0">
+              <Name>numberTrials</Name>
+              <DefaultAnnotationText/>
+              <Left value="False"/>
+            </Annotation>
+          </Properties>
+        </Node>
+        <Node ToolID="267">
+          <GuiSettings Plugin="AlteryxGuiToolkit.Questions.TextBox.QuestionTextBox">
+            <Position x="1902" y="186" width="59" height="59"/>
+          </GuiSettings>
+          <Properties>
+            <Configuration/>
+            <Annotation DisplayMode="0">
+              <Name>posClass</Name>
+              <DefaultAnnotationText/>
+              <Left value="False"/>
+            </Annotation>
+          </Properties>
+        </Node>
+        <Node ToolID="268">
+          <GuiSettings Plugin="AlteryxGuiToolkit.Questions.CheckBoxGroup.CheckBoxGroup">
+            <Position x="1962" y="186" width="59" height="59"/>
+          </GuiSettings>
+          <Properties>
+            <Configuration/>
+            <Annotation DisplayMode="0">
+              <Name>stratified</Name>
+              <DefaultAnnotationText/>
+              <Left value="False"/>
+            </Annotation>
+          </Properties>
+        </Node>
+      </ChildNodes>
+    </Node>
     <Node ToolID="257">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
         <Position x="774" y="594" width="199" height="98"/>
@@ -6891,7 +7009,7 @@ No Text Styling</DefaultAnnotationText>
       <ChildNodes>
         <Node ToolID="174">
           <GuiSettings Plugin="AlteryxGuiToolkit.Questions.NumericUpDown.NumericUpDown">
-            <Position x="85.99996" y="272.9998" width="59" height="59"/>
+            <Position x="85.99993" y="272.9999" width="59" height="59"/>
           </GuiSettings>
           <Properties>
             <Configuration/>
@@ -7733,7 +7851,7 @@ Union</Text>
     </Node>
     <Node ToolID="215">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="798.0002" y="348.9996" width="1346" height="218.0001"/>
+        <Position x="798.0002" y="348.9997" width="1346" height="217.9999"/>
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -7811,7 +7929,7 @@ Union</Text>
         </Node>
         <Node ToolID="211">
           <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
-            <Position x="1110" y="377.9996" width="100" height="36"/>
+            <Position x="1110" y="377.9997" width="100" height="36"/>
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -7885,7 +8003,7 @@ Union</Text>
         </Node>
         <Node ToolID="218">
           <GuiSettings Plugin="AlteryxGuiToolkit.Questions.CheckBoxGroup.CheckBoxGroup">
-            <Position x="930.0001" y="413.9993" width="59" height="59"/>
+            <Position x="930.0001" y="413.9992" width="59" height="59"/>
           </GuiSettings>
           <Properties>
             <Configuration/>
@@ -7944,7 +8062,7 @@ Union</Text>
         </Node>
         <Node ToolID="222">
           <GuiSettings Plugin="AlteryxGuiToolkit.Questions.NumericUpDown.NumericUpDown">
-            <Position x="1134" y="497.9998" width="59" height="59"/>
+            <Position x="1134" y="497.9997" width="59" height="59"/>
           </GuiSettings>
           <Properties>
             <Configuration/>
@@ -9022,6 +9140,48 @@ Union</Text>
         <Value/>
         <IsNumeric value="False"/>
       </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>use_cv</Name>
+        <Value/>
+        <IsNumeric value="False"/>
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>set_seed_cv</Name>
+        <Value/>
+        <IsNumeric value="False"/>
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>cv_seed</Name>
+        <Value/>
+        <IsNumeric value="True"/>
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>numberFolds</Name>
+        <Value/>
+        <IsNumeric value="True"/>
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>numberTrials</Name>
+        <Value/>
+        <IsNumeric value="True"/>
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>posClass</Name>
+        <Value/>
+        <IsNumeric value="False"/>
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>stratified</Name>
+        <Value/>
+        <IsNumeric value="False"/>
+      </Constant>
     </Constants>
     <MetaInfo>
       <NameIsFileName value="False"/>
@@ -9386,6 +9546,76 @@ C5.0
               <Password value="False"/>
               <Multiline value="False"/>
               <Hidden value="False"/>
+            </Question>
+            <Question>
+              <Type>BooleanGroup</Type>
+              <Description>Use cross-validation</Description>
+              <Name>use_cv</Name>
+              <ToolId value="262"/>
+              <Questions/>
+              <Default value="False"/>
+              <Collapsable value="False"/>
+            </Question>
+            <Question>
+              <Type>BooleanGroup</Type>
+              <Description>Set seed for external cross-validation</Description>
+              <Name>set_seed_cv</Name>
+              <ToolId value="263"/>
+              <Questions/>
+              <Default value="True"/>
+              <Collapsable value="False"/>
+            </Question>
+            <Question>
+              <Type>NumericUpDown</Type>
+              <Description>Select value of random seed for cross-validation</Description>
+              <Name>cv_seed</Name>
+              <ToolId value="264"/>
+              <Minimum value="1"/>
+              <Maximum value="1000000"/>
+              <Increment value="1"/>
+              <Default value="1"/>
+              <Decimals value="0"/>
+            </Question>
+            <Question>
+              <Type>NumericUpDown</Type>
+              <Description>Number of cross-validation folds</Description>
+              <Name>numberFolds</Name>
+              <ToolId value="265"/>
+              <Minimum value="1"/>
+              <Maximum value="100"/>
+              <Increment value="1"/>
+              <Default value="5"/>
+              <Decimals value="0"/>
+            </Question>
+            <Question>
+              <Type>NumericUpDown</Type>
+              <Description>Number of cross-validation trials</Description>
+              <Name>numberTrials</Name>
+              <ToolId value="266"/>
+              <Minimum value="1"/>
+              <Maximum value="100"/>
+              <Increment value="1"/>
+              <Default value="3"/>
+              <Decimals value="0"/>
+            </Question>
+            <Question>
+              <Type>TextBox</Type>
+              <Description>Enter the positive class of the target variable (optional, and only relevant with binary classificaiton models)</Description>
+              <Name>posClass</Name>
+              <ToolId value="267"/>
+              <Default/>
+              <Password value="False"/>
+              <Multiline value="False"/>
+              <Hidden value="False"/>
+            </Question>
+            <Question>
+              <Type>BooleanGroup</Type>
+              <Description>Use stratified cross-validation</Description>
+              <Name>stratified</Name>
+              <ToolId value="268"/>
+              <Questions/>
+              <Default value="False"/>
+              <Collapsable value="False"/>
             </Question>
           </Questions>
         </Question>

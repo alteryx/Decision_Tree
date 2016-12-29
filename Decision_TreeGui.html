@@ -83,6 +83,41 @@ Decision_Tree
     <div class="content-padded">
        <div class="tabpage" id='tabpage-model'>
          
+<!--  use_cv  -->
+<alteryx-pluginwidget type="CheckBox" text="Use cross-validation" id="use_cv" dataName="use_cv" defaultValue="false"></alteryx-pluginwidget>
+
+         <div id='show-on-cv' class='indent-one'>
+           
+<!--  set_seed_cv  -->
+<alteryx-pluginwidget type="CheckBox" text="Set seed for external cross-validation" id="set_seed_cv" dataName="set_seed_cv" defaultValue="true"></alteryx-pluginwidget>
+
+           <div id='show-on-seeded-cv'>
+             
+<!--  cv_seed  -->
+<label for="cv_seed">Select value of random seed for cross-validation</label>
+<alteryx-pluginwidget type="NumericSpinner" default="1" min="1" max="1000000" step="1" id="cv_seed" dataName="cv_seed"></alteryx-pluginwidget>
+
+           </div>
+           	
+<!--  numberFolds  -->
+<label for="numberFolds">Number of cross-validation folds</label>
+<alteryx-pluginwidget type="NumericSpinner" default="5" min="1" max="100" step="1" id="numberFolds" dataName="numberFolds"></alteryx-pluginwidget>
+
+	          
+<!--  numberTrials  -->
+<label for="numberTrials">Number of cross-validation trials</label>
+<alteryx-pluginwidget type="NumericSpinner" default="3" min="1" max="100" step="1" id="numberTrials" dataName="numberTrials"></alteryx-pluginwidget>
+
+	          
+<!--  posClass  -->
+<label for="posClass">Enter the positive class of the target variable (optional, and only relevant with binary classificaiton models)</label>
+<alteryx-pluginwidget type="TextBox" password="false" id="posClass" dataName="posClass"></alteryx-pluginwidget>
+
+	          
+<!--  stratified  -->
+<alteryx-pluginwidget type="CheckBox" text="Use stratified cross-validation" id="stratified" dataName="stratified" defaultValue="false"></alteryx-pluginwidget>
+
+         </div>
           <div id='model-algo'>
 <!--  model.algorithm  -->
 <label for="model.algorithm">Choose Algorithm</label>

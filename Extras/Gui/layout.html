@@ -51,7 +51,17 @@
   <div class="content">
     <div class="content-padded">
        <div class="tabpage" id='tabpage-model'>
-         
+         {{ use_cv }}
+         <div id='show-on-cv' class='indent-one'>
+           {{ set_seed_cv }}
+           <div id='show-on-seeded-cv'>
+             {{ cv_seed }}
+           </div>
+           	{{ numberFolds }}
+	          {{ numberTrials }}
+	          {{ posClass }}
+	          {{ stratified }}
+         </div>
           <div id='model-algo'>{{ model.algorithm }}</div>
           
           <div id='tabpage-model-rpart'>
