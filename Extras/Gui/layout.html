@@ -39,10 +39,14 @@
   
   <!-- TABS -->
   <div class="tabs" id='header'>
-    <div class="tab tab-one-half active mytab" data-page='model' id='model'>
+    <div class="tab tab-one-third active mytab" data-page='model' id='model'>
       Model
     </div>
-    <div class="tab tab-one-half mytab" data-page='graphics' id='graphics'>
+    <div class="tab tab-one-third active mytab" data-page='crossvalidation' 
+       id='crossvalidation'>
+      CrossValidation
+    </div>
+    <div class="tab tab-one-third mytab" data-page='graphics' id='graphics'>
       Plots
     </div>
   </div>
@@ -51,17 +55,6 @@
   <div class="content">
     <div class="content-padded">
        <div class="tabpage" id='tabpage-model'>
-         {{ use_cv }}
-         <div id='show-on-cv' class='indent-one'>
-           {{ set_seed_cv }}
-           <div id='show-on-seeded-cv'>
-             {{ cv_seed }}
-           </div>
-           	{{ numberFolds }}
-	          {{ numberTrials }}
-	          {{ posClass }}
-	          {{ stratified }}
-         </div>
           <div id='model-algo'>{{ model.algorithm }}</div>
           
           <div id='tabpage-model-rpart'>
@@ -149,6 +142,19 @@
         </div>
 
       </div>
+       <div class='tabpage' id='tabpage-crossvalidation'>
+         {{ use_cv }}
+         <div id='show-on-cv' class='indent-one'>
+           {{ set_seed_cv }}
+           <div id='show-on-seeded-cv'>
+             {{ cv_seed }}
+           </div>
+           {{ numberFolds }}
+	         {{ numberTrials }}
+	         {{ posClass }}
+	         {{ stratified }}
+         </div>
+       </div>
         
           <div class="tabpage" id='tabpage-graphics'>
             <div class="dt-accordion">
