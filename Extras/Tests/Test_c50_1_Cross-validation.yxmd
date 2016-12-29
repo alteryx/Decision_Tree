@@ -75,7 +75,7 @@ write.Alteryx(admission, 1)
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_2744_4671082f596c4874969c5f289c1a1105_\Engine_5012_9f07097128824e0cb1f64d02e0914be1_.yxdb</TempFile>
+          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_7720_7eff950743cd493cb41c106e3b0eefd6_\Engine_7268_f3eed2759b6c468d93fe36f84a80c632_.yxdb</TempFile>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
@@ -91,7 +91,7 @@ write.Alteryx(admission, 1)
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_2744_4671082f596c4874969c5f289c1a1105_\Engine_5012_ac186114ac334427a7f42a92fac5d010_.yxdb</TempFile>
+          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_7720_7eff950743cd493cb41c106e3b0eefd6_\Engine_7268_4b890794182c46cdb528d5ea84f1082a_.yxdb</TempFile>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
@@ -107,7 +107,7 @@ write.Alteryx(admission, 1)
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_2744_4671082f596c4874969c5f289c1a1105_\Engine_5012_21695ca936ce43fe8c0a21a66604f4a2_.yxdb</TempFile>
+          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_7720_7eff950743cd493cb41c106e3b0eefd6_\Engine_7268_4fecef6b78b34bbc9eafb0099c799cd9_.yxdb</TempFile>
           <Layout>
             <View1>
               <Hints>
@@ -132,7 +132,7 @@ write.Alteryx(admission, 1)
         <Configuration>
           <Value name="curPage">Customize</Value>
           <Value name="curTab">model</Value>
-          <Value name="curToggle">toggle-main</Value>
+          <Value name="curToggle">toggle-hyperparameters</Value>
           <Value name="use.gini">True</Value>
           <Value name="use.information">False</Value>
           <Value name="usesurrogate.0">True</Value>
@@ -156,7 +156,7 @@ write.Alteryx(admission, 1)
           <Value name="Model Name">Decision_Tree_13</Value>
           <Value name="Y Var">admit</Value>
           <Value name="X Vars">gre,gpa,rank</Value>
-          <Value name="use_cv">False</Value>
+          <Value name="use_cv">True</Value>
           <Value name="set_seed_cv">False</Value>
           <Value name="cv_seed">1</Value>
           <Value name="numberFolds">5</Value>
