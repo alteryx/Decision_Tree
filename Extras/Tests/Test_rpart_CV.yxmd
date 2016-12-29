@@ -34,98 +34,6 @@
       </Properties>
       <EngineSettings EngineDll="AlteryxRPluginEngine.dll" EngineDllEntryPoint="AlteryxR" />
     </Node>
-    <Node ToolID="2">
-      <GuiSettings Plugin="Decision_Tree">
-        <Position x="234" y="186" />
-      </GuiSettings>
-      <Properties>
-        <Configuration>
-          <Value name="curPage">Home</Value>
-          <Value name="curTab">model</Value>
-          <Value name="curToggle">toggle-split</Value>
-          <Value name="use.gini">True</Value>
-          <Value name="use.information">False</Value>
-          <Value name="usesurrogate.0">True</Value>
-          <Value name="usesurrogate.1">False</Value>
-          <Value name="usesurrogate.2">False</Value>
-          <Value name="total.correct">True</Value>
-          <Value name="percent.correct">False</Value>
-          <Value name="model_type">auto</Value>
-          <Value name="auto">True</Value>
-          <Value name="classification">False</Value>
-          <Value name="regression">False</Value>
-          <Value name="tree_summary">Counts</Value>
-          <Value name="Counts">True</Value>
-          <Value name="Proportions">False</Value>
-          <Value name="tree_plot_size">tree.inches</Value>
-          <Value name="tree.inches">True</Value>
-          <Value name="tree.centimeters">False</Value>
-          <Value name="pruning_plot_size">prune.inches</Value>
-          <Value name="prune.inches">True</Value>
-          <Value name="prune.centimeters">False</Value>
-          <Value name="Model Name">test_dtree</Value>
-          <Value name="set_seed_cv">True</Value>
-          <Value name="Y Var">mpg</Value>
-          <Value name="X Vars">cyl,disp,hp,drat,wt,qsec,vs,am,gear,carb</Value>
-          <Value name="use_cv">False</Value>
-          <Value name="cv_seed">1</Value>
-          <Value name="numberFolds">5</Value>
-          <Value name="numberTrials">3</Value>
-          <Value name="posClass">
-          </Value>
-          <Value name="stratified">False</Value>
-          <Value name="model.algorithm">rpart</Value>
-          <Value name="use.weights">False</Value>
-          <Value name="select.weights" />
-          <Value name="splitting_criteria">use.gini</Value>
-          <Value name="surrogate_use">usesurrogate.0</Value>
-          <Value name="surrogate_split_criteria">total.correct</Value>
-          <Value name="min.split">20</Value>
-          <Value name="min.bucket">7</Value>
-          <Value name="xval.folds">10</Value>
-          <Value name="max.depth">20</Value>
-          <Value name="max.bins">
-          </Value>
-          <Value name="set_cp">False</Value>
-          <Value name="cp">0</Value>
-          <Value name="rules">False</Value>
-          <Value name="bands_check">False</Value>
-          <Value name="bands">10</Value>
-          <Value name="subset">False</Value>
-          <Value name="winnow">False</Value>
-          <Value name="GlobalPruning">False</Value>
-          <Value name="fuzzyThreshold">False</Value>
-          <Value name="earlyStopping">False</Value>
-          <Value name="display.static">False</Value>
-          <Value name="trials">1</Value>
-          <Value name="CF">0.25</Value>
-          <Value name="minCases">2</Value>
-          <Value name="sample">0</Value>
-          <Value name="seed">1</Value>
-          <Value name="tree.plot">False</Value>
-          <Value name="Branch Dist">False</Value>
-          <Value name="tree.in.w">5.5</Value>
-          <Value name="tree.in.h">5.5</Value>
-          <Value name="tree.cm.w">13</Value>
-          <Value name="tree.cm.h">14.95</Value>
-          <Value name="tree.graph.resolution">1x</Value>
-          <Value name="tree.pointsize">8</Value>
-          <Value name="prune.plot">False</Value>
-          <Value name="prune.in.w">5.5</Value>
-          <Value name="prune.in.h">5.5</Value>
-          <Value name="prune.cm.w">13</Value>
-          <Value name="prune.cm.h">14.95</Value>
-          <Value name="prune.graph.resolution">1x</Value>
-          <Value name="prune.pointsize">10</Value>
-        </Configuration>
-        <Annotation DisplayMode="0">
-          <Name />
-          <DefaultAnnotationText>test_dtree</DefaultAnnotationText>
-          <Left value="False" />
-        </Annotation>
-      </Properties>
-      <EngineSettings Macro="Decision_Tree/Supporting_Macros/Decision_Tree.yxmc" EngineDll="Macro" EngineDllEntryPoint="Decision_Tree/Supporting_Macros/Decision_Tree.yxmc" />
-    </Node>
     <Node ToolID="3">
       <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
         <Position x="54" y="54" width="804" height="60" />
@@ -152,7 +60,7 @@
       </GuiSettings>
       <Properties>
         <Configuration>
-          <Text>This workflow is a basic test that ensures the rpart algorithm runs without errors and that it consistently gives the same splits, within a tolerance of .0001.</Text>
+          <Text>This workflow is a basic test that ensures the rpart algorithm with cross-validation runs without errors and that it consistently gives the same splits, within a tolerance of .0001.</Text>
           <Font name="Segoe UI" size="9" style="0" />
           <TextColor name="White" />
           <FillColor r="111" g="111" b="111" />
@@ -173,7 +81,9 @@
       <Properties>
         <Configuration>
           <RScript><![CDATA[mymodel <- readModelObjects("#1", default = NULL)
-new_split_matrix <- as.data.frame(mymodel$test_dtree$splits, row.names = c(1:NROW(mymodel$test_dtree$splits)))
+print("str of mymodel is:")
+print(str(mymodel))
+new_split_matrix <- as.data.frame(mymodel$Decision_Tree_10$splits, row.names = c(1:NROW(mymodel$test_dtree$splits)))
 print("new_split_matrix is:")
 print(new_split_matrix)
 fixed_split_matrix <- read.Alteryx("#2", mode="data.frame")
@@ -433,19 +343,103 @@ if (any((abs(new_split_matrix - fixed_split_matrix)) > .0001)) {
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAutoField" />
     </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="Decision_Tree">
+        <Position x="222" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="curPage">Home</Value>
+          <Value name="curTab">model</Value>
+          <Value name="curToggle">toggle-main</Value>
+          <Value name="use.gini">True</Value>
+          <Value name="use.information">False</Value>
+          <Value name="usesurrogate.0">True</Value>
+          <Value name="usesurrogate.1">False</Value>
+          <Value name="usesurrogate.2">False</Value>
+          <Value name="total.correct">True</Value>
+          <Value name="percent.correct">False</Value>
+          <Value name="model_type">auto</Value>
+          <Value name="auto">True</Value>
+          <Value name="classification">False</Value>
+          <Value name="regression">False</Value>
+          <Value name="tree_summary">Counts</Value>
+          <Value name="Counts">True</Value>
+          <Value name="Proportions">False</Value>
+          <Value name="tree_plot_size">tree.inches</Value>
+          <Value name="tree.inches">True</Value>
+          <Value name="tree.centimeters">False</Value>
+          <Value name="pruning_plot_size">prune.inches</Value>
+          <Value name="prune.inches">True</Value>
+          <Value name="prune.centimeters">False</Value>
+          <Value name="Model Name">Decision_Tree_10</Value>
+          <Value name="set_seed_cv">True</Value>
+          <Value name="Y Var">mpg</Value>
+          <Value name="X Vars">cyl,disp,hp,drat,wt,qsec,vs,am,gear,carb</Value>
+          <Value name="use_cv">True</Value>
+          <Value name="cv_seed">1</Value>
+          <Value name="numberFolds">5</Value>
+          <Value name="numberTrials">3</Value>
+          <Value name="posClass">
+          </Value>
+          <Value name="stratified">False</Value>
+          <Value name="model.algorithm">rpart</Value>
+          <Value name="use.weights">False</Value>
+          <Value name="select.weights" />
+          <Value name="splitting_criteria">use.gini</Value>
+          <Value name="surrogate_use">usesurrogate.0</Value>
+          <Value name="surrogate_split_criteria">total.correct</Value>
+          <Value name="min.split">20</Value>
+          <Value name="min.bucket">7</Value>
+          <Value name="xval.folds">10</Value>
+          <Value name="max.depth">20</Value>
+          <Value name="max.bins">
+          </Value>
+          <Value name="set_cp">False</Value>
+          <Value name="cp">0</Value>
+          <Value name="rules">False</Value>
+          <Value name="bands_check">False</Value>
+          <Value name="bands">10</Value>
+          <Value name="subset">False</Value>
+          <Value name="winnow">False</Value>
+          <Value name="GlobalPruning">False</Value>
+          <Value name="fuzzyThreshold">False</Value>
+          <Value name="earlyStopping">False</Value>
+          <Value name="display.static">False</Value>
+          <Value name="trials">1</Value>
+          <Value name="CF">0.25</Value>
+          <Value name="minCases">2</Value>
+          <Value name="sample">0</Value>
+          <Value name="seed">1</Value>
+          <Value name="tree.plot">False</Value>
+          <Value name="Branch Dist">False</Value>
+          <Value name="tree.in.w">5.5</Value>
+          <Value name="tree.in.h">5.5</Value>
+          <Value name="tree.cm.w">13</Value>
+          <Value name="tree.cm.h">14.95</Value>
+          <Value name="tree.graph.resolution">1x</Value>
+          <Value name="tree.pointsize">8</Value>
+          <Value name="prune.plot">False</Value>
+          <Value name="prune.in.w">5.5</Value>
+          <Value name="prune.in.h">5.5</Value>
+          <Value name="prune.cm.w">13</Value>
+          <Value name="prune.cm.h">14.95</Value>
+          <Value name="prune.graph.resolution">1x</Value>
+          <Value name="prune.pointsize">10</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Decision_Tree_10</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="Decision_Tree/Supporting_Macros/Decision_Tree.yxmc" EngineDll="Macro" EngineDllEntryPoint="Decision_Tree/Supporting_Macros/Decision_Tree.yxmc" />
+    </Node>
   </Nodes>
   <Connections>
     <Connection>
       <Origin ToolID="1" Connection="Output1" />
-      <Destination ToolID="2" Connection="Input" />
-    </Connection>
-    <Connection name="#1">
-      <Origin ToolID="2" Connection="Output" />
-      <Destination ToolID="6" Connection="Input" />
-    </Connection>
-    <Connection name="#2">
-      <Origin ToolID="9" Connection="Output" />
-      <Destination ToolID="6" Connection="Input" />
+      <Destination ToolID="10" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="7" Connection="Output" />
@@ -454,6 +448,14 @@ if (any((abs(new_split_matrix - fixed_split_matrix)) > .0001)) {
     <Connection>
       <Origin ToolID="8" Connection="Output" />
       <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
     </Connection>
   </Connections>
   <Properties>
@@ -474,7 +476,7 @@ if (any((abs(new_split_matrix - fixed_split_matrix)) > .0001)) {
     <LayoutType>Horizontal</LayoutType>
     <MetaInfo>
       <NameIsFileName value="True" />
-      <Name>Test_rpart_splits1</Name>
+      <Name>Test_rpart_CV</Name>
       <Description />
       <RootToolName />
       <ToolVersion />
