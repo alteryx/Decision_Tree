@@ -11,6 +11,7 @@
 #'
 #'
 ## DO NOT MODIFY: Auto Inserted by AlteryxRhelper ----
+library(flightdeck)
 library(AlteryxPredictive)
 config <- list(
 	`bands` = numericInput('%Question.bands%', 10),
