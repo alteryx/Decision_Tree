@@ -1,0 +1,499 @@
+<?xml version="1.0"?>
+<AlteryxDocument yxmdVer="11.0">
+  <Nodes>
+    <Node ToolID="1">
+      <GuiSettings Plugin="AlteryxRPluginGui.R">
+        <Position x="90" y="210" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <RScript><![CDATA[write.Alteryx(mtcars, 1)
+]]></RScript>
+          <UseFullUpdate value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output1">
+          <RecordInfo>
+            <Field name="mpg" source="R-DATA:" type="Double" />
+            <Field name="cyl" source="R-DATA:" type="Double" />
+            <Field name="disp" source="R-DATA:" type="Double" />
+            <Field name="hp" source="R-DATA:" type="Double" />
+            <Field name="drat" source="R-DATA:" type="Double" />
+            <Field name="wt" source="R-DATA:" type="Double" />
+            <Field name="qsec" source="R-DATA:" type="Double" />
+            <Field name="vs" source="R-DATA:" type="Double" />
+            <Field name="am" source="R-DATA:" type="Double" />
+            <Field name="gear" source="R-DATA:" type="Double" />
+            <Field name="carb" source="R-DATA:" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxRPluginEngine.dll" EngineDllEntryPoint="AlteryxR" />
+    </Node>
+    <Node ToolID="3">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="54" y="54" width="804" height="60" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>rpart Test</Text>
+          <Font name="Segoe UI" size="20.25" style="0" />
+          <TextColor name="White" />
+          <FillColor r="22" g="145" b="198" />
+          <Shape shape="0" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="4">
+      <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
+        <Position x="390" y="54" width="456" height="60" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Text>This workflow is a basic test that ensures the rpart algorithm with cross-validation runs without errors and that it consistently gives the same splits, within a tolerance of .0001.</Text>
+          <Font name="Segoe UI" size="9" style="0" />
+          <TextColor name="White" />
+          <FillColor r="111" g="111" b="111" />
+          <Shape shape="3" />
+          <Justification Justification="0" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+    </Node>
+    <Node ToolID="6">
+      <GuiSettings Plugin="AlteryxRPluginGui.R">
+        <Position x="342" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <RScript><![CDATA[mymodel <- readModelObjects("#1", default = NULL)
+print("str of mymodel is:")
+print(str(mymodel))
+new_split_matrix <- as.data.frame(mymodel$Decision_Tree_10$splits, row.names = c(1:NROW(mymodel$test_dtree$splits)))
+print("new_split_matrix is:")
+print(new_split_matrix)
+fixed_split_matrix <- read.Alteryx("#2", mode="data.frame")
+print("fixed_split_matrix is:")
+print(fixed_split_matrix)
+if (any((abs(new_split_matrix - fixed_split_matrix)) > .0001)) {
+  stop.Alteryx2("The two matrices of splits were not equal!") }
+]]></RScript>
+          <UseFullUpdate value="False" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxRPluginEngine.dll" EngineDllEntryPoint="AlteryxR" />
+    </Node>
+    <Node ToolID="7">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.TextInput.TextInput">
+        <Position x="78" y="390" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <NumRows value="21" />
+          <Fields>
+            <Field name="Field1" />
+            <Field name="Field2" />
+            <Field name="Field3" />
+            <Field name="Field4" />
+            <Field name="Field5" />
+          </Fields>
+          <Data>
+            <r>
+              <c>count</c>
+              <c>ncat</c>
+              <c>improve</c>
+              <c>index</c>
+              <c>adj</c>
+            </r>
+            <r>
+              <c>32</c>
+              <c>1</c>
+              <c>0.643125226048456</c>
+              <c>5</c>
+              <c>0</c>
+            </r>
+            <r>
+              <c>32</c>
+              <c>1</c>
+              <c>0.635662971970892</c>
+              <c>2.3925</c>
+              <c>0</c>
+            </r>
+            <r>
+              <c>32</c>
+              <c>1</c>
+              <c>0.613050203405682</c>
+              <c>163.8</c>
+              <c>0</c>
+            </r>
+            <r>
+              <c>32</c>
+              <c>1</c>
+              <c>0.601071222913579</c>
+              <c>118</c>
+              <c>0</c>
+            </r>
+            <r>
+              <c>32</c>
+              <c>-1</c>
+              <c>0.440947686116141</c>
+              <c>0.5</c>
+              <c>0</c>
+            </r>
+            <r>
+              <c>0</c>
+              <c>1</c>
+              <c>0.96875</c>
+              <c>142.9</c>
+              <c>0.909090909090909</c>
+            </r>
+            <r>
+              <c>0</c>
+              <c>1</c>
+              <c>0.9375</c>
+              <c>101</c>
+              <c>0.818181818181818</c>
+            </r>
+            <r>
+              <c>0</c>
+              <c>1</c>
+              <c>0.90625</c>
+              <c>2.5425</c>
+              <c>0.727272727272727</c>
+            </r>
+            <r>
+              <c>0</c>
+              <c>-1</c>
+              <c>0.84375</c>
+              <c>18.41</c>
+              <c>0.545454545454545</c>
+            </r>
+            <r>
+              <c>0</c>
+              <c>-1</c>
+              <c>0.84375</c>
+              <c>0.5</c>
+              <c>0.545454545454545</c>
+            </r>
+            <r>
+              <c>21</c>
+              <c>1</c>
+              <c>0.55308283268393</c>
+              <c>192.5</c>
+              <c>0</c>
+            </r>
+            <r>
+              <c>21</c>
+              <c>1</c>
+              <c>0.506847540259891</c>
+              <c>7</c>
+              <c>0</c>
+            </r>
+            <r>
+              <c>21</c>
+              <c>1</c>
+              <c>0.506847540259891</c>
+              <c>266.9</c>
+              <c>0</c>
+            </r>
+            <r>
+              <c>21</c>
+              <c>1</c>
+              <c>0.44148904009674</c>
+              <c>3.49</c>
+              <c>0</c>
+            </r>
+            <r>
+              <c>21</c>
+              <c>-1</c>
+              <c>0.189073926562889</c>
+              <c>3.075</c>
+              <c>0</c>
+            </r>
+            <r>
+              <c>0</c>
+              <c>1</c>
+              <c>0.857142857142857</c>
+              <c>334</c>
+              <c>0.571428571428571</c>
+            </r>
+            <r>
+              <c>0</c>
+              <c>1</c>
+              <c>0.80952380952381</c>
+              <c>4.66</c>
+              <c>0.428571428571429</c>
+            </r>
+            <r>
+              <c>0</c>
+              <c>-1</c>
+              <c>0.80952380952381</c>
+              <c>15.455</c>
+              <c>0.428571428571429</c>
+            </r>
+            <r>
+              <c>0</c>
+              <c>1</c>
+              <c>0.761904761904762</c>
+              <c>3.5</c>
+              <c>0.285714285714286</c>
+            </r>
+            <r>
+              <c>0</c>
+              <c>1</c>
+              <c>0.714285714285714</c>
+              <c>4.5</c>
+              <c>0.142857142857143</c>
+            </r>
+          </Data>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxTextInput" />
+    </Node>
+    <Node ToolID="8">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.DynamicRename.DynamicRename">
+        <Position x="198" y="390" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <RenameMode>FirstRow</RenameMode>
+          <Fields orderChanged="False">
+            <Field name="Field1" />
+            <Field name="Field2" />
+            <Field name="Field3" />
+            <Field name="Field4" />
+            <Field name="Field5" />
+            <Field name="*Unknown" />
+          </Fields>
+          <Expression />
+          <FirstRow>
+            <OnError>Warn</OnError>
+          </FirstRow>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="count" size="5" source="TextInput:" type="String" />
+            <Field name="ncat" size="4" source="TextInput:" type="String" />
+            <Field name="improve" size="17" source="TextInput:" type="String" />
+            <Field name="index" size="6" source="TextInput:" type="String" />
+            <Field name="adj" size="17" source="TextInput:" type="V_String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDynamicRename" />
+    </Node>
+    <Node ToolID="9">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.AutoField.AutoField">
+        <Position x="294" y="390" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Fields>
+            <Field field="count" selected="True" />
+            <Field field="ncat" selected="True" />
+            <Field field="improve" selected="True" />
+            <Field field="index" selected="True" />
+            <Field field="adj" selected="True" />
+            <Field field="*Unknown" selected="True" />
+          </Fields>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="count" source="TextInput:" type="Byte" />
+            <Field name="ncat" source="TextInput:" type="Int16" />
+            <Field name="improve" source="TextInput:" type="Double" />
+            <Field name="index" source="TextInput:" type="Double" />
+            <Field name="adj" source="TextInput:" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxAutoField" />
+    </Node>
+    <Node ToolID="10">
+      <GuiSettings Plugin="Decision_Tree">
+        <Position x="222" y="174" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <Value name="curPage">Home</Value>
+          <Value name="curTab">model</Value>
+          <Value name="curToggle">toggle-main</Value>
+          <Value name="use.gini">True</Value>
+          <Value name="use.information">False</Value>
+          <Value name="usesurrogate.0">True</Value>
+          <Value name="usesurrogate.1">False</Value>
+          <Value name="usesurrogate.2">False</Value>
+          <Value name="total.correct">True</Value>
+          <Value name="percent.correct">False</Value>
+          <Value name="model_type">auto</Value>
+          <Value name="auto">True</Value>
+          <Value name="classification">False</Value>
+          <Value name="regression">False</Value>
+          <Value name="tree_summary">Counts</Value>
+          <Value name="Counts">True</Value>
+          <Value name="Proportions">False</Value>
+          <Value name="tree_plot_size">tree.inches</Value>
+          <Value name="tree.inches">True</Value>
+          <Value name="tree.centimeters">False</Value>
+          <Value name="pruning_plot_size">prune.inches</Value>
+          <Value name="prune.inches">True</Value>
+          <Value name="prune.centimeters">False</Value>
+          <Value name="Model Name">Decision_Tree_10</Value>
+          <Value name="set_seed_cv">True</Value>
+          <Value name="Y Var">mpg</Value>
+          <Value name="X Vars">cyl,disp,hp,drat,wt,qsec,vs,am,gear,carb</Value>
+          <Value name="use_cv">True</Value>
+          <Value name="cv_seed">1</Value>
+          <Value name="numberFolds">5</Value>
+          <Value name="numberTrials">3</Value>
+          <Value name="posClass">
+          </Value>
+          <Value name="stratified">False</Value>
+          <Value name="model.algorithm">rpart</Value>
+          <Value name="use.weights">False</Value>
+          <Value name="select.weights" />
+          <Value name="splitting_criteria">use.gini</Value>
+          <Value name="surrogate_use">usesurrogate.0</Value>
+          <Value name="surrogate_split_criteria">total.correct</Value>
+          <Value name="min.split">20</Value>
+          <Value name="min.bucket">7</Value>
+          <Value name="xval.folds">10</Value>
+          <Value name="max.depth">20</Value>
+          <Value name="max.bins">
+          </Value>
+          <Value name="set_cp">False</Value>
+          <Value name="cp">0</Value>
+          <Value name="rules">False</Value>
+          <Value name="bands_check">False</Value>
+          <Value name="bands">10</Value>
+          <Value name="subset">False</Value>
+          <Value name="winnow">False</Value>
+          <Value name="GlobalPruning">False</Value>
+          <Value name="fuzzyThreshold">False</Value>
+          <Value name="earlyStopping">False</Value>
+          <Value name="display.static">False</Value>
+          <Value name="trials">1</Value>
+          <Value name="CF">0.25</Value>
+          <Value name="minCases">2</Value>
+          <Value name="sample">0</Value>
+          <Value name="seed">1</Value>
+          <Value name="tree.plot">False</Value>
+          <Value name="Branch Dist">False</Value>
+          <Value name="tree.in.w">5.5</Value>
+          <Value name="tree.in.h">5.5</Value>
+          <Value name="tree.cm.w">13</Value>
+          <Value name="tree.cm.h">14.95</Value>
+          <Value name="tree.graph.resolution">1x</Value>
+          <Value name="tree.pointsize">8</Value>
+          <Value name="prune.plot">False</Value>
+          <Value name="prune.in.w">5.5</Value>
+          <Value name="prune.in.h">5.5</Value>
+          <Value name="prune.cm.w">13</Value>
+          <Value name="prune.cm.h">14.95</Value>
+          <Value name="prune.graph.resolution">1x</Value>
+          <Value name="prune.pointsize">10</Value>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>Decision_Tree_10</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+      </Properties>
+      <EngineSettings Macro="Decision_Tree/Supporting_Macros/Decision_Tree.yxmc" EngineDll="Macro" EngineDllEntryPoint="Decision_Tree/Supporting_Macros/Decision_Tree.yxmc" />
+    </Node>
+  </Nodes>
+  <Connections>
+    <Connection>
+      <Origin ToolID="1" Connection="Output1" />
+      <Destination ToolID="10" Connection="Input" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="7" Connection="Output" />
+      <Destination ToolID="8" Connection="Targets" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="8" Connection="Output" />
+      <Destination ToolID="9" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="9" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="10" Connection="Output" />
+      <Destination ToolID="6" Connection="Input" />
+    </Connection>
+  </Connections>
+  <Properties>
+    <Memory default="True" />
+    <GlobalRecordLimit value="0" />
+    <TempFiles default="True" />
+    <Annotation on="True" includeToolName="False" />
+    <ConvErrorLimit value="10" />
+    <ConvErrorLimit_Stop value="False" />
+    <CancelOnError value="False" />
+    <DisableBrowse value="False" />
+    <EnablePerformanceProfiling value="False" />
+    <DisableAllOutput value="False" />
+    <ShowAllMacroMessages value="False" />
+    <ShowConnectionStatusIsOn value="True" />
+    <ShowConnectionStatusOnlyWhenRunning value="True" />
+    <ZoomLevel value="0" />
+    <LayoutType>Horizontal</LayoutType>
+    <MetaInfo>
+      <NameIsFileName value="True" />
+      <Name>Test_rpart_CV</Name>
+      <Description />
+      <RootToolName />
+      <ToolVersion />
+      <ToolInDb value="False" />
+      <CategoryName />
+      <SearchTags />
+      <Author />
+      <Company />
+      <Copyright />
+      <DescriptionLink actual="" displayed="" />
+      <Example>
+        <Description />
+        <File />
+      </Example>
+    </MetaInfo>
+    <Events>
+      <Enabled value="True" />
+    </Events>
+  </Properties>
+</AlteryxDocument>

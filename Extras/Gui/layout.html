@@ -1,101 +1,335 @@
+<!-- SETUP -->
 <div class='page has-hint' id='page-basic'>
-  <fieldset>
-     <div id='mname' class="qconst">{{ `Model Name` }}</div>
-     <div id='yvar' class="qconst">{{ `Y Var` }}</div>
-     <div id='xvars' class="qconst">{{ `X Vars` }}</div>
-     <button class='default-button primary' id='switch-to-customize'>
+  
+  <div class='fd-header'>
+    <div class='fd-header-title-text'>Setup</div>
+  </div>
+
+  <div class="content">
+    <div class="content-padded">
+      
+      <div id='mname' class="qconst">{{ `Model Name` }}</div>
+      <div id='yvar' class="qconst">{{ `Y Var` }}</div>
+      <div id='xvars' class="qconst">{{ `X Vars` }}</div>
+      <button class="btn pull-left switch" id="switch-to-customize"
+        data-page='Customize'
+      >
         Customize
-     </button>
-  </fieldset>
+        <i class = 'en-right-open-big pull-right'></i>
+      </button>
+      
+    </div>
+  </div>
+  
 </div>
+
+<!-- CUSTOMIZE -->
 <div class='page' id='page-customize' style='display:none;'>
-  <fieldset>
-  <legend>Customize</legend>
+  
+  <!-- HEADER -->
+  <div class='fd-header'>
+    <div class='fd-header-title'>
+      <i class = 'en-left-open-big switch' id='switch-to-home' 
+        data-page='Home'
+      >
+      </i> 
+      <span class='fd-header-title-text'>Customize</span>
+    </div>
+  </div>
+  
+  <!-- TABS -->
   <div class="tabs" id='header'>
-    <div class="tab is-tab-selected" data-page='advanced' id='advanced'>
+    <div class="tab tab-one-third active mytab" data-page='model' id='model'>
       Model
     </div>
-    <div class="tab" data-page='graphics' id='graphics'>
+    <div class="tab tab-one-third active mytab" data-page='crossvalidation' 
+      id='crossvalidation'>
+      Cross-validation
+    </div>
+    <div class="tab tab-one-third mytab" data-page='graphics' id='graphics'>
       Plots
     </div>
   </div>
-  <div class='tabpage has-hint' id='tabpage-advanced'>
-    <div id="dt-accordion">
-    <h4 class="accordion-toggle" id="toggle-main">
-      Model Type and Sampling Weights
-    </h4>
-    <div class='accordion-content'>
-      {{ `model_type` }}
-      {{ `use.weights` }}
-      <div id='div-use.weights'>{{ `select.weights` }}</div>
-      <!--  splitting_criteria  -->
-    </div>
-    <h4 class="accordion-toggle" id="toggle-split">
-      Splitting Criteria and Surrogates
-    </h4>
-    <div class='accordion-content'>
-      <div id='show-for-classification'>{{ `splitting_criteria` }}</div>
-      {{ `surrogate_use` }}
-      {{ `surrogate_split_criteria` }}
-    </div>
-    <h4 class="accordion-toggle" id='toggle-hyperparameters'>
-      HyperParameters
-    </h4>
-    <div class='accordion-content'>
-      {{ `min.split` }}
-      {{ `min.bucket` }}
-      {{ `xval.folds` }}
-      {{ `max.depth` }}
-      {{ `max.bins` }}
-      <div>
-        <div style='float:left;' id='div-set-cp'>{{ `set_cp` }}</div>
-        <div style='float:right;' id='div-cp'>{{ `cp` }}</div>
-      </div>
-    </div>
-  </div>
-  </div>
-  <div class='tabpage has-hint' id='tabpage-graphics'>
-    {{ `tree.plot` }}
-    <div id='div-tree.plot'>
-      <div id='div-branch-dist'>{{ `Branch Dist` }}</div>
-      {{ `tree_summary` }}
-      {{ `tree_plot_size` }}
-      <div id='div-treeplot-in'>
-        <div id='div-treeplot-in-w'>{{ `tree.in.w` }}</div>
-        <div id='div-treeplot-in-h'>{{ `tree.in.h` }}</div>
-      </div>
-      <div id='div-treeplot-cm'>
-        {{ `tree.cm.w` }}
-        {{ `tree.cm.h` }}     
-      </div>
-      {{ `tree.graph.resolution` }}
-      {{ `tree.pointsize` }}
-    </div>
-      {{ `prune.plot` }}
-      <div id='div-prune.plot'>
-        {{ `pruning_plot_size` }}
-        <div id='div-pruneplot-in'>
-        {{ `prune.in.w` }}
-        {{ `prune.in.h` }}
+  
+  <!-- CONTENT -->
+  <div class="content">
+    <div class="content-padded">
+      
+       <!-- MODEL TAB -->
+       <div class="tabpage" id='tabpage-model'>
+          <div id='model-algo'>{{ model.algorithm }}</div>
+          
+          <div id='tabpage-model-rpart'>
+            <div class="dt-accordion">
+              <h4 class="accordion-toggle" id="toggle-main">
+                Model Type and Sampling Weights
+              </h4>
+              <div class='accordion-content'>
+                {{ `model_type` }}
+                {{ `use.weights` }}
+                <div id='div-use.weights' class='indent-one'>
+                  {{ `select.weights` }}
+                </div>
+              </div>
+              <h4 class="accordion-toggle" id="toggle-split">
+                Splitting Criteria and Surrogates
+              </h4>
+              <div class='accordion-content'>
+                <div id='show-for-classification'>{{ `splitting_criteria` }}</div>
+                {{ `surrogate_use` }}
+                {{ `surrogate_split_criteria` }}
+              </div>
+              <h4 class="accordion-toggle" id='toggle-hyperparameters'>
+                HyperParameters
+              </h4>
+              <div class='accordion-content'>
+                {{ `min.split` }}
+                {{ `min.bucket` }}
+                {{ `xval.folds` }}
+                {{ `max.depth` }}
+                {{ `max.bins` }}
+                <div>
+                  <div style='float:left;' id='div-set-cp'>{{ `set_cp` }}</div>
+                  <div style='float:right;' id='div-cp'>{{ `cp` }}</div>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div id='tabpage-model-c50'>
+             <div class="dt-accordion">
+               
+               <h4 class='accordion-toggle' id='toggle-c50toggle1'>
+                 Structural Options
+               </h4>
+               <div class='accordion-content'>
+                  {{ rules }}
+                  <div id = 'show-on-rules' class='indent-one'> 
+                   {{ bands_check }}
+                   <div id = 'show-on-bandscheck'>
+                     {{  bands  }}
+                  </div>
+                 </div>
+                 {{ `use.weights` }}
+                 <div id='div-use.weights2' class='indent-one'>
+                    {{ `select.weights` }}
+                 </div>
+              </div>
+              
+               <h4 class='accordion-toggle' id='toggle-c50toggle2'>
+                 Detailed Options
+               </h4>
+               <div class='accordion-content'>
+                {{ subset }}
+                {{ winnow }}
+                {{ GlobalPruning }}
+                {{ fuzzyThreshold }}
+                {{ earlyStopping }}
+                {{ `display.static` }}
+              </div>
+              
+               <h4 class='accordion-toggle' id='toggle-c50toggle3'>
+                 Numerical Hyperparameters
+               </h4>
+               <div class='accordion-content'>
+                 <div id='div-trials'>{{ trials }}</div>
+                 {{ CF }}
+                 {{ minCases }}
+                 {{ sample }}
+                 {{ seed }}
+               </div>
+              
+          </div>
         </div>
-        <div id='div-pruneplot-cm'>
-        {{ `prune.cm.w` }}
-        {{ `prune.cm.h` }}
-        </div>
-        {{ `prune.graph.resolution` }}
-        {{ `prune.pointsize` }}
-      </div>
-    </div>
-</fieldset>
-  <button class='default-button primary' id='switch-to-home'>Back</button>
-</div>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.2.0/intro.min.js'>
-</script>
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.2.0/introjs.min.css' />
 
-<!-- CSS -->
-<style>
-  .accordion-toggle {cursor: pointer;}
-  .accordion-content {display: none;}
-  .accordion-content.default {display: block;}
-</style>
+      </div>
+      
+       <!-- CROSS VALIDATION TAB -->
+       <div class="tabpage" id='tabpage-crossvalidation'>
+         {{ use_cv }}
+         <div id='show-on-cv' class='indent-one'>
+           {{ set_seed_cv }}
+           <div id='show-on-seeded-cv'>
+             {{ cv_seed }}
+           </div>
+           	{{ numberFolds }}
+	          {{ numberTrials }}
+	          <div id='show-on-classification-CV'>
+	            {{ posClass }}
+	            {{ stratified }}
+	          </div>
+         </div>
+       </div>
+      
+       <!-- GRAPHICS TAB -->  
+       <div class="tabpage" id='tabpage-graphics'>
+          <div class="dt-accordion">
+            <div id = 'show-when-tree-plot-available'>
+            <h4 class="accordion-toggle" id="toggle-treeplot">
+              Tree Plot
+            </h4>
+            <div class='accordion-content'>
+              
+              {{ `tree.plot` }}
+                <div id='div-tree.plot'>
+                  <div id='div-branch-dist'>{{ `Branch Dist` }}</div>
+                  {{ `tree_summary` }}
+                  {{ `tree_plot_size` }}
+                  <div id='div-treeplot-in'>
+                    <div id='div-treeplot-in-w'>{{ `tree.in.w` }}</div>
+                    <div id='div-treeplot-in-h'>{{ `tree.in.h` }}</div>
+                  </div>
+                  <div id='div-treeplot-cm'>
+                    {{ `tree.cm.w` }}
+                    {{ `tree.cm.h` }}     
+                  </div>
+                  {{ `tree.graph.resolution` }}
+                  {{ `tree.pointsize` }}
+                </div>
+              </div>
+            </div>
+              
+            <div id = 'show-when-prune-plot-available'>
+            <h4 class="accordion-toggle" id="toggle-pruneplot">
+              Prune Plot
+            </h4>
+            <div class='accordion-content'>
+              {{ `prune.plot` }}
+                <div id='div-prune.plot'>
+                  {{ `pruning_plot_size` }}
+                  <div id='div-pruneplot-in'>
+                    {{ `prune.in.w` }}
+                    {{ `prune.in.h` }}
+                  </div>
+                  <div id='div-pruneplot-cm'>
+                    {{ `prune.cm.w` }}
+                    {{ `prune.cm.h` }}
+                  </div>
+                  {{ `prune.graph.resolution` }}
+                  {{ `prune.pointsize` }}
+                </div>
+              </div>
+            </div>
+              
+          </div>
+       </div>
+   
+    </div>
+  </div>
+  
+</div>
+
+<!-- Auto Generated by jvMakeDataItemsToInitialize -->
+<script>
+var items = {
+  "itemsToInitialize": {
+    "curPage": "Home",
+    "curTab": "model",
+    "curToggle": "toggle-main",
+    "set_seed_cv": true,
+    "showClassificationCV": true,
+    "showWhenTreePlotAvailable": true,
+  },
+  "toggleBarItems": {
+    "model_type": ["auto", "classification", "regression"],
+    "tree_summary": ["Counts", "Proportions"],
+    "tree_plot_size": ["tree.inches", "tree.centimeters"],
+    "pruning_plot_size": ["prune.inches", "prune.centimeters"]
+  },
+  "radioItems": {
+    "splitting_criteria": ["use.gini", "use.information"],
+    "surrogate_use": ["usesurrogate.0", "usesurrogate.1", "usesurrogate.2"],
+    "surrogate_split_criteria": ["total.correct", "percent.correct"]
+  }
+};
+/* Enter any Display Rules 
+Each key refers to the id of a div whose display is to be controlled. The values
+indicate the name of the dataItem controlling the display and an optional condition or value for which the div is to be displayed. For example, these rules imply
+1. display div with id 'show-on-rules' when 'rules' is true.
+2. display div with id 'show-for-classification' when 'model_type' is 'classification'.
+*/
+var displayRules = {
+  'div-use.weights': 'use.weights',
+  'div-use.weights2': 'use.weights',
+  'div-tree.plot': 'tree.plot',
+  'div-prune.plot': 'prune.plot',
+  'div-treeplot-in': ['tree_plot_size', 'tree.inches'],
+  'div-treeplot-cm': ['tree_plot_size', 'tree.centimeters'],
+  'div-pruneplot-in': ['pruning_plot_size', 'prune.inches'],
+  'div-pruneplot-cm': ['pruning_plot_size', 'prune.centimeters'],
+  'div-cp': 'set_cp',
+  'show-for-classification': ['model_type', 'classification'],
+  'show-on-rules': 'rules',
+  'show-on-bandscheck': 'bands_check',
+  'tabpage-model-rpart': ['model.algorithm', 'rpart'],
+  'tabpage-model-c50': ['model.algorithm', 'C5.0'],
+  'show-on-cv': 'use_cv',
+  'show-on-seeded-cv': 'set_seed_cv',
+  'show-on-classification-CV': 'showClassificationCV',
+  'show-when-tree-plot-available': 'showWhenTreePlotAvailable',
+  'show-when-prune-plot-available': ['model.algorithm', 'rpart']
+};
+/* 
+show-on-classification-CV should only display when at least one of these 3 conditions is true:
+1. When user selects classification with rpart models
+2. With all C5.0 models
+3. When user selects auto with rpart models and the y variable is a string (including vsting, etc.) */
+
+function controlDisplayClassificationCV(){
+  var manager = Alteryx.Gui.manager
+  var algorithm = manager.GetDataItem('model.algorithm')
+  var modeltype = manager.GetDataItem('model_type')
+  var fields = manager.metaInfo.Get(0)._GetFields()
+  var yvar = manager.GetDataItem('Y Var')
+  var showCV = manager.GetDataItem('showClassificationCV')
+  function setVal(){
+    var yIsString;
+    var yField = fields
+      .filter(function(d){return d.strName === yvar.value})[0]
+    if (typeof yField === 'undefined'){
+      yString = false;
+    } else {
+      yIsString = ['String', 'WString', 'V_String', 'V_WString'].indexOf(yField.strType) >= 0
+    }
+    var caseThree = (
+      algorithm.value === 'rpart' && 
+      modeltype.value === 'auto' && 
+      yIsString
+    )
+    var show = (
+      caseThree ||
+      algorithm.value === 'C5.0' || 
+      modeltype.value === 'classification'
+    )
+    console.log('showClassificationCV is ' + show)
+    if (typeof show !== 'undefined') showCV.setValue(show);
+  }
+  [algorithm, modeltype, yvar].forEach(function(d){
+    d.BindUserDataChanged(setVal)
+  })
+}
+
+/* show-when-tree-plot-available Should always be displayed, unless BOTH of the following conditions are true:
+1. C5.0 is the algorithm
+2. The user chooses the option "Decompose Tree into Rule-based model"
+*/
+function controlDisplayTreePlot(){
+  var manager = Alteryx.Gui.manager
+  var algorithm = manager.GetDataItem('model.algorithm')
+  var rules = manager.GetDataItem('rules')
+  var showTreePlot = manager.GetDataItem('showWhenTreePlotAvailable')
+  function setVal(){
+    var dontShow = (algorithm.value === 'C5.0' && rules.value)
+    console.log('dontShowWhenTreePlotAvailable is ' + dontShow)
+    if (typeof dontShow !== 'undefined') showTreePlot.setValue(!dontShow);
+  }
+  [algorithm, rules].forEach(function(d){
+    d.BindUserDataChanged(setVal)
+  })
+}
+
+
+/* show-when-prune-plot-available Should always be displayed, for rpart models, and never for C5.0 models
+*/
+
+</script>

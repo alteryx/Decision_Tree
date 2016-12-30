@@ -5,6 +5,8 @@
     <title>
 Decision_Tree
 </title>
+    <link href='./assets/entypo/entypo.css' rel='stylesheet' />
+    <link rel="stylesheet" href="./assets/alteryx-utils.css" charset="utf-8">
     <link rel="stylesheet" href="app.css" media="screen" charset="utf-8">
     <script type="text/javascript">
       // Include version 1 of the base GUI library.
@@ -15,69 +17,120 @@ Decision_Tree
 </head>
 <body>
     
+<!-- SETUP -->
 <div class='page has-hint' id='page-basic'>
-  <fieldset>
-     <div id='mname' class="qconst">
+  
+  <div class='fd-header'>
+    <div class='fd-header-title-text'>Setup</div>
+  </div>
+
+  <div class="content">
+    <div class="content-padded">
+      
+      <div id='mname' class="qconst">
 <!--  Model Name  -->
-<label for="Model Name">Model Name</label>
+<label for="Model Name">Type model name</label>
 <alteryx-pluginwidget type="TextBox" password="false" id="Model Name" dataName="Model Name"></alteryx-pluginwidget>
 </div>
-     <div id='yvar' class="qconst">
+      <div id='yvar' class="qconst">
 <!--  Y Var  -->
-<label for="Y Var">Select the target variable</label>
+<label for="Y Var">Select target variable</label>
 <alteryx-pluginwidget type="DropDown" dataType="FieldSelector" inputNumber="0" connectionNumber="0" fieldType="All" id="Y Var" dataName="Y Var"></alteryx-pluginwidget>
 </div>
-     <div id='xvars' class="qconst">
+      <div id='xvars' class="qconst">
 <!--  X Vars  -->
-<label for="X Vars">Select the predictor variables</label>
+<label for="X Vars">Select predictor variables</label>
 <alteryx-pluginwidget type="MultiSelectListBox" dataType="MultiStringSelector" inputNumber="0" connectionNumber="0" fieldType="All" id="X Vars" dataName="X Vars"></alteryx-pluginwidget>
 </div>
-     <button class='default-button primary' id='switch-to-customize'>
+      <button class="btn pull-left switch" id="switch-to-customize"
+        data-page='Customize'
+      >
         Customize
-     </button>
-  </fieldset>
+        <i class = 'en-right-open-big pull-right'></i>
+      </button>
+      
+    </div>
+  </div>
+  
 </div>
+
+<!-- CUSTOMIZE -->
 <div class='page' id='page-customize' style='display:none;'>
-  <fieldset>
-  <legend>Customize</legend>
+  
+  <!-- HEADER -->
+  <div class='fd-header'>
+    <div class='fd-header-title'>
+      <i class = 'en-left-open-big switch' id='switch-to-home' 
+        data-page='Home'
+      >
+      </i> 
+      <span class='fd-header-title-text'>Customize</span>
+    </div>
+  </div>
+  
+  <!-- TABS -->
   <div class="tabs" id='header'>
-    <div class="tab is-tab-selected" data-page='advanced' id='advanced'>
+    <div class="tab tab-one-third active mytab" data-page='model' id='model'>
       Model
     </div>
-    <div class="tab" data-page='graphics' id='graphics'>
+    <div class="tab tab-one-third active mytab" data-page='crossvalidation' 
+      id='crossvalidation'>
+      Cross-validation
+    </div>
+    <div class="tab tab-one-third mytab" data-page='graphics' id='graphics'>
       Plots
     </div>
   </div>
-  <div class='tabpage has-hint' id='tabpage-advanced'>
-    <div id="dt-accordion">
-    <h4 class="accordion-toggle" id="toggle-main">
-      Model Type and Sampling Weights
-    </h4>
-    <div class='accordion-content'>
+  
+  <!-- CONTENT -->
+  <div class="content">
+    <div class="content-padded">
       
-<!--  model_type  -->
-<label for="model_type">Model Type</label>
-<alteryx-pluginwidget type="ToggleBar" group="model_type" id="model_type" dataName="model_type">
-  <alteryx-option uiobject="Auto" default="true">auto</alteryx-option>
-  <alteryx-option uiobject="Classification">classification</alteryx-option>
-  <alteryx-option uiobject="Regression">regression</alteryx-option>
+       <!-- MODEL TAB -->
+       <div class="tabpage" id='tabpage-model'>
+          <div id='model-algo'>
+<!--  model.algorithm  -->
+<label for="model.algorithm">Choose algorithm</label>
+<alteryx-pluginwidget type="DropDown" id="model.algorithm" dataName="model.algorithm">
+  <alteryx-option uiobject="rpart" default="true">rpart</alteryx-option>
+  <alteryx-option uiobject="C5.0">C5.0</alteryx-option>
 </alteryx-pluginwidget>
+</div>
+          
+          <div id='tabpage-model-rpart'>
+            <div class="dt-accordion">
+              <h4 class="accordion-toggle" id="toggle-main">
+                Model Type and Sampling Weights
+              </h4>
+              <div class='accordion-content'>
+                
+<div class="clearfix togglebar" id="id-model_type">
+  <div class="label" style="float:left;">Model Type</div>
+  <div style="float:right;">
+    <div class="toggletabs">
+      <div class="toggletab is-tab-selected" data-page="auto" id="id-auto">Auto</div>
+      <div class="toggletab" data-page="classification" id="id-classification">Classification</div>
+      <div class="toggletab" data-page="regression" id="id-regression">Regression</div>
+    </div>
+  </div>
+</div>
 
-      
+                
 <!--  use.weights  -->
 <alteryx-pluginwidget type="CheckBox" text="Use sampling weights in model estimation" id="use.weights" dataName="use.weights" defaultValue="false"></alteryx-pluginwidget>
 
-      <div id='div-use.weights'>
+                <div id='div-use.weights' class='indent-one'>
+                  
 <!--  select.weights  -->
 <alteryx-pluginwidget type="DropDown" dataType="FieldSelector" inputNumber="0" connectionNumber="0" fieldType="Numeric" clearable="true" id="select.weights" dataName="select.weights"></alteryx-pluginwidget>
-</div>
-      <!--  splitting_criteria  -->
-    </div>
-    <h4 class="accordion-toggle" id="toggle-split">
-      Splitting Criteria and Surrogates
-    </h4>
-    <div class='accordion-content'>
-      <div id='show-for-classification'>
+
+                </div>
+              </div>
+              <h4 class="accordion-toggle" id="toggle-split">
+                Splitting Criteria and Surrogates
+              </h4>
+              <div class='accordion-content'>
+                <div id='show-for-classification'>
 <!--  splitting_criteria  -->
 <label for="splitting_criteria">The splitting criteria to use:</label>
 <alteryx-pluginwidget type="RadioGroup" group="splitting_criteria" id="splitting_criteria" dataName="splitting_criteria">
@@ -85,117 +138,277 @@ Decision_Tree
   <alteryx-option uiobject="Information index">use.information</alteryx-option>
 </alteryx-pluginwidget>
 </div>
-      
+                
 <!--  surrogate_use  -->
 <label for="surrogate_use">Use surrogates to</label>
 <alteryx-pluginwidget type="RadioGroup" group="surrogate_use" id="surrogate_use" dataName="surrogate_use">
-  <alteryx-option uiobject="Omit observations with missing value for primary split rule." default="true">usesurrogate.0</alteryx-option>
-  <alteryx-option uiobject="Split records missing the candidate variable.">usesurrogate.1</alteryx-option>
-  <alteryx-option uiobject="Send observation in majority direction if all surrogates are missing.">usesurrogate.2</alteryx-option>
+  <alteryx-option uiobject="Omit observations with missing value for primary split rule" default="true">usesurrogate.0</alteryx-option>
+  <alteryx-option uiobject="Split records missing the candidate variable">usesurrogate.1</alteryx-option>
+  <alteryx-option uiobject="Send observation in majority direction if all surrogates are missing">usesurrogate.2</alteryx-option>
 </alteryx-pluginwidget>
 
-      
+                
 <!--  surrogate_split_criteria  -->
 <label for="surrogate_split_criteria">Select best surrogate split using</label>
 <alteryx-pluginwidget type="RadioGroup" group="surrogate_split_criteria" id="surrogate_split_criteria" dataName="surrogate_split_criteria">
-  <alteryx-option uiobject="Number of correct classifications for a candidate variable." default="true">total.correct</alteryx-option>
-  <alteryx-option uiobject="Percentage of correct classifications for a candidate variable.">percent.correct</alteryx-option>
+  <alteryx-option uiobject="Number of correct classifications for a candidate variable" default="true">total.correct</alteryx-option>
+  <alteryx-option uiobject="Percentage of correct classifications for a candidate variable">percent.correct</alteryx-option>
 </alteryx-pluginwidget>
 
-    </div>
-    <h4 class="accordion-toggle" id='toggle-hyperparameters'>
-      HyperParameters
-    </h4>
-    <div class='accordion-content'>
-      
+              </div>
+              <h4 class="accordion-toggle" id='toggle-hyperparameters'>
+                HyperParameters
+              </h4>
+              <div class='accordion-content'>
+                
 <!--  min.split  -->
 <label for="min.split">The minimum number of records needed to allow for a split</label>
 <alteryx-pluginwidget type="NumericSpinner" default="20" min="2" max="10000" step="1" id="min.split" dataName="min.split"></alteryx-pluginwidget>
 
-      
+                
 <!--  min.bucket  -->
 <label for="min.bucket">The allowed minimum number of records in a terminal node</label>
 <alteryx-pluginwidget type="NumericSpinner" default="7" min="1" max="5000" step="1" id="min.bucket" dataName="min.bucket"></alteryx-pluginwidget>
 
-      
+                
 <!--  xval.folds  -->
 <label for="xval.folds">The number of folds to use in the cross validation to prune the tree</label>
 <alteryx-pluginwidget type="NumericSpinner" default="10" min="2" max="20" step="1" id="xval.folds" dataName="xval.folds"></alteryx-pluginwidget>
 
-      
+                
 <!--  max.depth  -->
 <label for="max.depth">The maximum allowed depth of any node in the final tree</label>
 <alteryx-pluginwidget type="NumericSpinner" default="20" min="2" max="50" step="1" id="max.depth" dataName="max.depth"></alteryx-pluginwidget>
 
-      
+                
 <!--  max.bins  -->
 <label for="max.bins">The maximum number of bins to use for each numeric variable</label>
 <alteryx-pluginwidget type="TextBox" password="false" placeholder="Default" id="max.bins" dataName="max.bins"></alteryx-pluginwidget>
 
-      <div>
-        <div style='float:left;' id='div-set-cp'>
+                <div>
+                  <div style='float:left;' id='div-set-cp'>
 <!--  set_cp  -->
 <alteryx-pluginwidget type="CheckBox" text="Set complexity parameter" id="set_cp" dataName="set_cp" defaultValue="false"></alteryx-pluginwidget>
 </div>
-        <div style='float:right;' id='div-cp'>
+                  <div style='float:right;' id='div-cp'>
 <!--  cp  -->
-<alteryx-pluginwidget type="NumericSpinner" default="0" min="0" max="0.9999999999" step="0.1" id="cp" dataName="cp"></alteryx-pluginwidget>
+<alteryx-pluginwidget type="NumericSpinner" default="0" min="0" max="1" step="0.1" id="cp" dataName="cp"></alteryx-pluginwidget>
 </div>
-      </div>
-    </div>
-  </div>
-  </div>
-  <div class='tabpage has-hint' id='tabpage-graphics'>
-    
-<!--  tree.plot  -->
-<alteryx-pluginwidget type="CheckBox" text="Tree plot" id="tree.plot" dataName="tree.plot" defaultValue="true"></alteryx-pluginwidget>
+                </div>
+              </div>
+            </div>
+          </div>
+          
+          <div id='tabpage-model-c50'>
+             <div class="dt-accordion">
+               
+               <h4 class='accordion-toggle' id='toggle-c50toggle1'>
+                 Structural Options
+               </h4>
+               <div class='accordion-content'>
+                  
+<!--  rules  -->
+<alteryx-pluginwidget type="CheckBox" text="Decompose tree into rule-based model" id="rules" dataName="rules" defaultValue="false"></alteryx-pluginwidget>
 
-    <div id='div-tree.plot'>
-      <div id='div-branch-dist'>
+                  <div id = 'show-on-rules' class='indent-one'> 
+                   
+<!--  bands_check  -->
+<alteryx-pluginwidget type="CheckBox" text="Threshold number of bands to group rules into" id="bands_check" dataName="bands_check" defaultValue="false"></alteryx-pluginwidget>
+
+                   <div id = 'show-on-bandscheck'>
+                     
+<!--  bands  -->
+<label for="bands">Select number of bands to group rules into</label>
+<alteryx-pluginwidget type="NumericSpinner" default="10" min="0" max="1000" step="1" id="bands" dataName="bands"></alteryx-pluginwidget>
+
+                  </div>
+                 </div>
+                 
+<!--  use.weights  -->
+<alteryx-pluginwidget type="CheckBox" text="Use sampling weights in model estimation" id="use.weights" dataName="use.weights" defaultValue="false"></alteryx-pluginwidget>
+
+                 <div id='div-use.weights2' class='indent-one'>
+                    
+<!--  select.weights  -->
+<alteryx-pluginwidget type="DropDown" dataType="FieldSelector" inputNumber="0" connectionNumber="0" fieldType="Numeric" clearable="true" id="select.weights" dataName="select.weights"></alteryx-pluginwidget>
+
+                 </div>
+              </div>
+              
+               <h4 class='accordion-toggle' id='toggle-c50toggle2'>
+                 Detailed Options
+               </h4>
+               <div class='accordion-content'>
+                
+<!--  subset  -->
+<alteryx-pluginwidget type="CheckBox" text="Model should evaluate groups of discrete predictors for splits" id="subset" dataName="subset" defaultValue="false"></alteryx-pluginwidget>
+
+                
+<!--  winnow  -->
+<alteryx-pluginwidget type="CheckBox" text="Use predictor winnowing (i.e. feature selection)" id="winnow" dataName="winnow" defaultValue="false"></alteryx-pluginwidget>
+
+                
+<!--  GlobalPruning  -->
+<alteryx-pluginwidget type="CheckBox" text="Prune tree" id="GlobalPruning" dataName="GlobalPruning" defaultValue="true"></alteryx-pluginwidget>
+
+                
+<!--  fuzzyThreshold  -->
+<alteryx-pluginwidget type="CheckBox" text="Evaluate advanced splits in the data" id="fuzzyThreshold" dataName="fuzzyThreshold" defaultValue="true"></alteryx-pluginwidget>
+
+                
+<!--  earlyStopping  -->
+<alteryx-pluginwidget type="CheckBox" text="Use stopping method for boosting" id="earlyStopping" dataName="earlyStopping" defaultValue="true"></alteryx-pluginwidget>
+
+                
+<!--  display.static  -->
+<alteryx-pluginwidget type="CheckBox" text="Display static report" id="display.static" dataName="display.static" defaultValue="true"></alteryx-pluginwidget>
+
+              </div>
+              
+               <h4 class='accordion-toggle' id='toggle-c50toggle3'>
+                 Numerical Hyperparameters
+               </h4>
+               <div class='accordion-content'>
+                 <div id='div-trials'>
+<!--  trials  -->
+<label for="trials">Select number of boosting iterations</label>
+<alteryx-pluginwidget type="NumericSpinner" default="1" min="1" max="1000000" step="1" id="trials" dataName="trials"></alteryx-pluginwidget>
+</div>
+                 
+<!--  CF  -->
+<label for="CF">Select confidence factor</label>
+<alteryx-pluginwidget type="NumericSpinner" default="0.25" min="0.001" max="0.999" step="0.01" id="CF" dataName="CF"></alteryx-pluginwidget>
+
+                 
+<!--  minCases  -->
+<label for="minCases">Select number of samples that must be in at least 2 splits</label>
+<alteryx-pluginwidget type="NumericSpinner" default="2" min="0" max="1000000" step="1" id="minCases" dataName="minCases"></alteryx-pluginwidget>
+
+                 
+<!--  sample  -->
+<label for="sample">Percent of data held from training for model evaluation</label>
+<alteryx-pluginwidget type="NumericSpinner" default="0" min="0" max="0.99" step="0.01" id="sample" dataName="sample"></alteryx-pluginwidget>
+
+                 
+<!--  seed  -->
+<label for="seed">Select random seed for algorithm</label>
+<alteryx-pluginwidget type="NumericSpinner" default="1" min="1" max="1000000" step="1" id="seed" dataName="seed"></alteryx-pluginwidget>
+
+               </div>
+              
+          </div>
+        </div>
+
+      </div>
+      
+       <!-- CROSS VALIDATION TAB -->
+       <div class="tabpage" id='tabpage-crossvalidation'>
+         
+<!--  use_cv  -->
+<alteryx-pluginwidget type="CheckBox" text="Use cross-validation" showAsToggle="true" id="use_cv" dataName="use_cv" defaultValue="false"></alteryx-pluginwidget>
+
+         <div id='show-on-cv' class='indent-one'>
+           
+<!--  set_seed_cv  -->
+<alteryx-pluginwidget type="CheckBox" text="Set seed for external cross-validation" id="set_seed_cv" dataName="set_seed_cv" defaultValue="true"></alteryx-pluginwidget>
+
+           <div id='show-on-seeded-cv'>
+             
+<!--  cv_seed  -->
+<label for="cv_seed">Select value of random seed for cross-validation</label>
+<alteryx-pluginwidget type="NumericSpinner" default="1" min="1" max="1000000" step="1" id="cv_seed" dataName="cv_seed"></alteryx-pluginwidget>
+
+           </div>
+           	
+<!--  numberFolds  -->
+<label for="numberFolds">Number of cross-validation folds</label>
+<alteryx-pluginwidget type="NumericSpinner" default="5" min="1" max="100" step="1" id="numberFolds" dataName="numberFolds"></alteryx-pluginwidget>
+
+	          
+<!--  numberTrials  -->
+<label for="numberTrials">Number of cross-validation trials</label>
+<alteryx-pluginwidget type="NumericSpinner" default="3" min="1" max="100" step="1" id="numberTrials" dataName="numberTrials"></alteryx-pluginwidget>
+
+	          <div id='show-on-classification-CV'>
+	            
+<!--  posClass  -->
+<label for="posClass">Enter the positive class of the target variable (optional, and only relevant with binary classification models)</label>
+<alteryx-pluginwidget type="TextBox" password="false" id="posClass" dataName="posClass"></alteryx-pluginwidget>
+
+	            
+<!--  stratified  -->
+<alteryx-pluginwidget type="CheckBox" text="Use stratified cross-validation" id="stratified" dataName="stratified" defaultValue="false"></alteryx-pluginwidget>
+
+	          </div>
+         </div>
+       </div>
+      
+       <!-- GRAPHICS TAB -->  
+       <div class="tabpage" id='tabpage-graphics'>
+          <div class="dt-accordion">
+            <div id = 'show-when-tree-plot-available'>
+            <h4 class="accordion-toggle" id="toggle-treeplot">
+              Tree Plot
+            </h4>
+            <div class='accordion-content'>
+              
+              
+<!--  tree.plot  -->
+<alteryx-pluginwidget type="CheckBox" text="Display tree plot" showAsToggle="true" id="tree.plot" dataName="tree.plot" defaultValue="true"></alteryx-pluginwidget>
+
+                <div id='div-tree.plot'>
+                  <div id='div-branch-dist'>
 <!--  Branch Dist  -->
 <alteryx-pluginwidget type="CheckBox" text="Uniform branch distances" id="Branch Dist" dataName="Branch Dist" defaultValue="true"></alteryx-pluginwidget>
 </div>
-      
-<!--  tree_summary  -->
-<label for="tree_summary">Leaf summary</label>
-<alteryx-pluginwidget type="ToggleBar" group="tree_summary" id="tree_summary" dataName="tree_summary">
-  <alteryx-option uiobject="Counts" default="true">Counts</alteryx-option>
-  <alteryx-option uiobject="Proportions">Proportions</alteryx-option>
-</alteryx-pluginwidget>
 
-      
-<!--  tree_plot_size  -->
-<label for="tree_plot_size">Plot size</label>
-<alteryx-pluginwidget type="ToggleBar" group="tree_plot_size" id="tree_plot_size" dataName="tree_plot_size">
-  <alteryx-option uiobject="Inches" default="true">tree.inches</alteryx-option>
-  <alteryx-option uiobject="Centimeters">tree.centimeters</alteryx-option>
-</alteryx-pluginwidget>
+                  
+<div class="clearfix togglebar" id="id-tree_summary">
+  <div class="label" style="float:left;">Leaf summary</div>
+  <div style="float:right;">
+    <div class="toggletabs">
+      <div class="toggletab is-tab-selected" data-page="Counts" id="id-Counts">Counts</div>
+      <div class="toggletab" data-page="Proportions" id="id-Proportions">Proportions</div>
+    </div>
+  </div>
+</div>
 
-      <div id='div-treeplot-in'>
-        <div id='div-treeplot-in-w'>
+                  
+<div class="clearfix togglebar" id="id-tree_plot_size">
+  <div class="label" style="float:left;">Plot size</div>
+  <div style="float:right;">
+    <div class="toggletabs">
+      <div class="toggletab is-tab-selected" data-page="tree.inches" id="id-tree.inches">Inches</div>
+      <div class="toggletab" data-page="tree.centimeters" id="id-tree.centimeters">Centimeters</div>
+    </div>
+  </div>
+</div>
+
+                  <div id='div-treeplot-in'>
+                    <div id='div-treeplot-in-w'>
 <!--  tree.in.w  -->
 <label for="tree.in.w">Width</label>
 <alteryx-pluginwidget type="NumericSpinner" default="5.5" min="1" max="100" step="0.05" id="tree.in.w" dataName="tree.in.w"></alteryx-pluginwidget>
 </div>
-        <div id='div-treeplot-in-h'>
+                    <div id='div-treeplot-in-h'>
 <!--  tree.in.h  -->
 <label for="tree.in.h">Height</label>
 <alteryx-pluginwidget type="NumericSpinner" default="5.5" min="1" max="100" step="0.05" id="tree.in.h" dataName="tree.in.h"></alteryx-pluginwidget>
 </div>
-      </div>
-      <div id='div-treeplot-cm'>
-        
+                  </div>
+                  <div id='div-treeplot-cm'>
+                    
 <!--  tree.cm.w  -->
 <label for="tree.cm.w">Width</label>
 <alteryx-pluginwidget type="NumericSpinner" default="13" min="1" max="100" step="0.05" id="tree.cm.w" dataName="tree.cm.w"></alteryx-pluginwidget>
 
-        
+                    
 <!--  tree.cm.h  -->
 <label for="tree.cm.h">Height</label>
 <alteryx-pluginwidget type="NumericSpinner" default="14.95" min="1" max="100" step="0.05" id="tree.cm.h" dataName="tree.cm.h"></alteryx-pluginwidget>
      
-      </div>
-      
+                  </div>
+                  
 <!--  tree.graph.resolution  -->
 <label for="tree.graph.resolution">Graph resolution</label>
 <alteryx-pluginwidget type="DropDown" id="tree.graph.resolution" dataName="tree.graph.resolution">
@@ -204,50 +417,61 @@ Decision_Tree
   <alteryx-option uiobject="3x (288 dpi)">3x</alteryx-option>
 </alteryx-pluginwidget>
 
-      
+                  
 <!--  tree.pointsize  -->
 <label for="tree.pointsize">Base font size (points)</label>
 <alteryx-pluginwidget type="NumericSpinner" default="8" min="5" max="100" step="1" id="tree.pointsize" dataName="tree.pointsize"></alteryx-pluginwidget>
 
-    </div>
-      
+                </div>
+              </div>
+            </div>
+              
+            <div id = 'show-when-prune-plot-available'>
+            <h4 class="accordion-toggle" id="toggle-pruneplot">
+              Prune Plot
+            </h4>
+            <div class='accordion-content'>
+              
 <!--  prune.plot  -->
-<alteryx-pluginwidget type="CheckBox" text="Pruning plot" id="prune.plot" dataName="prune.plot" defaultValue="false"></alteryx-pluginwidget>
+<alteryx-pluginwidget type="CheckBox" text="Display prune plot" showAsToggle="true" id="prune.plot" dataName="prune.plot" defaultValue="false"></alteryx-pluginwidget>
 
-      <div id='div-prune.plot'>
-        
-<!--  pruning_plot_size  -->
-<label for="pruning_plot_size">Plot size</label>
-<alteryx-pluginwidget type="ToggleBar" group="pruning_plot_size" id="pruning_plot_size" dataName="pruning_plot_size">
-  <alteryx-option uiobject="Inches" default="true">prune.inches</alteryx-option>
-  <alteryx-option uiobject="Centimeters">prune.centimeters</alteryx-option>
-</alteryx-pluginwidget>
+                <div id='div-prune.plot'>
+                  
+<div class="clearfix togglebar" id="id-pruning_plot_size">
+  <div class="label" style="float:left;">Plot size</div>
+  <div style="float:right;">
+    <div class="toggletabs">
+      <div class="toggletab is-tab-selected" data-page="prune.inches" id="id-prune.inches">Inches</div>
+      <div class="toggletab" data-page="prune.centimeters" id="id-prune.centimeters">Centimeters</div>
+    </div>
+  </div>
+</div>
 
-        <div id='div-pruneplot-in'>
-        
+                  <div id='div-pruneplot-in'>
+                    
 <!--  prune.in.w  -->
 <label for="prune.in.w">Width</label>
 <alteryx-pluginwidget type="NumericSpinner" default="5.5" min="1" max="100" step="0.05" id="prune.in.w" dataName="prune.in.w"></alteryx-pluginwidget>
 
-        
+                    
 <!--  prune.in.h  -->
 <label for="prune.in.h">Height</label>
 <alteryx-pluginwidget type="NumericSpinner" default="5.5" min="1" max="100" step="0.05" id="prune.in.h" dataName="prune.in.h"></alteryx-pluginwidget>
 
-        </div>
-        <div id='div-pruneplot-cm'>
-        
+                  </div>
+                  <div id='div-pruneplot-cm'>
+                    
 <!--  prune.cm.w  -->
 <label for="prune.cm.w">Width</label>
 <alteryx-pluginwidget type="NumericSpinner" default="13" min="1" max="100" step="0.05" id="prune.cm.w" dataName="prune.cm.w"></alteryx-pluginwidget>
 
-        
+                    
 <!--  prune.cm.h  -->
 <label for="prune.cm.h">Height</label>
 <alteryx-pluginwidget type="NumericSpinner" default="14.95" min="1" max="100" step="0.05" id="prune.cm.h" dataName="prune.cm.h"></alteryx-pluginwidget>
 
-        </div>
-        
+                  </div>
+                  
 <!--  prune.graph.resolution  -->
 <label for="prune.graph.resolution">Graph resolution</label>
 <alteryx-pluginwidget type="DropDown" id="prune.graph.resolution" dataName="prune.graph.resolution">
@@ -256,27 +480,140 @@ Decision_Tree
   <alteryx-option uiobject="3x (288 dpi)">3x</alteryx-option>
 </alteryx-pluginwidget>
 
-        
+                  
 <!--  prune.pointsize  -->
 <label for="prune.pointsize">Base font size (points)</label>
 <alteryx-pluginwidget type="NumericSpinner" default="10" min="5" max="100" step="1" id="prune.pointsize" dataName="prune.pointsize"></alteryx-pluginwidget>
 
-      </div>
+                </div>
+              </div>
+            </div>
+              
+          </div>
+       </div>
+   
     </div>
-</fieldset>
-  <button class='default-button primary' id='switch-to-home'>Back</button>
+  </div>
+  
 </div>
-<script src='https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.2.0/intro.min.js'>
+
+<!-- Auto Generated by jvMakeDataItemsToInitialize -->
+<script>
+var items = {
+  "itemsToInitialize": {
+    "curPage": "Home",
+    "curTab": "model",
+    "curToggle": "toggle-main",
+    "set_seed_cv": true,
+    "showClassificationCV": true,
+    "showWhenTreePlotAvailable": true,
+  },
+  "toggleBarItems": {
+    "model_type": ["auto", "classification", "regression"],
+    "tree_summary": ["Counts", "Proportions"],
+    "tree_plot_size": ["tree.inches", "tree.centimeters"],
+    "pruning_plot_size": ["prune.inches", "prune.centimeters"]
+  },
+  "radioItems": {
+    "splitting_criteria": ["use.gini", "use.information"],
+    "surrogate_use": ["usesurrogate.0", "usesurrogate.1", "usesurrogate.2"],
+    "surrogate_split_criteria": ["total.correct", "percent.correct"]
+  }
+};
+/* Enter any Display Rules 
+Each key refers to the id of a div whose display is to be controlled. The values
+indicate the name of the dataItem controlling the display and an optional condition or value for which the div is to be displayed. For example, these rules imply
+1. display div with id 'show-on-rules' when 'rules' is true.
+2. display div with id 'show-for-classification' when 'model_type' is 'classification'.
+*/
+var displayRules = {
+  'div-use.weights': 'use.weights',
+  'div-use.weights2': 'use.weights',
+  'div-tree.plot': 'tree.plot',
+  'div-prune.plot': 'prune.plot',
+  'div-treeplot-in': ['tree_plot_size', 'tree.inches'],
+  'div-treeplot-cm': ['tree_plot_size', 'tree.centimeters'],
+  'div-pruneplot-in': ['pruning_plot_size', 'prune.inches'],
+  'div-pruneplot-cm': ['pruning_plot_size', 'prune.centimeters'],
+  'div-cp': 'set_cp',
+  'show-for-classification': ['model_type', 'classification'],
+  'show-on-rules': 'rules',
+  'show-on-bandscheck': 'bands_check',
+  'tabpage-model-rpart': ['model.algorithm', 'rpart'],
+  'tabpage-model-c50': ['model.algorithm', 'C5.0'],
+  'show-on-cv': 'use_cv',
+  'show-on-seeded-cv': 'set_seed_cv',
+  'show-on-classification-CV': 'showClassificationCV',
+  'show-when-tree-plot-available': 'showWhenTreePlotAvailable',
+  'show-when-prune-plot-available': ['model.algorithm', 'rpart']
+};
+/* 
+show-on-classification-CV should only display when at least one of these 3 conditions is true:
+1. When user selects classification with rpart models
+2. With all C5.0 models
+3. When user selects auto with rpart models and the y variable is a string (including vsting, etc.) */
+
+function controlDisplayClassificationCV(){
+  var manager = Alteryx.Gui.manager
+  var algorithm = manager.GetDataItem('model.algorithm')
+  var modeltype = manager.GetDataItem('model_type')
+  var fields = manager.metaInfo.Get(0)._GetFields()
+  var yvar = manager.GetDataItem('Y Var')
+  var showCV = manager.GetDataItem('showClassificationCV')
+  function setVal(){
+    var yIsString;
+    var yField = fields
+      .filter(function(d){return d.strName === yvar.value})[0]
+    if (typeof yField === 'undefined'){
+      yString = false;
+    } else {
+      yIsString = ['String', 'WString', 'V_String', 'V_WString'].indexOf(yField.strType) >= 0
+    }
+    var caseThree = (
+      algorithm.value === 'rpart' && 
+      modeltype.value === 'auto' && 
+      yIsString
+    )
+    var show = (
+      caseThree ||
+      algorithm.value === 'C5.0' || 
+      modeltype.value === 'classification'
+    )
+    console.log('showClassificationCV is ' + show)
+    if (typeof show !== 'undefined') showCV.setValue(show);
+  }
+  [algorithm, modeltype, yvar].forEach(function(d){
+    d.BindUserDataChanged(setVal)
+  })
+}
+
+/* show-when-tree-plot-available Should always be displayed, unless BOTH of the following conditions are true:
+1. C5.0 is the algorithm
+2. The user chooses the option "Decompose Tree into Rule-based model"
+*/
+function controlDisplayTreePlot(){
+  var manager = Alteryx.Gui.manager
+  var algorithm = manager.GetDataItem('model.algorithm')
+  var rules = manager.GetDataItem('rules')
+  var showTreePlot = manager.GetDataItem('showWhenTreePlotAvailable')
+  function setVal(){
+    var dontShow = (algorithm.value === 'C5.0' && rules.value)
+    console.log('dontShowWhenTreePlotAvailable is ' + dontShow)
+    if (typeof dontShow !== 'undefined') showTreePlot.setValue(!dontShow);
+  }
+  [algorithm, rules].forEach(function(d){
+    d.BindUserDataChanged(setVal)
+  })
+}
+
+
+/* show-when-prune-plot-available Should always be displayed, for rpart models, and never for C5.0 models
+*/
+
 </script>
-<link rel='stylesheet' href='https://cdnjs.cloudflare.com/ajax/libs/intro.js/2.2.0/introjs.min.css' />
 
-<!-- CSS -->
-<style>
-  .accordion-toggle {cursor: pointer;}
-  .accordion-content {display: none;}
-  .accordion-content.default {display: block;}
-</style>
-
+  <script src="./assets/alteryx-utils.js"></script>
+  <script src='./assets/jquery-sticky-kit/jquery.sticky-kit.min.js'></script>
   <script src="app.min.js" type="text/javascript"></script>
 </body>
 </html>
