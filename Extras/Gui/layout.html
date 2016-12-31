@@ -97,7 +97,10 @@
           </div>
           
           <div id='tabpage-model-c50'>
-             <div class="dt-accordion">
+             <div class='show-on-xdf' style='display:none;'>
+               C5.0 is not currently supported for XDF inputs.
+             </div>
+             <div class="dt-accordion hide-on-xdf">
                
                <h4 class='accordion-toggle' id='toggle-c50toggle1'>
                  Structural Options
@@ -125,7 +128,6 @@
                 {{ GlobalPruning }}
                 {{ fuzzyThreshold }}
                 {{ earlyStopping }}
-                {{ `display.static` }}
               </div>
               
                <h4 class='accordion-toggle' id='toggle-c50toggle3'>
@@ -146,24 +148,30 @@
       
        <!-- CROSS VALIDATION TAB -->
        <div class="tabpage" id='tabpage-crossvalidation'>
-         {{ use_cv }}
-         <div id='show-on-cv'>
-           	{{ numberFolds }}
-	          {{ numberTrials }}
-	          <div id='show-on-classification-CV'>
-	            {{ posClass }}
-	            {{ stratified }}
-	          </div>
-	          {{ set_seed_cv }}
-            <div id='show-on-seeded-cv'>
-              {{ cv_seed }}
-            </div>
+         <div class='show-on-xdf' style='display:none;'>
+           Cross-validation is not currently supported for XDF input.
+         </div>
+         <div class='hide-on-xdf'>
+           {{ use_cv }}
+           <div id='show-on-cv'>
+             	{{ numberFolds }}
+  	          {{ numberTrials }}
+  	          <div id='show-on-classification-CV'>
+  	            {{ posClass }}
+  	            {{ stratified }}
+  	          </div>
+  	          {{ set_seed_cv }}
+              <div id='show-on-seeded-cv'>
+                {{ cv_seed }}
+              </div>
+           </div>
          </div>
        </div>
       
        <!-- GRAPHICS TAB -->  
        <div class="tabpage" id='tabpage-graphics'>
-          <div class="dt-accordion">
+         {{ `display.static` }}
+          <div class="dt-accordion" id = "show-on-display-static">
             <div id = 'show-when-tree-plot-available'>
             <h4 class="accordion-toggle" id="toggle-treeplot">
               Tree Plot
@@ -226,6 +234,7 @@ var items = {
     "curPage": "Home",
     "curTab": "model",
     "curToggle": "toggle-main",
+    "display.static": true,
     "set_seed_cv": true,
     "showClassificationCV": true,
     "showWhenTreePlotAvailable": true,
@@ -266,6 +275,7 @@ var displayRules = {
   'show-on-cv': 'use_cv',
   'show-on-seeded-cv': 'set_seed_cv',
   'show-on-classification-CV': 'showClassificationCV',
+  'show-on-display-static': 'display.static',
   'show-when-tree-plot-available': 'showWhenTreePlotAvailable',
   'show-when-prune-plot-available': ['model.algorithm', 'rpart']
 };
