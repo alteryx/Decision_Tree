@@ -39,10 +39,14 @@
   
   <!-- TABS -->
   <div class="tabs" id='header'>
-    <div class="tab tab-one-half active mytab" data-page='model' id='model'>
+    <div class="tab tab-one-third active mytab" data-page='model' id='model'>
       Model
     </div>
-    <div class="tab tab-one-half mytab" data-page='graphics' id='graphics'>
+    <div class="tab tab-one-third active mytab" data-page='crossvalidation' 
+      id='crossvalidation'>
+      CrossValidation
+    </div>
+    <div class="tab tab-one-third mytab" data-page='graphics' id='graphics'>
       Plots
     </div>
   </div>
@@ -50,18 +54,9 @@
   <!-- CONTENT -->
   <div class="content">
     <div class="content-padded">
+      
+       <!-- MODEL TAB -->
        <div class="tabpage" id='tabpage-model'>
-         {{ use_cv }}
-         <div id='show-on-cv' class='indent-one'>
-           {{ set_seed_cv }}
-           <div id='show-on-seeded-cv'>
-             {{ cv_seed }}
-           </div>
-           	{{ numberFolds }}
-	          {{ numberTrials }}
-	          {{ posClass }}
-	          {{ stratified }}
-         </div>
           <div id='model-algo'>{{ model.algorithm }}</div>
           
           <div id='tabpage-model-rpart'>
@@ -75,7 +70,6 @@
                 <div id='div-use.weights' class='indent-one'>
                   {{ `select.weights` }}
                 </div>
-                <!--  splitting_criteria  -->
               </div>
               <h4 class="accordion-toggle" id="toggle-split">
                 Splitting Criteria and Surrogates
@@ -106,7 +100,7 @@
              <div class="dt-accordion">
                
                <h4 class='accordion-toggle' id='toggle-c50toggle1'>
-                 Structural Configuration Options
+                 Structural Options
                </h4>
                <div class='accordion-content'>
                   {{ rules }}
@@ -123,7 +117,7 @@
               </div>
               
                <h4 class='accordion-toggle' id='toggle-c50toggle2'>
-                 Detailed Configuration Options
+                 Detailed Options
                </h4>
                <div class='accordion-content'>
                 {{ subset }}
@@ -135,7 +129,7 @@
               </div>
               
                <h4 class='accordion-toggle' id='toggle-c50toggle3'>
-                 Numerical COnfiguration Options
+                 Numerical Hyperparameters
                </h4>
                <div class='accordion-content'>
                  <div id='div-trials'>{{ trials }}</div>
@@ -149,54 +143,70 @@
         </div>
 
       </div>
-        
-          <div class="tabpage" id='tabpage-graphics'>
-            <div class="dt-accordion">
+      
+       <!-- CROSS VALIDATION TAB -->
+       <div class="tabpage" id='tabpage-crossvalidation'>
+         {{ use_cv }}
+         <div id='show-on-cv' class='indent-one'>
+           {{ set_seed_cv }}
+           <div id='show-on-seeded-cv'>
+             {{ cv_seed }}
+           </div>
+           	{{ numberFolds }}
+	          {{ numberTrials }}
+	          {{ posClass }}
+	          {{ stratified }}
+         </div>
+       </div>
+      
+       <!-- GRAPHICS TAB -->  
+       <div class="tabpage" id='tabpage-graphics'>
+          <div class="dt-accordion">
              
-              <h4 class="accordion-toggle" id="toggle-treeplot">
-                Tree Plot
-              </h4>
-              <div class='accordion-content'>
-                {{ `tree.plot` }}
-                <div id='div-tree.plot'>
-                  <div id='div-branch-dist'>{{ `Branch Dist` }}</div>
-                  {{ `tree_summary` }}
-                  {{ `tree_plot_size` }}
-                  <div id='div-treeplot-in'>
-                    <div id='div-treeplot-in-w'>{{ `tree.in.w` }}</div>
-                    <div id='div-treeplot-in-h'>{{ `tree.in.h` }}</div>
-                  </div>
-                  <div id='div-treeplot-cm'>
-                    {{ `tree.cm.w` }}
-                    {{ `tree.cm.h` }}     
-                  </div>
-                  {{ `tree.graph.resolution` }}
-                  {{ `tree.pointsize` }}
+            <h4 class="accordion-toggle" id="toggle-treeplot">
+              Tree Plot
+            </h4>
+            <div class='accordion-content'>
+              {{ `tree.plot` }}
+              <div id='div-tree.plot'>
+                <div id='div-branch-dist'>{{ `Branch Dist` }}</div>
+                {{ `tree_summary` }}
+                {{ `tree_plot_size` }}
+                <div id='div-treeplot-in'>
+                  <div id='div-treeplot-in-w'>{{ `tree.in.w` }}</div>
+                  <div id='div-treeplot-in-h'>{{ `tree.in.h` }}</div>
                 </div>
+                <div id='div-treeplot-cm'>
+                  {{ `tree.cm.w` }}
+                  {{ `tree.cm.h` }}     
+                </div>
+                {{ `tree.graph.resolution` }}
+                {{ `tree.pointsize` }}
               </div>
+            </div>
               
-              <h4 class="accordion-toggle" id="toggle-pruneplot">
-                Prune Plot
-              </h4>
-              <div class='accordion-content'>
-                {{ `prune.plot` }}
-                <div id='div-prune.plot'>
-                  {{ `pruning_plot_size` }}
-                  <div id='div-pruneplot-in'>
+            <h4 class="accordion-toggle" id="toggle-pruneplot">
+              Prune Plot
+            </h4>
+            <div class='accordion-content'>
+              {{ `prune.plot` }}
+              <div id='div-prune.plot'>
+                {{ `pruning_plot_size` }}
+                <div id='div-pruneplot-in'>
                   {{ `prune.in.w` }}
                   {{ `prune.in.h` }}
-                  </div>
-                  <div id='div-pruneplot-cm'>
+                </div>
+                <div id='div-pruneplot-cm'>
                   {{ `prune.cm.w` }}
                   {{ `prune.cm.h` }}
-                  </div>
-                  {{ `prune.graph.resolution` }}
-                  {{ `prune.pointsize` }}
                 </div>
+                {{ `prune.graph.resolution` }}
+                {{ `prune.pointsize` }}
               </div>
+            </div>
               
-           </div>
-        </div>
+          </div>
+       </div>
    
     </div>
   </div>
