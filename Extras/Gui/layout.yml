@@ -17,25 +17,24 @@ Customize:
       - "Numerical Hyperparameters":
          - min.split
          - min.bucket
-      - "Another Section":
          - max.bins
          - cp
          - set_cp
     - c50:
-      - Toggle1: 
+      - "Structural Options": 
         - use.weights
         - select.weights
         - rules
         - bands_check
         - bands
-      - Toggle2:
+      - "Detailed Options":
         - subset
         - winnow
         - GlobalPruning
         - fuzzyThreshold
         - earlyStopping
         - display.static
-      - Toggle3:
+      -  "Numerical Hyperparameters":
         - CF
         - minCases
         - sample
