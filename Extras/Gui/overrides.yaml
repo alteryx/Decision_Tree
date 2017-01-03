@@ -15,3 +15,9 @@ pruning_plot_size:
   type: ToggleBar
 tree_plot_size:
   type: ToggleBar
+use_cv:
+  showAsToggle: "true"
+prune.plot:
+  showAsToggle: "true"
+tree.plot:
+  showAsToggle: "true"
