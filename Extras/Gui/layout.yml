@@ -7,38 +7,39 @@ Customize:
     - model.algorithm
     - rpart:
       - "Model and Sampling Weights":
-         - model_type
-         - use.weights
-         - select.weights
+           - model_type
+           - use.weights
+           - select.weights
       - "Splitting Criteria and Surrogates":
-         - splitting_criteria
-         - surrogate_use
-         - surrogate_split_criteria
+           - splitting_criteria
+           - surrogate_use
+           - surrogate_split_criteria
       - "Numerical Hyperparameters":
-         - min.split
-         - min.bucket
-         - max.bins
-         - cp
-         - set_cp
+           - min.split
+           - min.bucket
+           - max.bins
+      - "Another Subsection":
+           - cp
+           - set_cp
     - c50:
       - "Structural Options": 
-        - use.weights
-        - select.weights
-        - rules
-        - bands_check
-        - bands
+          - use.weights
+          - select.weights
+          - rules
+          - bands_check
+          - bands
       - "Detailed Options":
-        - subset
-        - winnow
-        - GlobalPruning
-        - fuzzyThreshold
-        - earlyStopping
-        - display.static
+          - subset
+          - winnow
+          - GlobalPruning
+          - fuzzyThreshold
+          - earlyStopping
+          - display.static
       -  "Numerical Hyperparameters":
-        - CF
-        - minCases
-        - sample
-        - seed 
+          - CF
+          - minCases
+          - sample
+          - seed 
   - "Cross Validation":
     - cv_seed
   - Plots:
@@ -63,3 +64,10 @@ Customize:
          - prune.cm.h
          - prune.graph.resolution
          - prune.pointsize
+dataItems:
+  curPage: 'Home'
+  curTab: 'model'
+  curToggle: 'model-and-sampling-weights'
+displayRules:
+  'subsection-rpart': ['model.algorithm', 'rpart']
+  'subsection-c50': ['model.algorithm', 'C5.0']
