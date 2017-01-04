@@ -351,16 +351,17 @@ Decision_Tree
               Tree Plot
             </h4>
             <div class='accordion-content'>
+              <div id = 'show-when-tree-plot-available'>
               
 <!--  tree.plot  -->
 <alteryx-pluginwidget type="CheckBox" text="Display Tree Plot?" showAsToggle="true" id="tree.plot" dataName="tree.plot" defaultValue="true"></alteryx-pluginwidget>
 
-              <div id='div-tree.plot'>
-                <div id='div-branch-dist'>
+                <div id='div-tree.plot'>
+                  <div id='div-branch-dist'>
 <!--  Branch Dist  -->
 <alteryx-pluginwidget type="CheckBox" text="Uniform branch distances" id="Branch Dist" dataName="Branch Dist" defaultValue="true"></alteryx-pluginwidget>
 </div>
-                
+                  
 <div class="clearfix togglebar" id="id-tree_summary">
   <div class="label" style="float:left;">Leaf summary</div>
   <div style="float:right;">
@@ -371,7 +372,7 @@ Decision_Tree
   </div>
 </div>
 
-                
+                  
 <div class="clearfix togglebar" id="id-tree_plot_size">
   <div class="label" style="float:left;">Plot size</div>
   <div style="float:right;">
@@ -382,31 +383,31 @@ Decision_Tree
   </div>
 </div>
 
-                <div id='div-treeplot-in'>
-                  <div id='div-treeplot-in-w'>
+                  <div id='div-treeplot-in'>
+                    <div id='div-treeplot-in-w'>
 <!--  tree.in.w  -->
 <label for="tree.in.w">Width</label>
 <alteryx-pluginwidget type="NumericSpinner" default="5.5" min="1" max="100" step="0.05" id="tree.in.w" dataName="tree.in.w"></alteryx-pluginwidget>
 </div>
-                  <div id='div-treeplot-in-h'>
+                    <div id='div-treeplot-in-h'>
 <!--  tree.in.h  -->
 <label for="tree.in.h">Height</label>
 <alteryx-pluginwidget type="NumericSpinner" default="5.5" min="1" max="100" step="0.05" id="tree.in.h" dataName="tree.in.h"></alteryx-pluginwidget>
 </div>
-                </div>
-                <div id='div-treeplot-cm'>
-                  
+                  </div>
+                  <div id='div-treeplot-cm'>
+                    
 <!--  tree.cm.w  -->
 <label for="tree.cm.w">Width</label>
 <alteryx-pluginwidget type="NumericSpinner" default="13" min="1" max="100" step="0.05" id="tree.cm.w" dataName="tree.cm.w"></alteryx-pluginwidget>
 
-                  
+                    
 <!--  tree.cm.h  -->
 <label for="tree.cm.h">Height</label>
 <alteryx-pluginwidget type="NumericSpinner" default="14.95" min="1" max="100" step="0.05" id="tree.cm.h" dataName="tree.cm.h"></alteryx-pluginwidget>
      
-                </div>
-                
+                  </div>
+                  
 <!--  tree.graph.resolution  -->
 <label for="tree.graph.resolution">Graph resolution</label>
 <alteryx-pluginwidget type="DropDown" id="tree.graph.resolution" dataName="tree.graph.resolution">
@@ -415,11 +416,12 @@ Decision_Tree
   <alteryx-option uiobject="3x (288 dpi)">3x</alteryx-option>
 </alteryx-pluginwidget>
 
-                
+                  
 <!--  tree.pointsize  -->
 <label for="tree.pointsize">Base font size (points)</label>
 <alteryx-pluginwidget type="NumericSpinner" default="8" min="5" max="100" step="1" id="tree.pointsize" dataName="tree.pointsize"></alteryx-pluginwidget>
 
+                </div>
               </div>
             </div>
               
@@ -427,12 +429,13 @@ Decision_Tree
               Prune Plot
             </h4>
             <div class='accordion-content'>
+              <div id = 'show-when-prune-plot-available'>
               
 <!--  prune.plot  -->
 <alteryx-pluginwidget type="CheckBox" text="Display Prune Plot?" showAsToggle="true" id="prune.plot" dataName="prune.plot" defaultValue="false"></alteryx-pluginwidget>
 
-              <div id='div-prune.plot'>
-                
+                <div id='div-prune.plot'>
+                  
 <div class="clearfix togglebar" id="id-pruning_plot_size">
   <div class="label" style="float:left;">Plot size</div>
   <div style="float:right;">
@@ -443,31 +446,31 @@ Decision_Tree
   </div>
 </div>
 
-                <div id='div-pruneplot-in'>
-                  
+                  <div id='div-pruneplot-in'>
+                    
 <!--  prune.in.w  -->
 <label for="prune.in.w">Width</label>
 <alteryx-pluginwidget type="NumericSpinner" default="5.5" min="1" max="100" step="0.05" id="prune.in.w" dataName="prune.in.w"></alteryx-pluginwidget>
 
-                  
+                    
 <!--  prune.in.h  -->
 <label for="prune.in.h">Height</label>
 <alteryx-pluginwidget type="NumericSpinner" default="5.5" min="1" max="100" step="0.05" id="prune.in.h" dataName="prune.in.h"></alteryx-pluginwidget>
 
-                </div>
-                <div id='div-pruneplot-cm'>
-                  
+                  </div>
+                  <div id='div-pruneplot-cm'>
+                    
 <!--  prune.cm.w  -->
 <label for="prune.cm.w">Width</label>
 <alteryx-pluginwidget type="NumericSpinner" default="13" min="1" max="100" step="0.05" id="prune.cm.w" dataName="prune.cm.w"></alteryx-pluginwidget>
 
-                  
+                    
 <!--  prune.cm.h  -->
 <label for="prune.cm.h">Height</label>
 <alteryx-pluginwidget type="NumericSpinner" default="14.95" min="1" max="100" step="0.05" id="prune.cm.h" dataName="prune.cm.h"></alteryx-pluginwidget>
 
-                </div>
-                
+                  </div>
+                  
 <!--  prune.graph.resolution  -->
 <label for="prune.graph.resolution">Graph resolution</label>
 <alteryx-pluginwidget type="DropDown" id="prune.graph.resolution" dataName="prune.graph.resolution">
@@ -476,11 +479,12 @@ Decision_Tree
   <alteryx-option uiobject="3x (288 dpi)">3x</alteryx-option>
 </alteryx-pluginwidget>
 
-                
+                  
 <!--  prune.pointsize  -->
 <label for="prune.pointsize">Base font size (points)</label>
 <alteryx-pluginwidget type="NumericSpinner" default="10" min="5" max="100" step="1" id="prune.pointsize" dataName="prune.pointsize"></alteryx-pluginwidget>
 
+                </div>
               </div>
             </div>
               
@@ -540,13 +544,19 @@ var displayRules = {
   'show-on-classification-CV': ['model_type', 'classification']
 };
 /* 
+show-on-classification-CV should only display when at least one of these 3 conditions is true:
 1. When user selects classification with rpart models
 2. With all C5.0 models
 3. When user selects auto with rpart models and the y variable is a string (including vsting, etc.) */
 
-function showClassificationCV() {
-  
-}
+/* show-when-tree-plot-available Should always be displayed, unless BOTH of the following conditions are true:
+1. C5.0 is the algorithm
+2. The user chooses the option "Decompose Tree into Rule-based model"
+*/
+
+/* show-when-prune-plot-available Should always be displayed, for rpart models, and never for C5.0 models
+*/
+
 </script>
 
   <script src="./assets/alteryx-utils.js"></script>
