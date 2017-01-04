@@ -227,7 +227,7 @@ var items = {
     "curTab": "model",
     "curToggle": "toggle-main",
     "set_seed_cv": true,
-    "showClassificationCV": false,
+    "showClassificationCV": true,
     "showWhenTreePlotAvailable": true,
   },
   "toggleBarItems": {
@@ -279,12 +279,32 @@ function controlDisplayClassificationCV(){
   var manager = Alteryx.Gui.manager
   var algorithm = manager.GetDataItem('model.algorithm')
   var modeltype = manager.GetDataItem('model_type')
+  var fields = manager.metaInfo.Get(0)._GetFields()
+  var yvar = manager.GetDataItem('Y Var')
   var showCV = manager.GetDataItem('showClassificationCV')
   function setVal(){
-    var show = (algorithm.value === 'C5.0' || modeltype.value === 'classification')
-    showCV.setValue(show);
+    var yIsString;
+    var yField = fields
+      .filter(function(d){return d.strName === yvar.value})[0]
+    if (typeof yField === 'undefined'){
+      yString = false;
+    } else {
+      yIsString = ['String', 'WString', 'V_String', 'V_WString'].indexOf(yField.strType) >= 0
+    }
+    var caseThree = (
+      algorithm.value === 'rpart' && 
+      modeltype.value === 'auto' && 
+      yIsString
+    )
+    var show = (
+      caseThree ||
+      algorithm.value === 'C5.0' || 
+      modeltype.value === 'classification'
+    )
+    console.log('showClassificationCV is ' + show)
+    if (typeof show !== 'undefined') showCV.setValue(show);
   }
-  [algorithm, modeltype].forEach(function(d){
+  [algorithm, modeltype, yvar].forEach(function(d){
     d.BindUserDataChanged(setVal)
   })
 }
@@ -300,7 +320,8 @@ function controlDisplayTreePlot(){
   var showTreePlot = manager.GetDataItem('showWhenTreePlotAvailable')
   function setVal(){
     var dontShow = (algorithm.value === 'C5.0' && rules.value)
-    showTreePlot.setValue(!dontShow);
+    console.log('dontShowWhenTreePlotAvailable is ' + dontShow)
+    if (typeof dontShow !== 'undefined') showTreePlot.setValue(!dontShow);
   }
   [algorithm, rules].forEach(function(d){
     d.BindUserDataChanged(setVal)
