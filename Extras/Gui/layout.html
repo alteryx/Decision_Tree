@@ -154,8 +154,10 @@
            </div>
            	{{ numberFolds }}
 	          {{ numberTrials }}
-	          {{ posClass }}
-	          {{ stratified }}
+	          <div id='show-on-classification-CV'>
+	            {{ posClass }}
+	            {{ stratified }}
+	          </div>
          </div>
        </div>
       
@@ -167,21 +169,23 @@
               Tree Plot
             </h4>
             <div class='accordion-content'>
+              <div id = 'show-when-tree-plot-available'>
               {{ `tree.plot` }}
-              <div id='div-tree.plot'>
-                <div id='div-branch-dist'>{{ `Branch Dist` }}</div>
-                {{ `tree_summary` }}
-                {{ `tree_plot_size` }}
-                <div id='div-treeplot-in'>
-                  <div id='div-treeplot-in-w'>{{ `tree.in.w` }}</div>
-                  <div id='div-treeplot-in-h'>{{ `tree.in.h` }}</div>
+                <div id='div-tree.plot'>
+                  <div id='div-branch-dist'>{{ `Branch Dist` }}</div>
+                  {{ `tree_summary` }}
+                  {{ `tree_plot_size` }}
+                  <div id='div-treeplot-in'>
+                    <div id='div-treeplot-in-w'>{{ `tree.in.w` }}</div>
+                    <div id='div-treeplot-in-h'>{{ `tree.in.h` }}</div>
+                  </div>
+                  <div id='div-treeplot-cm'>
+                    {{ `tree.cm.w` }}
+                    {{ `tree.cm.h` }}     
+                  </div>
+                  {{ `tree.graph.resolution` }}
+                  {{ `tree.pointsize` }}
                 </div>
-                <div id='div-treeplot-cm'>
-                  {{ `tree.cm.w` }}
-                  {{ `tree.cm.h` }}     
-                </div>
-                {{ `tree.graph.resolution` }}
-                {{ `tree.pointsize` }}
               </div>
             </div>
               
@@ -189,19 +193,21 @@
               Prune Plot
             </h4>
             <div class='accordion-content'>
+              <div id = 'show-when-prune-plot-available'>
               {{ `prune.plot` }}
-              <div id='div-prune.plot'>
-                {{ `pruning_plot_size` }}
-                <div id='div-pruneplot-in'>
-                  {{ `prune.in.w` }}
-                  {{ `prune.in.h` }}
+                <div id='div-prune.plot'>
+                  {{ `pruning_plot_size` }}
+                  <div id='div-pruneplot-in'>
+                    {{ `prune.in.w` }}
+                    {{ `prune.in.h` }}
+                  </div>
+                  <div id='div-pruneplot-cm'>
+                    {{ `prune.cm.w` }}
+                    {{ `prune.cm.h` }}
+                  </div>
+                  {{ `prune.graph.resolution` }}
+                  {{ `prune.pointsize` }}
                 </div>
-                <div id='div-pruneplot-cm'>
-                  {{ `prune.cm.w` }}
-                  {{ `prune.cm.h` }}
-                </div>
-                {{ `prune.graph.resolution` }}
-                {{ `prune.pointsize` }}
               </div>
             </div>
               
@@ -256,6 +262,22 @@ var displayRules = {
   'tabpage-model-rpart': ['model.algorithm', 'rpart'],
   'tabpage-model-c50': ['model.algorithm', 'C5.0'],
   'show-on-cv': 'use_cv',
-  'show-on-seeded-cv': 'set_seed_cv'
+  'show-on-seeded-cv': 'set_seed_cv',
+  'show-on-classification-CV': ['model.algorithm', 'C5.0'],
+  'show-on-classification-CV': ['model_type', 'classification']
 };
+/* 
+show-on-classification-CV should only display when at least one of these 3 conditions is true:
+1. When user selects classification with rpart models
+2. With all C5.0 models
+3. When user selects auto with rpart models and the y variable is a string (including vsting, etc.) */
+
+/* show-when-tree-plot-available Should always be displayed, unless BOTH of the following conditions are true:
+1. C5.0 is the algorithm
+2. The user chooses the option "Decompose Tree into Rule-based model"
+*/
+
+/* show-when-prune-plot-available Should always be displayed, for rpart models, and never for C5.0 models
+*/
+
 </script>
