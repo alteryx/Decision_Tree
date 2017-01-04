@@ -164,12 +164,12 @@
        <!-- GRAPHICS TAB -->  
        <div class="tabpage" id='tabpage-graphics'>
           <div class="dt-accordion">
-             
+            <div id = 'show-when-tree-plot-available'>
             <h4 class="accordion-toggle" id="toggle-treeplot">
               Tree Plot
             </h4>
             <div class='accordion-content'>
-              <div id = 'show-when-tree-plot-available'>
+              
               {{ `tree.plot` }}
                 <div id='div-tree.plot'>
                   <div id='div-branch-dist'>{{ `Branch Dist` }}</div>
@@ -189,11 +189,11 @@
               </div>
             </div>
               
+            <div id = 'show-when-prune-plot-available'>
             <h4 class="accordion-toggle" id="toggle-pruneplot">
               Prune Plot
             </h4>
             <div class='accordion-content'>
-              <div id = 'show-when-prune-plot-available'>
               {{ `prune.plot` }}
                 <div id='div-prune.plot'>
                   {{ `pruning_plot_size` }}
@@ -226,7 +226,9 @@ var items = {
     "curPage": "Home",
     "curTab": "model",
     "curToggle": "toggle-main",
-    "set_seed_cv": true
+    "set_seed_cv": true,
+    "showClassificationCV": false,
+    "showWhenTreePlotAvailable": true,
   },
   "toggleBarItems": {
     "model_type": ["auto", "classification", "regression"],
@@ -263,8 +265,9 @@ var displayRules = {
   'tabpage-model-c50': ['model.algorithm', 'C5.0'],
   'show-on-cv': 'use_cv',
   'show-on-seeded-cv': 'set_seed_cv',
-  'show-on-classification-CV': ['model.algorithm', 'C5.0'],
-  'show-on-classification-CV': ['model_type', 'classification']
+  'show-on-classification-CV': 'showClassificationCV',
+  'show-when-tree-plot-available': 'showWhenTreePlotAvailable',
+  'show-when-prune-plot-available': ['model.algorithm', 'rpart']
 };
 /* 
 show-on-classification-CV should only display when at least one of these 3 conditions is true:
@@ -272,10 +275,38 @@ show-on-classification-CV should only display when at least one of these 3 condi
 2. With all C5.0 models
 3. When user selects auto with rpart models and the y variable is a string (including vsting, etc.) */
 
+function controlDisplayClassificationCV(){
+  var manager = Alteryx.Gui.manager
+  var algorithm = manager.GetDataItem('model.algorithm')
+  var modeltype = manager.GetDataItem('model_type')
+  var showCV = manager.GetDataItem('showClassificationCV')
+  function setVal(){
+    var show = (algorithm.value === 'C5.0' || modeltype.value === 'classification')
+    showCV.setValue(show);
+  }
+  [algorithm, modeltype].forEach(function(d){
+    d.BindUserDataChanged(setVal)
+  })
+}
+
 /* show-when-tree-plot-available Should always be displayed, unless BOTH of the following conditions are true:
 1. C5.0 is the algorithm
 2. The user chooses the option "Decompose Tree into Rule-based model"
 */
+function controlDisplayTreePlot(){
+  var manager = Alteryx.Gui.manager
+  var algorithm = manager.GetDataItem('model.algorithm')
+  var rules = manager.GetDataItem('rules')
+  var showTreePlot = manager.GetDataItem('showWhenTreePlotAvailable')
+  function setVal(){
+    var dontShow = (algorithm.value === 'C5.0' && rules.value)
+    showTreePlot.setValue(!dontShow);
+  }
+  [algorithm, rules].forEach(function(d){
+    d.BindUserDataChanged(setVal)
+  })
+}
+
 
 /* show-when-prune-plot-available Should always be displayed, for rpart models, and never for C5.0 models
 */
