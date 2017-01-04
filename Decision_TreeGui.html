@@ -329,15 +329,17 @@ Decision_Tree
 <label for="numberTrials">Number of cross-validation trials</label>
 <alteryx-pluginwidget type="NumericSpinner" default="3" min="1" max="100" step="1" id="numberTrials" dataName="numberTrials"></alteryx-pluginwidget>
 
-	          
+	          <div id='show-on-classification-CV'>
+	            
 <!--  posClass  -->
 <label for="posClass">Enter the positive class of the target variable (optional, and only relevant with binary classificaiton models)</label>
 <alteryx-pluginwidget type="TextBox" password="false" id="posClass" dataName="posClass"></alteryx-pluginwidget>
 
-	          
+	            
 <!--  stratified  -->
 <alteryx-pluginwidget type="CheckBox" text="Use stratified cross-validation" id="stratified" dataName="stratified" defaultValue="false"></alteryx-pluginwidget>
 
+	          </div>
          </div>
        </div>
       
@@ -533,8 +535,18 @@ var displayRules = {
   'tabpage-model-rpart': ['model.algorithm', 'rpart'],
   'tabpage-model-c50': ['model.algorithm', 'C5.0'],
   'show-on-cv': 'use_cv',
-  'show-on-seeded-cv': 'set_seed_cv'
+  'show-on-seeded-cv': 'set_seed_cv',
+  'show-on-classification-CV': ['model.algorithm', 'C5.0'],
+  'show-on-classification-CV': ['model_type', 'classification']
 };
+/* 
+1. When user selects classification with rpart models
+2. With all C5.0 models
+3. When user selects auto with rpart models and the y variable is a string (including vsting, etc.) */
+
+function showClassificationCV() {
+  
+}
 </script>
 
   <script src="./assets/alteryx-utils.js"></script>
