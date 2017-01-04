@@ -218,7 +218,7 @@ http://downloads.alteryx.com/Latest_RInstaller.htm</AnnotationText>
         </MetaInfo>
         <MetaInfo connection="Output2">
           <RecordInfo>
-            <Field name="Graph" size="1073741823" source="Report:R-Graph:" type="V_WString" />
+            <Field name="one" source="R-DATA:" type="Double" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -483,7 +483,7 @@ http://downloads.alteryx.com/Latest_RInstaller.htm</AnnotationText>
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_5308_d12566762d8047d2a9e411f11fbb7579_\Engine_6516_d9048f8c8b4942e3a26ec2ebcc51db45_.yxdb</TempFile>
+          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_9408_4878611f9e2f4709afb9e946eff56e37_\Engine_6516_ed0a86544c4f4bb9aa5d05ed332c1fe9_.yxdb</TempFile>
           <TempFileDataProfiling>C:\Users\DBLANC~1\AppData\Local\Temp\Engine_8556_9ca41fa99d264e5b9f3f89971c898cf4_\Engine_6844_2f6344d1371b4f97ab3300f3f53d44b4_.yxdb</TempFileDataProfiling>
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -600,7 +600,7 @@ http://downloads.alteryx.com/Latest_RInstaller.htm</AnnotationText>
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_5308_d12566762d8047d2a9e411f11fbb7579_\Engine_6516_c9a11ae1b9a2457d8104be9c88b68b76_.yxdb</TempFile>
+          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_9408_4878611f9e2f4709afb9e946eff56e37_\Engine_6516_758cf70dca2b48c1b36b460e0c8f2ff0_.yxdb</TempFile>
           <TempFileDataProfiling>C:\Users\DBLANC~1\AppData\Local\Temp\Engine_8556_9ca41fa99d264e5b9f3f89971c898cf4_\Engine_6844_db7625636b9549eda57a4fb225091152_.yxdb</TempFileDataProfiling>
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -717,7 +717,7 @@ http://downloads.alteryx.com/Latest_RInstaller.htm</AnnotationText>
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_5308_d12566762d8047d2a9e411f11fbb7579_\Engine_6516_3f0dd1cd4c0e498dbccb1d5ff05b9da7_.yxdb</TempFile>
+          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_1584_7cddba3b859b4602a36a8b4547c6a18f_\Engine_6516_d57632a464f04cc8ad66721b1523d642_.yxdb</TempFile>
           <TempFileDataProfiling>C:\Users\DBLANC~1\AppData\Local\Temp\Engine_8556_9ca41fa99d264e5b9f3f89971c898cf4_\Engine_6844_772dbc003e4e4b4faf7d1526e88d1fd8_.yxdb</TempFileDataProfiling>
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -908,12 +908,13 @@ http://downloads.alteryx.com/Latest_RInstaller.htm</AnnotationText>
       <Properties>
         <Configuration>
           <FormulaFields>
-            <FormulaField field="Desc" type="V_String" size="64" expression="&quot;PruningTable&quot;" />
+            <FormulaField expression="&quot;PruningTable&quot;" field="Desc" size="64" type="V_String" />
           </FormulaFields>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
-          <DefaultAnnotationText>Desc="PruningTable"</DefaultAnnotationText>
+          <DefaultAnnotationText><![CDATA[Desc = "PruningTable"
+]]></DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
         <MetaInfo connection="Output">
@@ -961,7 +962,7 @@ http://downloads.alteryx.com/Latest_RInstaller.htm</AnnotationText>
       <Properties>
         <Configuration>
           <TempFileDataProfiling>C:\Users\DBLANC~1\AppData\Local\Temp\Engine_8556_9ca41fa99d264e5b9f3f89971c898cf4_\Engine_6844_76ff939a8f964d2cb07464c09a1823fa_.yxdb</TempFileDataProfiling>
-          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_5308_d12566762d8047d2a9e411f11fbb7579_\Engine_6516_f47e35a15e324a678f9f1e1d3f42e825_.yxdb</TempFile>
+          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_9408_4878611f9e2f4709afb9e946eff56e37_\Engine_6516_26fd0ffb6d5a46108346643ce3e9c1cd_.yxdb</TempFile>
           <Layout>
             <ViewMode>Single</ViewMode>
             <ViewSize value="100" />
@@ -986,7 +987,7 @@ http://downloads.alteryx.com/Latest_RInstaller.htm</AnnotationText>
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_5308_d12566762d8047d2a9e411f11fbb7579_\Engine_6516_66f04dc8bba34b8abdd500795ad39005_.yxdb</TempFile>
+          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_1584_7cddba3b859b4602a36a8b4547c6a18f_\Engine_6516_cff35ab3d7274c38a6f8459efa9612b8_.yxdb</TempFile>
           <TempFileDataProfiling>C:\Users\DBLANC~1\AppData\Local\Temp\Engine_8556_9ca41fa99d264e5b9f3f89971c898cf4_\Engine_6844_a107a5a937cc4eb4a5284d7330c03ad5_.yxdb</TempFileDataProfiling>
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -1174,7 +1175,7 @@ No Text Styling</DefaultAnnotationText>
       <Properties>
         <Configuration>
           <TempFileDataProfiling>C:\Users\DBLANC~1\AppData\Local\Temp\Engine_8556_9ca41fa99d264e5b9f3f89971c898cf4_\Engine_6844_878f914c6b5845db94051dda5396d570_.yxdb</TempFileDataProfiling>
-          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_5308_d12566762d8047d2a9e411f11fbb7579_\Engine_6516_e0c8fd6130c84213a048c7714ae9e775_.yxdb</TempFile>
+          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_9408_4878611f9e2f4709afb9e946eff56e37_\Engine_6516_fddde42675cb4b6b85d95f69eb5734ad_.yxdb</TempFile>
           <Layout>
             <ViewMode>Single</ViewMode>
             <ViewSize value="100" />
@@ -1286,7 +1287,7 @@ No Text Styling</DefaultAnnotationText>
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_5308_d12566762d8047d2a9e411f11fbb7579_\Engine_6516_dc15a21629e64c5cb738b12d5ef37b77_.yxdb</TempFile>
+          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_1584_7cddba3b859b4602a36a8b4547c6a18f_\Engine_6516_3f162834a1624e6a8d4ec23e3f0d63c5_.yxdb</TempFile>
           <TempFileDataProfiling>C:\Users\DBLANC~1\AppData\Local\Temp\Engine_8556_9ca41fa99d264e5b9f3f89971c898cf4_\Engine_6844_0c1ede5b05f546c6bc0bb12b17bc0b99_.yxdb</TempFileDataProfiling>
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -1341,7 +1342,7 @@ No Text Styling</DefaultAnnotationText>
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_5308_d12566762d8047d2a9e411f11fbb7579_\Engine_6516_5ced5f82bb7c4a80b8a721a7f0e769e8_.yxdb</TempFile>
+          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_9408_4878611f9e2f4709afb9e946eff56e37_\Engine_6516_a2e2c82bb75946f79b51d7ceec5b05f1_.yxdb</TempFile>
           <TempFileDataProfiling>C:\Users\DBLANC~1\AppData\Local\Temp\Engine_8556_9ca41fa99d264e5b9f3f89971c898cf4_\Engine_6844_6ed0cbcf4a1c461eabcbc74784dd327a_.yxdb</TempFileDataProfiling>
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -1404,7 +1405,7 @@ No Text Styling</DefaultAnnotationText>
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_5308_d12566762d8047d2a9e411f11fbb7579_\Engine_6516_7cd79368cc5040189216ad39bf3924ed_.yxdb</TempFile>
+          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_9408_4878611f9e2f4709afb9e946eff56e37_\Engine_6516_83e709fd6d464068a21035e29b74496a_.yxdb</TempFile>
           <TempFileDataProfiling>C:\Users\DBLANC~1\AppData\Local\Temp\Engine_8556_9ca41fa99d264e5b9f3f89971c898cf4_\Engine_6844_e7519f2f34af47b181a4b39648e25787_.yxdb</TempFileDataProfiling>
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -6211,7 +6212,7 @@ No Text Styling</DefaultAnnotationText>
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_5308_d12566762d8047d2a9e411f11fbb7579_\Engine_6516_0395379167714e398d7ae6e9942b2534_.yxdb</TempFile>
+          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_1584_7cddba3b859b4602a36a8b4547c6a18f_\Engine_6516_0c2882cff2d44c03964a9744a7222273_.yxdb</TempFile>
           <TempFileDataProfiling>C:\Users\DBLANC~1\AppData\Local\Temp\Engine_8556_9ca41fa99d264e5b9f3f89971c898cf4_\Engine_6844_bffc6d0205ff4e619f46e053a09ef9a8_.yxdb</TempFileDataProfiling>
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -6469,7 +6470,7 @@ No Text Styling</DefaultAnnotationText>
       </GuiSettings>
       <Properties>
         <Configuration>
-          <DetourRight value="True" />
+          <DetourRight value="False" />
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
@@ -6504,8 +6505,7 @@ No Text Styling</DefaultAnnotationText>
         </Annotation>
         <MetaInfo connection="Output">
           <RecordInfo>
-            <Field name="Desc" size="64" source="Formula: (Multiple Sources)" type="V_String" />
-            <Field name="Report" size="1073741823" source="Report: (Multiple Sources)" type="V_WString" />
+            <Field name="Static Report" size="39" source="TextInput:" type="String" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -6558,6 +6558,11 @@ No Text Styling</DefaultAnnotationText>
           <DefaultAnnotationText />
           <Left value="False" />
         </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Static Report" size="39" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxJoinMultiple" />
     </Node>
@@ -6596,7 +6601,7 @@ No Text Styling</DefaultAnnotationText>
       </GuiSettings>
       <Properties>
         <Configuration>
-          <DetourRight value="True" />
+          <DetourRight value="False" />
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
@@ -6605,12 +6610,12 @@ No Text Styling</DefaultAnnotationText>
         </Annotation>
         <MetaInfo connection="Left">
           <RecordInfo>
-            <Field name="Graph" size="1073741823" source="Report:R-Graph:" type="V_WString" />
+            <Field name="one" source="R-DATA:" type="Double" />
           </RecordInfo>
         </MetaInfo>
         <MetaInfo connection="Right">
           <RecordInfo>
-            <Field name="Graph" size="1073741823" source="Report:R-Graph:" type="V_WString" />
+            <Field name="one" source="R-DATA:" type="Double" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -6815,7 +6820,7 @@ No Text Styling</DefaultAnnotationText>
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_5308_d12566762d8047d2a9e411f11fbb7579_\Engine_6516_cc37b43a60144fc9ae495920d75119de_.yxdb</TempFile>
+          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_1584_7cddba3b859b4602a36a8b4547c6a18f_\Engine_6516_e1184da9ba254ce499b5ac0dee80080f_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -6836,6 +6841,29 @@ No Text Styling</DefaultAnnotationText>
         </Annotation>
       </Properties>
       <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxBrowseV2" />
+    </Node>
+    <Node ToolID="289">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Sample.Sample">
+        <Position x="2490" y="1962" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <GroupFields orderChanged="False" />
+          <Mode>First</Mode>
+          <N>1</N>
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText>First 1</DefaultAnnotationText>
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Output">
+          <RecordInfo>
+            <Field name="Static Report" size="39" source="TextInput:" type="String" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxSample" />
     </Node>
     <Node ToolID="261">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
@@ -8949,11 +8977,7 @@ Union</Text>
     </Connection>
     <Connection>
       <Origin ToolID="255" Connection="Output" />
-      <Destination ToolID="253" Connection="Left" />
-    </Connection>
-    <Connection>
-      <Origin ToolID="282" Connection="Output" />
-      <Destination ToolID="253" Connection="Right" />
+      <Destination ToolID="289" Connection="Input" />
     </Connection>
     <Connection>
       <Origin ToolID="272" Connection="Right" />
@@ -8982,6 +9006,14 @@ Union</Text>
     <Connection name="#1">
       <Origin ToolID="271" Connection="Action" />
       <Destination ToolID="285" Connection="Action" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="282" Connection="Output" />
+      <Destination ToolID="253" Connection="Right" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="289" Connection="Output" />
+      <Destination ToolID="253" Connection="Left" />
     </Connection>
     <Connection>
       <Origin ToolID="283" Connection="Right" />
@@ -9176,7 +9208,7 @@ Union</Text>
       <Constant>
         <Namespace>Question</Namespace>
         <Name>display.static</Name>
-        <Value>True</Value>
+        <Value>False</Value>
         <IsNumeric value="False" />
       </Constant>
       <Constant>
@@ -9434,7 +9466,7 @@ Union</Text>
       <Constant>
         <Namespace>Question</Namespace>
         <Name>tree.plot</Name>
-        <Value>True</Value>
+        <Value>False</Value>
         <IsNumeric value="False" />
       </Constant>
       <Constant>
