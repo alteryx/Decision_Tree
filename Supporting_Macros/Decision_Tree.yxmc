@@ -7919,7 +7919,7 @@ AlteryxPredictive:::runCrossValidationDTree(inputs, config)
     </Node>
     <Node ToolID="176">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="56.00011" y="144.9998" width="677" height="326.0004" />
+        <Position x="56.00012" y="144.9998" width="677" height="326.0004" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -7937,7 +7937,7 @@ AlteryxPredictive:::runCrossValidationDTree(inputs, config)
       <ChildNodes>
         <Node ToolID="174">
           <GuiSettings Plugin="AlteryxGuiToolkit.Questions.NumericUpDown.NumericUpDown">
-            <Position x="86.00017" y="273.0001" width="59" height="59" />
+            <Position x="86.00014" y="273.0002" width="59" height="59" />
           </GuiSettings>
           <Properties>
             <Configuration />
@@ -7950,7 +7950,7 @@ AlteryxPredictive:::runCrossValidationDTree(inputs, config)
         </Node>
         <Node ToolID="175">
           <GuiSettings Plugin="AlteryxGuiToolkit.Questions.CheckBoxGroup.CheckBoxGroup">
-            <Position x="85.99976" y="212.9999" width="59" height="59" />
+            <Position x="85.9998" y="212.9999" width="59" height="59" />
           </GuiSettings>
           <Properties>
             <Configuration />
@@ -8212,7 +8212,7 @@ Split Criteria</Text>
         </Node>
         <Node ToolID="181">
           <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
-            <Position x="66.00011" y="173.9998" width="100" height="36" />
+            <Position x="66.00012" y="173.9998" width="100" height="36" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -8305,7 +8305,7 @@ Type
     </Node>
     <Node ToolID="215">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="797.9999" y="461.9999" width="1346" height="218.0002" />
+        <Position x="797.9999" y="461.9999" width="1346" height="218.0004" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -8383,7 +8383,7 @@ Type
         </Node>
         <Node ToolID="211">
           <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
-            <Position x="1110" y="491" width="100" height="36" />
+            <Position x="1110" y="490.9999" width="100" height="36" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -8423,7 +8423,7 @@ Type
         </Node>
         <Node ToolID="216">
           <GuiSettings Plugin="AlteryxGuiToolkit.Questions.NumericUpDown.NumericUpDown">
-            <Position x="834.0001" y="527.0006" width="59" height="59" />
+            <Position x="834.0001" y="527.0005" width="59" height="59" />
           </GuiSettings>
           <Properties>
             <Configuration />
@@ -8437,7 +8437,7 @@ Type
         </Node>
         <Node ToolID="217">
           <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
-            <Position x="906.0001" y="491.0005" width="100" height="36" />
+            <Position x="906.0001" y="491.0004" width="100" height="36" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -8483,7 +8483,7 @@ Type
         </Node>
         <Node ToolID="220">
           <GuiSettings Plugin="AlteryxGuiToolkit.TextBox.TextBox">
-            <Position x="1002" y="491.0009" width="100" height="36" />
+            <Position x="1002" y="491.0008" width="100" height="36" />
           </GuiSettings>
           <Properties>
             <Configuration>
@@ -9208,7 +9208,7 @@ Union</Text>
     </Node>
     <Node ToolID="168">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="65.99986" y="678.0001" width="1113" height="284.9999" />
+        <Position x="65.99991" y="678.0004" width="1113" height="284.9997" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -9226,7 +9226,7 @@ Union</Text>
       <ChildNodes>
         <Node ToolID="106">
           <GuiSettings Plugin="AlteryxGuiToolkit.Questions.TextBox.TextBox">
-            <Position x="76.00054" y="707.0001" width="59" height="59" />
+            <Position x="76.00047" y="707.0004" width="59" height="59" />
           </GuiSettings>
           <Properties>
             <Configuration />
@@ -9239,7 +9239,7 @@ Union</Text>
         </Node>
         <Node ToolID="109">
           <GuiSettings Plugin="AlteryxGuiToolkit.Questions.DropDownListBox.DropDown">
-            <Position x="164.5005" y="707.0007" width="59" height="59" />
+            <Position x="164.5005" y="707.0008" width="59" height="59" />
           </GuiSettings>
           <Properties>
             <Configuration />
@@ -9304,7 +9304,7 @@ Union</Text>
         </Node>
         <Node ToolID="97">
           <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
-            <Position x="161.9999" y="810.0002" width="59" height="59" />
+            <Position x="161.9999" y="809.9999" width="59" height="59" />
           </GuiSettings>
           <Properties>
             <Configuration />
@@ -9356,7 +9356,7 @@ Union</Text>
         </Node>
         <Node ToolID="100">
           <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
-            <Position x="75.99986" y="808.0009" width="59" height="59" />
+            <Position x="75.99991" y="808.001" width="59" height="59" />
           </GuiSettings>
           <Properties>
             <Configuration />
@@ -10995,7 +10995,7 @@ ENDIF</Expression>
             </Question>
             <Question>
               <Type>BooleanGroup</Type>
-              <Description>Prune Tree</Description>
+              <Description>Prune tree</Description>
               <Name>GlobalPruning</Name>
               <ToolId value="225" />
               <Questions />
@@ -11066,7 +11066,7 @@ ENDIF</Expression>
             </Question>
             <Question>
               <Type>ListBox</Type>
-              <Description>Choose Algorithm</Description>
+              <Description>Choose algorithm</Description>
               <Name>model.algorithm</Name>
               <ToolId value="238" />
               <Multiple value="False" />
@@ -11078,7 +11078,7 @@ C5.0
             </Question>
             <Question>
               <Type>BooleanGroup</Type>
-              <Description>Display Static Report</Description>
+              <Description>Display static report</Description>
               <Name>display.static</Name>
               <ToolId value="239" />
               <Questions />
@@ -11168,7 +11168,7 @@ C5.0
             </Question>
             <Question>
               <Type>TextBox</Type>
-              <Description>Enter the positive class of the target variable (optional, and only relevant with binary classificaiton models)</Description>
+              <Description>Enter the positive class of the target variable (optional, and only relevant with binary classification models)</Description>
               <Name>posClass</Name>
               <ToolId value="267" />
               <Default />
@@ -11195,7 +11195,7 @@ C5.0
           <Questions>
             <Question>
               <Type>TextBox</Type>
-              <Description>Model Name</Description>
+              <Description>Type model name</Description>
               <Name>Model Name</Name>
               <ToolId value="106" />
               <Default />
@@ -11217,7 +11217,7 @@ C5.0
             </Question>
             <Question>
               <Type>ListBox</Type>
-              <Description>Select the target variable</Description>
+              <Description>Select target variable</Description>
               <Name>Y Var</Name>
               <ToolId value="109" />
               <Multiple value="False" />
@@ -11229,7 +11229,7 @@ C5.0
             </Question>
             <Question>
               <Type>ListBox</Type>
-              <Description>Select the predictor variables</Description>
+              <Description>Select predictor variables</Description>
               <Name>X Vars</Name>
               <ToolId value="110" />
               <Multiple value="True" />
@@ -11380,7 +11380,7 @@ C5.0
               <Questions>
                 <Question>
                   <Type>RadioGroup</Type>
-                  <Description>Omit observations with missing value for primary split rule.</Description>
+                  <Description>Omit observations with missing value for primary split rule</Description>
                   <Name>usesurrogate.0</Name>
                   <ToolId value="124" />
                   <Questions />
@@ -11389,7 +11389,7 @@ C5.0
                 </Question>
                 <Question>
                   <Type>RadioGroup</Type>
-                  <Description>Split records missing the candidate variable.</Description>
+                  <Description>Split records missing the candidate variable</Description>
                   <Name>usesurrogate.1</Name>
                   <ToolId value="125" />
                   <Questions />
@@ -11398,7 +11398,7 @@ C5.0
                 </Question>
                 <Question>
                   <Type>RadioGroup</Type>
-                  <Description>Send observation in majority direction if all surrogates are missing.</Description>
+                  <Description>Send observation in majority direction if all surrogates are missing</Description>
                   <Name>usesurrogate.2</Name>
                   <ToolId value="126" />
                   <Questions />
@@ -11415,7 +11415,7 @@ C5.0
               <Questions>
                 <Question>
                   <Type>RadioGroup</Type>
-                  <Description>Number of correct classifications for a candidate variable.</Description>
+                  <Description>Number of correct classifications for a candidate variable</Description>
                   <Name>total.correct</Name>
                   <ToolId value="128" />
                   <Questions />
@@ -11424,7 +11424,7 @@ C5.0
                 </Question>
                 <Question>
                   <Type>RadioGroup</Type>
-                  <Description>Percentage of correct classifications for a candidate variable.</Description>
+                  <Description>Percentage of correct classifications for a candidate variable</Description>
                   <Name>percent.correct</Name>
                   <ToolId value="129" />
                   <Questions />
@@ -11483,7 +11483,7 @@ C5.0
           <Questions>
             <Question>
               <Type>BooleanGroup</Type>
-              <Description>Display Tree Plot?</Description>
+              <Description>Display tree plot</Description>
               <Name>tree.plot</Name>
               <ToolId value="150" />
               <Questions>
@@ -11632,7 +11632,7 @@ C5.0
             </Question>
             <Question>
               <Type>BooleanGroup</Type>
-              <Description>Display Prune Plot?</Description>
+              <Description>Display prune plot</Description>
               <Name>prune.plot</Name>
               <ToolId value="160" />
               <Questions>

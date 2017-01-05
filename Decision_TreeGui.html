@@ -29,17 +29,17 @@ Decision_Tree
       
       <div id='mname' class="qconst">
 <!--  Model Name  -->
-<label for="Model Name">Model Name</label>
+<label for="Model Name">Type model name</label>
 <alteryx-pluginwidget type="TextBox" password="false" id="Model Name" dataName="Model Name"></alteryx-pluginwidget>
 </div>
       <div id='yvar' class="qconst">
 <!--  Y Var  -->
-<label for="Y Var">Select the target variable</label>
+<label for="Y Var">Select target variable</label>
 <alteryx-pluginwidget type="DropDown" dataType="FieldSelector" inputNumber="0" connectionNumber="0" fieldType="All" id="Y Var" dataName="Y Var"></alteryx-pluginwidget>
 </div>
       <div id='xvars' class="qconst">
 <!--  X Vars  -->
-<label for="X Vars">Select the predictor variables</label>
+<label for="X Vars">Select predictor variables</label>
 <alteryx-pluginwidget type="MultiSelectListBox" dataType="MultiStringSelector" inputNumber="0" connectionNumber="0" fieldType="All" id="X Vars" dataName="X Vars"></alteryx-pluginwidget>
 </div>
       <button class="btn pull-left switch" id="switch-to-customize"
@@ -75,7 +75,7 @@ Decision_Tree
     </div>
     <div class="tab tab-one-third active mytab" data-page='crossvalidation' 
       id='crossvalidation'>
-      CrossValidation
+      Cross-validation
     </div>
     <div class="tab tab-one-third mytab" data-page='graphics' id='graphics'>
       Plots
@@ -90,7 +90,7 @@ Decision_Tree
        <div class="tabpage" id='tabpage-model'>
           <div id='model-algo'>
 <!--  model.algorithm  -->
-<label for="model.algorithm">Choose Algorithm</label>
+<label for="model.algorithm">Choose algorithm</label>
 <alteryx-pluginwidget type="DropDown" id="model.algorithm" dataName="model.algorithm">
   <alteryx-option uiobject="rpart" default="true">rpart</alteryx-option>
   <alteryx-option uiobject="C5.0">C5.0</alteryx-option>
@@ -142,17 +142,17 @@ Decision_Tree
 <!--  surrogate_use  -->
 <label for="surrogate_use">Use surrogates to</label>
 <alteryx-pluginwidget type="RadioGroup" group="surrogate_use" id="surrogate_use" dataName="surrogate_use">
-  <alteryx-option uiobject="Omit observations with missing value for primary split rule." default="true">usesurrogate.0</alteryx-option>
-  <alteryx-option uiobject="Split records missing the candidate variable.">usesurrogate.1</alteryx-option>
-  <alteryx-option uiobject="Send observation in majority direction if all surrogates are missing.">usesurrogate.2</alteryx-option>
+  <alteryx-option uiobject="Omit observations with missing value for primary split rule" default="true">usesurrogate.0</alteryx-option>
+  <alteryx-option uiobject="Split records missing the candidate variable">usesurrogate.1</alteryx-option>
+  <alteryx-option uiobject="Send observation in majority direction if all surrogates are missing">usesurrogate.2</alteryx-option>
 </alteryx-pluginwidget>
 
                 
 <!--  surrogate_split_criteria  -->
 <label for="surrogate_split_criteria">Select best surrogate split using</label>
 <alteryx-pluginwidget type="RadioGroup" group="surrogate_split_criteria" id="surrogate_split_criteria" dataName="surrogate_split_criteria">
-  <alteryx-option uiobject="Number of correct classifications for a candidate variable." default="true">total.correct</alteryx-option>
-  <alteryx-option uiobject="Percentage of correct classifications for a candidate variable.">percent.correct</alteryx-option>
+  <alteryx-option uiobject="Number of correct classifications for a candidate variable" default="true">total.correct</alteryx-option>
+  <alteryx-option uiobject="Percentage of correct classifications for a candidate variable">percent.correct</alteryx-option>
 </alteryx-pluginwidget>
 
               </div>
@@ -249,7 +249,7 @@ Decision_Tree
 
                 
 <!--  GlobalPruning  -->
-<alteryx-pluginwidget type="CheckBox" text="Prune Tree" id="GlobalPruning" dataName="GlobalPruning" defaultValue="true"></alteryx-pluginwidget>
+<alteryx-pluginwidget type="CheckBox" text="Prune tree" id="GlobalPruning" dataName="GlobalPruning" defaultValue="true"></alteryx-pluginwidget>
 
                 
 <!--  fuzzyThreshold  -->
@@ -261,7 +261,7 @@ Decision_Tree
 
                 
 <!--  display.static  -->
-<alteryx-pluginwidget type="CheckBox" text="Display Static Report" id="display.static" dataName="display.static" defaultValue="true"></alteryx-pluginwidget>
+<alteryx-pluginwidget type="CheckBox" text="Display static report" id="display.static" dataName="display.static" defaultValue="true"></alteryx-pluginwidget>
 
               </div>
               
@@ -332,7 +332,7 @@ Decision_Tree
 	          <div id='show-on-classification-CV'>
 	            
 <!--  posClass  -->
-<label for="posClass">Enter the positive class of the target variable (optional, and only relevant with binary classificaiton models)</label>
+<label for="posClass">Enter the positive class of the target variable (optional, and only relevant with binary classification models)</label>
 <alteryx-pluginwidget type="TextBox" password="false" id="posClass" dataName="posClass"></alteryx-pluginwidget>
 
 	            
@@ -354,7 +354,7 @@ Decision_Tree
               
               
 <!--  tree.plot  -->
-<alteryx-pluginwidget type="CheckBox" text="Display Tree Plot?" showAsToggle="true" id="tree.plot" dataName="tree.plot" defaultValue="true"></alteryx-pluginwidget>
+<alteryx-pluginwidget type="CheckBox" text="Display tree plot" showAsToggle="true" id="tree.plot" dataName="tree.plot" defaultValue="true"></alteryx-pluginwidget>
 
                 <div id='div-tree.plot'>
                   <div id='div-branch-dist'>
@@ -432,7 +432,7 @@ Decision_Tree
             <div class='accordion-content'>
               
 <!--  prune.plot  -->
-<alteryx-pluginwidget type="CheckBox" text="Display Prune Plot?" showAsToggle="true" id="prune.plot" dataName="prune.plot" defaultValue="false"></alteryx-pluginwidget>
+<alteryx-pluginwidget type="CheckBox" text="Display prune plot" showAsToggle="true" id="prune.plot" dataName="prune.plot" defaultValue="false"></alteryx-pluginwidget>
 
                 <div id='div-prune.plot'>
                   
