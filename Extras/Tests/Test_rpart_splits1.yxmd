@@ -43,6 +43,9 @@
           <Value name="curPage">Home</Value>
           <Value name="curTab">model</Value>
           <Value name="curToggle">toggle-split</Value>
+          <Value name="set_seed_cv">True</Value>
+          <Value name="showClassificationCV">True</Value>
+          <Value name="showWhenTreePlotAvailable">True</Value>
           <Value name="use.gini">True</Value>
           <Value name="use.information">False</Value>
           <Value name="usesurrogate.0">True</Value>
@@ -64,16 +67,8 @@
           <Value name="prune.inches">True</Value>
           <Value name="prune.centimeters">False</Value>
           <Value name="Model Name">test_dtree</Value>
-          <Value name="set_seed_cv">True</Value>
           <Value name="Y Var">mpg</Value>
           <Value name="X Vars">cyl,disp,hp,drat,wt,qsec,vs,am,gear,carb</Value>
-          <Value name="use_cv">False</Value>
-          <Value name="cv_seed">1</Value>
-          <Value name="numberFolds">5</Value>
-          <Value name="numberTrials">3</Value>
-          <Value name="posClass">
-          </Value>
-          <Value name="stratified">False</Value>
           <Value name="model.algorithm">rpart</Value>
           <Value name="use.weights">False</Value>
           <Value name="select.weights" />
@@ -102,6 +97,13 @@
           <Value name="minCases">2</Value>
           <Value name="sample">0</Value>
           <Value name="seed">1</Value>
+          <Value name="use_cv">False</Value>
+          <Value name="cv_seed">1</Value>
+          <Value name="numberFolds">5</Value>
+          <Value name="numberTrials">3</Value>
+          <Value name="posClass">
+          </Value>
+          <Value name="stratified">False</Value>
           <Value name="tree.plot">False</Value>
           <Value name="Branch Dist">False</Value>
           <Value name="tree.in.w">5.5</Value>
@@ -467,7 +469,7 @@ if (any((abs(new_split_matrix - fixed_split_matrix)) > .0001)) {
     <DisableBrowse value="False" />
     <EnablePerformanceProfiling value="False" />
     <DisableAllOutput value="False" />
-    <ShowAllMacroMessages value="False" />
+    <ShowAllMacroMessages value="True" />
     <ShowConnectionStatusIsOn value="True" />
     <ShowConnectionStatusOnlyWhenRunning value="True" />
     <ZoomLevel value="0" />

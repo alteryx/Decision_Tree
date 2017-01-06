@@ -75,7 +75,7 @@ write.Alteryx(admission, 1)
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_9484_a1c6abd0e71b4b7dbf0b8276609c8f81_\Engine_8020_048f48e7507b45f58eb4859891163064_.yxdb</TempFile>
+          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_7728_9e7ae64bed3e44989a4d33995ef88a64_\Engine_7556_af372324f0b14016a5813b8e4c2b66b4_.yxdb</TempFile>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
@@ -91,7 +91,7 @@ write.Alteryx(admission, 1)
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_9484_a1c6abd0e71b4b7dbf0b8276609c8f81_\Engine_8020_1dfab1f9ab3d41268c2fdd728b508e6f_.yxdb</TempFile>
+          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_7728_9e7ae64bed3e44989a4d33995ef88a64_\Engine_7556_e40e162cafd6471c96f1c4266cd90c73_.yxdb</TempFile>
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
@@ -107,7 +107,7 @@ write.Alteryx(admission, 1)
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_9484_a1c6abd0e71b4b7dbf0b8276609c8f81_\Engine_8020_2e51b76ba1db43c9a6014dac4cb21f8a_.yxdb</TempFile>
+          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_7728_9e7ae64bed3e44989a4d33995ef88a64_\Engine_7556_46911e904289484582dd43f4b45d7ad6_.yxdb</TempFile>
           <Layout>
             <View1>
               <Hints>
@@ -134,6 +134,8 @@ write.Alteryx(admission, 1)
           <Value name="curTab">model</Value>
           <Value name="curToggle">toggle-c50toggle3</Value>
           <Value name="set_seed_cv">True</Value>
+          <Value name="showClassificationCV">True</Value>
+          <Value name="showWhenTreePlotAvailable">True</Value>
           <Value name="use.gini">True</Value>
           <Value name="use.information">False</Value>
           <Value name="usesurrogate.0">True</Value>
@@ -246,7 +248,7 @@ write.Alteryx(admission, 1)
     <DisableBrowse value="False" />
     <EnablePerformanceProfiling value="False" />
     <DisableAllOutput value="False" />
-    <ShowAllMacroMessages value="False" />
+    <ShowAllMacroMessages value="True" />
     <ShowConnectionStatusIsOn value="True" />
     <ShowConnectionStatusOnlyWhenRunning value="True" />
     <ZoomLevel value="0" />
