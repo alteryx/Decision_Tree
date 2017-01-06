@@ -84,9 +84,10 @@ options(width = 2000)
 #' We also specify defaults for use when R code is run outside Alteryx.
 
 inputs <- list(
-  models = list(Decision_Tree = unserializeObject((read.Alteryx("#1")$Object)[[1]])),
+  models = list(Decision_Tree = unserializeObject((read.Alteryx("#1")$Object[[1]]))),
   the.data = read.Alteryx2("#2", default = rev(iris))
 )
 
-
-AlteryxPredictive:::runCrossValidationDTree(inputs, config)
+if (config$use_cv) {
+  AlteryxPredictive:::runCrossValidationDTree(inputs, config)
+}

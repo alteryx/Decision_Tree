@@ -64,7 +64,7 @@
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_7424_070d670059694535ae2e44144381b01a_\Engine_6516_a65b3ef7794d4e31801549b95943163b_.yxdb</TempFile>
+          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_5260_7ce1116a9e094b42b35fbc2de55fff65_\Engine_7484_4753b6eb33e547db8ce93b82aaa99632_.yxdb</TempFile>
           <TempFileDataProfiling>C:\ProgramData\Alteryx\Engine\Engine_4604_8cebd32cf1514438824e4d4c9eaa1710_\Engine_1200_ba3f5c6b612a47dd83a8db0d5d8368f9_.yxdb</TempFileDataProfiling>
           <Layout>
             <View1>
@@ -88,7 +88,7 @@
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_7424_070d670059694535ae2e44144381b01a_\Engine_6516_bc875832418741a69c74dc14973d3e71_.yxdb</TempFile>
+          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_5260_7ce1116a9e094b42b35fbc2de55fff65_\Engine_7484_57e60de6e0d54217a0500aae4c7fc169_.yxdb</TempFile>
           <TempFileDataProfiling>C:\ProgramData\Alteryx\Engine\Engine_4604_8cebd32cf1514438824e4d4c9eaa1710_\Engine_1200_b96be389d960469096e59d8de43b1f9c_.yxdb</TempFileDataProfiling>
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -117,7 +117,7 @@
       <Properties>
         <Configuration>
           <TempFileDataProfiling>C:\ProgramData\Alteryx\Engine\Engine_4604_8cebd32cf1514438824e4d4c9eaa1710_\Engine_1200_b8f80bbe70344d95b19445ee63654903_.yxdb</TempFileDataProfiling>
-          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_7424_070d670059694535ae2e44144381b01a_\Engine_6516_a15c2c4e2b1a4a179fb1e845290895ee_.yxdb</TempFile>
+          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_5260_7ce1116a9e094b42b35fbc2de55fff65_\Engine_7484_a03a5301edb04fe3828c9e5864dc6f26_.yxdb</TempFile>
           <Layout>
             <ViewMode>Single</ViewMode>
             <ViewSize value="100" />
@@ -145,7 +145,7 @@
       <Properties>
         <Configuration>
           <TempFileDataProfiling>C:\ProgramData\Alteryx\Engine\Engine_4604_8cebd32cf1514438824e4d4c9eaa1710_\Engine_1200_d5fa3ff6e8ec4e0393db38c1dcf0f3c7_.yxdb</TempFileDataProfiling>
-          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_7424_070d670059694535ae2e44144381b01a_\Engine_6516_4e5c2609d09341dcbcb15c803948f634_.yxdb</TempFile>
+          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_5260_7ce1116a9e094b42b35fbc2de55fff65_\Engine_7484_e4caf54b4aa44eaaa9452857f5b8b385_.yxdb</TempFile>
           <Layout>
             <View1>
               <Hints>
@@ -168,7 +168,7 @@
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_7424_070d670059694535ae2e44144381b01a_\Engine_6516_495810f8a501498088d85fd14e979c26_.yxdb</TempFile>
+          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_5260_7ce1116a9e094b42b35fbc2de55fff65_\Engine_7484_76dc36079c534951a3957eac8d31d6c5_.yxdb</TempFile>
           <TempFileDataProfiling>C:\ProgramData\Alteryx\Engine\Engine_4604_8cebd32cf1514438824e4d4c9eaa1710_\Engine_1200_65084c18ab2743848fe8cee7738dd3b6_.yxdb</TempFileDataProfiling>
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -197,7 +197,7 @@
       <Properties>
         <Configuration>
           <TempFileDataProfiling>C:\ProgramData\Alteryx\Engine\Engine_4604_8cebd32cf1514438824e4d4c9eaa1710_\Engine_1200_49088733a23949368b2754d78b30709d_.yxdb</TempFileDataProfiling>
-          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_7424_070d670059694535ae2e44144381b01a_\Engine_6516_f7a4bd511888493ca360b2227858126d_.yxdb</TempFile>
+          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_5260_7ce1116a9e094b42b35fbc2de55fff65_\Engine_7484_574aa825ef0d40aba31bda3d2b7dbbad_.yxdb</TempFile>
           <Layout>
             <ViewMode>Single</ViewMode>
             <ViewSize value="100" />
@@ -7540,7 +7540,7 @@
         </Annotation>
       </Properties>
     </Node>
-    <Node ToolID="23">
+    <Node ToolID="24">
       <GuiSettings Plugin="Decision_Tree">
         <Position x="210" y="174" />
       </GuiSettings>
@@ -7550,6 +7550,8 @@
           <Value name="curTab">graphics</Value>
           <Value name="curToggle">toggle-treeplot</Value>
           <Value name="set_seed_cv">True</Value>
+          <Value name="showClassificationCV">True</Value>
+          <Value name="showWhenTreePlotAvailable">True</Value>
           <Value name="use.gini">True</Value>
           <Value name="use.information">False</Value>
           <Value name="usesurrogate.0">True</Value>
@@ -7626,7 +7628,7 @@
         </Configuration>
         <Annotation DisplayMode="0">
           <Name />
-          <DefaultAnnotationText>New_DT</DefaultAnnotationText>
+          <DefaultAnnotationText>Decision_Tree_24</DefaultAnnotationText>
           <Left value="False" />
         </Annotation>
       </Properties>
@@ -7652,18 +7654,18 @@
     </Connection>
     <Connection>
       <Origin ToolID="18" Connection="Output" />
-      <Destination ToolID="23" Connection="Input" />
+      <Destination ToolID="24" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="23" Connection="Output" />
+      <Origin ToolID="24" Connection="Output" />
       <Destination ToolID="11" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="23" Connection="Reports" />
+      <Origin ToolID="24" Connection="Reports" />
       <Destination ToolID="12" Connection="Input" />
     </Connection>
     <Connection>
-      <Origin ToolID="23" Connection="Interactive" />
+      <Origin ToolID="24" Connection="Interactive" />
       <Destination ToolID="13" Connection="Input" />
     </Connection>
   </Connections>
