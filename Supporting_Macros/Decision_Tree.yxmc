@@ -11114,7 +11114,7 @@ C5.0
             </Question>
             <Question>
               <Type>BooleanGroup</Type>
-              <Description>Use cross-validation</Description>
+              <Description>Use cross-validation to determine estimates of model quality</Description>
               <Name>use_cv</Name>
               <ToolId value="262" />
               <Questions />
