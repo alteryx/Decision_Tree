@@ -7912,6 +7912,19 @@ if (config$use_cv) {
             </Annotation>
           </Properties>
         </Node>
+        <Node ToolID="323">
+          <GuiSettings Plugin="AlteryxGuiToolkit.Questions.TextBox.QuestionTextBox">
+            <Position x="1746" y="270" width="59" height="59" />
+          </GuiSettings>
+          <Properties>
+            <Configuration />
+            <Annotation DisplayMode="0">
+              <Name>showClassificationCV</Name>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
       </ChildNodes>
     </Node>
     <Node ToolID="176">
@@ -8996,7 +9009,7 @@ Union</Text>
     </Node>
     <Node ToolID="177">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="797.9999" y="294" width="667.0001" height="177.0001" />
+        <Position x="797.9999" y="293.9999" width="667.0001" height="177.0001" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -9118,7 +9131,7 @@ Union</Text>
         </Node>
         <Node ToolID="150">
           <GuiSettings Plugin="AlteryxGuiToolkit.Questions.CheckBoxGroup.CheckBoxGroup">
-            <Position x="807.9999" y="323" width="59" height="59" />
+            <Position x="807.9999" y="322.9999" width="59" height="59" />
           </GuiSettings>
           <Properties>
             <Configuration />
@@ -9137,6 +9150,19 @@ Union</Text>
             <Configuration />
             <Annotation DisplayMode="0">
               <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+        <Node ToolID="324">
+          <GuiSettings Plugin="AlteryxGuiToolkit.Questions.TextBox.QuestionTextBox">
+            <Position x="954" y="402" width="59" height="59" />
+          </GuiSettings>
+          <Properties>
+            <Configuration />
+            <Annotation DisplayMode="0">
+              <Name>showWhenTreePlotAvailable</Name>
               <DefaultAnnotationText />
               <Left value="False" />
             </Annotation>
@@ -9205,7 +9231,7 @@ Union</Text>
     </Node>
     <Node ToolID="168">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="66" y="678.0005" width="1113" height="284.9996" />
+        <Position x="66.00001" y="678.0005" width="1113" height="284.9996" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -9223,7 +9249,7 @@ Union</Text>
       <ChildNodes>
         <Node ToolID="106">
           <GuiSettings Plugin="AlteryxGuiToolkit.Questions.TextBox.TextBox">
-            <Position x="76.00039" y="707.0006" width="59" height="59" />
+            <Position x="76.00032" y="707.0006" width="59" height="59" />
           </GuiSettings>
           <Properties>
             <Configuration />
@@ -9236,7 +9262,7 @@ Union</Text>
         </Node>
         <Node ToolID="109">
           <GuiSettings Plugin="AlteryxGuiToolkit.Questions.DropDownListBox.DropDown">
-            <Position x="164.5007" y="707.0009" width="59" height="59" />
+            <Position x="164.5006" y="707.0009" width="59" height="59" />
           </GuiSettings>
           <Properties>
             <Configuration />
@@ -9301,7 +9327,7 @@ Union</Text>
         </Node>
         <Node ToolID="97">
           <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
-            <Position x="161.9999" y="809.9996" width="59" height="59" />
+            <Position x="161.9998" y="809.9996" width="59" height="59" />
           </GuiSettings>
           <Properties>
             <Configuration />
@@ -9353,7 +9379,7 @@ Union</Text>
         </Node>
         <Node ToolID="100">
           <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
-            <Position x="75.99997" y="808.0013" width="59" height="59" />
+            <Position x="75.99998" y="808.0013" width="59" height="59" />
           </GuiSettings>
           <Properties>
             <Configuration />
@@ -10648,6 +10674,18 @@ Union</Text>
         <Value>True</Value>
         <IsNumeric value="False" />
       </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>showClassificationCV</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
+      <Constant>
+        <Namespace>Question</Namespace>
+        <Name>showWhenTreePlotAvailable</Name>
+        <Value />
+        <IsNumeric value="False" />
+      </Constant>
     </Constants>
     <MetaInfo>
       <NameIsFileName value="False" />
@@ -11181,6 +11219,26 @@ C5.0
               <Questions />
               <Default value="False" />
               <Collapsable value="False" />
+            </Question>
+            <Question>
+              <Type>TextBox</Type>
+              <Description>showClassificationCV</Description>
+              <Name>showClassificationCV</Name>
+              <ToolId value="323" />
+              <Default />
+              <Password value="False" />
+              <Multiline value="False" />
+              <Hidden value="False" />
+            </Question>
+            <Question>
+              <Type>TextBox</Type>
+              <Description>showWhenTreePlotAvailable</Description>
+              <Name>showWhenTreePlotAvailable</Name>
+              <ToolId value="324" />
+              <Default />
+              <Password value="False" />
+              <Multiline value="False" />
+              <Hidden value="False" />
             </Question>
           </Questions>
         </Question>
