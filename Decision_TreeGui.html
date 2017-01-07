@@ -307,18 +307,7 @@ Decision_Tree
 <!--  use_cv  -->
 <alteryx-pluginwidget type="CheckBox" text="Use cross-validation" showAsToggle="true" id="use_cv" dataName="use_cv" defaultValue="false"></alteryx-pluginwidget>
 
-         <div id='show-on-cv' class='indent-one'>
-           
-<!--  set_seed_cv  -->
-<alteryx-pluginwidget type="CheckBox" text="Set seed for external cross-validation" id="set_seed_cv" dataName="set_seed_cv" defaultValue="true"></alteryx-pluginwidget>
-
-           <div id='show-on-seeded-cv'>
-             
-<!--  cv_seed  -->
-<label for="cv_seed">Select value of random seed for cross-validation</label>
-<alteryx-pluginwidget type="NumericSpinner" default="1" min="1" max="1000000" step="1" id="cv_seed" dataName="cv_seed"></alteryx-pluginwidget>
-
-           </div>
+         <div id='show-on-cv'>
            	
 <!--  numberFolds  -->
 <label for="numberFolds">Number of cross-validation folds</label>
@@ -340,6 +329,17 @@ Decision_Tree
 <alteryx-pluginwidget type="CheckBox" text="Use stratified cross-validation" id="stratified" dataName="stratified" defaultValue="false"></alteryx-pluginwidget>
 
 	          </div>
+	          
+<!--  set_seed_cv  -->
+<alteryx-pluginwidget type="CheckBox" text="Set seed for external cross-validation" id="set_seed_cv" dataName="set_seed_cv" defaultValue="true"></alteryx-pluginwidget>
+
+            <div id='show-on-seeded-cv'>
+              
+<!--  cv_seed  -->
+<label for="cv_seed">Select value of random seed for cross-validation</label>
+<alteryx-pluginwidget type="NumericSpinner" default="1" min="1" max="1000000" step="1" id="cv_seed" dataName="cv_seed"></alteryx-pluginwidget>
+
+            </div>
          </div>
        </div>
       
