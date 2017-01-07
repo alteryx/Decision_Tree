@@ -147,17 +147,17 @@
        <!-- CROSS VALIDATION TAB -->
        <div class="tabpage" id='tabpage-crossvalidation'>
          {{ use_cv }}
-         <div id='show-on-cv' class='indent-one'>
-           {{ set_seed_cv }}
-           <div id='show-on-seeded-cv'>
-             {{ cv_seed }}
-           </div>
+         <div id='show-on-cv'>
            	{{ numberFolds }}
 	          {{ numberTrials }}
 	          <div id='show-on-classification-CV'>
 	            {{ posClass }}
 	            {{ stratified }}
 	          </div>
+	          {{ set_seed_cv }}
+            <div id='show-on-seeded-cv'>
+              {{ cv_seed }}
+            </div>
          </div>
        </div>
       
