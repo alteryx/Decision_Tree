@@ -2,17 +2,17 @@
 
 
 
-These tests were run at 2017-01-08 00:29:07
+These tests were run at 2017-01-08 09:32:22
 
 
-| id|name                        |status  |time           |message    |
-|--:|:---------------------------|:-------|:--------------|:----------|
-|  1|BasicTest                   |&#9989; |10.671 seconds |2 warnings |
-|  2|Test_c50_1                  |&#9989; |8.679 seconds  |2 warnings |
-|  3|Test_c50_1_Cross-validation |&#9989; |11.506 seconds |2 warnings |
-|  4|Test_c50_missing            |&#9989; |10.610 seconds |2 warnings |
-|  5|Test_rpart_CV               |&#9989; |12.268 seconds |1 warning  |
-|  6|Test_rpart_splits1          |&#9989; |10.730 seconds |1 warning  |
+| id|name                        |status  |time          |message   |
+|--:|:---------------------------|:-------|:-------------|:---------|
+|  1|BasicTest                   |&#9989; |9.618 seconds |1 warning |
+|  2|Test_c50_1                  |&#9989; |7.530 seconds |1 warning |
+|  3|Test_c50_1_Cross-validation |&#9989; |9.122 seconds |1 warning |
+|  4|Test_c50_missing            |&#9989; |9.343 seconds |1 warning |
+|  5|Test_rpart_CV               |&#9989; |9.720 seconds |          |
+|  6|Test_rpart_splits1          |&#9989; |9.516 seconds |          |
 
 ### Usage Notes
 
@@ -42,4 +42,5 @@ These tests were run at 2017-01-08 00:29:07
 15. `Use Cross-validation to determine estimates of model quality` should be unchecked by default. 
 16. In the Cross-validation tab, `Number of folds`, `Number of trials`, and `Set seed` should appear if and only if cross-validation is selected. If CV is selected, `Set seed` should be checked by default, and the default value of the seed should be 1.
 17. If CV is selected, the options `Enter the positive class...` and `Use stratified cross-validation` should appear if and only if one of the following three conditions is true. 1: C5.0 is selected as the algorithm. 2: rpart is selected as the algorithm with `Classification` as the model type. 3: rpart is selected with `Auto` as the classification type, and the target variable is a (V)(W)String.
-18. The `Prune plot` accordion should show up if and only if rpart is the model type. The `Display prune plot` toggle should be off by default. If it's turned on, the options should be `Plot size`, `Width`, `Height`, `Graph resolution`, and `Base font size (points)`. Both plots should be generated according to the user's selection, though there should be no prune plots ever generated with C5.0, and no tree plots with C5.0 when `Decompose tree into rule-based model` is selected.
+18. Assuming `Display static reports` is selected, the `Prune plot` accordion should show up if and only if rpart is the model type. The `Display prune plot` toggle should be off by default. If it's turned on, the options should be `Plot size`, `Width`, `Height`, `Graph resolution`, and `Base font size (points)`. Both plots should be generated according to the user's selection, though there should be no prune plots ever generated with C5.0, and no tree plots with C5.0 when `Decompose tree into rule-based model` is selected.
+19. The `Display static reports` option should be selected by default. The `Tree plot` and `Prune plot` accordions, if applicable as described above, should appear if and only if `Display static reports` is selected.

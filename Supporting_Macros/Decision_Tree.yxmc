@@ -212,14 +212,14 @@ http://downloads.alteryx.com/Latest_RInstaller.htm</AnnotationText>
             <Field name="Object" size="2147483647" source="R-DATA:SERIAL" type="Blob" />
           </RecordInfo>
         </MetaInfo>
-        <MetaInfo connection="Output5">
-          <RecordInfo>
-            <Field name="html" size="1073741823" source="R-DATA:" type="V_WString" />
-          </RecordInfo>
-        </MetaInfo>
         <MetaInfo connection="Output4">
           <RecordInfo>
             <Field name="Graph" size="1073741823" source="Report:R-Graph:" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Output5">
+          <RecordInfo>
+            <Field name="html" size="1073741823" source="R-DATA:" type="V_WString" />
           </RecordInfo>
         </MetaInfo>
       </Properties>
@@ -484,7 +484,7 @@ http://downloads.alteryx.com/Latest_RInstaller.htm</AnnotationText>
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_6968_259dc1987e0549858507af682448f3eb_\Engine_5332_be3b88628de148089682806be426104e_.yxdb</TempFile>
+          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_7448_e9b61351b5f7452389ba619f0c7c6d00_\Engine_6836_abbcbc72e3004f58a83b5c9682138dd1_.yxdb</TempFile>
           <TempFileDataProfiling>C:\Users\DBLANC~1\AppData\Local\Temp\Engine_8556_9ca41fa99d264e5b9f3f89971c898cf4_\Engine_6844_2f6344d1371b4f97ab3300f3f53d44b4_.yxdb</TempFileDataProfiling>
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -601,7 +601,7 @@ http://downloads.alteryx.com/Latest_RInstaller.htm</AnnotationText>
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_6968_259dc1987e0549858507af682448f3eb_\Engine_5332_0d27f08fdaf343dbb178e221c1a469c4_.yxdb</TempFile>
+          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_7448_e9b61351b5f7452389ba619f0c7c6d00_\Engine_6836_80dd76ec46ef4430900f280acdbd878d_.yxdb</TempFile>
           <TempFileDataProfiling>C:\Users\DBLANC~1\AppData\Local\Temp\Engine_8556_9ca41fa99d264e5b9f3f89971c898cf4_\Engine_6844_db7625636b9549eda57a4fb225091152_.yxdb</TempFileDataProfiling>
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -718,7 +718,7 @@ http://downloads.alteryx.com/Latest_RInstaller.htm</AnnotationText>
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_6968_259dc1987e0549858507af682448f3eb_\Engine_5332_3ca88b1af4024fdda4397a2d788af5b2_.yxdb</TempFile>
+          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_7448_e9b61351b5f7452389ba619f0c7c6d00_\Engine_6836_d95f29d0461f45e2874f63c9c7b57b63_.yxdb</TempFile>
           <TempFileDataProfiling>C:\Users\DBLANC~1\AppData\Local\Temp\Engine_8556_9ca41fa99d264e5b9f3f89971c898cf4_\Engine_6844_772dbc003e4e4b4faf7d1526e88d1fd8_.yxdb</TempFileDataProfiling>
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -963,7 +963,7 @@ http://downloads.alteryx.com/Latest_RInstaller.htm</AnnotationText>
       <Properties>
         <Configuration>
           <TempFileDataProfiling>C:\Users\DBLANC~1\AppData\Local\Temp\Engine_8556_9ca41fa99d264e5b9f3f89971c898cf4_\Engine_6844_76ff939a8f964d2cb07464c09a1823fa_.yxdb</TempFileDataProfiling>
-          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_6968_259dc1987e0549858507af682448f3eb_\Engine_5332_54163a3c21c047ef9f54c67f76eb04d1_.yxdb</TempFile>
+          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_7448_e9b61351b5f7452389ba619f0c7c6d00_\Engine_6836_d778f0f36ccc49cc882d36086aad8702_.yxdb</TempFile>
           <Layout>
             <ViewMode>Single</ViewMode>
             <ViewSize value="100" />
@@ -988,7 +988,7 @@ http://downloads.alteryx.com/Latest_RInstaller.htm</AnnotationText>
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_6968_259dc1987e0549858507af682448f3eb_\Engine_5332_15986806d6414090a71c1c02150a6177_.yxdb</TempFile>
+          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_7448_e9b61351b5f7452389ba619f0c7c6d00_\Engine_6836_61f448114a3342c8a756c46eaff4bea0_.yxdb</TempFile>
           <TempFileDataProfiling>C:\Users\DBLANC~1\AppData\Local\Temp\Engine_8556_9ca41fa99d264e5b9f3f89971c898cf4_\Engine_6844_a107a5a937cc4eb4a5284d7330c03ad5_.yxdb</TempFileDataProfiling>
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -1176,7 +1176,7 @@ No Text Styling</DefaultAnnotationText>
       <Properties>
         <Configuration>
           <TempFileDataProfiling>C:\Users\DBLANC~1\AppData\Local\Temp\Engine_8556_9ca41fa99d264e5b9f3f89971c898cf4_\Engine_6844_878f914c6b5845db94051dda5396d570_.yxdb</TempFileDataProfiling>
-          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_6968_259dc1987e0549858507af682448f3eb_\Engine_5332_1383b960fa154b078fb94126f1b95f31_.yxdb</TempFile>
+          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_7448_e9b61351b5f7452389ba619f0c7c6d00_\Engine_6836_469f51b377d24c8bba41a41c80d8afc7_.yxdb</TempFile>
           <Layout>
             <ViewMode>Single</ViewMode>
             <ViewSize value="100" />
@@ -1288,7 +1288,7 @@ No Text Styling</DefaultAnnotationText>
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_6968_259dc1987e0549858507af682448f3eb_\Engine_5332_9483d7cfdb6d4380888e1995a019e533_.yxdb</TempFile>
+          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_7448_e9b61351b5f7452389ba619f0c7c6d00_\Engine_6836_57e91fdd8eb54da7821362e470a2ddde_.yxdb</TempFile>
           <TempFileDataProfiling>C:\Users\DBLANC~1\AppData\Local\Temp\Engine_8556_9ca41fa99d264e5b9f3f89971c898cf4_\Engine_6844_0c1ede5b05f546c6bc0bb12b17bc0b99_.yxdb</TempFileDataProfiling>
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -1343,7 +1343,7 @@ No Text Styling</DefaultAnnotationText>
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_6968_259dc1987e0549858507af682448f3eb_\Engine_5332_2db081e3afb34491914dde8418bbcea8_.yxdb</TempFile>
+          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_7448_e9b61351b5f7452389ba619f0c7c6d00_\Engine_6836_89af49f047114e96ae5c8156855eb3c0_.yxdb</TempFile>
           <TempFileDataProfiling>C:\Users\DBLANC~1\AppData\Local\Temp\Engine_8556_9ca41fa99d264e5b9f3f89971c898cf4_\Engine_6844_6ed0cbcf4a1c461eabcbc74784dd327a_.yxdb</TempFileDataProfiling>
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -1402,11 +1402,11 @@ No Text Styling</DefaultAnnotationText>
     </Node>
     <Node ToolID="49">
       <GuiSettings Plugin="AlteryxBasePluginsGui.BrowseV2.BrowseV2">
-        <Position x="1697" y="968" />
+        <Position x="1710" y="1014" />
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_6968_259dc1987e0549858507af682448f3eb_\Engine_5332_ff6c0b7ef34644d493b3df064b732730_.yxdb</TempFile>
+          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_7448_e9b61351b5f7452389ba619f0c7c6d00_\Engine_6836_48fd176dcf55472ead7ce532c45c74bc_.yxdb</TempFile>
           <TempFileDataProfiling>C:\Users\DBLANC~1\AppData\Local\Temp\Engine_8556_9ca41fa99d264e5b9f3f89971c898cf4_\Engine_6844_e7519f2f34af47b181a4b39648e25787_.yxdb</TempFileDataProfiling>
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -6213,7 +6213,7 @@ No Text Styling</DefaultAnnotationText>
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_6968_259dc1987e0549858507af682448f3eb_\Engine_5332_f6b66ad1d70d4d77a4476fe19946ede1_.yxdb</TempFile>
+          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_7448_e9b61351b5f7452389ba619f0c7c6d00_\Engine_6836_2889f89e4a3046aa88f354290e88bb21_.yxdb</TempFile>
           <TempFileDataProfiling>C:\Users\DBLANC~1\AppData\Local\Temp\Engine_8556_9ca41fa99d264e5b9f3f89971c898cf4_\Engine_6844_bffc6d0205ff4e619f46e053a09ef9a8_.yxdb</TempFileDataProfiling>
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -6822,7 +6822,7 @@ No Text Styling</DefaultAnnotationText>
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_6968_259dc1987e0549858507af682448f3eb_\Engine_5332_13c979835b1b40ba9529e406b57af1ca_.yxdb</TempFile>
+          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_7448_e9b61351b5f7452389ba619f0c7c6d00_\Engine_6836_e74c7fd5d6c343f1a83ad406c724f983_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -7008,7 +7008,7 @@ if (config$use_cv) {
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_6968_259dc1987e0549858507af682448f3eb_\Engine_5332_7d71ed10c83c4870a67a6724a638cf31_.yxdb</TempFile>
+          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_7448_e9b61351b5f7452389ba619f0c7c6d00_\Engine_6836_3543c31ecdcc4dcd9ee21405bd02ec09_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -7036,7 +7036,7 @@ if (config$use_cv) {
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_6968_259dc1987e0549858507af682448f3eb_\Engine_5332_c229614ffdae49138afaf46be7f3efc4_.yxdb</TempFile>
+          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_7448_e9b61351b5f7452389ba619f0c7c6d00_\Engine_6836_ca7eb0bc257c465f9b72e2a207e00432_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -7064,7 +7064,7 @@ if (config$use_cv) {
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_6968_259dc1987e0549858507af682448f3eb_\Engine_5332_1667d6d5fffc46d3ad553629602935a4_.yxdb</TempFile>
+          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_7448_e9b61351b5f7452389ba619f0c7c6d00_\Engine_6836_fe6d3a2b6db244038fef5fd47aa3c468_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -7165,14 +7165,14 @@ if (config$use_cv) {
         <Configuration>
           <AutoResetMode>Custom</AutoResetMode>
           <MultiMetaInfo>
-            <MetaInfo name="#3">
-              <RecordInfo>
-                <Field name="Table" size="2147483647" source="Report:Table:Basic:" type="V_String" column="1" />
-              </RecordInfo>
-            </MetaInfo>
             <MetaInfo name="#1">
               <RecordInfo>
                 <Field name="Graph" size="1073741823" source="Report:R-Graph:" type="V_WString" column="1" />
+              </RecordInfo>
+            </MetaInfo>
+            <MetaInfo name="#3">
+              <RecordInfo>
+                <Field name="Table" size="2147483647" source="Report:Table:Basic:" type="V_String" column="1" />
               </RecordInfo>
             </MetaInfo>
             <MetaInfo name="#2">
@@ -7288,7 +7288,7 @@ if (config$use_cv) {
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_6968_259dc1987e0549858507af682448f3eb_\Engine_5332_59624b49ea0e4c799b6521884ebe9f17_.yxdb</TempFile>
+          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_7448_e9b61351b5f7452389ba619f0c7c6d00_\Engine_6836_80607d65464b4ec08325a116863d8c06_.yxdb</TempFile>
           <TempFileDataProfiling>C:\Users\btoomey\AppData\Local\Temp\Engine_10984_646fb7662b5b437d90b48a230752d9f5_\Engine_1404_4a118f442d094cf9a3ce8f3dfcbb69b3_.yxdb</TempFileDataProfiling>
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -7474,7 +7474,7 @@ if (config$use_cv) {
       <Properties>
         <Configuration>
           <TempFileDataProfiling>C:\Users\btoomey\AppData\Local\Temp\Engine_10984_646fb7662b5b437d90b48a230752d9f5_\Engine_1404_17298ee47b56493eb5e4a71a17b98a01_.yxdb</TempFileDataProfiling>
-          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_6968_259dc1987e0549858507af682448f3eb_\Engine_5332_8fd6405cf84541c994d7bd2a93f5dd10_.yxdb</TempFile>
+          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_7448_e9b61351b5f7452389ba619f0c7c6d00_\Engine_6836_f924af0adb1548618f3dba52519776e2_.yxdb</TempFile>
           <Layout>
             <ViewMode>Single</ViewMode>
             <ViewSize value="100" />
@@ -7733,7 +7733,7 @@ if (config$use_cv) {
       </GuiSettings>
       <Properties>
         <Configuration>
-          <TempFile>C:\ProgramData\Alteryx\Engine\Engine_6968_259dc1987e0549858507af682448f3eb_\Engine_5332_d9619702a5914a34b331bef90c77fec0_.yxdb</TempFile>
+          <TempFile>C:\Users\btoomey\AppData\Local\Temp\Engine_7448_e9b61351b5f7452389ba619f0c7c6d00_\Engine_6836_b8e928d7657c41cab0930d81ce374320_.yxdb</TempFile>
           <TempFileDataProfiling />
           <Layout>
             <ViewMode>Single</ViewMode>
@@ -7790,9 +7790,107 @@ if (config$use_cv) {
       </Properties>
       <EngineSettings EngineDll="PortfolioPluginsEngine.dll" EngineDllEntryPoint="AlteryxPortfolioComposerTextPlugin" />
     </Node>
+    <Node ToolID="325">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Detour.Detour">
+        <Position x="2466" y="1194" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <DetourRight value="True" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="trial" source="R-DATA:" type="Double" />
+            <Field name="fold" source="R-DATA:" type="Double" />
+            <Field name="Model" size="1073741823" source="R-DATA:" type="V_WString" />
+            <Field name="variable" size="1073741823" source="R-DATA:" type="V_WString" />
+            <Field name="value" source="R-DATA:" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="trial" source="R-DATA:" type="Double" />
+            <Field name="fold" source="R-DATA:" type="Double" />
+            <Field name="Model" size="1073741823" source="R-DATA:" type="V_WString" />
+            <Field name="variable" size="1073741823" source="R-DATA:" type="V_WString" />
+            <Field name="value" source="R-DATA:" type="Double" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDetour" />
+    </Node>
+    <Node ToolID="328">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Detour.Detour">
+        <Position x="2418" y="1386" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <DetourRight value="True" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="Trial" size="1073741823" source="R-DATA:" type="V_WString" />
+            <Field name="Fold" size="1073741823" source="R-DATA:" type="V_WString" />
+            <Field name="Model" size="1073741823" source="R-DATA:" type="V_WString" />
+            <Field name="Type" size="1073741823" source="R-DATA:" type="V_WString" />
+            <Field name="Predicted_class" size="1073741823" source="R-DATA:" type="V_WString" />
+            <Field name="Variable" size="1073741823" source="R-DATA:" type="V_WString" />
+            <Field name="Value" size="1073741823" source="R-DATA:" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="Trial" size="1073741823" source="R-DATA:" type="V_WString" />
+            <Field name="Fold" size="1073741823" source="R-DATA:" type="V_WString" />
+            <Field name="Model" size="1073741823" source="R-DATA:" type="V_WString" />
+            <Field name="Type" size="1073741823" source="R-DATA:" type="V_WString" />
+            <Field name="Predicted_class" size="1073741823" source="R-DATA:" type="V_WString" />
+            <Field name="Variable" size="1073741823" source="R-DATA:" type="V_WString" />
+            <Field name="Value" size="1073741823" source="R-DATA:" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDetour" />
+    </Node>
+    <Node ToolID="330">
+      <GuiSettings Plugin="AlteryxBasePluginsGui.Detour.Detour">
+        <Position x="2562" y="1638" />
+      </GuiSettings>
+      <Properties>
+        <Configuration>
+          <DetourRight value="True" />
+        </Configuration>
+        <Annotation DisplayMode="0">
+          <Name />
+          <DefaultAnnotationText />
+          <Left value="False" />
+        </Annotation>
+        <MetaInfo connection="Left">
+          <RecordInfo>
+            <Field name="Graph" size="1073741823" source="Report:R-Graph:" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+        <MetaInfo connection="Right">
+          <RecordInfo>
+            <Field name="Graph" size="1073741823" source="Report:R-Graph:" type="V_WString" />
+          </RecordInfo>
+        </MetaInfo>
+      </Properties>
+      <EngineSettings EngineDll="AlteryxBasePluginsEngine.dll" EngineDllEntryPoint="AlteryxDetour" />
+    </Node>
     <Node ToolID="261">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="1553" y="142" width="493" height="224" />
+        <Position x="1493" y="129.9999" width="697" height="236.0001" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -7810,7 +7908,7 @@ if (config$use_cv) {
       <ChildNodes>
         <Node ToolID="262">
           <GuiSettings Plugin="AlteryxGuiToolkit.Questions.CheckBoxGroup.CheckBoxGroup">
-            <Position x="1578" y="186.0002" width="59" height="59" />
+            <Position x="1554" y="173.9999" width="59" height="59" />
           </GuiSettings>
           <Properties>
             <Configuration />
@@ -7823,7 +7921,7 @@ if (config$use_cv) {
         </Node>
         <Node ToolID="263">
           <GuiSettings Plugin="AlteryxGuiToolkit.Questions.CheckBoxGroup.CheckBoxGroup">
-            <Position x="1650" y="186" width="59" height="59" />
+            <Position x="1794" y="198" width="59" height="59" />
           </GuiSettings>
           <Properties>
             <Configuration />
@@ -7836,7 +7934,7 @@ if (config$use_cv) {
         </Node>
         <Node ToolID="264">
           <GuiSettings Plugin="AlteryxGuiToolkit.Questions.NumericUpDown.NumericUpDown">
-            <Position x="1722" y="186" width="59" height="59" />
+            <Position x="1866" y="198" width="59" height="59" />
           </GuiSettings>
           <Properties>
             <Configuration />
@@ -7849,7 +7947,7 @@ if (config$use_cv) {
         </Node>
         <Node ToolID="265">
           <GuiSettings Plugin="AlteryxGuiToolkit.Questions.NumericUpDown.NumericUpDown">
-            <Position x="1782" y="186" width="59" height="59" />
+            <Position x="1926" y="198" width="59" height="59" />
           </GuiSettings>
           <Properties>
             <Configuration />
@@ -7862,7 +7960,7 @@ if (config$use_cv) {
         </Node>
         <Node ToolID="266">
           <GuiSettings Plugin="AlteryxGuiToolkit.Questions.NumericUpDown.NumericUpDown">
-            <Position x="1842" y="186" width="59" height="59" />
+            <Position x="1986" y="198" width="59" height="59" />
           </GuiSettings>
           <Properties>
             <Configuration />
@@ -7875,7 +7973,7 @@ if (config$use_cv) {
         </Node>
         <Node ToolID="267">
           <GuiSettings Plugin="AlteryxGuiToolkit.Questions.TextBox.QuestionTextBox">
-            <Position x="1902" y="186" width="59" height="59" />
+            <Position x="2046" y="198" width="59" height="59" />
           </GuiSettings>
           <Properties>
             <Configuration />
@@ -7888,7 +7986,7 @@ if (config$use_cv) {
         </Node>
         <Node ToolID="268">
           <GuiSettings Plugin="AlteryxGuiToolkit.Questions.CheckBoxGroup.CheckBoxGroup">
-            <Position x="1962" y="186" width="59" height="59" />
+            <Position x="2106" y="198" width="59" height="59" />
           </GuiSettings>
           <Properties>
             <Configuration />
@@ -7901,7 +7999,7 @@ if (config$use_cv) {
         </Node>
         <Node ToolID="313">
           <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
-            <Position x="1590" y="282" width="59" height="59" />
+            <Position x="1518" y="281.9999" width="59" height="59" />
           </GuiSettings>
           <Properties>
             <Configuration />
@@ -7914,12 +8012,51 @@ if (config$use_cv) {
         </Node>
         <Node ToolID="323">
           <GuiSettings Plugin="AlteryxGuiToolkit.Questions.TextBox.QuestionTextBox">
-            <Position x="1746" y="270" width="59" height="59" />
+            <Position x="1890" y="282" width="59" height="59" />
           </GuiSettings>
           <Properties>
             <Configuration />
             <Annotation DisplayMode="0">
               <Name>showClassificationCV</Name>
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+        <Node ToolID="327">
+          <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
+            <Position x="1590" y="281.9999" width="59" height="59" />
+          </GuiSettings>
+          <Properties>
+            <Configuration />
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+        <Node ToolID="329">
+          <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
+            <Position x="1650" y="270" width="59" height="59" />
+          </GuiSettings>
+          <Properties>
+            <Configuration />
+            <Annotation DisplayMode="0">
+              <Name />
+              <DefaultAnnotationText />
+              <Left value="False" />
+            </Annotation>
+          </Properties>
+        </Node>
+        <Node ToolID="331">
+          <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
+            <Position x="1698" y="270" width="59" height="59" />
+          </GuiSettings>
+          <Properties>
+            <Configuration />
+            <Annotation DisplayMode="0">
+              <Name />
               <DefaultAnnotationText />
               <Left value="False" />
             </Annotation>
@@ -9009,7 +9146,7 @@ Union</Text>
     </Node>
     <Node ToolID="177">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="797.9999" y="293.9999" width="667.0001" height="177.0001" />
+        <Position x="797.9999" y="293.9999" width="667.0001" height="177.0002" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -9231,7 +9368,7 @@ Union</Text>
     </Node>
     <Node ToolID="168">
       <GuiSettings Plugin="AlteryxGuiToolkit.ToolContainer.ToolContainer">
-        <Position x="66.00001" y="678.0005" width="1113" height="284.9996" />
+        <Position x="65.99996" y="678.0005" width="1113" height="284.9996" />
       </GuiSettings>
       <Properties>
         <Configuration>
@@ -9249,7 +9386,7 @@ Union</Text>
       <ChildNodes>
         <Node ToolID="106">
           <GuiSettings Plugin="AlteryxGuiToolkit.Questions.TextBox.TextBox">
-            <Position x="76.00032" y="707.0006" width="59" height="59" />
+            <Position x="76.00039" y="707.0005" width="59" height="59" />
           </GuiSettings>
           <Properties>
             <Configuration />
@@ -9262,7 +9399,7 @@ Union</Text>
         </Node>
         <Node ToolID="109">
           <GuiSettings Plugin="AlteryxGuiToolkit.Questions.DropDownListBox.DropDown">
-            <Position x="164.5006" y="707.0009" width="59" height="59" />
+            <Position x="164.5006" y="707.001" width="59" height="59" />
           </GuiSettings>
           <Properties>
             <Configuration />
@@ -9353,7 +9490,7 @@ Union</Text>
         </Node>
         <Node ToolID="99">
           <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
-            <Position x="246" y="810.0006" width="59" height="59" />
+            <Position x="246" y="810.0007" width="59" height="59" />
           </GuiSettings>
           <Properties>
             <Configuration />
@@ -9379,7 +9516,7 @@ Union</Text>
         </Node>
         <Node ToolID="100">
           <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
-            <Position x="75.99998" y="808.0013" width="59" height="59" />
+            <Position x="75.99996" y="808.0013" width="59" height="59" />
           </GuiSettings>
           <Properties>
             <Configuration />
@@ -9405,7 +9542,7 @@ Union</Text>
         </Node>
         <Node ToolID="102">
           <GuiSettings Plugin="AlteryxGuiToolkit.Action.Action">
-            <Position x="329.9999" y="810.0001" width="59" height="59" />
+            <Position x="329.9999" y="810.0002" width="59" height="59" />
           </GuiSettings>
           <Properties>
             <Configuration />
@@ -9444,7 +9581,7 @@ Union</Text>
         </Node>
         <Node ToolID="239">
           <GuiSettings Plugin="AlteryxGuiToolkit.Questions.CheckBoxGroup.CheckBoxGroup">
-            <Position x="930" y="726" width="59" height="59" />
+            <Position x="966" y="726" width="59" height="59" />
           </GuiSettings>
           <Properties>
             <Configuration />
@@ -10056,27 +10193,27 @@ Union</Text>
     </Connection>
     <Connection>
       <Origin ToolID="290" Connection="Output1" />
-      <Destination ToolID="316" Connection="Input" />
+      <Destination ToolID="325" Connection="Input" />
     </Connection>
-    <Connection name="#1">
-      <Origin ToolID="311" Connection="Action" />
-      <Destination ToolID="316" Connection="Action" />
+    <Connection name="#2">
+      <Origin ToolID="327" Connection="Action" />
+      <Destination ToolID="325" Connection="Action" />
     </Connection>
     <Connection>
       <Origin ToolID="290" Connection="Output2" />
-      <Destination ToolID="317" Connection="Input" />
+      <Destination ToolID="328" Connection="Input" />
     </Connection>
     <Connection name="#2">
-      <Origin ToolID="318" Connection="Action" />
-      <Destination ToolID="317" Connection="Action" />
+      <Origin ToolID="329" Connection="Action" />
+      <Destination ToolID="328" Connection="Action" />
     </Connection>
     <Connection>
       <Origin ToolID="290" Connection="Output4" />
-      <Destination ToolID="319" Connection="Input" />
+      <Destination ToolID="330" Connection="Input" />
     </Connection>
     <Connection name="#2">
-      <Origin ToolID="320" Connection="Action" />
-      <Destination ToolID="319" Connection="Action" />
+      <Origin ToolID="331" Connection="Action" />
+      <Destination ToolID="330" Connection="Action" />
     </Connection>
     <Connection>
       <Origin ToolID="297" Connection="Output" />
@@ -10162,9 +10299,45 @@ Union</Text>
       <Origin ToolID="319" Connection="Right" />
       <Destination ToolID="299" Connection="Input" />
     </Connection>
+    <Connection>
+      <Origin ToolID="325" Connection="Right" />
+      <Destination ToolID="316" Connection="Input" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="311" Connection="Action" />
+      <Destination ToolID="316" Connection="Action" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="328" Connection="Right" />
+      <Destination ToolID="317" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="318" Connection="Action" />
+      <Destination ToolID="317" Connection="Action" />
+    </Connection>
+    <Connection>
+      <Origin ToolID="330" Connection="Right" />
+      <Destination ToolID="319" Connection="Input" />
+    </Connection>
+    <Connection name="#2">
+      <Origin ToolID="320" Connection="Action" />
+      <Destination ToolID="319" Connection="Action" />
+    </Connection>
     <Connection name="#1">
       <Origin ToolID="262" Connection="Question" />
       <Destination ToolID="313" Connection="Question" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="262" Connection="Question" />
+      <Destination ToolID="327" Connection="Question" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="262" Connection="Question" />
+      <Destination ToolID="329" Connection="Question" />
+    </Connection>
+    <Connection name="#1">
+      <Origin ToolID="262" Connection="Question" />
+      <Destination ToolID="331" Connection="Question" />
     </Connection>
     <Connection name="#2">
       <Origin ToolID="160" Connection="Question" />
@@ -10911,6 +11084,39 @@ ENDIF</Expression>
               <ToolId value="320" />
               <Expression>{{INPUT}}</Expression>
               <Destination>319/DetourRight/@value</Destination>
+              <Mapping>Update Detour Direction from Question</Mapping>
+              <Mode>Expression</Mode>
+              <DynamicConfiguration />
+              <DefaultConfiguration value="True" />
+            </Action>
+            <Action>
+              <Type>Dynamic</Type>
+              <Description />
+              <ToolId value="327" />
+              <Expression>{{INPUT}}</Expression>
+              <Destination>325/DetourRight/@value</Destination>
+              <Mapping>Update Detour Direction from Question</Mapping>
+              <Mode>Expression</Mode>
+              <DynamicConfiguration />
+              <DefaultConfiguration value="True" />
+            </Action>
+            <Action>
+              <Type>Dynamic</Type>
+              <Description />
+              <ToolId value="329" />
+              <Expression>{{INPUT}}</Expression>
+              <Destination>328/DetourRight/@value</Destination>
+              <Mapping>Update Detour Direction from Question</Mapping>
+              <Mode>Expression</Mode>
+              <DynamicConfiguration />
+              <DefaultConfiguration value="True" />
+            </Action>
+            <Action>
+              <Type>Dynamic</Type>
+              <Description />
+              <ToolId value="331" />
+              <Expression>{{INPUT}}</Expression>
+              <Destination>330/DetourRight/@value</Destination>
               <Mapping>Update Detour Direction from Question</Mapping>
               <Mode>Expression</Mode>
               <DynamicConfiguration />

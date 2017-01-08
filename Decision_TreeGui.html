@@ -262,10 +262,6 @@ Decision_Tree
 <!--  earlyStopping  -->
 <alteryx-pluginwidget type="CheckBox" text="Use stopping method for boosting" id="earlyStopping" dataName="earlyStopping" defaultValue="true"></alteryx-pluginwidget>
 
-                
-<!--  display.static  -->
-<alteryx-pluginwidget type="CheckBox" text="Display static report" id="display.static" dataName="display.static" defaultValue="true"></alteryx-pluginwidget>
-
               </div>
               
                <h4 class='accordion-toggle' id='toggle-c50toggle3'>
@@ -353,7 +349,11 @@ Decision_Tree
       
        <!-- GRAPHICS TAB -->  
        <div class="tabpage" id='tabpage-graphics'>
-          <div class="dt-accordion">
+         
+<!--  display.static  -->
+<alteryx-pluginwidget type="CheckBox" text="Display static report" id="display.static" dataName="display.static" defaultValue="true"></alteryx-pluginwidget>
+
+          <div class="dt-accordion" id = "show-on-display-static">
             <div id = 'show-when-tree-plot-available'>
             <h4 class="accordion-toggle" id="toggle-treeplot">
               Tree Plot
@@ -511,6 +511,7 @@ var items = {
     "curPage": "Home",
     "curTab": "model",
     "curToggle": "toggle-main",
+    "display.static": true,
     "set_seed_cv": true,
     "showClassificationCV": true,
     "showWhenTreePlotAvailable": true,
@@ -551,6 +552,7 @@ var displayRules = {
   'show-on-cv': 'use_cv',
   'show-on-seeded-cv': 'set_seed_cv',
   'show-on-classification-CV': 'showClassificationCV',
+  'show-on-display-static': 'display.static',
   'show-when-tree-plot-available': 'showWhenTreePlotAvailable',
   'show-when-prune-plot-available': ['model.algorithm', 'rpart']
 };
