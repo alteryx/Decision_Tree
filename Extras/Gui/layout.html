@@ -146,18 +146,23 @@
       
        <!-- CROSS VALIDATION TAB -->
        <div class="tabpage" id='tabpage-crossvalidation'>
-         {{ use_cv }}
-         <div id='show-on-cv'>
-           	{{ numberFolds }}
-	          {{ numberTrials }}
-	          <div id='show-on-classification-CV'>
-	            {{ posClass }}
-	            {{ stratified }}
-	          </div>
-	          {{ set_seed_cv }}
-            <div id='show-on-seeded-cv'>
-              {{ cv_seed }}
-            </div>
+         <div class='show-on-xdf' style='display:none;'>
+           Cross-validation is not currently supported for XDF input.
+         </div>
+         <div class='hide-on-xdf'>
+           {{ use_cv }}
+           <div id='show-on-cv'>
+             	{{ numberFolds }}
+  	          {{ numberTrials }}
+  	          <div id='show-on-classification-CV'>
+  	            {{ posClass }}
+  	            {{ stratified }}
+  	          </div>
+  	          {{ set_seed_cv }}
+              <div id='show-on-seeded-cv'>
+                {{ cv_seed }}
+              </div>
+           </div>
          </div>
        </div>
       
