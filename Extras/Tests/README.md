@@ -2,17 +2,17 @@
 
 
 
-These tests were run at 2017-01-07 16:37:16
+These tests were run at 2017-01-07 17:18:18
 
 
-| id|name                        |status  |time           |message   |
-|--:|:---------------------------|:-------|:--------------|:---------|
-|  1|BasicTest                   |&#9989; |9.612 seconds  |1 warning |
-|  2|Test_c50_1                  |&#9989; |8.966 seconds  |1 warning |
-|  3|Test_c50_1_Cross-validation |&#9989; |10.345 seconds |1 warning |
-|  4|Test_c50_missing            |&#9989; |9.457 seconds  |1 warning |
-|  5|Test_rpart_CV               |&#9989; |10.781 seconds |          |
-|  6|Test_rpart_splits1          |&#9989; |9.555 seconds  |          |
+| id|name                        |status  |time           |message    |
+|--:|:---------------------------|:-------|:--------------|:----------|
+|  1|BasicTest                   |&#9989; |10.608 seconds |2 warnings |
+|  2|Test_c50_1                  |&#9989; |9.479 seconds  |2 warnings |
+|  3|Test_c50_1_Cross-validation |&#9989; |12.647 seconds |2 warnings |
+|  4|Test_c50_missing            |&#9989; |12.222 seconds |2 warnings |
+|  5|Test_rpart_CV               |&#9989; |12.677 seconds |1 warning  |
+|  6|Test_rpart_splits1          |&#9989; |11.985 seconds |1 warning  |
 
 ### Usage Notes
 
