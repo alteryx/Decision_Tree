@@ -66,9 +66,11 @@
               </h4>
               <div class='accordion-content'>
                 {{ `model_type` }}
+                <div id = 'weights-show-on-rpart'>
                 {{ `use.weights` }}
                 <div id='div-use.weights' class='indent-one'>
                   {{ `select.weights` }}
+                </div>
                 </div>
               </div>
               <h4 class="accordion-toggle" id="toggle-split">
@@ -112,10 +114,6 @@
                    <div id = 'show-on-bandscheck'>
                      {{  bands  }}
                   </div>
-                 </div>
-                 {{ `use.weights` }}
-                 <div id='div-use.weights2' class='indent-one'>
-                    {{ `select.weights` }}
                  </div>
               </div>
               
@@ -259,7 +257,6 @@ indicate the name of the dataItem controlling the display and an optional condit
 */
 var displayRules = {
   'div-use.weights': 'use.weights',
-  'div-use.weights2': 'use.weights',
   'div-tree.plot': 'tree.plot',
   'div-prune.plot': 'prune.plot',
   'div-treeplot-in': ['tree_plot_size', 'tree.inches'],
@@ -277,7 +274,7 @@ var displayRules = {
   'show-on-classification-CV': 'showClassificationCV',
   'show-on-display-static': 'display.static',
   'show-when-tree-plot-available': 'showWhenTreePlotAvailable',
-  'show-when-prune-plot-available': ['model.algorithm', 'rpart']
+  'show-when-prune-plot-available': ['model.algorithm', 'rpart'],
 };
 /* 
 show-on-classification-CV should only display when at least one of these 3 conditions is true:
