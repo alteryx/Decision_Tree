@@ -115,6 +115,7 @@ Decision_Tree
   </div>
 </div>
 
+                <div id = 'weights-show-on-rpart'>
                 
 <!--  use.weights  -->
 <alteryx-pluginwidget type="CheckBox" text="Use sampling weights in model estimation" id="use.weights" dataName="use.weights" defaultValue="false"></alteryx-pluginwidget>
@@ -124,6 +125,7 @@ Decision_Tree
 <!--  select.weights  -->
 <alteryx-pluginwidget type="DropDown" dataType="FieldSelector" inputNumber="0" connectionNumber="0" fieldType="Numeric" clearable="true" id="select.weights" dataName="select.weights"></alteryx-pluginwidget>
 
+                </div>
                 </div>
               </div>
               <h4 class="accordion-toggle" id="toggle-split">
@@ -225,16 +227,6 @@ Decision_Tree
 <alteryx-pluginwidget type="NumericSpinner" default="10" min="0" max="1000" step="1" id="bands" dataName="bands"></alteryx-pluginwidget>
 
                   </div>
-                 </div>
-                 
-<!--  use.weights  -->
-<alteryx-pluginwidget type="CheckBox" text="Use sampling weights in model estimation" id="use.weights" dataName="use.weights" defaultValue="false"></alteryx-pluginwidget>
-
-                 <div id='div-use.weights2' class='indent-one'>
-                    
-<!--  select.weights  -->
-<alteryx-pluginwidget type="DropDown" dataType="FieldSelector" inputNumber="0" connectionNumber="0" fieldType="Numeric" clearable="true" id="select.weights" dataName="select.weights"></alteryx-pluginwidget>
-
                  </div>
               </div>
               
@@ -536,7 +528,6 @@ indicate the name of the dataItem controlling the display and an optional condit
 */
 var displayRules = {
   'div-use.weights': 'use.weights',
-  'div-use.weights2': 'use.weights',
   'div-tree.plot': 'tree.plot',
   'div-prune.plot': 'prune.plot',
   'div-treeplot-in': ['tree_plot_size', 'tree.inches'],
@@ -554,7 +545,7 @@ var displayRules = {
   'show-on-classification-CV': 'showClassificationCV',
   'show-on-display-static': 'display.static',
   'show-when-tree-plot-available': 'showWhenTreePlotAvailable',
-  'show-when-prune-plot-available': ['model.algorithm', 'rpart']
+  'show-when-prune-plot-available': ['model.algorithm', 'rpart'],
 };
 /* 
 show-on-classification-CV should only display when at least one of these 3 conditions is true:
