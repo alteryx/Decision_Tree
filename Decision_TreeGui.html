@@ -92,8 +92,8 @@ Decision_Tree
 <!--  model.algorithm  -->
 <label for="model.algorithm">XMSG("Choose algorithm")</label>
 <alteryx-pluginwidget type="DropDown" id="model.algorithm" dataName="model.algorithm">
-  <alteryx-option uiobject="rpart" default="true">rpart</alteryx-option>
-  <alteryx-option uiobject="C5.0">C5.0</alteryx-option>
+  <alteryx-option uiobject="XMSG('rpart')" default="true">rpart</alteryx-option>
+  <alteryx-option uiobject="XMSG('C5.0')">C5.0</alteryx-option>
 </alteryx-pluginwidget>
 </div>
           
@@ -118,7 +118,7 @@ Decision_Tree
                 <div id = 'weights-show-on-rpart'>
                 
 <!--  use.weights  -->
-<alteryx-pluginwidget type="CheckBox" text="Use sampling weights in model estimation" id="use.weights" dataName="use.weights" defaultValue="false"></alteryx-pluginwidget>
+<alteryx-pluginwidget type="CheckBox" text="XMSG('Use sampling weights in model estimation')" id="use.weights" dataName="use.weights" defaultValue="false"></alteryx-pluginwidget>
 
                 <div id='div-use.weights' class='indent-one'>
                   
@@ -136,25 +136,25 @@ Decision_Tree
 <!--  splitting_criteria  -->
 <label for="splitting_criteria">XMSG("The splitting criteria to use:")</label>
 <alteryx-pluginwidget type="RadioGroup" group="splitting_criteria" id="splitting_criteria" dataName="splitting_criteria">
-  <alteryx-option uiobject="Gini coefficient" default="true">use.gini</alteryx-option>
-  <alteryx-option uiobject="Information index">use.information</alteryx-option>
+  <alteryx-option uiobject="XMSG('Gini coefficient')" default="true">use.gini</alteryx-option>
+  <alteryx-option uiobject="XMSG('Information index')">use.information</alteryx-option>
 </alteryx-pluginwidget>
 </div>
                 
 <!--  surrogate_use  -->
 <label for="surrogate_use">XMSG("Use surrogates to")</label>
 <alteryx-pluginwidget type="RadioGroup" group="surrogate_use" id="surrogate_use" dataName="surrogate_use">
-  <alteryx-option uiobject="Omit observations with missing value for primary split rule" default="true">usesurrogate.0</alteryx-option>
-  <alteryx-option uiobject="Split records missing the candidate variable">usesurrogate.1</alteryx-option>
-  <alteryx-option uiobject="Send observation in majority direction if all surrogates are missing">usesurrogate.2</alteryx-option>
+  <alteryx-option uiobject="XMSG('Omit observations with missing value for primary split rule')" default="true">usesurrogate.0</alteryx-option>
+  <alteryx-option uiobject="XMSG('Split records missing the candidate variable')">usesurrogate.1</alteryx-option>
+  <alteryx-option uiobject="XMSG('Send observation in majority direction if all surrogates are missing')">usesurrogate.2</alteryx-option>
 </alteryx-pluginwidget>
 
                 
 <!--  surrogate_split_criteria  -->
 <label for="surrogate_split_criteria">XMSG("Select best surrogate split using")</label>
 <alteryx-pluginwidget type="RadioGroup" group="surrogate_split_criteria" id="surrogate_split_criteria" dataName="surrogate_split_criteria">
-  <alteryx-option uiobject="Number of correct classifications for a candidate variable" default="true">total.correct</alteryx-option>
-  <alteryx-option uiobject="Percentage of correct classifications for a candidate variable">percent.correct</alteryx-option>
+  <alteryx-option uiobject="XMSG('Number of correct classifications for a candidate variable')" default="true">total.correct</alteryx-option>
+  <alteryx-option uiobject="XMSG('Percentage of correct classifications for a candidate variable')">percent.correct</alteryx-option>
 </alteryx-pluginwidget>
 
               </div>
@@ -190,7 +190,7 @@ Decision_Tree
                 <div>
                   <div style='float:left;' id='div-set-cp'>
 <!--  set_cp  -->
-<alteryx-pluginwidget type="CheckBox" text="Set complexity parameter" id="set_cp" dataName="set_cp" defaultValue="false"></alteryx-pluginwidget>
+<alteryx-pluginwidget type="CheckBox" text="XMSG('Set complexity parameter')" id="set_cp" dataName="set_cp" defaultValue="false"></alteryx-pluginwidget>
 </div>
                   <div style='float:right;' id='div-cp'>
 <!--  cp  -->
@@ -213,12 +213,12 @@ Decision_Tree
                <div class='accordion-content'>
                   
 <!--  rules  -->
-<alteryx-pluginwidget type="CheckBox" text="Decompose tree into rule-based model" id="rules" dataName="rules" defaultValue="false"></alteryx-pluginwidget>
+<alteryx-pluginwidget type="CheckBox" text="XMSG('Decompose tree into rule-based model')" id="rules" dataName="rules" defaultValue="false"></alteryx-pluginwidget>
 
                   <div id = 'show-on-rules' class='indent-one'> 
                    
 <!--  bands_check  -->
-<alteryx-pluginwidget type="CheckBox" text="Threshold number of bands to group rules into" id="bands_check" dataName="bands_check" defaultValue="false"></alteryx-pluginwidget>
+<alteryx-pluginwidget type="CheckBox" text="XMSG('Threshold number of bands to group rules into')" id="bands_check" dataName="bands_check" defaultValue="false"></alteryx-pluginwidget>
 
                    <div id = 'show-on-bandscheck'>
                      
@@ -236,23 +236,23 @@ Decision_Tree
                <div class='accordion-content'>
                 
 <!--  subset  -->
-<alteryx-pluginwidget type="CheckBox" text="Model should evaluate groups of discrete predictors for splits" id="subset" dataName="subset" defaultValue="false"></alteryx-pluginwidget>
+<alteryx-pluginwidget type="CheckBox" text="XMSG('Model should evaluate groups of discrete predictors for splits')" id="subset" dataName="subset" defaultValue="false"></alteryx-pluginwidget>
 
                 
 <!--  winnow  -->
-<alteryx-pluginwidget type="CheckBox" text="Use predictor winnowing (i.e. feature selection)" id="winnow" dataName="winnow" defaultValue="false"></alteryx-pluginwidget>
+<alteryx-pluginwidget type="CheckBox" text="XMSG('Use predictor winnowing (i.e. feature selection)')" id="winnow" dataName="winnow" defaultValue="false"></alteryx-pluginwidget>
 
                 
 <!--  GlobalPruning  -->
-<alteryx-pluginwidget type="CheckBox" text="Prune tree" id="GlobalPruning" dataName="GlobalPruning" defaultValue="true"></alteryx-pluginwidget>
+<alteryx-pluginwidget type="CheckBox" text="XMSG('Prune tree')" id="GlobalPruning" dataName="GlobalPruning" defaultValue="true"></alteryx-pluginwidget>
 
                 
 <!--  fuzzyThreshold  -->
-<alteryx-pluginwidget type="CheckBox" text="Evaluate advanced splits in the data" id="fuzzyThreshold" dataName="fuzzyThreshold" defaultValue="true"></alteryx-pluginwidget>
+<alteryx-pluginwidget type="CheckBox" text="XMSG('Evaluate advanced splits in the data')" id="fuzzyThreshold" dataName="fuzzyThreshold" defaultValue="true"></alteryx-pluginwidget>
 
                 
 <!--  earlyStopping  -->
-<alteryx-pluginwidget type="CheckBox" text="Use stopping method for boosting" id="earlyStopping" dataName="earlyStopping" defaultValue="true"></alteryx-pluginwidget>
+<alteryx-pluginwidget type="CheckBox" text="XMSG('Use stopping method for boosting')" id="earlyStopping" dataName="earlyStopping" defaultValue="true"></alteryx-pluginwidget>
 
               </div>
               
@@ -300,7 +300,7 @@ Decision_Tree
          <div class='hide-on-xdf'>
            
 <!--  use_cv  -->
-<alteryx-pluginwidget type="CheckBox" text="Use cross-validation to determine estimates of model quality" showAsToggle="true" id="use_cv" dataName="use_cv" defaultValue="false"></alteryx-pluginwidget>
+<alteryx-pluginwidget type="CheckBox" text="XMSG('Use cross-validation to determine estimates of model quality')" showAsToggle="true" id="use_cv" dataName="use_cv" defaultValue="false"></alteryx-pluginwidget>
 
            <div id='show-on-cv'>
              	
@@ -321,12 +321,12 @@ Decision_Tree
 
   	            
 <!--  stratified  -->
-<alteryx-pluginwidget type="CheckBox" text="Use stratified cross-validation" id="stratified" dataName="stratified" defaultValue="false"></alteryx-pluginwidget>
+<alteryx-pluginwidget type="CheckBox" text="XMSG('Use stratified cross-validation')" id="stratified" dataName="stratified" defaultValue="false"></alteryx-pluginwidget>
 
   	          </div>
   	          
 <!--  set_seed_cv  -->
-<alteryx-pluginwidget type="CheckBox" text="Set seed for external cross-validation" id="set_seed_cv" dataName="set_seed_cv" defaultValue="true"></alteryx-pluginwidget>
+<alteryx-pluginwidget type="CheckBox" text="XMSG('Set seed for external cross-validation')" id="set_seed_cv" dataName="set_seed_cv" defaultValue="true"></alteryx-pluginwidget>
 
               <div id='show-on-seeded-cv'>
                 
@@ -343,7 +343,7 @@ Decision_Tree
        <div class="tabpage" id='tabpage-graphics'>
          
 <!--  display.static  -->
-<alteryx-pluginwidget type="CheckBox" text="Display static report" id="display.static" dataName="display.static" defaultValue="true"></alteryx-pluginwidget>
+<alteryx-pluginwidget type="CheckBox" text="XMSG('Display static report')" id="display.static" dataName="display.static" defaultValue="true"></alteryx-pluginwidget>
 
           <div class="dt-accordion" id = "show-on-display-static">
             <div id = 'show-when-tree-plot-available'>
@@ -354,12 +354,12 @@ Decision_Tree
               
               
 <!--  tree.plot  -->
-<alteryx-pluginwidget type="CheckBox" text="Display tree plot" showAsToggle="true" id="tree.plot" dataName="tree.plot" defaultValue="true"></alteryx-pluginwidget>
+<alteryx-pluginwidget type="CheckBox" text="XMSG('Display tree plot')" showAsToggle="true" id="tree.plot" dataName="tree.plot" defaultValue="true"></alteryx-pluginwidget>
 
                 <div id='div-tree.plot'>
                   <div id='div-branch-dist'>
 <!--  Branch Dist  -->
-<alteryx-pluginwidget type="CheckBox" text="Uniform branch distances" id="Branch Dist" dataName="Branch Dist" defaultValue="true"></alteryx-pluginwidget>
+<alteryx-pluginwidget type="CheckBox" text="XMSG('Uniform branch distances')" id="Branch Dist" dataName="Branch Dist" defaultValue="true"></alteryx-pluginwidget>
 </div>
                   
 <div class="clearfix togglebar" id="id-tree_summary">
@@ -411,9 +411,9 @@ Decision_Tree
 <!--  tree.graph.resolution  -->
 <label for="tree.graph.resolution">XMSG("Graph resolution")</label>
 <alteryx-pluginwidget type="DropDown" id="tree.graph.resolution" dataName="tree.graph.resolution">
-  <alteryx-option uiobject="1x (96 dpi)" default="true">1x</alteryx-option>
-  <alteryx-option uiobject="2x (192 dpi)">2x</alteryx-option>
-  <alteryx-option uiobject="3x (288 dpi)">3x</alteryx-option>
+  <alteryx-option uiobject="XMSG('1x (96 dpi)')" default="true">1x</alteryx-option>
+  <alteryx-option uiobject="XMSG('2x (192 dpi)')">2x</alteryx-option>
+  <alteryx-option uiobject="XMSG('3x (288 dpi)')">3x</alteryx-option>
 </alteryx-pluginwidget>
 
                   
@@ -432,7 +432,7 @@ Decision_Tree
             <div class='accordion-content'>
               
 <!--  prune.plot  -->
-<alteryx-pluginwidget type="CheckBox" text="Display prune plot" showAsToggle="true" id="prune.plot" dataName="prune.plot" defaultValue="false"></alteryx-pluginwidget>
+<alteryx-pluginwidget type="CheckBox" text="XMSG('Display prune plot')" showAsToggle="true" id="prune.plot" dataName="prune.plot" defaultValue="false"></alteryx-pluginwidget>
 
                 <div id='div-prune.plot'>
                   
@@ -474,9 +474,9 @@ Decision_Tree
 <!--  prune.graph.resolution  -->
 <label for="prune.graph.resolution">XMSG("Graph resolution")</label>
 <alteryx-pluginwidget type="DropDown" id="prune.graph.resolution" dataName="prune.graph.resolution">
-  <alteryx-option uiobject="1x (96 dpi)" default="true">1x</alteryx-option>
-  <alteryx-option uiobject="2x (192 dpi)">2x</alteryx-option>
-  <alteryx-option uiobject="3x (288 dpi)">3x</alteryx-option>
+  <alteryx-option uiobject="XMSG('1x (96 dpi)')" default="true">1x</alteryx-option>
+  <alteryx-option uiobject="XMSG('2x (192 dpi)')">2x</alteryx-option>
+  <alteryx-option uiobject="XMSG('3x (288 dpi)')">3x</alteryx-option>
 </alteryx-pluginwidget>
 
                   
