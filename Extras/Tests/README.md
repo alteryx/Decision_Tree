@@ -2,18 +2,18 @@
 
 
 
-These tests were run at 2017-02-09 16:48:23
+These tests were run at 2017-02-24 14:23:15
 
 
-| id|name                        |status  |time           |message    |
-|--:|:---------------------------|:-------|:--------------|:----------|
-|  1|BasicTest                   |&#9989; |10.789 seconds |1 warning  |
-|  2|BasicTest_ggplot_issue      |&#9989; |12.642 seconds |3 warnings |
-|  3|Test_c50_1                  |&#9989; |8.233 seconds  |1 warning  |
-|  4|Test_c50_1_Cross-validation |&#9989; |9.713 seconds  |1 warning  |
-|  5|Test_c50_missing            |&#9989; |9.819 seconds  |1 warning  |
-|  6|Test_rpart_CV               |&#9989; |10.966 seconds |           |
-|  7|Test_rpart_splits1          |&#9989; |10.463 seconds |           |
+| id|name                        |status  |time           |message   |
+|--:|:---------------------------|:-------|:--------------|:---------|
+|  1|BasicTest                   |&#9989; |10.875 seconds |1 warning |
+|  2|BasicTest_ggplot_issue      |&#9989; |13.134 seconds |1 warning |
+|  3|Test_c50_1                  |&#9989; |8.622 seconds  |1 warning |
+|  4|Test_c50_1_Cross-validation |&#9989; |14.054 seconds |1 warning |
+|  5|Test_c50_missing            |&#9989; |14.227 seconds |1 warning |
+|  6|Test_rpart_CV               |&#9989; |21.551 seconds |          |
+|  7|Test_rpart_splits1          |&#9989; |20.667 seconds |          |
 
 ### Usage Notes
 
