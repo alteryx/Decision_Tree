@@ -2,7 +2,7 @@
 <div class='page has-hint' id='page-basic'>
   
   <div class='fd-header'>
-    <div class='fd-header-title-text'>Setup</div>
+    <div class='fd-header-title-text'>XMSG("Setup")</div>
   </div>
 
   <div class="content">
@@ -14,7 +14,7 @@
       <button class="btn pull-left switch" id="switch-to-customize"
         data-page='Customize'
       >
-        Customize
+        XMSG("Customize")
         <i class = 'en-right-open-big pull-right'></i>
       </button>
       
@@ -40,14 +40,14 @@
   <!-- TABS -->
   <div class="tabs" id='header'>
     <div class="tab tab-one-third active mytab" data-page='model' id='model'>
-      Model
+      XMSG("Model")
     </div>
     <div class="tab tab-one-third active mytab" data-page='crossvalidation' 
       id='crossvalidation'>
-      Cross-validation
+      XMSG("Cross-validation")
     </div>
     <div class="tab tab-one-third mytab" data-page='graphics' id='graphics'>
-      Plots
+      XMSG("Plots")
     </div>
   </div>
   
@@ -62,7 +62,7 @@
           <div id='tabpage-model-rpart'>
             <div class="dt-accordion">
               <h4 class="accordion-toggle" id="toggle-main">
-                Model Type and Sampling Weights
+                XMSG("Model Type and Sampling Weights")
               </h4>
               <div class='accordion-content'>
                 {{ `model_type` }}
@@ -74,7 +74,7 @@
                 </div>
               </div>
               <h4 class="accordion-toggle" id="toggle-split">
-                Splitting Criteria and Surrogates
+                XMSG("Splitting Criteria and Surrogates")
               </h4>
               <div class='accordion-content'>
                 <div id='show-for-classification'>{{ `splitting_criteria` }}</div>
@@ -82,7 +82,7 @@
                 {{ `surrogate_split_criteria` }}
               </div>
               <h4 class="accordion-toggle" id='toggle-hyperparameters'>
-                HyperParameters
+                XMSG("HyperParameters")
               </h4>
               <div class='accordion-content'>
                 {{ `min.split` }}
@@ -100,12 +100,12 @@
           
           <div id='tabpage-model-c50'>
              <div class='show-on-xdf' style='display:none;'>
-               C5.0 is not currently supported for XDF inputs.
+               XMSG("C5.0 is not currently supported for XDF inputs.")
              </div>
              <div class="dt-accordion hide-on-xdf">
                
                <h4 class='accordion-toggle' id='toggle-c50toggle1'>
-                 Structural Options
+                 XMSG("Structural Options")
                </h4>
                <div class='accordion-content'>
                   {{ rules }}
@@ -118,7 +118,7 @@
               </div>
               
                <h4 class='accordion-toggle' id='toggle-c50toggle2'>
-                 Detailed Options
+                 XMSG("Detailed Options")
                </h4>
                <div class='accordion-content'>
                 {{ subset }}
@@ -129,7 +129,7 @@
               </div>
               
                <h4 class='accordion-toggle' id='toggle-c50toggle3'>
-                 Numerical Hyperparameters
+                 XMSG("Numerical Hyperparameters")
                </h4>
                <div class='accordion-content'>
                  <div id='div-trials'>{{ trials }}</div>
@@ -147,7 +147,7 @@
        <!-- CROSS VALIDATION TAB -->
        <div class="tabpage" id='tabpage-crossvalidation'>
          <div class='show-on-xdf' style='display:none;'>
-           Cross-validation is not currently supported for XDF input.
+           XMSG("Cross-validation is not currently supported for XDF input.")
          </div>
          <div class='hide-on-xdf'>
            {{ use_cv }}
@@ -172,7 +172,7 @@
           <div class="dt-accordion" id = "show-on-display-static">
             <div id = 'show-when-tree-plot-available'>
             <h4 class="accordion-toggle" id="toggle-treeplot">
-              Tree Plot
+              XMSG("Tree Plot")
             </h4>
             <div class='accordion-content'>
               
@@ -197,7 +197,7 @@
               
             <div id = 'show-when-prune-plot-available'>
             <h4 class="accordion-toggle" id="toggle-pruneplot">
-              Prune Plot
+              XMSG("Prune Plot")
             </h4>
             <div class='accordion-content'>
               {{ `prune.plot` }}
